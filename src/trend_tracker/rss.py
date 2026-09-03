@@ -27,6 +27,52 @@ class Article:
         return asdict(self)
 
 
+# 제품 이름만으로 다른 사업부 기사가 섞이지 않도록 반도체 산업에서
+# 의미가 비교적 분명한 용어를 우선 사용한다. 목록은 향후 회사별 설정으로 분리한다.
+SEMICONDUCTOR_KEYWORDS = (
+    "semiconductor",
+    "foundry",
+    "wafer",
+    "hbm",
+    "dram",
+    "v-nand",
+    "v nand",
+    "nand flash",
+    "ddr5",
+    "lpddr",
+    "gddr",
+    "cxl",
+    "chiplet",
+    "advanced packaging",
+    "gate-all-around",
+    "gate all around",
+    "gaa",
+    "process node",
+    "exynos",
+    "isocell",
+)
+
+
+def semiconductor_keyword_matches(article: Article) -> list[str]:
+    """기사 제목과 요약에서 반도체 관련 근거 키워드를 반환한다."""
+
+    searchable = f"{article.title} {article.summary}".casefold()
+    return [keyword for keyword in SEMICONDUCTOR_KEYWORDS if keyword in searchable]
+
+
+def filter_semiconductor_articles(
+    articles: Iterable[Article],
+) -> list[tuple[Article, list[str]]]:
+    """근거 키워드가 하나 이상인 기사만 선택한다."""
+
+    selected: list[tuple[Article, list[str]]] = []
+    for article in articles:
+        matches = semiconductor_keyword_matches(article)
+        if matches:
+            selected.append((article, matches))
+    return selected
+
+
 def _text(element: ElementTree.Element | None) -> str:
     if element is None or element.text is None:
         return ""
@@ -96,4 +142,3 @@ def unique_by_url(articles: Iterable[Article]) -> list[Article]:
         seen.add(article.url)
         result.append(article)
     return result
-

@@ -6,9 +6,9 @@ __pycache__/
 
 # 실행 중 생성되는 원문 데이터와 로그
 data/raw/*.json
+data/processed/*.json
 logs/
 
 # 비밀정보
 credentials*.json
 service-account*.json
-
