@@ -1,0 +1,94 @@
+version: 0.1
+updated_at: "2026-09-03"
+
+sources:
+  - id: samsung
+    company: "Samsung Electronics"
+    company_group: "memory_idm"
+    priority: "must"
+    official_url: "https://news.samsung.com/global/category/products/semiconductors"
+    preferred_method: "rss_then_html"
+    status: "candidate"
+    notes: "Global Newsroom exposes an RSS entry; semiconductor filtering must be verified."
+
+  - id: sk_hynix
+    company: "SK hynix"
+    company_group: "memory_idm"
+    priority: "must"
+    official_url: "https://news.skhynix.co.kr/"
+    preferred_method: "html_or_feed_discovery"
+    status: "needs_spike"
+    notes: "Official newsroom is confirmed; automated fetch behavior and feed endpoint need validation."
+
+  - id: micron
+    company: "Micron"
+    company_group: "memory_idm"
+    priority: "target"
+    official_url: "https://investors.micron.com/news-releases"
+    preferred_method: "rss_then_html"
+    status: "candidate"
+    notes: "Investor news-release list; verify current RSS endpoint and article-body extraction."
+
+  - id: kioxia
+    company: "Kioxia"
+    company_group: "memory_idm"
+    priority: "target"
+    official_url: "https://www.kioxia-holdings.com/en-jp/news.html"
+    preferred_method: "html"
+    status: "candidate"
+    notes: "Combined news and IR list; content-type filtering is required."
+
+  - id: tsmc
+    company: "TSMC"
+    company_group: "foundry"
+    priority: "target"
+    official_url: "https://pr.tsmc.com/english/latest-news"
+    preferred_method: "html"
+    status: "candidate"
+    notes: "Stable latest-news list and article pages observed; filter routine financial notices if needed."
+
+  - id: asml
+    company: "ASML"
+    company_group: "equipment"
+    priority: "must"
+    official_url: "https://www.asml.com/en/news/press-releases"
+    preferred_method: "html_or_embedded_data"
+    status: "needs_spike"
+    notes: "Listing appears dynamic in some clients; inspect embedded data or a public feed before browser automation."
+
+  - id: applied_materials
+    company: "Applied Materials"
+    company_group: "equipment"
+    priority: "must"
+    official_url: "https://ir.appliedmaterials.com/news-releases/"
+    preferred_method: "rss"
+    status: "candidate"
+    notes: "Official RSS feeds are explicitly available."
+
+  - id: lam_research
+    company: "Lam Research"
+    company_group: "equipment"
+    priority: "must"
+    official_url: "https://newsroom.lamresearch.com/press-releases?l=100"
+    preferred_method: "html"
+    status: "candidate"
+    notes: "Server-rendered list exposes title, date, summary, and article links."
+
+  - id: tokyo_electron
+    company: "Tokyo Electron"
+    company_group: "equipment"
+    priority: "must"
+    official_url: "https://www.tel.com/news/"
+    preferred_method: "html"
+    status: "candidate"
+    notes: "News list is accessible; filter to product, technology, and relevant corporate topics."
+
+  - id: kla
+    company: "KLA"
+    company_group: "equipment"
+    priority: "target"
+    official_url: "https://ir.kla.com/news-events/press-releases"
+    preferred_method: "html_or_rss_discovery"
+    status: "candidate"
+    notes: "Official press-release archive is accessible; technical relevance filter is required."
+

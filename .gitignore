@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+
+# 실행 중 생성되는 원문 데이터와 로그
+data/raw/*.json
+logs/
+
+# 비밀정보
+credentials*.json
+service-account*.json
+
