@@ -50,6 +50,14 @@ SEMICONDUCTOR_KEYWORDS = (
     "process node",
     "exynos",
     "isocell",
+    "ai memory",
+    "memory solution",
+    "hybrid bonding",
+    "back-end process",
+    "back end process",
+    "mass production",
+    "semiconductor fab",
+    "semiconductor cluster",
 )
 
 

@@ -15,10 +15,10 @@ sources:
     company: "SK hynix"
     company_group: "memory_idm"
     priority: "must"
-    official_url: "https://news.skhynix.co.kr/"
-    preferred_method: "html_or_feed_discovery"
-    status: "needs_spike"
-    notes: "Official newsroom is confirmed; automated fetch behavior and feed endpoint need validation."
+    official_url: "https://news.skhynix.com/en/feed"
+    preferred_method: "rss"
+    status: "verified"
+    notes: "Official global newsroom footer links to this RSS feed; collect all and retain keyword-backed technical candidates."
 
   - id: micron
     company: "Micron"
@@ -91,4 +91,3 @@ sources:
     preferred_method: "html_or_rss_discovery"
     status: "candidate"
     notes: "Official press-release archive is accessible; technical relevance filter is required."
-
