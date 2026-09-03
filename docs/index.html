@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="삼성전자와 SK하이닉스의 공식 뉴스에서 반도체·공정 관련 기술 동향을 선별합니다."
+    />
+    <title>반도체 기술동향 트래커</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <div>
+          <h1>반도체 기술동향 트래커</h1>
+          <p>공식 뉴스룸 기반 · 근거 키워드 공개</p>
+        </div>
+      </div>
+      <div class="updated" id="updated">데이터 확인 중</div>
+    </header>
+
+    <main>
+      <section class="overview" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow">DAILY SIGNAL BOARD</p>
+          <h2 id="overview-title">오늘 확인할 반도체 기술 신호</h2>
+          <p class="overview-copy">
+            삼성전자와 SK하이닉스의 공식 발표에서 공정·메모리·패키징 관련 기사만 선별했습니다.
+          </p>
+        </div>
+        <div class="metrics" aria-label="수집 현황">
+          <div class="metric"><strong id="total-count">-</strong><span>선별 기사</span></div>
+          <div class="metric"><strong id="company-count">-</strong><span>추적 기업</span></div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="기사 필터">
+        <div class="company-filters" id="company-filters">
+          <button class="filter active" type="button" data-company="all">전체</button>
+        </div>
+        <label class="search">
+          <span class="sr-only">기사 검색</span>
+          <input id="search" type="search" placeholder="HBM, 공정, 패키징 등 검색" />
+        </label>
+      </section>
+
+      <div class="result-line" id="result-line" aria-live="polite">기사를 불러오는 중입니다.</div>
+      <section class="article-grid" id="article-grid" aria-label="선별 기사 목록"></section>
+
+      <section class="empty" id="empty" hidden>
+        <h2>조건에 맞는 기사가 없습니다.</h2>
+        <p>검색어를 바꾸거나 전체 기업을 선택해 보세요.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>기사 저작권은 각 회사에 있으며, 제목과 링크는 공식 원문으로 연결됩니다.</p>
+    </footer>
+  </body>
+</html>
