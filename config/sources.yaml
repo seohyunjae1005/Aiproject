@@ -33,10 +33,10 @@ sources:
     company: "Kioxia"
     company_group: "memory_idm"
     priority: "target"
-    official_url: "https://www.kioxia-holdings.com/en-jp/news.html"
+    official_url: "https://www.kioxia.com/en-jp/news.html"
     preferred_method: "html"
-    status: "candidate"
-    notes: "Combined news and IR list; content-type filtering is required."
+    status: "verified"
+    notes: "Official Kioxia news list exposes title, date, category, and article URL in static HTML; collect 180 days and apply technical relevance filtering."
 
   - id: tsmc
     company: "TSMC"

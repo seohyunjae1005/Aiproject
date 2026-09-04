@@ -1,10 +1,93 @@
 {
-  "generated_at": "2026-09-04T06:50:54.988324+00:00",
-  "article_count": 1,
+  "generated_at": "2026-09-04T07:06:59.737371+00:00",
+  "article_count": 24,
   "company_counts": {
-    "Samsung Electronics": 1
+    "Samsung Electronics": 2,
+    "SK hynix": 2,
+    "Kioxia": 20
   },
   "articles": [
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[AI Ecosystem] The real bottleneck: Data, not compute",
+      "url": "https://news.skhynix.com/en/ai-ecosystem-series-ep2-5/",
+      "published_at": "2026-09-04T00:52:54+00:00",
+      "summary": "",
+      "collected_at": "2026-09-04T07:06:58.908630+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ai ecosystem"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[AI Infrastructure Insight] Why faster GPUs alone can’t deliver AI performance",
+      "url": "https://news.skhynix.com/en/ai-infrastructure-insight-ep2-3/",
+      "published_at": "2026-09-01T04:55:43+00:00",
+      "summary": "",
+      "collected_at": "2026-09-04T07:06:58.908630+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia and Sandisk to Invest Over $31 Billion in Japan, Extending Leadership in Memory Industry",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html",
+      "published_at": "2026-08-27T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "memory industry"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia to Expand 3D Flash Memory Production Capacity with the New Fab3 at Kitakami Plant",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-2.html",
+      "published_at": "2026-08-27T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "3d flash",
+        "production capacity"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Showcases P9 and P7 SSDs Featuring USB4 at Gamescom 2026",
+      "url": "https://news.samsung.com/global/samsung-showcases-p9-and-p7-ssds-featuring-usb4-at-gamescom-2026",
+      "published_at": "2026-08-26T16:00:00+00:00",
+      "summary": "Samsung Electronics a global leader in advanced memory technology, today unveiled the P9 and P7, its next-generation portable solid-state drives (SSDs) featuring USB4 connectivity. The company introduced the new P Series at Gamescom 2026, the world’s largest gaming event, held in Cologne, Germany from Aug. 26-30. Designed to meet rapidly growing storage demands driven by […]",
+      "collected_at": "2026-09-04T07:06:57.366339+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia and Sandisk Unveil New High-Performance QLC 3D Flash Memory Technology Designed for AI and Data-Intensive Applications",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260812-1.html",
+      "published_at": "2026-08-12T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "3d flash"
+      ]
+    },
     {
       "source_id": "samsung",
       "company": "Samsung Electronics",
@@ -12,12 +95,243 @@
       "url": "https://news.samsung.com/global/samsung-unveils-next-gen-3d-memory-vision-at-fms-2026-charting-the-future-of-ai-infrastructure",
       "published_at": "2026-08-05T04:30:00+00:00",
       "summary": "Samsung Electronics, a global leader in advanced memory technology, today showcased its latest AI memory innovations at Future of Memory and Storage (FMS) 2026 in Santa Clara, California. With broad expertise spanning DRAM, NAND, enterprise storage and relevant advanced semiconductor technologies, Samsung presented its latest AI memory portfolio and technology roadmap, including a preview of […]",
-      "collected_at": "2026-09-04T06:50:53.733245+00:00",
+      "collected_at": "2026-09-04T07:06:57.366339+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "semiconductor",
         "dram",
-        "ai memory"
+        "ai memory",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "KIOXIA GP Series Super High IOPS SSD Named 'Best of Show' at FMS: the Future of Memory and Storage 2026",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260805-1.html",
+      "published_at": "2026-08-05T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "New 3D Flash Memory Technology from Kioxia and Sandisk Achieves Industry’s Highest Bit Density for QLC NAND",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-2.html",
+      "published_at": "2026-08-04T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "3d flash"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Showcases Flash Storage Innovations for the AI Era at FMS 2026",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-1.html",
+      "published_at": "2026-08-04T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash storage"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Announces KIOXIA GP1 Series Super High IOPS SSDs for AI Applications",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260804-1.html",
+      "published_at": "2026-08-04T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia to Showcase CXL™ Compatible Memory Expansion Module KIOXIA XL1 Series for AI Workloads",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260803-1.html",
+      "published_at": "2026-08-03T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "cxl"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Commences Sample Shipments of 9th-Generation BiCS FLASH™ 1Tb TLC Devices",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260730-1.html",
+      "published_at": "2026-07-30T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "bics flash",
+        "sample shipments"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Introduces First PCIe® 6.0 Enterprise SSDs Utilizing Newest BiCS FLASH™ Generation 10 Flash Memory",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260730-1.html",
+      "published_at": "2026-07-30T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "bics flash",
+        "enterprise ssd",
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "New UFS 5.0 Embedded Flash Memory Devices from Kioxia Enable On-Device AI",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-2.html",
+      "published_at": "2026-07-29T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "ufs 5.0"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Announces Next-Generation E1.S SSDs for AI and Hyperscale Environments",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-1.html",
+      "published_at": "2026-07-29T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia and Sandisk Begin Production of 10th-Generation 3D Flash Memory Products at Kitakami Plant Fab2",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html",
+      "published_at": "2026-07-03T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash memory",
+        "3d flash",
+        "memory products"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Commences Sample Shipments of 10th-Generation BiCS FLASH™ Devices Delivering High Performance, High Capacity and Low Power Consumption",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-1.html",
+      "published_at": "2026-07-03T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "bics flash",
+        "sample shipments"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Announces Growth Strategy for the AI Inference Era at Investor Day",
+      "url": "https://www.kioxia-holdings.com/en-jp/news/2026/20260602-1.html",
+      "published_at": "2026-06-02T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ai inference"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia and Dell Technologies First to Deliver High-Density Server with 9.8 PB of Flash Storage",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260515-1.html",
+      "published_at": "2026-05-15T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "flash storage"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Unveils High Performance KIOXIA XG10 Series SSDs for PC OEMs",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260514-1.html",
+      "published_at": "2026-05-14T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Introduces New Mainstream KIOXIA BG8 Series SSDs for PC OEMs",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260423-1.html",
+      "published_at": "2026-04-23T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Unveils Value-Oriented QLC-based KIOXIA EG7 Series SSDs for PC OEMs",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260421-1.html",
+      "published_at": "2026-04-21T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "kioxia",
+      "company": "Kioxia",
+      "title": "Kioxia Announces New SSD Model Optimized for AI GPU-Initiated Workloads",
+      "url": "https://www.kioxia.com/en-jp/business/news/2026/20260317-1.html",
+      "published_at": "2026-03-17T00:00:00+00:00",
+      "summary": "Official category: News Releases",
+      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "selection_method": "keyword_v1",
+      "matched_keywords": [
+        "ssd"
       ]
     }
   ]

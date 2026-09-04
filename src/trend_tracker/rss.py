@@ -58,6 +58,22 @@ SEMICONDUCTOR_KEYWORDS = (
     "mass production",
     "semiconductor fab",
     "semiconductor cluster",
+    "flash memory",
+    "bics flash",
+    "3d flash",
+    "solid state drive",
+    "enterprise ssd",
+    "nvme ssd",
+    "ufs 5.0",
+    "sample shipments",
+    "production capacity",
+    "memory products",
+    "memory industry",
+    "flash storage",
+    "ssd",
+    "ai inference",
+    "ai infrastructure",
+    "ai ecosystem",
 )
 
 

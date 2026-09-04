@@ -13,10 +13,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_samsung_rss.py",
     PROJECT_ROOT / "scripts" / "fetch_skhynix_rss.py",
+    PROJECT_ROOT / "scripts" / "fetch_kioxia_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "sk_hynix_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "kioxia_semiconductor.json",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 
@@ -33,16 +35,20 @@ def main() -> None:
 
     combined: list[dict] = []
     seen_urls: set[str] = set()
+    seen_company_titles: set[tuple[str, str]] = set()
     company_counts: dict[str, int] = {}
     for path in INPUT_PATHS:
         rows = json.loads(path.read_text(encoding="utf-8"))
         for row in rows:
             url = row.get("url", "")
-            if not url or url in seen_urls:
+            company = row.get("company", "Unknown")
+            normalized_title = " ".join(row.get("title", "").casefold().split())
+            title_key = (company, normalized_title)
+            if not url or url in seen_urls or title_key in seen_company_titles:
                 continue
             seen_urls.add(url)
+            seen_company_titles.add(title_key)
             combined.append(row)
-            company = row.get("company", "Unknown")
             company_counts[company] = company_counts.get(company, 0) + 1
 
     combined.sort(key=_published_sort_value, reverse=True)
