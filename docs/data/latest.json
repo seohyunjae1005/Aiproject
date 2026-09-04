@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-09-04T07:06:59.737371+00:00",
-  "article_count": 24,
+  "generated_at": "2026-09-04T07:16:44.971605+00:00",
+  "article_count": 38,
   "company_counts": {
     "Samsung Electronics": 2,
     "SK hynix": 2,
-    "Kioxia": 20
+    "Kioxia": 20,
+    "Micron": 14
   },
   "articles": [
     {
@@ -14,10 +15,23 @@
       "url": "https://news.skhynix.com/en/ai-ecosystem-series-ep2-5/",
       "published_at": "2026-09-04T00:52:54+00:00",
       "summary": "",
-      "collected_at": "2026-09-04T07:06:58.908630+00:00",
+      "collected_at": "2026-09-04T07:16:42.008849+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ai ecosystem"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Redefining local AI computing",
+      "url": "https://www.micron.com/about/blog/memory/dram/redefining-local-ai-computing",
+      "published_at": "2026-09-02T05:30:00+00:00",
+      "summary": "Autonomous AI agents like OpenClaw are moving intelligence onto local hardware. See why DRAM capacity and bandwidth set the ceiling for edge AI performance.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "dram"
       ]
     },
     {
@@ -27,7 +41,7 @@
       "url": "https://news.skhynix.com/en/ai-infrastructure-insight-ep2-3/",
       "published_at": "2026-09-01T04:55:43+00:00",
       "summary": "",
-      "collected_at": "2026-09-04T07:06:58.908630+00:00",
+      "collected_at": "2026-09-04T07:16:42.008849+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ai infrastructure"
@@ -40,7 +54,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html",
       "published_at": "2026-08-27T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "memory industry"
@@ -53,7 +67,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-2.html",
       "published_at": "2026-08-27T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -68,10 +82,23 @@
       "url": "https://news.samsung.com/global/samsung-showcases-p9-and-p7-ssds-featuring-usb4-at-gamescom-2026",
       "published_at": "2026-08-26T16:00:00+00:00",
       "summary": "Samsung Electronics a global leader in advanced memory technology, today unveiled the P9 and P7, its next-generation portable solid-state drives (SSDs) featuring USB4 connectivity. The company introduced the new P Series at Gamescom 2026, the world’s largest gaming event, held in Cologne, Germany from Aug. 26-30. Designed to meet rapidly growing storage demands driven by […]",
-      "collected_at": "2026-09-04T07:06:57.366339+00:00",
+      "collected_at": "2026-09-04T07:16:40.512168+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "How query types shape GPU demand, memory, and power",
+      "url": "https://www.micron.com/about/blog/applications/ai/how-query-types-shape-gpu-demand-memory-and-power",
+      "published_at": "2026-08-25T05:30:00+00:00",
+      "summary": "Not all LLM queries are created equal. We profile how six real-world prompt types place very different demands on GPU memory bandwidth, power, throughput, and energy efficiency, helping infrastructure teams right-size their AI deployments and optimize total cost of ownership.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
       ]
     },
     {
@@ -81,7 +108,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260812-1.html",
       "published_at": "2026-08-12T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -95,7 +122,7 @@
       "url": "https://news.samsung.com/global/samsung-unveils-next-gen-3d-memory-vision-at-fms-2026-charting-the-future-of-ai-infrastructure",
       "published_at": "2026-08-05T04:30:00+00:00",
       "summary": "Samsung Electronics, a global leader in advanced memory technology, today showcased its latest AI memory innovations at Future of Memory and Storage (FMS) 2026 in Santa Clara, California. With broad expertise spanning DRAM, NAND, enterprise storage and relevant advanced semiconductor technologies, Samsung presented its latest AI memory portfolio and technology roadmap, including a preview of […]",
-      "collected_at": "2026-09-04T07:06:57.366339+00:00",
+      "collected_at": "2026-09-04T07:16:40.512168+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "semiconductor",
@@ -111,7 +138,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260805-1.html",
       "published_at": "2026-08-05T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -124,7 +151,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-2.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -138,7 +165,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-1.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
@@ -151,7 +178,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260804-1.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -164,10 +191,36 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260803-1.html",
       "published_at": "2026-08-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "cxl"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "The quiet engine behind the AI revolution: Why low-power memory is finding a new role in the data center",
+      "url": "https://www.micron.com/about/blog/memory/dram/why-low-power-memory-is-finding-a-new-role-in-the-data-center",
+      "published_at": "2026-07-31T11:30:00+00:00",
+      "summary": "Why LPDDR low-power memory is finding a new role in the AI data center, delivering the performance-per-watt that inference and agentic AI workloads demand.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "lpddr"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "How memory and storage became the backbone of the AI era",
+      "url": "https://www.micron.com/about/blog/applications/ai/how-memory-and-storage-became-the-backbone-of-the-ai-era",
+      "published_at": "2026-07-31T05:30:00+00:00",
+      "summary": "See why memory and storage, not compute alone, now define AI infrastructure as inference and agentic workloads reshape efficiency, scale and cost.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "ai infrastructure"
       ]
     },
     {
@@ -177,7 +230,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260730-1.html",
       "published_at": "2026-07-30T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "bics flash",
@@ -191,7 +244,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260730-1.html",
       "published_at": "2026-07-30T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -207,7 +260,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-2.html",
       "published_at": "2026-07-29T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -221,10 +274,39 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-1.html",
       "published_at": "2026-07-29T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Generational performance for the application server",
+      "url": "https://www.micron.com/about/blog/storage/ssd/agentic-ai-on-amd-epyc-plus-micron-ddr5-8000-and-nvme",
+      "published_at": "2026-07-23T18:00:00+00:00",
+      "summary": "Learn how 6th Gen AMD EPYC with Micron DDR5-8000 and 9650 Gen6 NVMe SSDs delivers 3.8x agentic AI performance at 2.9x better CPU power efficiency.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "ddr5",
+        "nvme ssd",
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "What we learned putting LPDDR to work in the data center",
+      "url": "https://www.micron.com/about/blog/memory/dram/when-memory-changes-the-equation",
+      "published_at": "2026-07-20T11:30:00+00:00",
+      "summary": "Micron and Meta engineers used the open-source DCPerf benchmark to measure how LPDDR5X and SOCAMM2 memory perform on real hyperscale data center workloads.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "ddr5",
+        "lpddr"
       ]
     },
     {
@@ -234,7 +316,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html",
       "published_at": "2026-07-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -249,11 +331,51 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-1.html",
       "published_at": "2026-07-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "bics flash",
         "sample shipments"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "QLC vs. HDD: How real-world IO distributions reshape storage cost",
+      "url": "https://www.micron.com/about/blog/storage/ssd/qlc-vs-hdd-how-real-world-io-distributions-reshape-storage-cost",
+      "published_at": "2026-07-01T05:30:00+00:00",
+      "summary": "Workloads generate a distribution of IO sizes rather than a single, uniform request size, and this distribution significantly affects the relative performance and capacity requirements of QLC SSDs and HDDs.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Why agentic AI is rewriting the rules for CPU and memory infrastructure",
+      "url": "https://www.micron.com/about/blog/memory/dram/why-agentic-ai-is-rewriting-the-rules-for-cpu-and-memory-infrastructure",
+      "published_at": "2026-07-01T05:30:00+00:00",
+      "summary": "Agentic AI is driving a resurgence in CPU and DRAM demand. Learn how autonomous AI agents are reshaping data center infrastructure and why memory is on the critical path.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "dram"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Micron broadens LPDDR5X options for next-generation edge designs",
+      "url": "https://www.micron.com/about/blog/memory/dram/micron-broadens-lpddr5x-options-for-next-generation-edge-designs",
+      "published_at": "2026-06-30T00:00:00+00:00",
+      "summary": "Micron expands its LPDDR5X portfolio with new 1γ non-binary options—adding 6GB, 12GB, and 24GB capacities for greater design flexibility, higher performance, and improved power efficiency across mobile and client PC edge AI designs.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "ddr5",
+        "lpddr"
       ]
     },
     {
@@ -263,10 +385,23 @@
       "url": "https://www.kioxia-holdings.com/en-jp/news/2026/20260602-1.html",
       "published_at": "2026-06-02T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ai inference"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "New STAC-A2 record shows how MRDIMMs scale financial risk analytics",
+      "url": "https://www.micron.com/about/blog/memory/dram/new-stac-a2-record-shows-how-mrdimms-scale-financial-risk-analytics",
+      "published_at": "2026-05-19T21:36:00+00:00",
+      "summary": "Learn how Micron MRDIMMs and Intel Xeon 6 set a new STAC-A2 benchmark, improving throughput, efficiency, and speed for financial risk analytics.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
       ]
     },
     {
@@ -276,7 +411,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260515-1.html",
       "published_at": "2026-05-15T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
@@ -289,10 +424,49 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260514-1.html",
       "published_at": "2026-05-14T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Micron 6600 ION 245TB is now shipping — redefining data center storage at scale",
+      "url": "https://www.micron.com/about/blog/storage/ssd/micron-6600-ion-redefining-data-center-storage",
+      "published_at": "2026-05-05T00:00:00+00:00",
+      "summary": "6600 ION 245TB launch blog by Bill Bollengier.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "VMware® VMmark® 4 world record: Dell Technologies® and Micron® power performance of virtualization platforms",
+      "url": "https://www.micron.com/about/blog/storage/ssd/vmware-vmmark-4-world-record-dell-technologies-and-micron-power-performance-of-virtualization-platforms",
+      "published_at": "2026-04-28T00:00:00+00:00",
+      "summary": "A four-node cluster. 334 virtual machines. A VMmark 4 score of 12.4. This is the new world record, validated January 20, 2026, according to VMware. It beats the previous record by 18.1% and adds 48 VMs to the same cluster footprint. The teams documented the results in a reference architecture, which details the findings here <link to RA>. This blog summarizes the work and results.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Power efficiency enables AI-era client performance",
+      "url": "https://www.micron.com/about/blog/storage/ssd/power-efficiency-enables-ai-era-client-performance",
+      "published_at": "2026-04-24T14:16:17.640000+00:00",
+      "summary": "By combining top performance with substantial reductions in active idle power and performance per watt, the Micron 3610 addresses a key challenge in edge AI platforms: sustaining high performance while minimizing energy consumption.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
       ]
     },
     {
@@ -302,7 +476,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260423-1.html",
       "published_at": "2026-04-23T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -315,10 +489,23 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260421-1.html",
       "published_at": "2026-04-21T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "micron",
+      "company": "Micron",
+      "title": "Why IO size changes the economics of QLC vs. HDD",
+      "url": "https://www.micron.com/about/blog/storage/ssd/why-io-size-changes-the-economics-of-qlc-vs-hdd",
+      "published_at": "2026-04-14T05:30:00+00:00",
+      "summary": "Storage performance and cost are commonly compared using $/TB, but the IO size of the workload has a first order effect on the amount of capacity required to deliver a given level of throughput.",
+      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "selection_method": "official_technology_category",
+      "matched_keywords": [
+        "Micron Technology blog"
       ]
     },
     {
@@ -328,7 +515,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260317-1.html",
       "published_at": "2026-03-17T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:06:59.676038+00:00",
+      "collected_at": "2026-09-04T07:16:42.672937+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"

@@ -24,10 +24,10 @@ sources:
     company: "Micron"
     company_group: "memory_idm"
     priority: "target"
-    official_url: "https://investors.micron.com/news-releases"
-    preferred_method: "rss_then_html"
-    status: "candidate"
-    notes: "Investor news-release list; verify current RSS endpoint and article-body extraction."
+    official_url: "https://www.micron.com/about/blog"
+    preferred_method: "official_search_api"
+    status: "verified"
+    notes: "Investor newsroom blocks automated access; use the official blog's public JSON search endpoint and request the Technology category only."
 
   - id: kioxia
     company: "Kioxia"

@@ -14,11 +14,13 @@ COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_samsung_rss.py",
     PROJECT_ROOT / "scripts" / "fetch_skhynix_rss.py",
     PROJECT_ROOT / "scripts" / "fetch_kioxia_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_micron_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "sk_hynix_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "kioxia_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "micron_semiconductor.json",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 
