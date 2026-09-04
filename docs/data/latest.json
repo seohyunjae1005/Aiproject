@@ -1,78 +1,10 @@
 {
-  "generated_at": "2026-09-03T14:41:03.201108+00:00",
-  "article_count": 7,
+  "generated_at": "2026-09-04T06:50:54.988324+00:00",
+  "article_count": 1,
   "company_counts": {
-    "Samsung Electronics": 2,
-    "SK hynix": 5
+    "Samsung Electronics": 1
   },
   "articles": [
-    {
-      "source_id": "sk_hynix",
-      "company": "SK hynix",
-      "title": "SK hynix Indiana fab breaks ground as new hub for US AI innovation",
-      "url": "https://news.skhynix.com/en/indiana-groundbreaking-ceremony-sketch/",
-      "published_at": "2026-08-28T03:29:47+00:00",
-      "summary": "SK hynix held a groundbreaking ceremony for its Indiana fab on Aug. 27 (local time) at Purdue University’s Holloway Gymnasium, located in West Lafayette, Indiana, taking its first step toward securing a local AI memory production base in the United",
-      "collected_at": "2026-09-03T14:41:03.150751+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "ai memory"
-      ]
-    },
-    {
-      "source_id": "sk_hynix",
-      "company": "SK hynix",
-      "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
-      "url": "https://news.skhynix.com/en/sk-hynix-holds-groundbreaking-ceremony-for-hbm-production-base-in-indiana-beginning-a-new-future-for-us-korea-ai/",
-      "published_at": "2026-08-28T02:46:45+00:00",
-      "summary": "",
-      "collected_at": "2026-09-03T14:41:03.150751+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "hbm"
-      ]
-    },
-    {
-      "source_id": "sk_hynix",
-      "company": "SK hynix",
-      "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
-      "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana-3/",
-      "published_at": "2026-08-28T02:44:52+00:00",
-      "summary": "",
-      "collected_at": "2026-09-03T14:41:03.150751+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "hbm"
-      ]
-    },
-    {
-      "source_id": "sk_hynix",
-      "company": "SK hynix",
-      "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
-      "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana-2/",
-      "published_at": "2026-08-28T02:41:28+00:00",
-      "summary": "",
-      "collected_at": "2026-09-03T14:41:03.150751+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "hbm"
-      ]
-    },
-    {
-      "source_id": "sk_hynix",
-      "company": "SK hynix",
-      "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
-      "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana-01/",
-      "published_at": "2026-08-27T16:21:49+00:00",
-      "summary": "▲ Rendering of the AI memory advanced packaging production base being constructed by SK hynix in West Lafayette, Indiana, U.S",
-      "collected_at": "2026-09-03T14:41:03.150751+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "hbm",
-        "advanced packaging",
-        "ai memory"
-      ]
-    },
     {
       "source_id": "samsung",
       "company": "Samsung Electronics",
@@ -80,25 +12,12 @@
       "url": "https://news.samsung.com/global/samsung-unveils-next-gen-3d-memory-vision-at-fms-2026-charting-the-future-of-ai-infrastructure",
       "published_at": "2026-08-05T04:30:00+00:00",
       "summary": "Samsung Electronics, a global leader in advanced memory technology, today showcased its latest AI memory innovations at Future of Memory and Storage (FMS) 2026 in Santa Clara, California. With broad expertise spanning DRAM, NAND, enterprise storage and relevant advanced semiconductor technologies, Samsung presented its latest AI memory portfolio and technology roadmap, including a preview of […]",
-      "collected_at": "2026-09-03T14:41:01.448390+00:00",
+      "collected_at": "2026-09-04T06:50:53.733245+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "semiconductor",
         "dram",
         "ai memory"
-      ]
-    },
-    {
-      "source_id": "samsung",
-      "company": "Samsung Electronics",
-      "title": "Samsung Electronics and Broadcom Expand Strategic Collaboration Across Memory and Foundry Technologies",
-      "url": "https://news.samsung.com/global/samsung-electronics-and-broadcom-expand-strategic-collaboration-across-memory-and-foundry-technologies",
-      "published_at": "2026-07-25T14:32:00+00:00",
-      "summary": "Samsung Electronics and Broadcom today announced the signing of a memorandum of understanding (MOU) to expand their strategic collaboration across memory and foundry technologies, supporting the next generation of AI infrastructure. The MOU was announced during the AI Summit, held at The Midway in San Francisco. Attendees included Jinman Han, President and Head of Samsung […]",
-      "collected_at": "2026-09-03T14:41:01.448390+00:00",
-      "selection_method": "keyword_v1",
-      "matched_keywords": [
-        "foundry"
       ]
     }
   ]
