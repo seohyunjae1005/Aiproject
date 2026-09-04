@@ -11,8 +11,8 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COLLECTORS = (
-    PROJECT_ROOT / "scripts" / "fetch_samsung_rss.py",
-    PROJECT_ROOT / "scripts" / "fetch_skhynix_rss.py",
+    PROJECT_ROOT / "scripts" / "fetch_samsung_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_skhynix_news.py",
     PROJECT_ROOT / "scripts" / "fetch_kioxia_news.py",
     PROJECT_ROOT / "scripts" / "fetch_micron_news.py",
 )

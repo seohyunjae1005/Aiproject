@@ -7,18 +7,18 @@ sources:
     company_group: "memory_idm"
     priority: "must"
     official_url: "https://news.samsung.com/global/category/products/semiconductors"
-    preferred_method: "rss_then_html"
-    status: "candidate"
-    notes: "Global Newsroom exposes an RSS entry; semiconductor filtering must be verified."
+    preferred_method: "official_category_html"
+    status: "verified"
+    notes: "Collect the official Semiconductors category for 180 days; avoids unrelated consumer-news RSS items."
 
   - id: sk_hynix
     company: "SK hynix"
     company_group: "memory_idm"
     priority: "must"
     official_url: "https://news.skhynix.com/en/feed"
-    preferred_method: "rss"
+    preferred_method: "tech_archive_plus_rss"
     status: "verified"
-    notes: "Official global newsroom footer links to this RSS feed; collect all and retain keyword-backed technical candidates."
+    notes: "Merge 180-day TECH&AI archive with keyword-backed recent RSS items, then deduplicate by normalized title."
 
   - id: micron
     company: "Micron"

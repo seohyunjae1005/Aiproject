@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-04T07:16:44.971605+00:00",
-  "article_count": 38,
+  "generated_at": "2026-09-04T07:24:25.097826+00:00",
+  "article_count": 73,
   "company_counts": {
-    "Samsung Electronics": 2,
-    "SK hynix": 2,
+    "Samsung Electronics": 8,
+    "SK hynix": 31,
     "Kioxia": 20,
     "Micron": 14
   },
@@ -12,12 +12,14 @@
       "source_id": "sk_hynix",
       "company": "SK hynix",
       "title": "[AI Ecosystem] The real bottleneck: Data, not compute",
-      "url": "https://news.skhynix.com/en/ai-ecosystem-series-ep2-5/",
-      "published_at": "2026-09-04T00:52:54+00:00",
-      "summary": "",
-      "collected_at": "2026-09-04T07:16:42.008849+00:00",
-      "selection_method": "keyword_v1",
+      "url": "https://news.skhynix.com/en/ai-ecosystem-series-ep2/",
+      "published_at": "2026-09-03T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, HBF, HBM",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
       "matched_keywords": [
+        "hbm",
+        "ai memory",
         "ai ecosystem"
       ]
     },
@@ -28,7 +30,7 @@
       "url": "https://www.micron.com/about/blog/memory/dram/redefining-local-ai-computing",
       "published_at": "2026-09-02T05:30:00+00:00",
       "summary": "Autonomous AI agents like OpenClaw are moving intelligence onto local hardware. See why DRAM capacity and bandwidth set the ceiling for edge AI performance.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "dram"
@@ -38,12 +40,13 @@
       "source_id": "sk_hynix",
       "company": "SK hynix",
       "title": "[AI Infrastructure Insight] Why faster GPUs alone can’t deliver AI performance",
-      "url": "https://news.skhynix.com/en/ai-infrastructure-insight-ep2-3/",
-      "published_at": "2026-09-01T04:55:43+00:00",
-      "summary": "",
-      "collected_at": "2026-09-04T07:16:42.008849+00:00",
-      "selection_method": "keyword_v1",
+      "url": "https://news.skhynix.com/en/ai-infrastructure-insight-ep2/",
+      "published_at": "2026-08-31T00:00:00+00:00",
+      "summary": "Tags: AI data center, AI Infra, AI Memory, GPU",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
       "matched_keywords": [
+        "ai memory",
         "ai infrastructure"
       ]
     },
@@ -54,7 +57,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html",
       "published_at": "2026-08-27T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "memory industry"
@@ -67,7 +70,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-2.html",
       "published_at": "2026-08-27T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -80,12 +83,31 @@
       "company": "Samsung Electronics",
       "title": "Samsung Showcases P9 and P7 SSDs Featuring USB4 at Gamescom 2026",
       "url": "https://news.samsung.com/global/samsung-showcases-p9-and-p7-ssds-featuring-usb4-at-gamescom-2026",
-      "published_at": "2026-08-26T16:00:00+00:00",
-      "summary": "Samsung Electronics a global leader in advanced memory technology, today unveiled the P9 and P7, its next-generation portable solid-state drives (SSDs) featuring USB4 connectivity. The company introduced the new P Series at Gamescom 2026, the world’s largest gaming event, held in Cologne, Germany from Aug. 26-30. Designed to meet rapidly growing storage demands driven by […]",
-      "collected_at": "2026-09-04T07:16:40.512168+00:00",
-      "selection_method": "keyword_v1",
+      "published_at": "2026-08-26T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
       "matched_keywords": [
+        "semiconductor",
         "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix Presents a Full Lineup of Memory Solutions Optimized for AI Infrastructure at DTF 2026",
+      "url": "https://news.skhynix.com/en/dtf-2026/",
+      "published_at": "2026-08-26T00:00:00+00:00",
+      "summary": "Tags: AI Memory, cSSD, DellTechForum, DRAM, DTF, eSSD, HBM, NAND",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory",
+        "memory solution",
+        "ssd",
+        "ai infrastructure"
       ]
     },
     {
@@ -95,10 +117,58 @@
       "url": "https://www.micron.com/about/blog/applications/ai/how-query-types-shape-gpu-demand-memory-and-power",
       "published_at": "2026-08-25T05:30:00+00:00",
       "summary": "Not all LLM queries are created equal. We profile how six real-world prompt types place very different demands on GPU memory bandwidth, power, throughput, and energy efficiency, helping infrastructure teams right-size their AI deployments and optimize total cost of ownership.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[Tech Note] Hybrid Bonding: Evolving into a Foundational Technology for Improving Semiconductor Performance",
+      "url": "https://news.skhynix.com/en/tech-note-series-ep2/",
+      "published_at": "2026-08-25T00:00:00+00:00",
+      "summary": "Tags: Advanced Packaging, back-end process, HBM, HBM4, Hybrid Bonding, Packaging",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm",
+        "advanced packaging",
+        "hybrid bonding",
+        "back-end process"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix’s technology roadmap for co-packaged optics features in ‘Nature Electronics,’ as AI competition shifts from chips to systems",
+      "url": "https://news.skhynix.com/en/cpo-in-nature-electronics/",
+      "published_at": "2026-08-20T00:00:00+00:00",
+      "summary": "Tags: AI Infrastructure, AI Memory, CoPackagedOptics, CPO, HBM, HeterogeneousIntegration, NatureElectronics, Photonics",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[AI Ecosystem] The paradigm shift in AI computing",
+      "url": "https://news.skhynix.com/en/ai-ecosystem-series-ep1/",
+      "published_at": "2026-08-18T00:00:00+00:00",
+      "summary": "Tags: Agentic AI, AI Infrastructure, AI Memory, semiconductor industry",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "ai memory",
+        "ai infrastructure",
+        "ai ecosystem"
       ]
     },
     {
@@ -108,7 +178,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260812-1.html",
       "published_at": "2026-08-12T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -116,18 +186,46 @@
       ]
     },
     {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[AI Infrastructure Insight] What is changing inside AI data centers?",
+      "url": "https://news.skhynix.com/en/ai-infrastructure-insigh-ep1/",
+      "published_at": "2026-08-10T00:00:00+00:00",
+      "summary": "Tags: AI, AI data center, AI Infrastructure, AI Memory",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "ai memory",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "The Next-Generation Memory Architecture in the AI Era? SK hynix Charts the Direction at ‘FMS 2026’",
+      "url": "https://news.skhynix.com/en/fms-2026/",
+      "published_at": "2026-08-07T00:00:00+00:00",
+      "summary": "Tags: CXL, DRAM, FMS, HBF, HBM, NAND, SSD",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "cxl",
+        "ssd"
+      ]
+    },
+    {
       "source_id": "samsung",
       "company": "Samsung Electronics",
       "title": "Samsung Unveils Next-Gen 3D-Memory Vision at FMS 2026, Charting the Future of AI Infrastructure",
       "url": "https://news.samsung.com/global/samsung-unveils-next-gen-3d-memory-vision-at-fms-2026-charting-the-future-of-ai-infrastructure",
-      "published_at": "2026-08-05T04:30:00+00:00",
-      "summary": "Samsung Electronics, a global leader in advanced memory technology, today showcased its latest AI memory innovations at Future of Memory and Storage (FMS) 2026 in Santa Clara, California. With broad expertise spanning DRAM, NAND, enterprise storage and relevant advanced semiconductor technologies, Samsung presented its latest AI memory portfolio and technology roadmap, including a preview of […]",
-      "collected_at": "2026-09-04T07:16:40.512168+00:00",
-      "selection_method": "keyword_v1",
+      "published_at": "2026-08-05T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
       "matched_keywords": [
         "semiconductor",
-        "dram",
-        "ai memory",
         "ai infrastructure"
       ]
     },
@@ -138,7 +236,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260805-1.html",
       "published_at": "2026-08-05T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -151,7 +249,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-2.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -165,7 +263,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260804-1.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
@@ -178,7 +276,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260804-1.html",
       "published_at": "2026-08-04T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -191,7 +289,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260803-1.html",
       "published_at": "2026-08-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "cxl"
@@ -204,7 +302,7 @@
       "url": "https://www.micron.com/about/blog/memory/dram/why-low-power-memory-is-finding-a-new-role-in-the-data-center",
       "published_at": "2026-07-31T11:30:00+00:00",
       "summary": "Why LPDDR low-power memory is finding a new role in the AI data center, delivering the performance-per-watt that inference and agentic AI workloads demand.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "lpddr"
@@ -217,7 +315,7 @@
       "url": "https://www.micron.com/about/blog/applications/ai/how-memory-and-storage-became-the-backbone-of-the-ai-era",
       "published_at": "2026-07-31T05:30:00+00:00",
       "summary": "See why memory and storage, not compute alone, now define AI infrastructure as inference and agentic workloads reshape efficiency, scale and cost.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ai infrastructure"
@@ -230,7 +328,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260730-1.html",
       "published_at": "2026-07-30T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "bics flash",
@@ -244,7 +342,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260730-1.html",
       "published_at": "2026-07-30T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -260,7 +358,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-2.html",
       "published_at": "2026-07-29T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -274,10 +372,24 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260729-1.html",
       "published_at": "2026-07-29T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Electronics and Broadcom Expand Strategic Collaboration Across Memory and Foundry Technologies",
+      "url": "https://news.samsung.com/global/samsung-electronics-and-broadcom-expand-strategic-collaboration-across-memory-and-foundry-technologies",
+      "published_at": "2026-07-25T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "foundry"
       ]
     },
     {
@@ -287,12 +399,25 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/agentic-ai-on-amd-epyc-plus-micron-ddr5-8000-and-nvme",
       "published_at": "2026-07-23T18:00:00+00:00",
       "summary": "Learn how 6th Gen AMD EPYC with Micron DDR5-8000 and 9650 Gen6 NVMe SSDs delivers 3.8x agentic AI performance at 2.9x better CPU power efficiency.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ddr5",
         "nvme ssd",
         "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[Inside the Research] SK hynix’s CTI innovation advances 176-layer 3D NAND toward mass production",
+      "url": "https://news.skhynix.com/en/research-inside-ep1/",
+      "published_at": "2026-07-22T00:00:00+00:00",
+      "summary": "Tags: 176 layer NAND, CTI, IEDM, IEEE, NAND, Research Inside, Scaling",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "mass production"
       ]
     },
     {
@@ -302,11 +427,76 @@
       "url": "https://www.micron.com/about/blog/memory/dram/when-memory-changes-the-equation",
       "published_at": "2026-07-20T11:30:00+00:00",
       "summary": "Micron and Meta engineers used the open-source DCPerf benchmark to measure how LPDDR5X and SOCAMM2 memory perform on real hyperscale data center workloads.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ddr5",
         "lpddr"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Begins Mass Production of PM1763 SSD Optimized for Next-Generation AI Infrastructure",
+      "url": "https://news.samsung.com/global/samsung-begins-mass-production-of-pm1763-ssd-optimized-for-next-generation-ai-infrastructure",
+      "published_at": "2026-07-08T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "mass production",
+        "ssd",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "From HBM to eSSD: How SK hynix is charting the future of full-stack memory",
+      "url": "https://news.skhynix.com/en/hbm-to-essd/",
+      "published_at": "2026-07-08T00:00:00+00:00",
+      "summary": "Tags: AI, AI Infrastructure, AI Memory, cHBM, DRAM, eSSD, HBM, NAND",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory",
+        "ssd",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[Expert POV] From AI semiconductors to AI services: How the ecosystem is evolving",
+      "url": "https://news.skhynix.com/en/2026-expert-column-series-ep4/",
+      "published_at": "2026-07-06T00:00:00+00:00",
+      "summary": "Tags: AI, AI Infrastructure, artificial intelligence, HBM, Semiconductor Ecosystem, semiconductor industry",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "Why advanced memory matters in the AI infrastructure era",
+      "url": "https://news.skhynix.com/en/ai-competition-next-challenge/",
+      "published_at": "2026-07-03T00:00:00+00:00",
+      "summary": "Tags: AI, AI Infrastructure, AI Memory, DRAM, eSSD, HBM",
+      "collected_at": "2026-09-04T07:24:17.969596+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory",
+        "ssd",
+        "ai infrastructure"
       ]
     },
     {
@@ -316,7 +506,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html",
       "published_at": "2026-07-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash memory",
@@ -331,7 +521,7 @@
       "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-1.html",
       "published_at": "2026-07-03T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "bics flash",
@@ -345,7 +535,7 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/qlc-vs-hdd-how-real-world-io-distributions-reshape-storage-cost",
       "published_at": "2026-07-01T05:30:00+00:00",
       "summary": "Workloads generate a distribution of IO sizes rather than a single, uniform request size, and this distribution significantly affects the relative performance and capacity requirements of QLC SSDs and HDDs.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ssd"
@@ -358,7 +548,7 @@
       "url": "https://www.micron.com/about/blog/memory/dram/why-agentic-ai-is-rewriting-the-rules-for-cpu-and-memory-infrastructure",
       "published_at": "2026-07-01T05:30:00+00:00",
       "summary": "Agentic AI is driving a resurgence in CPU and DRAM demand. Learn how autonomous AI agents are reshaping data center infrastructure and why memory is on the critical path.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "dram"
@@ -371,11 +561,147 @@
       "url": "https://www.micron.com/about/blog/memory/dram/micron-broadens-lpddr5x-options-for-next-generation-edge-designs",
       "published_at": "2026-06-30T00:00:00+00:00",
       "summary": "Micron expands its LPDDR5X portfolio with new 1γ non-binary options—adding 6GB, 12GB, and 24GB capacities for greater design flexibility, higher performance, and improved power efficiency across mobile and client PC edge AI designs.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ddr5",
         "lpddr"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[Expert POV] The real battleground in the AI semiconductor race: Capital and energy infrastructure",
+      "url": "https://news.skhynix.com/en/2026-expert-column-series-ep3/",
+      "published_at": "2026-06-24T00:00:00+00:00",
+      "summary": "Tags: AI, AI Infrastructure, AI Memory, AI Semiconductor, Semiconductor infra, Yongin Semiconductor Cluster",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "ai memory",
+        "semiconductor cluster",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Unveils Industry’s Fastest UFS 5.0 Solution for Next-Gen On-Device AI Applications",
+      "url": "https://news.samsung.com/global/samsung-unveils-industrys-fastest-ufs-5-0-solution-for-next-gen-on-device-ai-applications",
+      "published_at": "2026-06-23T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "ufs 5.0"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "Five things you need to know about SK hynix and the future of AI memory",
+      "url": "https://news.skhynix.com/en/5-things-about-skhynix/",
+      "published_at": "2026-06-23T00:00:00+00:00",
+      "summary": "Tags: AI, AI Infrastructure, AI Memory, Datacenter, DRAM, HBM, NAND",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix Showcases Tech Leadership as ‘Full Stack AI Memory Creator’ at HPED 2026, Reaffirming Strong Partnership with HPE",
+      "url": "https://news.skhynix.com/en/hpe-discover-2026/",
+      "published_at": "2026-06-19T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, CXL, eSSD, HBM, HEP Discover, HPE",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "cxl",
+        "ai memory",
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[SOD’s Review] COMPUTEX 2026: SK hynix beyond memory – how the AI factory era is reshaping the company’s identity",
+      "url": "https://news.skhynix.com/en/computex-2026-review/",
+      "published_at": "2026-06-11T00:00:00+00:00",
+      "summary": "Tags: AI, AI factory, AI Infrastructure, AI Memory, COMPUTEX, HBM, iHBM, SOCAMM2",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory",
+        "ai infrastructure"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "‘From Chips to AI Systems’… Chairman Chey Strengthens Partnership with Foxconn",
+      "url": "https://news.skhynix.com/en/ai-partnership-foxconn-2026/",
+      "published_at": "2026-06-04T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, Foxconn, HBM, semiconductor industry",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm",
+        "ai memory"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK Group Chairman Chey Tae-won Meets TSMC Chairman and CEO C.C. Wei in Taiwan to Solidify Global AI Chip Partnership",
+      "url": "https://news.skhynix.com/en/ai-partnership-tsmc-2026/",
+      "published_at": "2026-06-03T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, HBM, TSMC",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "Memory Solutions Grab the AI Wave — SK hynix Makes Its Mark at COMPUTEX 2026",
+      "url": "https://news.skhynix.com/en/computex-2026/",
+      "published_at": "2026-06-02T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, COMPUTEX, CXL, HBM, LPCAMM2, LPDDR, SOCAMM2",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "lpddr",
+        "cxl",
+        "ai memory",
+        "memory solution"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "Chairman Chey Tae-won and CEO Jensen Huang Reunite at COMPUTEX Taipei 2026",
+      "url": "https://news.skhynix.com/en/computex-2026-booth-tour/",
+      "published_at": "2026-06-02T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, COMPUTEX, NVIDIA",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "ai memory"
       ]
     },
     {
@@ -385,10 +711,53 @@
       "url": "https://www.kioxia-holdings.com/en-jp/news/2026/20260602-1.html",
       "published_at": "2026-06-02T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ai inference"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK Group Chairman Chey Tae-won Attends GTC Taipei 2026 Keynote, Reinforcing Vision as ‘An Innovative Partner to Build the Next-Gen AI Architecture Together’",
+      "url": "https://news.skhynix.com/en/gtc-taipei-2026-keynote/",
+      "published_at": "2026-06-01T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, GTC, HBF, HBM",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Electronics Begins Shipment of Industry-First HBM4E Samples",
+      "url": "https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples",
+      "published_at": "2026-05-29T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "What Brought Dell and SK hynix Together in Las Vegas? From HBM to cSSD, Reaffirming the Limitless Scalability of AI Memory",
+      "url": "https://news.skhynix.com/en/dtw-2026/",
+      "published_at": "2026-05-20T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, cSSD, DTW, eSSD, HBM",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory",
+        "ssd"
       ]
     },
     {
@@ -398,7 +767,7 @@
       "url": "https://www.micron.com/about/blog/memory/dram/new-stac-a2-record-shows-how-mrdimms-scale-financial-risk-analytics",
       "published_at": "2026-05-19T21:36:00+00:00",
       "summary": "Learn how Micron MRDIMMs and Intel Xeon 6 set a new STAC-A2 benchmark, improving throughput, efficiency, and speed for financial risk analytics.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
@@ -411,7 +780,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260515-1.html",
       "published_at": "2026-05-15T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
@@ -424,10 +793,25 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260514-1.html",
       "published_at": "2026-05-14T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[Tech Note EP.1] ‘It’s the Memory’, The Future of AI Will Be Decided by Memory",
+      "url": "https://news.skhynix.com/en/tech-note-series-ep1/",
+      "published_at": "2026-05-12T00:00:00+00:00",
+      "summary": "Tags: AI, HBF, HBM, Physical AI, Yongin Semiconductor Cluster",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm",
+        "semiconductor cluster"
       ]
     },
     {
@@ -437,7 +821,7 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/micron-6600-ion-redefining-data-center-storage",
       "published_at": "2026-05-05T00:00:00+00:00",
       "summary": "6600 ION 245TB launch blog by Bill Bollengier.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
@@ -450,10 +834,25 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/vmware-vmmark-4-world-record-dell-technologies-and-micron-power-performance-of-virtualization-platforms",
       "published_at": "2026-04-28T00:00:00+00:00",
       "summary": "A four-node cluster. 334 virtual machines. A VMmark 4 score of 12.4. This is the new world record, validated January 20, 2026, according to VMware. It beats the previous record by 18.1% and adds 48 VMs to the same cluster footprint. The teams documented the results in a reference architecture, which details the findings here <link to RA>. This blog summarizes the work and results.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "The Economics of Reviving Struggling Regions Through Corporate-Led Initiatives",
+      "url": "https://news.skhynix.com/en/opinion-local-economy-pt7/",
+      "published_at": "2026-04-27T00:00:00+00:00",
+      "summary": "Tags: Advanced Packaging, AI Infrastructure, Balanced Regional Development, P&T7, Package, Regional Revitalization, semiconductor industry",
+      "collected_at": "2026-09-04T07:24:19.501069+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "semiconductor",
+        "advanced packaging",
+        "ai infrastructure"
       ]
     },
     {
@@ -463,10 +862,23 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/power-efficiency-enables-ai-era-client-performance",
       "published_at": "2026-04-24T14:16:17.640000+00:00",
       "summary": "By combining top performance with substantial reductions in active idle power and performance per watt, the Micron 3610 addresses a key challenge in edge AI platforms: sustaining high performance while minimizing energy consumption.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "“Overcoming Technological Limits Requires the Integration of Memory and Logic”: SK hynix Presents Vision at TSMC Symposium",
+      "url": "https://news.skhynix.com/en/tsmc-technology-symposium-2026/",
+      "published_at": "2026-04-23T00:00:00+00:00",
+      "summary": "Tags: HBM, HBM3E, HBM4, TSMC",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm"
       ]
     },
     {
@@ -476,10 +888,25 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260423-1.html",
       "published_at": "2026-04-23T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "What Does P&T7 Mean for Cheongju? A New AI Memory Production Hub and Catalyst for the Local Economy",
+      "url": "https://news.skhynix.com/en/skhynix-chungju-pt7/",
+      "published_at": "2026-04-22T00:00:00+00:00",
+      "summary": "Tags: Advanced Packaging, AI Infrastructure, AI Memory, Balanced Regional Development, P&T7, Regional Revitalization",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "advanced packaging",
+        "ai memory",
+        "ai infrastructure"
       ]
     },
     {
@@ -489,7 +916,7 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260421-1.html",
       "published_at": "2026-04-21T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
@@ -502,10 +929,84 @@
       "url": "https://www.micron.com/about/blog/storage/ssd/why-io-size-changes-the-economics-of-qlc-vs-hdd",
       "published_at": "2026-04-14T05:30:00+00:00",
       "summary": "Storage performance and cost are commonly compared using $/TB, but the IO size of the workload has a first order effect on the amount of capacity required to deliver a given level of throughput.",
-      "collected_at": "2026-09-04T07:16:44.879580+00:00",
+      "collected_at": "2026-09-04T07:24:24.930493+00:00",
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix Begins Supply of 321-layer QLC NAND cSSD, Reinforcing AI PC Storage Leadership",
+      "url": "https://news.skhynix.com/en/begin-supply-321-layer-qlc-nand-cssd/",
+      "published_at": "2026-04-08T00:00:00+00:00",
+      "summary": "Tags: 321-layer 4D NAND, AI, NAND Flash, PQC21, QLC",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "nand flash",
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "[SOD’s Review] GTC 2026: From Models to Infrastructure – How the AI Race Is Shifting and What It Means for SK hynix",
+      "url": "https://news.skhynix.com/en/gtc-2026-review/",
+      "published_at": "2026-03-27T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, DRAM, eSSD, GTC, HBM4, NAND",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory",
+        "ssd"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung and AMD Expand Strategic Collaboration on Next-Generation AI Memory Solutions",
+      "url": "https://news.samsung.com/global/samsung-and-amd-expand-strategic-collaboration-on-next-generation-ai-memory-solutions",
+      "published_at": "2026-03-18T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "ai memory",
+        "memory solution"
+      ]
+    },
+    {
+      "source_id": "samsung",
+      "company": "Samsung Electronics",
+      "title": "Samsung Unveils HBM4E, Showcasing Comprehensive AI Solutions, NVIDIA Partnership and Vision at NVIDIA GTC 2026",
+      "url": "https://news.samsung.com/global/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026",
+      "published_at": "2026-03-17T00:00:00+00:00",
+      "summary": "Official category: Semiconductors",
+      "collected_at": "2026-09-04T07:24:15.923025+00:00",
+      "selection_method": "official_semiconductors_category",
+      "matched_keywords": [
+        "semiconductor",
+        "hbm"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "Chey Tae-won, Chairman of SK Group, Attends GTC 2026 for First Time, Strengthens Role as “Innovation Partner” in AI Ecosystem",
+      "url": "https://news.skhynix.com/en/gtc-2026-ai-partnership/",
+      "published_at": "2026-03-17T00:00:00+00:00",
+      "summary": "Tags: AI Memory, GTC, HBM, HBM4, Partnership",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "ai memory",
+        "ai ecosystem"
       ]
     },
     {
@@ -515,10 +1016,39 @@
       "url": "https://www.kioxia.com/en-jp/business/news/2026/20260317-1.html",
       "published_at": "2026-03-17T00:00:00+00:00",
       "summary": "Official category: News Releases",
-      "collected_at": "2026-09-04T07:16:42.672937+00:00",
+      "collected_at": "2026-09-04T07:24:22.890594+00:00",
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix Reaffirms Partnership With NVIDIA at GTC 2026, Unveiling Latest AI Memory Portfolio",
+      "url": "https://news.skhynix.com/en/gtc-2026-exhibition-booth/",
+      "published_at": "2026-03-16T00:00:00+00:00",
+      "summary": "Tags: AI, AI Memory, DRAM, GTC, HBM, HBM4, NAND",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "hbm",
+        "dram",
+        "ai memory"
+      ]
+    },
+    {
+      "source_id": "sk_hynix",
+      "company": "SK hynix",
+      "title": "SK hynix Develops 1c LPDDR6, 6th-Generation 10nm-Class DRAM",
+      "url": "https://news.skhynix.com/en/1c-lpddr6-development-2026/",
+      "published_at": "2026-03-10T00:00:00+00:00",
+      "summary": "Tags: DRAM, LPDDR6, On-Device AI",
+      "collected_at": "2026-09-04T07:24:20.967011+00:00",
+      "selection_method": "official_tech_ai_category",
+      "matched_keywords": [
+        "dram",
+        "lpddr"
       ]
     }
   ]
