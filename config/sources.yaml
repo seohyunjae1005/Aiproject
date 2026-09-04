@@ -47,6 +47,15 @@ sources:
     status: "verified"
     notes: "Official XML sitemap exposes news title, publication date, and URL; collect every release from the last 180 days, then label technology signals separately from business and financial context."
 
+  - id: intel
+    company: "Intel"
+    company_group: "logic_idm_foundry"
+    priority: "target"
+    official_url: "https://www.intel.com/content/www/us/en/newsroom/home.html"
+    preferred_method: "official_newsroom_html"
+    status: "verified"
+    notes: "Collect the official newsroom cards for 180 days and distinguish process, foundry, manufacturing, and advanced-packaging signals from general company context."
+
   - id: asml
     company: "ASML"
     company_group: "equipment"
