@@ -10,7 +10,9 @@ from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
 
-DEFAULT_USER_AGENT = "SemiconductorTrendTracker/0.1 (+educational-project)"
+DEFAULT_USER_AGENT = (
+    "Mozilla/5.0 (compatible; SemiconductorTrendTracker/0.1; educational project)"
+)
 
 
 @dataclass(frozen=True)

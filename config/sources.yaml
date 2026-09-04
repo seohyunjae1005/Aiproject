@@ -43,9 +43,9 @@ sources:
     company_group: "foundry"
     priority: "target"
     official_url: "https://pr.tsmc.com/english/latest-news"
-    preferred_method: "html"
-    status: "candidate"
-    notes: "Stable latest-news list and article pages observed; filter routine financial notices if needed."
+    preferred_method: "official_news_sitemap"
+    status: "verified"
+    notes: "Official XML sitemap exposes news title, publication date, and URL; collect every release from the last 180 days, then label technology signals separately from business and financial context."
 
   - id: asml
     company: "ASML"

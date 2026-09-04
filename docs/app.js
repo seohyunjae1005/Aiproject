@@ -38,8 +38,11 @@ function render() {
         <time datetime="${escapeHtml(article.published_at)}">${formatDate(article.published_at)}</time>
       </div>
       <h2>${escapeHtml(article.title)}</h2>
-      <div class="keywords" aria-label="선별 근거">
-        ${(article.matched_keywords || []).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
+      <div class="keywords" aria-label="분류 근거">
+        ${((article.matched_keywords || []).length
+          ? article.matched_keywords
+          : [article.source_category || "공식 발표"]
+        ).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
       </div>
       <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기 →</a>
     </article>
