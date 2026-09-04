@@ -1,0 +1,46 @@
+name: Daily semiconductor news update
+
+on:
+  schedule:
+    # GitHub cron은 UTC 기준: 22:00 UTC = 다음 날 07:00 KST
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-semiconductor-update
+  cancel-in-progress: false
+
+jobs:
+  collect-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect official newsroom feeds
+        run: python scripts/run_daily_collection.py
+
+      - name: Build public website data
+        run: python scripts/build_site.py
+
+      - name: Commit updated website data
+        run: |
+          if git diff --quiet -- docs/data/latest.json; then
+            echo "No website data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/latest.json
+          git commit -m "Update daily semiconductor news"
+          git push
