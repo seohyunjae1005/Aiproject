@@ -17,6 +17,7 @@ COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_micron_news.py",
     PROJECT_ROOT / "scripts" / "fetch_tsmc_news.py",
     PROJECT_ROOT / "scripts" / "fetch_intel_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_asml_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
@@ -25,6 +26,7 @@ INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "micron_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "tsmc_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "intel_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "asml_semiconductor.json",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 

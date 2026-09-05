@@ -61,9 +61,9 @@ sources:
     company_group: "equipment"
     priority: "must"
     official_url: "https://www.asml.com/en/news/press-releases"
-    preferred_method: "html_or_embedded_data"
-    status: "needs_spike"
-    notes: "Listing appears dynamic in some clients; inspect embedded data or a public feed before browser automation."
+    preferred_method: "official_sitemap_plus_article_metadata"
+    status: "verified"
+    notes: "Collect press releases and technology stories from official sitemaps for 180 days, then label EUV, DUV, lithography, metrology, inspection, equipment, and manufacturing relevance."
 
   - id: applied_materials
     company: "Applied Materials"
