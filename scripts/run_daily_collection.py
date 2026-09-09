@@ -28,7 +28,17 @@ INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "intel_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "asml_semiconductor.json",
 )
+COMPANIES = (
+    "Samsung Electronics",
+    "SK hynix",
+    "Kioxia",
+    "Micron",
+    "TSMC",
+    "Intel",
+    "ASML",
+)
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
+PUBLISHED_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
 
 
 def _published_sort_value(article: dict) -> str:
@@ -37,8 +47,15 @@ def _published_sort_value(article: dict) -> str:
 
 def main() -> None:
     print("=== 우선순위 기업 최신 뉴스 수집 시작 ===")
+    published_by_company: dict[str, list[dict]] = {}
+    if PUBLISHED_PATH.exists():
+        previous_payload = json.loads(PUBLISHED_PATH.read_text(encoding="utf-8"))
+        for row in previous_payload.get("articles", []):
+            company = row.get("company", "Unknown")
+            published_by_company.setdefault(company, []).append(row)
+
     collection_status: dict[str, str] = {}
-    for collector, output_path in zip(COLLECTORS, INPUT_PATHS):
+    for collector, output_path, company in zip(COLLECTORS, INPUT_PATHS, COMPANIES):
         print(f"\n[{collector.stem}]")
         result = subprocess.run(
             [sys.executable, str(collector)], cwd=PROJECT_ROOT, check=False
@@ -49,6 +66,17 @@ def main() -> None:
             collection_status[collector.stem] = "cached_after_error"
             print(
                 f"경고: 새 수집에 실패해 기존 저장자료를 사용합니다: {output_path.name}"
+            )
+        elif published_by_company.get(company):
+            fallback_rows = published_by_company[company]
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_text(
+                json.dumps(fallback_rows, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            collection_status[collector.stem] = "published_cache_after_error"
+            print(
+                f"경고: 새 수집에 실패해 직전 공개자료 {len(fallback_rows)}건을 사용합니다."
             )
         else:
             collection_status[collector.stem] = "unavailable"
