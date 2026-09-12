@@ -1,4 +1,13 @@
-const state = { articles: [], company: "all", query: "" };
+const state = {
+  articles: [],
+  company: "all",
+  relevance: "all",
+  job: "all",
+  domain: "all",
+  signal: "all",
+  days: "all",
+  query: "",
+};
 
 const grid = document.querySelector("#article-grid");
 const empty = document.querySelector("#empty");
@@ -15,16 +24,54 @@ function escapeHtml(value) {
 
 function formatDate(value) {
   if (!value) return "날짜 미상";
-  return new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "short", day: "numeric" }).format(new Date(value));
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "날짜 미상";
+  return new Intl.DateTimeFormat("ko-KR", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(date);
+}
+
+function withinDays(value, days) {
+  if (days === "all") return true;
+  const published = new Date(value).getTime();
+  if (Number.isNaN(published)) return false;
+  const cutoff = Date.now() - Number(days) * 24 * 60 * 60 * 1000;
+  return published >= cutoff;
+}
+
+function includesValue(values, selected) {
+  return selected === "all" || (values || []).includes(selected);
 }
 
 function visibleArticles() {
   const query = state.query.trim().toLocaleLowerCase("ko");
   return state.articles.filter((article) => {
-    const companyMatch = state.company === "all" || article.company === state.company;
-    const text = [article.title, article.company, ...(article.matched_keywords || [])].join(" ").toLocaleLowerCase("ko");
-    return companyMatch && (!query || text.includes(query));
+    const searchable = [
+      article.title,
+      article.summary,
+      article.company,
+      ...(article.matched_keywords || []),
+      ...(article.tech_domains || []),
+      ...(article.job_roles || []),
+      ...(article.signal_types || []),
+    ].join(" ").toLocaleLowerCase("ko");
+
+    return (state.company === "all" || article.company === state.company)
+      && (state.relevance === "all" || article.relevance === state.relevance)
+      && includesValue(article.job_roles, state.job)
+      && includesValue(article.tech_domains, state.domain)
+      && includesValue(article.signal_types, state.signal)
+      && withinDays(article.published_at, state.days)
+      && (!query || searchable.includes(query));
   });
+}
+
+function badgeList(values, className, limit = 3) {
+  return (values || []).slice(0, limit)
+    .map((value) => `<span class="badge ${className}">${escapeHtml(value)}</span>`)
+    .join("");
 }
 
 function render() {
@@ -38,11 +85,19 @@ function render() {
         <time datetime="${escapeHtml(article.published_at)}">${formatDate(article.published_at)}</time>
       </div>
       <h2>${escapeHtml(article.title)}</h2>
+      <div class="classification" aria-label="직무와 기술 분류">
+        <span class="badge relevance ${article.relevance === "high" ? "high" : "context"}">
+          ${article.relevance === "high" ? "핵심 기술" : "참고 동향"}
+        </span>
+        ${badgeList(article.job_roles, "job")}
+        ${badgeList(article.tech_domains, "domain")}
+        ${badgeList(article.signal_types, "signal", 2)}
+      </div>
       <div class="keywords" aria-label="분류 근거">
         ${((article.matched_keywords || []).length
           ? article.matched_keywords
           : [article.source_category || "공식 발표"]
-        ).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
+        ).slice(0, 6).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
       </div>
       <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기 →</a>
     </article>
@@ -68,6 +123,68 @@ function createCompanyFilters(companies) {
   });
 }
 
+function fillSelect(selector, values, field) {
+  const select = document.querySelector(selector);
+  const counts = new Map();
+  state.articles.forEach((article) => {
+    (article[field] || []).forEach((value) => {
+      counts.set(value, (counts.get(value) || 0) + 1);
+    });
+  });
+  values.filter((value) => counts.has(value)).forEach((value) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = `${value} (${counts.get(value)})`;
+    select.append(option);
+  });
+}
+
+function bindFilters() {
+  document.querySelector("#importance-filters").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-relevance]");
+    if (!button) return;
+    document.querySelectorAll("#importance-filters button").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+    state.relevance = button.dataset.relevance;
+    render();
+  });
+
+  const selectBindings = {
+    "#job-filter": "job",
+    "#domain-filter": "domain",
+    "#signal-filter": "signal",
+    "#days-filter": "days",
+  };
+  Object.entries(selectBindings).forEach(([selector, key]) => {
+    document.querySelector(selector).addEventListener("change", (event) => {
+      state[key] = event.target.value;
+      render();
+    });
+  });
+
+  document.querySelector("#reset-filters").addEventListener("click", () => {
+    state.company = "all";
+    state.relevance = "all";
+    state.job = "all";
+    state.domain = "all";
+    state.signal = "all";
+    state.days = "all";
+    state.query = "";
+    document.querySelector("#search").value = "";
+    document.querySelectorAll("#company-filters button").forEach((button) => {
+      button.classList.toggle("active", button.dataset.company === "all");
+    });
+    document.querySelectorAll("#importance-filters button").forEach((button) => {
+      button.classList.toggle("active", button.dataset.relevance === "all");
+    });
+    ["#job-filter", "#domain-filter", "#signal-filter", "#days-filter"].forEach((selector) => {
+      document.querySelector(selector).value = "all";
+    });
+    render();
+  });
+}
+
 async function loadData() {
   try {
     const response = await fetch("data/latest.json", { cache: "no-store" });
@@ -75,10 +192,14 @@ async function loadData() {
     const data = await response.json();
     state.articles = data.articles || [];
     const companies = Object.keys(data.company_counts || {});
+    const options = data.filter_options || {};
     document.querySelector("#total-count").textContent = data.article_count ?? state.articles.length;
     document.querySelector("#company-count").textContent = companies.length;
     document.querySelector("#updated").textContent = `최근 갱신 ${formatDate(data.generated_at)}`;
     createCompanyFilters(companies);
+    fillSelect("#job-filter", options.job_roles || [], "job_roles");
+    fillSelect("#domain-filter", options.tech_domains || [], "tech_domains");
+    fillSelect("#signal-filter", options.signal_types || [], "signal_types");
     render();
   } catch (error) {
     resultLine.textContent = "데이터를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.";
@@ -93,4 +214,5 @@ document.querySelector("#search").addEventListener("input", (event) => {
   render();
 });
 
+bindFilters();
 loadData();

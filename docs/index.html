@@ -48,12 +48,47 @@
         </label>
       </section>
 
+      <section class="filter-panel" aria-label="직무와 기술 상세 필터">
+        <div class="filter-group importance-group">
+          <span class="filter-label">중요도</span>
+          <div class="importance-filters" id="importance-filters">
+            <button class="filter active" type="button" data-relevance="all">전체</button>
+            <button class="filter" type="button" data-relevance="high">핵심 기술</button>
+            <button class="filter" type="button" data-relevance="context">참고 동향</button>
+          </div>
+        </div>
+        <div class="select-grid">
+          <label>
+            <span>관련 직무</span>
+            <select id="job-filter"><option value="all">모든 직무</option></select>
+          </label>
+          <label>
+            <span>기술 분야</span>
+            <select id="domain-filter"><option value="all">모든 기술</option></select>
+          </label>
+          <label>
+            <span>발표 유형</span>
+            <select id="signal-filter"><option value="all">모든 발표</option></select>
+          </label>
+          <label>
+            <span>게시 기간</span>
+            <select id="days-filter">
+              <option value="all">최근 180일 전체</option>
+              <option value="7">최근 7일</option>
+              <option value="30">최근 30일</option>
+              <option value="90">최근 90일</option>
+            </select>
+          </label>
+        </div>
+        <button class="reset-button" id="reset-filters" type="button">필터 초기화</button>
+      </section>
+
       <div class="result-line" id="result-line" aria-live="polite">기사를 불러오는 중입니다.</div>
       <section class="article-grid" id="article-grid" aria-label="선별 기사 목록"></section>
 
       <section class="empty" id="empty" hidden>
         <h2>조건에 맞는 기사가 없습니다.</h2>
-        <p>검색어를 바꾸거나 전체 기업을 선택해 보세요.</p>
+        <p>검색어를 바꾸거나 필터를 초기화해 보세요.</p>
       </section>
     </main>
 
