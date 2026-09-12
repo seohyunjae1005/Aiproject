@@ -7,6 +7,8 @@ const state = {
   signal: "all",
   days: "all",
   query: "",
+  language: "original",
+  translatedCount: 0,
 };
 
 const grid = document.querySelector("#article-grid");
@@ -51,6 +53,8 @@ function visibleArticles() {
     const searchable = [
       article.title,
       article.summary,
+      article.title_ko,
+      article.summary_ko,
       article.company,
       ...(article.matched_keywords || []),
       ...(article.tech_domains || []),
@@ -78,13 +82,19 @@ function render() {
   const rows = visibleArticles();
   resultLine.textContent = `${rows.length}개의 기술 신호를 표시합니다.`;
   empty.hidden = rows.length !== 0;
-  grid.innerHTML = rows.map((article) => `
+  grid.innerHTML = rows.map((article) => {
+    const showKorean = state.language === "ko" && article.title_ko;
+    const displayTitle = showKorean ? article.title_ko : article.title;
+    const translatedSummary = showKorean ? article.summary_ko : "";
+    return `
     <article class="article-card">
       <div class="card-meta">
         <span class="company">${escapeHtml(article.company)}</span>
         <time datetime="${escapeHtml(article.published_at)}">${formatDate(article.published_at)}</time>
       </div>
-      <h2>${escapeHtml(article.title)}</h2>
+      <h2>${escapeHtml(displayTitle)}</h2>
+      ${showKorean ? `<p class="original-title">원문: ${escapeHtml(article.title)}</p>` : ""}
+      ${translatedSummary ? `<p class="translated-summary">${escapeHtml(translatedSummary)}</p>` : ""}
       <div class="classification" aria-label="직무와 기술 분류">
         <span class="badge relevance ${article.relevance === "high" ? "high" : "context"}">
           ${article.relevance === "high" ? "핵심 기술" : "참고 동향"}
@@ -101,7 +111,20 @@ function render() {
       </div>
       <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기 →</a>
     </article>
-  `).join("");
+  `;
+  }).join("");
+}
+
+function updateLanguageButton() {
+  const button = document.querySelector("#language-toggle");
+  button.disabled = state.translatedCount === 0;
+  if (state.translatedCount === 0) {
+    button.textContent = "한국어 번역 준비 중";
+  } else if (state.language === "ko") {
+    button.textContent = "영문 원문 보기";
+  } else {
+    button.textContent = `한국어 번역 보기 (${state.translatedCount})`;
+  }
 }
 
 function createCompanyFilters(companies) {
@@ -193,6 +216,7 @@ async function loadData() {
     state.articles = data.articles || [];
     const companies = Object.keys(data.company_counts || {});
     const options = data.filter_options || {};
+    state.translatedCount = Number(data.translation?.translated_count || 0);
     document.querySelector("#total-count").textContent = data.article_count ?? state.articles.length;
     document.querySelector("#company-count").textContent = companies.length;
     document.querySelector("#updated").textContent = `최근 갱신 ${formatDate(data.generated_at)}`;
@@ -200,6 +224,7 @@ async function loadData() {
     fillSelect("#job-filter", options.job_roles || [], "job_roles");
     fillSelect("#domain-filter", options.tech_domains || [], "tech_domains");
     fillSelect("#signal-filter", options.signal_types || [], "signal_types");
+    updateLanguageButton();
     render();
   } catch (error) {
     resultLine.textContent = "데이터를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.";
@@ -211,6 +236,12 @@ async function loadData() {
 
 document.querySelector("#search").addEventListener("input", (event) => {
   state.query = event.target.value;
+  render();
+});
+
+document.querySelector("#language-toggle").addEventListener("click", () => {
+  state.language = state.language === "ko" ? "original" : "ko";
+  updateLanguageButton();
   render();
 });
 
