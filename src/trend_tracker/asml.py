@@ -109,7 +109,18 @@ def _page_data(url: str) -> tuple[str, str, datetime | None]:
 
 def _keyword_matches(title: str) -> list[str]:
     text = title.casefold()
-    return [keyword for keyword in TECH_KEYWORDS if keyword in text]
+    matches: list[str] = []
+    for keyword in TECH_KEYWORDS:
+        if len(keyword) <= 3 and keyword.isalnum():
+            found = re.search(
+                rf"(?<![a-z0-9]){re.escape(keyword)}(?![a-z0-9])",
+                text,
+            )
+        else:
+            found = keyword in text
+        if found:
+            matches.append(keyword)
+    return matches
 
 
 def fetch_asml_news(

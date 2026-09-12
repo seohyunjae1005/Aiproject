@@ -102,7 +102,8 @@ DOMAIN_KEYWORDS = {
         "facility", "cleanroom", "plant", "lab network", "장비", "설비", "팹", "생산", "공장",
     ),
     "소재·부품": (
-        "material", "materials", "wafer", "silicon carbide", "sic", "gallium nitride",
+        "semiconductor material", "advanced material", "materials engineering", "wafer",
+        "silicon carbide", "sic", "gallium nitride",
         "gan", "substrate", "chemical", "gas delivery", "component", "부품", "소재", "웨이퍼",
     ),
     "AI·데이터": (
@@ -123,7 +124,6 @@ def _article_text(article: dict) -> str:
     values = (
         article.get("title"),
         article.get("summary"),
-        article.get("matched_keywords"),
         article.get("source_category"),
     )
     return f" {' '.join(_flatten(value) for value in values).casefold()} "
