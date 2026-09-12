@@ -133,7 +133,7 @@ def _contains(text: str, keyword: str) -> bool:
     needle = keyword.casefold()
     if needle.startswith(" ") or needle.endswith(" "):
         return needle in text
-    if len(needle) <= 3 and needle.isalnum():
+    if re.fullmatch(r"[a-z0-9]+(?: [a-z0-9]+)*", needle):
         return re.search(rf"(?<![a-z0-9]){re.escape(needle)}(?![a-z0-9])", text) is not None
     return needle in text
 
@@ -161,7 +161,11 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
         "노광·마스크", "식각", "증착·박막", "이온주입·열처리", "세정·CMP", "계측·검사·수율",
     }
     if domain_set & unit_process_domains or _has_any(
-        text, ("process", "mass production", "manufacturing", "recipe", "공정", "양산")
+        text,
+        (
+            "process", "mass production", "volume production", "production capacity",
+            "manufacturing", "recipe", "공정", "양산",
+        ),
     ):
         roles.append("공정기술·양산기술")
 
