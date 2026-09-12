@@ -21,6 +21,7 @@ COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_applied_materials_news.py",
     PROJECT_ROOT / "scripts" / "fetch_lam_research_news.py",
     PROJECT_ROOT / "scripts" / "fetch_tokyo_electron_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_kla_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
@@ -33,6 +34,7 @@ INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "applied_materials_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "lam_research_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "tokyo_electron_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "kla_semiconductor.json",
 )
 COMPANIES = (
     "Samsung Electronics",
@@ -45,6 +47,7 @@ COMPANIES = (
     "Applied Materials",
     "Lam Research",
     "Tokyo Electron",
+    "KLA",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 PUBLISHED_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
