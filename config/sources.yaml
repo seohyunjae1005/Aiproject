@@ -80,17 +80,17 @@ sources:
     priority: "must"
     official_url: "https://newsroom.lamresearch.com/press-releases?l=100"
     preferred_method: "html"
-    status: "candidate"
-    notes: "Server-rendered list exposes title, date, summary, and article links."
+    status: "verified"
+    notes: "Collect up to 100 official press releases, retain the most recent 180 days, and distinguish etch, deposition, cleaning, EUV, wafer, logic, memory, packaging, materials, and yield signals from financial and corporate context."
 
   - id: tokyo_electron
     company: "Tokyo Electron"
     company_group: "equipment"
     priority: "must"
     official_url: "https://www.tel.com/news/"
-    preferred_method: "html"
-    status: "candidate"
-    notes: "News list is accessible; filter to product, technology, and relevant corporate topics."
+    preferred_method: "official_year_archive_html"
+    status: "verified"
+    notes: "Collect the official year archive for 180 days and use the Products / Services category plus equipment and process keywords to identify high-relevance signals while retaining other items as context."
 
   - id: kla
     company: "KLA"

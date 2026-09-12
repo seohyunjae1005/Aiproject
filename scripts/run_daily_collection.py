@@ -19,6 +19,8 @@ COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_intel_news.py",
     PROJECT_ROOT / "scripts" / "fetch_asml_news.py",
     PROJECT_ROOT / "scripts" / "fetch_applied_materials_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_lam_research_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_tokyo_electron_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
@@ -29,6 +31,8 @@ INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "intel_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "asml_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "applied_materials_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "lam_research_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "tokyo_electron_semiconductor.json",
 )
 COMPANIES = (
     "Samsung Electronics",
@@ -39,6 +43,8 @@ COMPANIES = (
     "Intel",
     "ASML",
     "Applied Materials",
+    "Lam Research",
+    "Tokyo Electron",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 PUBLISHED_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
@@ -52,7 +58,11 @@ def main() -> None:
     print("=== 우선순위 기업 최신 뉴스 수집 시작 ===")
     published_by_company: dict[str, list[dict]] = {}
     if PUBLISHED_PATH.exists():
-        previous_payload = json.loads(PUBLISHED_PATH.read_text(encoding="utf-8"))
+        try:
+            previous_payload = json.loads(PUBLISHED_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            previous_payload = {}
+            print("경고: 직전 공개자료가 완전한 JSON이 아니어서 캐시로 사용하지 않습니다.")
         for row in previous_payload.get("articles", []):
             company = row.get("company", "Unknown")
             published_by_company.setdefault(company, []).append(row)
