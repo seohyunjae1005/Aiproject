@@ -94,9 +94,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -205,8 +203,7 @@
       "signal_types": [
         "기술·제품",
         "투자·생산",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -261,8 +258,7 @@
       "signal_types": [
         "기술·제품",
         "투자·생산",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -407,11 +403,9 @@
       "relevance": "high",
       "tech_domains": [
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -467,7 +461,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "행사·인재"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -566,6 +560,7 @@
         "장비·Fab·인프라"
       ],
       "job_roles": [
+        "공정기술·양산기술",
         "인프라·안전"
       ],
       "signal_types": [
@@ -641,8 +636,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -670,12 +664,10 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -727,8 +719,7 @@
         "인프라·안전"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -751,9 +742,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "투자·생산",
-        "경영·실적",
-        "행사·인재"
+        "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -810,8 +799,7 @@
         "평가분석·품질·PE"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -831,7 +819,6 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "설계",
         "AE·솔루션",
         "SW·데이터·AI"
       ],
@@ -884,7 +871,6 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "투자·생산",
         "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -905,14 +891,10 @@
       ],
       "relevance": "high",
       "tech_domains": [
-        "패키징·테스트",
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
-        "P&T·패키지개발",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -984,16 +966,13 @@
       "relevance": "high",
       "tech_domains": [
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1016,7 +995,6 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "투자·생산",
         "경영·실적",
         "행사·인재"
       ],
@@ -1066,7 +1044,6 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "투자·생산",
         "경영·실적",
         "행사·인재"
       ],
@@ -1091,7 +1068,6 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "협업·공급망",
         "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -1116,7 +1092,6 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
         "투자·생산"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -1141,8 +1116,6 @@
       ],
       "job_roles": [
         "평가분석·품질·PE",
-        "설계",
-        "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -1171,8 +1144,7 @@
       ],
       "job_roles": [
         "R&D공정·공정설계",
-        "설비기술·기반기술",
-        "AE·솔루션"
+        "설비기술·기반기술"
       ],
       "signal_types": [
         "기술·제품",
@@ -1205,8 +1177,7 @@
       ],
       "signal_types": [
         "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1226,10 +1197,9 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "AE·솔루션"
+        "산업·사업 공통"
       ],
       "signal_types": [
-        "기술·제품",
         "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -1250,17 +1220,14 @@
       "source_category": "Technology",
       "relevance": "high",
       "tech_domains": [
-        "파운드리·로직·소자"
+        "기업·산업 일반"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "소자",
-        "AE·솔루션"
+        "R&D공정·공정설계"
       ],
       "signal_types": [
         "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1378,7 +1345,7 @@
         "AE·솔루션"
       ],
       "signal_types": [
-        "협업·공급망"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1481,8 +1448,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1505,7 +1471,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "경영·실적"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1531,8 +1497,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -1603,7 +1568,6 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -1628,7 +1592,6 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -1919,8 +1882,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2037,7 +1999,7 @@
         "평가분석·품질·PE"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2111,8 +2073,7 @@
       ],
       "signal_types": [
         "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2141,8 +2102,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2341,8 +2301,7 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "AE·솔루션",
-        "인프라·안전"
+        "AE·솔루션"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -2579,8 +2538,7 @@
       ],
       "signal_types": [
         "기술·제품",
-        "투자·생산",
-        "행사·인재"
+        "투자·생산"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2655,16 +2613,13 @@
       "relevance": "high",
       "tech_domains": [
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -2865,7 +2820,6 @@
       ],
       "relevance": "high",
       "tech_domains": [
-        "DRAM·HBM",
         "AI·데이터"
       ],
       "job_roles": [
@@ -3096,7 +3050,6 @@
         "설비기술·기반기술",
         "P&T·패키지개발",
         "소자",
-        "설계",
         "SW·데이터·AI",
         "인프라·안전"
       ],
@@ -3156,8 +3109,7 @@
         "인프라·안전"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3201,20 +3153,16 @@
       ],
       "relevance": "high",
       "tech_domains": [
-        "패키징·테스트",
         "NAND·스토리지",
         "AI·데이터"
       ],
       "job_roles": [
         "R&D공정·공정설계",
-        "P&T·패키지개발",
-        "평가분석·품질·PE",
         "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3347,8 +3295,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3376,7 +3323,6 @@
         "소자"
       ],
       "signal_types": [
-        "기술·제품",
         "투자·생산"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -3404,8 +3350,7 @@
       ],
       "signal_types": [
         "기술·제품",
-        "투자·생산",
-        "협업·공급망"
+        "투자·생산"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3468,11 +3413,10 @@
       "source_category": "News release",
       "relevance": "context",
       "tech_domains": [
-        "장비·Fab·인프라",
         "소재·부품"
       ],
       "job_roles": [
-        "설비기술·기반기술"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품",
@@ -3527,7 +3471,6 @@
         "식각",
         "증착·박막",
         "파운드리·로직·소자",
-        "장비·Fab·인프라",
         "소재·부품"
       ],
       "job_roles": [
@@ -3711,7 +3654,7 @@
         "AE·솔루션"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3732,17 +3675,13 @@
       "relevance": "high",
       "tech_domains": [
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3762,10 +3701,10 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "AE·솔루션"
+        "산업·사업 공통"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3816,8 +3755,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -3897,7 +3835,6 @@
       ],
       "signal_types": [
         "기술·제품",
-        "투자·생산",
         "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
@@ -3941,7 +3878,7 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "설계"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -3990,15 +3927,13 @@
       "source_category": "Data Center",
       "relevance": "context",
       "tech_domains": [
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4089,7 +4024,6 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "공정기술·양산기술",
         "AE·솔루션"
       ],
       "signal_types": [
@@ -4115,11 +4049,10 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "평가분석·품질·PE"
+        "산업·사업 공통"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4215,7 +4148,6 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "공정기술·양산기술",
         "AE·솔루션"
       ],
       "signal_types": [
@@ -4275,8 +4207,7 @@
         "설비기술·기반기술"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4324,7 +4255,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "행사·인재"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4523,9 +4454,7 @@
       ],
       "signal_types": [
         "기술·제품",
-        "투자·생산",
-        "협업·공급망",
-        "행사·인재"
+        "투자·생산"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4574,7 +4503,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "행사·인재"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4690,18 +4619,15 @@
       "source_category": "Innovation",
       "relevance": "high",
       "tech_domains": [
-        "패키징·테스트",
-        "소재·부품"
+        "패키징·테스트"
       ],
       "job_roles": [
         "R&D공정·공정설계",
         "설비기술·기반기술",
-        "P&T·패키지개발",
-        "설계"
+        "P&T·패키지개발"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4753,8 +4679,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4779,7 +4704,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "경영·실적"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -4903,13 +4828,11 @@
       ],
       "job_roles": [
         "R&D공정·공정설계",
-        "소자",
-        "AE·솔루션"
+        "소자"
       ],
       "signal_types": [
         "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -5025,9 +4948,7 @@
         "산업·사업 공통"
       ],
       "signal_types": [
-        "투자·생산",
-        "경영·실적",
-        "행사·인재"
+        "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -5227,8 +5148,7 @@
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -5545,11 +5465,10 @@
       "source_category": "News release",
       "relevance": "context",
       "tech_domains": [
-        "패키징·테스트"
+        "기업·산업 일반"
       ],
       "job_roles": [
-        "P&T·패키지개발",
-        "평가분석·품질·PE"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "협업·공급망"
@@ -5643,11 +5562,10 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "공정기술·양산기술",
         "AE·솔루션"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -5866,8 +5784,7 @@
       "relevance": "high",
       "tech_domains": [
         "증착·박막",
-        "파운드리·로직·소자",
-        "장비·Fab·인프라"
+        "파운드리·로직·소자"
       ],
       "job_roles": [
         "공정기술·양산기술",
@@ -6265,8 +6182,7 @@
       ],
       "job_roles": [
         "소자",
-        "AE·솔루션",
-        "인프라·안전"
+        "AE·솔루션"
       ],
       "signal_types": [
         "기술·제품"
@@ -6347,8 +6263,7 @@
         "AE·솔루션"
       ],
       "signal_types": [
-        "기술·제품",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -6399,10 +6314,8 @@
       ],
       "signal_types": [
         "기술·제품",
-        "투자·생산",
         "협업·공급망",
-        "경영·실적",
-        "행사·인재"
+        "경영·실적"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -6427,13 +6340,11 @@
       ],
       "job_roles": [
         "R&D공정·공정설계",
-        "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
         "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -6478,13 +6389,10 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "AE·솔루션",
         "SW·데이터·AI"
       ],
       "signal_types": [
-        "기술·제품",
-        "협업·공급망",
-        "행사·인재"
+        "기술·제품"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
@@ -6505,12 +6413,10 @@
       "relevance": "high",
       "tech_domains": [
         "DRAM·HBM",
-        "장비·Fab·인프라",
         "AI·데이터"
       ],
       "job_roles": [
         "R&D공정·공정설계",
-        "설비기술·기반기술",
         "SW·데이터·AI"
       ],
       "signal_types": [
@@ -6561,11 +6467,10 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "공정기술·양산기술",
         "AE·솔루션"
       ],
       "signal_types": [
-        "기술·제품"
+        "기업·산업 일반"
       ],
       "classification_version": "job_tech_taxonomy_v1"
     },
