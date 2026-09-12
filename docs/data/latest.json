@@ -39,7 +39,17 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -52,7 +62,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -65,7 +85,20 @@
       "selection_method": "official_semiconductors_category",
       "matched_keywords": [
         "semiconductor"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -79,7 +112,20 @@
       "matched_keywords": [
         "semiconductor",
         "ai memory"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -94,7 +140,19 @@
         "ai"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -109,7 +167,21 @@
         "euv"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "노광·마스크",
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -125,7 +197,22 @@
         "manufacturing"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -141,7 +228,19 @@
         "high na"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "노광·마스크"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -154,7 +253,22 @@
       "selection_method": "official_semiconductors_category",
       "matched_keywords": [
         "semiconductor"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -167,7 +281,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "노광·마스크"
+      ],
+      "job_roles": [
+        "공정기술·양산기술"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -182,7 +306,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -197,7 +331,20 @@
         "foundry"
       ],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "노광·마스크",
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -212,7 +359,17 @@
       "source_category": [
         "Event"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -225,7 +382,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -240,7 +407,21 @@
         "hbm",
         "ai memory",
         "ai ecosystem"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -253,7 +434,21 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "dram"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -268,7 +463,17 @@
         "semiconductor"
       ],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -282,7 +487,20 @@
       "matched_keywords": [
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -295,7 +513,17 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -308,7 +536,19 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "memory industry"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -323,7 +563,20 @@
         "flash memory",
         "3d flash",
         "production capacity"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -336,7 +589,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -349,7 +612,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -363,7 +636,19 @@
       "matched_keywords": [
         "semiconductor",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -381,7 +666,22 @@
         "memory solution",
         "ssd",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -394,7 +694,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -409,7 +719,22 @@
         "semiconductor"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -422,7 +747,19 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -435,7 +772,20 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -452,7 +802,22 @@
         "advanced packaging",
         "hybrid bonding",
         "back-end process"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "DRAM·HBM"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "P&T·패키지개발",
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -465,7 +830,19 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -480,7 +857,17 @@
       "source_category": [
         "Event"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -493,7 +880,18 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -508,7 +906,23 @@
         "hbm",
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "P&T·패키지개발",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -521,7 +935,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -534,7 +958,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -550,7 +984,22 @@
         "ai memory",
         "ai infrastructure",
         "ai ecosystem"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -563,7 +1012,19 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -578,7 +1039,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -591,7 +1062,19 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -604,7 +1087,18 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "협업·공급망",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -617,7 +1111,19 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -631,7 +1137,22 @@
       "matched_keywords": [
         "flash memory",
         "3d flash"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -648,7 +1169,22 @@
         "fabrication"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "AE·솔루션",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -664,7 +1200,22 @@
         "epic center"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -677,7 +1228,18 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -693,7 +1255,21 @@
         "image sensor"
       ],
       "source_category": "Technology",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "소자",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -706,7 +1282,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -720,7 +1306,19 @@
       "matched_keywords": [
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -733,7 +1331,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -746,7 +1354,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -759,7 +1377,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -775,7 +1403,23 @@
         "dram",
         "cxl",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -788,7 +1432,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -801,7 +1455,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -816,7 +1480,18 @@
         "semiconductor"
       ],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -829,7 +1504,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -843,7 +1528,20 @@
       "matched_keywords": [
         "semiconductor",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -856,7 +1554,18 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -870,7 +1579,18 @@
       "matched_keywords": [
         "flash memory",
         "3d flash"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -883,7 +1603,20 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -896,7 +1629,20 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -909,7 +1655,19 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "cxl"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -924,7 +1682,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -937,7 +1705,21 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "lpddr"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -950,7 +1732,19 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -965,7 +1759,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -979,7 +1783,19 @@
       "matched_keywords": [
         "bics flash",
         "sample shipments"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -995,7 +1811,18 @@
         "bics flash",
         "enterprise ssd",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1010,7 +1837,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -1024,7 +1861,19 @@
       "matched_keywords": [
         "flash memory",
         "ufs 5.0"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -1037,7 +1886,21 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1053,7 +1916,23 @@
         "advanced packaging"
       ],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "파운드리·로직·소자",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "P&T·패키지개발",
+        "소자",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -1066,7 +1945,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1081,7 +1970,17 @@
       "source_category": [
         "Disaster"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -1094,7 +1993,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "KLA Advance",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -1107,7 +2016,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1120,7 +2039,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Intel® Products",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1133,7 +2062,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1148,7 +2087,17 @@
       "source_category": [
         "Disaster"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -1162,7 +2111,20 @@
       "matched_keywords": [
         "semiconductor",
         "foundry"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1177,7 +2139,22 @@
         "semiconductor"
       ],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "파운드리·로직·소자",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "P&T·패키지개발",
+        "소자",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -1192,7 +2169,23 @@
         "ddr5",
         "nvme ssd",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "AE·솔루션",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -1205,7 +2198,18 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1218,7 +2222,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1231,7 +2245,20 @@
       "selection_method": "official_tech_ai_category",
       "matched_keywords": [
         "mass production"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1246,7 +2273,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -1260,7 +2297,18 @@
       "matched_keywords": [
         "ddr5",
         "lpddr"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1273,7 +2321,19 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1286,7 +2346,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -1299,7 +2370,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1312,7 +2393,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1328,7 +2419,17 @@
         "Topics",
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -1344,7 +2445,21 @@
         "high na"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "노광·마스크",
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -1357,7 +2472,17 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -1370,7 +2495,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1385,7 +2520,20 @@
         "manufacturing"
       ],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1400,7 +2548,18 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -1416,7 +2575,24 @@
         "mass production",
         "ssd",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1433,7 +2609,21 @@
         "ai memory",
         "ssd",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -1446,7 +2636,18 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1461,7 +2662,22 @@
         "semiconductor",
         "hbm",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1478,7 +2694,21 @@
         "ai memory",
         "ssd",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -1493,7 +2723,20 @@
         "flash memory",
         "3d flash",
         "memory products"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -1507,7 +2750,20 @@
       "matched_keywords": [
         "bics flash",
         "sample shipments"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -1520,7 +2776,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -1533,7 +2799,20 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -1546,7 +2825,19 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "dram"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1561,7 +2852,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -1575,7 +2876,24 @@
       "matched_keywords": [
         "ddr5",
         "lpddr"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "평가분석·품질·PE",
+        "설계",
+        "AE·솔루션",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1588,7 +2906,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1601,7 +2929,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1616,7 +2954,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1631,7 +2979,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1646,7 +3004,21 @@
         "manufacturing"
       ],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1661,7 +3033,17 @@
       "source_category": [
         "Disaster"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1680,7 +3062,23 @@
         "Topics",
         "IR"
       ],
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "설비기술·기반기술",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -1697,7 +3095,31 @@
         "advanced packaging"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "증착·박막",
+        "패키징·테스트",
+        "DRAM·HBM",
+        "파운드리·로직·소자",
+        "장비·Fab·인프라",
+        "소재·부품",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "P&T·패키지개발",
+        "소자",
+        "설계",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1712,7 +3134,17 @@
       "source_category": [
         "Disaster"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1728,7 +3160,21 @@
         "ai memory",
         "semiconductor cluster",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1743,7 +3189,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -1757,7 +3213,25 @@
       "matched_keywords": [
         "semiconductor",
         "ufs 5.0"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "P&T·패키지개발",
+        "평가분석·품질·PE",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1773,7 +3247,20 @@
         "dram",
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1788,7 +3275,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1803,7 +3300,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1818,7 +3325,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1834,7 +3351,22 @@
         "cxl",
         "ai memory",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1850,7 +3382,20 @@
         "manufacturing"
       ],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "파운드리·로직·소자",
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -1863,7 +3408,23 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "설비기술·기반기술",
+        "평가분석·품질·PE",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1876,7 +3437,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1889,7 +3460,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -1902,7 +3483,19 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -1917,7 +3510,19 @@
         "foundry"
       ],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -1934,7 +3539,24 @@
         "etch"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "식각",
+        "증착·박막",
+        "파운드리·로직·소자",
+        "장비·Fab·인프라",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -1947,7 +3569,17 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Technology story",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -1962,7 +3594,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -1977,7 +3619,19 @@
         "hbm",
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -1990,7 +3644,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2006,7 +3670,22 @@
         "manufacturing"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "소재·부품",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2019,7 +3698,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Wireless",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2032,7 +3721,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2047,7 +3746,23 @@
         "semiconductor",
         "hbm",
         "ai memory"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -2060,7 +3775,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2075,7 +3800,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2089,7 +3824,20 @@
       "matched_keywords": [
         "hbm",
         "ai memory"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2106,7 +3854,20 @@
         "cxl",
         "ai memory",
         "memory solution"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2119,7 +3880,19 @@
       "selection_method": "official_tech_ai_category",
       "matched_keywords": [
         "ai memory"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -2132,7 +3905,20 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ai inference"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2145,7 +3931,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2158,7 +3954,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Data Center",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "설계"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2172,7 +3978,22 @@
       "matched_keywords": [
         "hbm",
         "ai memory"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설계",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2185,7 +4006,19 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Data Center",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2198,7 +4031,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2211,7 +4054,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2226,7 +4079,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2239,7 +4102,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -2253,7 +4127,19 @@
       "matched_keywords": [
         "semiconductor",
         "hbm"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2268,7 +4154,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2283,7 +4179,18 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2298,7 +4205,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2311,7 +4228,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2326,7 +4254,19 @@
         "emib"
       ],
       "source_category": "Intel Foundry",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "P&T·패키지개발",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2342,7 +4282,21 @@
         "epic center"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "세정·CMP",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2357,7 +4311,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2370,7 +4334,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -2383,7 +4357,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2398,7 +4382,21 @@
         "hbm",
         "ai memory",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2411,7 +4409,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2424,7 +4432,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2437,7 +4455,17 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -2452,7 +4480,19 @@
         "panel-level"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "P&T·패키지개발"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -2465,7 +4505,19 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -2481,7 +4533,21 @@
         "manufacturing"
       ],
       "source_category": "Press release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -2494,7 +4560,18 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "flash storage"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -2509,7 +4586,17 @@
         "semiconductor"
       ],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2524,7 +4611,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -2537,7 +4634,19 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2550,7 +4659,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2563,7 +4682,17 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -2580,7 +4709,22 @@
         "interposer"
       ],
       "source_category": "Innovation",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "P&T·패키지개발",
+        "설계"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -2593,7 +4737,19 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Technology story",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2608,7 +4764,20 @@
         "semiconductor",
         "hbm",
         "semiconductor cluster"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2623,7 +4792,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2638,7 +4817,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2653,7 +4842,17 @@
         "epic center"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "설비기술·기반기술"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2668,7 +4867,20 @@
         "epic center"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "소재·부품",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -2681,7 +4893,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -2697,7 +4919,21 @@
         "image sensor"
       ],
       "source_category": "Technology",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "소자",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -2710,7 +4946,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -2723,7 +4969,17 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -2736,7 +4992,18 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2749,7 +5016,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2762,7 +5039,19 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2775,7 +5064,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2790,7 +5089,20 @@
         "advanced packaging"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "P&T·패키지개발"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2805,7 +5117,17 @@
       "source_category": [
         "Event"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -2818,7 +5140,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "KLA Advance",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -2831,7 +5163,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2844,7 +5186,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -2857,7 +5209,21 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "설계",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2872,7 +5238,22 @@
         "semiconductor",
         "advanced packaging",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "P&T·패키지개발",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2888,7 +5269,17 @@
         "IR",
         "Notice"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -2901,7 +5292,21 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "AE·솔루션",
+        "SW·데이터·AI",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -2916,7 +5321,17 @@
       "source_category": [
         "Topics"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -2929,7 +5344,19 @@
       "selection_method": "official_tech_ai_category",
       "matched_keywords": [
         "hbm"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -2942,7 +5369,18 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -2958,7 +5396,17 @@
         "a13"
       ],
       "source_category": "Technology",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -2971,7 +5419,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -2984,7 +5442,17 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "소재·부품"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -2997,7 +5465,17 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -3012,7 +5490,23 @@
         "advanced packaging",
         "ai memory",
         "ai infrastructure"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트",
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "P&T·패키지개발",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -3025,7 +5519,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -3038,7 +5542,18 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -3051,7 +5566,19 @@
       "selection_method": "applied_materials_official_rss_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "News release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "패키징·테스트",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "P&T·패키지개발",
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3066,7 +5593,17 @@
       "source_category": [
         "Disaster"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -3079,7 +5616,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -3092,7 +5639,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3105,7 +5662,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3124,7 +5692,18 @@
         "Products / Services",
         "IR"
       ],
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "패키징·테스트"
+      ],
+      "job_roles": [
+        "설비기술·기반기술",
+        "P&T·패키지개발"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "asml",
@@ -3137,7 +5716,17 @@
       "selection_method": "asml_official_sources_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "micron",
@@ -3150,7 +5739,19 @@
       "selection_method": "official_technology_category",
       "matched_keywords": [
         "Micron Technology blog"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3163,7 +5764,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Wireless",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tsmc",
@@ -3176,7 +5787,17 @@
       "selection_method": "tsmc_official_newsroom_with_relevance_v2",
       "matched_keywords": [],
       "source_category": "Business",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3189,7 +5810,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -3203,7 +5834,20 @@
       "matched_keywords": [
         "nand flash",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3216,7 +5860,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "applied_materials",
@@ -3234,7 +5888,23 @@
         "angstrom"
       ],
       "source_category": "News release",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "증착·박막",
+        "파운드리·로직·소자",
+        "장비·Fab·인프라",
+        "소재·부품"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "소자"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3249,7 +5919,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3264,7 +5944,17 @@
       "source_category": [
         "Topics"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3277,7 +5967,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3290,7 +5990,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "평가분석·품질·PE",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3305,7 +6016,18 @@
         "fab"
       ],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "장비·Fab·인프라"
+      ],
+      "job_roles": [
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "투자·생산",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -3318,7 +6040,18 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -3331,7 +6064,17 @@
       "selection_method": "kla_official_ir_and_advance_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3344,7 +6087,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -3360,7 +6113,21 @@
         "dram",
         "ai memory",
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3375,7 +6142,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "경영·실적"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3390,7 +6167,17 @@
       "source_category": [
         "IR"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3405,7 +6192,17 @@
       "source_category": [
         "Topics"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3418,7 +6215,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3431,7 +6238,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Artificial Intelligence (AI)",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3444,7 +6261,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3459,7 +6286,19 @@
         "18a"
       ],
       "source_category": "Client Computing",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "파운드리·로직·소자"
+      ],
+      "job_roles": [
+        "소자",
+        "AE·솔루션",
+        "인프라·안전"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3475,7 +6314,17 @@
         "IR",
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3490,7 +6339,17 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -3505,7 +6364,20 @@
         "semiconductor"
       ],
       "source_category": "KLA Advance",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3518,7 +6390,17 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Corporate Information",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kla",
@@ -3533,7 +6415,23 @@
         "semiconductor"
       ],
       "source_category": "KLA Advance",
-      "relevance": "high"
+      "relevance": "high",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "투자·생산",
+        "협업·공급망",
+        "경영·실적",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -3548,7 +6446,23 @@
         "semiconductor",
         "ai memory",
         "memory solution"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "lam_research",
@@ -3561,7 +6475,17 @@
       "selection_method": "lam_official_press_releases_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Press release",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "samsung",
@@ -3575,7 +6499,22 @@
       "matched_keywords": [
         "semiconductor",
         "hbm"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망",
+        "행사·인재"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "sk_hynix",
@@ -3590,7 +6529,23 @@
         "hbm",
         "ai memory",
         "ai ecosystem"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "DRAM·HBM",
+        "장비·Fab·인프라",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "R&D공정·공정설계",
+        "설비기술·기반기술",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품",
+        "협업·공급망"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "kioxia",
@@ -3603,7 +6558,20 @@
       "selection_method": "keyword_v1",
       "matched_keywords": [
         "ssd"
-      ]
+      ],
+      "relevance": "high",
+      "tech_domains": [
+        "NAND·스토리지",
+        "AI·데이터"
+      ],
+      "job_roles": [
+        "AE·솔루션",
+        "SW·데이터·AI"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "intel",
@@ -3616,7 +6584,18 @@
       "selection_method": "intel_official_newsroom_with_relevance_v1",
       "matched_keywords": [],
       "source_category": "Client Computing",
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "공정기술·양산기술",
+        "AE·솔루션"
+      ],
+      "signal_types": [
+        "기술·제품"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     },
     {
       "source_id": "tokyo_electron",
@@ -3631,7 +6610,56 @@
       "source_category": [
         "Sustainability"
       ],
-      "relevance": "context"
+      "relevance": "context",
+      "tech_domains": [
+        "기업·산업 일반"
+      ],
+      "job_roles": [
+        "산업·사업 공통"
+      ],
+      "signal_types": [
+        "기업·산업 일반"
+      ],
+      "classification_version": "job_tech_taxonomy_v1"
     }
-  ]
+  ],
+  "filter_options": {
+    "job_roles": [
+      "공정기술·양산기술",
+      "R&D공정·공정설계",
+      "설비기술·기반기술",
+      "P&T·패키지개발",
+      "평가분석·품질·PE",
+      "소자",
+      "설계",
+      "AE·솔루션",
+      "SW·데이터·AI",
+      "인프라·안전",
+      "산업·사업 공통"
+    ],
+    "tech_domains": [
+      "노광·마스크",
+      "식각",
+      "증착·박막",
+      "이온주입·열처리",
+      "세정·CMP",
+      "계측·검사·수율",
+      "패키징·테스트",
+      "DRAM·HBM",
+      "NAND·스토리지",
+      "파운드리·로직·소자",
+      "장비·Fab·인프라",
+      "소재·부품",
+      "AI·데이터",
+      "기업·산업 일반"
+    ],
+    "signal_types": [
+      "기술·제품",
+      "투자·생산",
+      "협업·공급망",
+      "경영·실적",
+      "행사·인재",
+      "기업·산업 일반"
+    ]
+  }
 }
