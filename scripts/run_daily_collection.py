@@ -18,6 +18,7 @@ COLLECTORS = (
     PROJECT_ROOT / "scripts" / "fetch_tsmc_news.py",
     PROJECT_ROOT / "scripts" / "fetch_intel_news.py",
     PROJECT_ROOT / "scripts" / "fetch_asml_news.py",
+    PROJECT_ROOT / "scripts" / "fetch_applied_materials_news.py",
 )
 INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "samsung_semiconductor.json",
@@ -27,6 +28,7 @@ INPUT_PATHS = (
     PROJECT_ROOT / "data" / "processed" / "tsmc_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "intel_semiconductor.json",
     PROJECT_ROOT / "data" / "processed" / "asml_semiconductor.json",
+    PROJECT_ROOT / "data" / "processed" / "applied_materials_semiconductor.json",
 )
 COMPANIES = (
     "Samsung Electronics",
@@ -36,6 +38,7 @@ COMPANIES = (
     "TSMC",
     "Intel",
     "ASML",
+    "Applied Materials",
 )
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 PUBLISHED_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"

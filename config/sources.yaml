@@ -70,9 +70,9 @@ sources:
     company_group: "equipment"
     priority: "must"
     official_url: "https://ir.appliedmaterials.com/news-releases/"
-    preferred_method: "rss"
-    status: "candidate"
-    notes: "Official RSS feeds are explicitly available."
+    preferred_method: "official_rss"
+    status: "verified"
+    notes: "Collect the official news-release RSS for 180 days and distinguish deposition, etch, CMP, epitaxy, metrology, packaging, wafer, fab, and manufacturing signals from general company context. The official feed currently exposes its latest releases."
 
   - id: lam_research
     company: "Lam Research"
