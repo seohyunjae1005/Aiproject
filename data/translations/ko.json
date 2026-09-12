@@ -2,6 +2,1477 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": null,
-  "translations": {}
+  "updated_at": "2026-09-12T12:42:35.434833+00:00",
+  "translations": {
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
+      "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
+      "summary_ko": "캘리포니아주 산타클라라, 2026년 9월 10일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 이사회가 자사 보통주에 대해 주당 0.53달러의 분기별 현금 배당금을 승인했다고 발표했다. 이 배당금은 2026년 11월 기준 주주명부에 등재된 주주들에게 2026년 12월 10일에 지급될 예정이다.",
+      "source_fingerprint": "296eb46e80f94abe1d7603e59c815a1d732e2b220fb08d1612afc74cdc5c5905",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3340": {
+      "title_ko": "TSMC 2026년 8월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "2d1e1ba140088c07f94bcabdbb206bc70b48dcdacc70f8d85c22d0fc6eabea6d",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://news.samsung.com/global/samsung-and-mistral-ai-announce-strategic-partnership-for-intelligence-driven-semiconductor-infrastructure": {
+      "title_ko": "삼성전자와 미스트랄 AI, 지능형 반도체 인프라 구축을 위한 전략적 파트너십 체결",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "fb08e0c89fb2f84388f7c50d1abb5ea6d0692cd3daf172ff4b4aa9366ae79752",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://news.skhynix.com/en/future-forum-2026/": {
+      "title_ko": "SK하이닉스, ‘2026 퓨처 포럼’에서 사업 및 기술 방향 제시—“지금이 도약할 절호의 기회”",
+      "summary_ko": "태그: 3D 메모리, AI 메모리, AX, 퓨처 반도체, SK하이닉스 퓨처 포럼",
+      "source_fingerprint": "9326bfbe4662948cae05143de3f5a525087dcb75f0e875cb9ed9e1a75f517e9f",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/asml-begins-construction-of-new-eindhoven-campus": {
+      "title_ko": "ASML, 아인트호벤 신규 캠퍼스 착공… 브레인포트 지역 내 입지 강화",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "2f206d55669e912db1e098636af2a63c2b7b2f834f577bb81817dd398bce5bb8",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/intel-foundry-and-asml-collaborate-to-accelerate-industry-readiness-for-high-na-euv": {
+      "title_ko": "인텔 파운드리와 ASML, 고수차(High-NA) EUV의 산업적 도입 가속화를 위해 협력",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "f11193f8311d1d0fb2f59b292c2ecd55b3d9579116dda49aaabdd84e3724b6a0",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/samsung-electronics-and-asml-expand-collaboration-on-next-generation-semiconductor-manufacturing": {
+      "title_ko": "삼성전자와 ASML, 차세대 반도체 제조를 위한 전략적 협력 확대",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "d3df8b37a69627fdf5be99bf2ba94c65ebad3d29c9555e2df10fd70df6ac2129",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/tsmc-and-asml-announce-industry-transition-to-large-format-photomasks-for-high-na-euv": {
+      "title_ko": "TSMC와 ASML, 고 NA EUV용 대형 포토마스크로의 업계 전환을 선도하기 위한 이니셔티브 발표",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "e14cd68fc5b82fb8fcd4a0a5e90f1e41a68a079715eff8272c85d9965caa3f92",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://news.samsung.com/global/samsung-electronics-and-asml-expand-strategic-collaboration-for-next-generation-semiconductor-manufacturing": {
+      "title_ko": "삼성전자와 ASML, 차세대 반도체 제조를 위한 전략적 협력 확대",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "950426c5e8decaab7e0323b2b48e6c205ecc3d5f79e71d9f83407043d4e88a17",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3338": {
+      "title_ko": "ASML과 TSMC, 고 NA EUV용 대형 포토마스크로의 업계 전환을 선도하기 위한 이니셔티브 발표",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "1f81c30196fe60eb944544bc264172a14e4bde42c3087e5c24fb9024c30bf29c",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260908_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘정보 보안 보고서 2026’ 발간",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "de7e7a844e1705e0c6a660851f97c574f53ea8c6471b54b2c21e8df368d121db",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/intel-foundry/intel-foundry-asml-accelerate-industry-readiness-for-high-na-euv.html": {
+      "title_ko": "인텔 파운드리와 ASML, 고수차(High-NA) EUV 기술 도입을 위한 업계 준비 가속화",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "57992d7ffe9f77d934b9b3f0f924cb4e9f21410e819170c6affcac68360c688e",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.tel.com/news/event/2026/20260907__001.html": {
+      "title_ko": "SEMICON India 2026",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "8b10a20584cf3214b8875ae88ffa47f5f204f002eee01d98111c91cb345bf2ca",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-agentic-pcs-give-asu-football-on-field-edge.html": {
+      "title_ko": "인텔 에이전틱 PC, ASU 미식축구팀에 경기장에서의 우위를 제공하다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "83ec9a36386c88e40733b42c539130324cb1578f5b3176e9f2f8110a5094392a",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://news.skhynix.com/en/ai-ecosystem-series-ep2/": {
+      "title_ko": "[AI 생태계] 진정한 병목 현상: 연산 능력이 아닌 데이터",
+      "summary_ko": "태그: AI, AI 메모리, HBF, HBM",
+      "source_fingerprint": "789500862ac7e7af730c9b7c8ff0ca57eac95f77688545fdcee23e8d2d3fa5db",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/redefining-local-ai-computing": {
+      "title_ko": "지역 AI 컴퓨팅의 재정의",
+      "summary_ko": "OpenClaw와 같은 자율 AI 에이전트는 지능을 로컬 하드웨어로 이전하고 있습니다. DRAM 용량과 대역폭이 엣지 AI 성능의 상한선을 결정하는 이유를 확인해 보세요.",
+      "source_fingerprint": "2f5286439ae8c188191e6c824e17a4712a447d18418f4dd860d3ac5dc5923964",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/foundation-pltw-expand-semiconductor-careers.html": {
+      "title_ko": "인텔 재단과 PLTW, 반도체 분야 진로 진출 경로 확대",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "38a59e06ecdf51e6e54176c39d30eacfcaaaff8347219ded3a43aa2687be73fb",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://news.skhynix.com/en/ai-infrastructure-insight-ep2/": {
+      "title_ko": "[AI 인프라 인사이트] 왜 더 빠른 GPU만으로는 AI 성능을 보장할 수 없는가",
+      "summary_ko": "태그: AI 데이터 센터, AI 인프라, AI 메모리, GPU",
+      "source_fingerprint": "513a62127253b511246c1853b6e6d2179f0c13ddf3bd2fefb8599f3551458aee",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-appoints-akash-palkhiwala-board-directors": {
+      "title_ko": "애플라이드 머티리얼즈, 아카시 팔키왈라를 이사회 이사로 선임",
+      "summary_ko": "캘리포니아주 산타클라라, 2026년 8월 27일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 아카시 팔키왈라(Akash Palkhiwala) 씨를 이사회 이사로 선임했다고 발표했다. 퀄컴(Qualcomm Incorporated)의 최고재무책임자(CFO) 겸 최고운영책임자(COO)인 팔키왈라 씨는,",
+      "source_fingerprint": "31426ea05d3a90b4bd6e693af36fc5517f5b01e663e0087099a4d75059b8ce7d",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html": {
+      "title_ko": "키옥시아와 샌디스크, 일본에 310억 달러 이상 투자… 메모리 산업 선도적 입지 공고히 할 전망",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "81ed7794a48f3d94fe2909146bcbc15b83296fb9b959537737a4eb15b4148d0e",
+      "translated_at": "2026-09-12T12:42:22.938872+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260827-2.html": {
+      "title_ko": "키옥시아, 키타카미 공장의 신규 Fab3를 통해 3D 플래시 메모리 생산 능력 확대",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "851870a2d0ceb6346169504a50aaad8b4be0b1609aa4ca3125ad439357bf5b84",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-27-Lam-Research-Announces-Retirement-of-Michael-R-Cannon-and-Sohail-U-Ahmed-from-Board-of-Directors": {
+      "title_ko": "램 리서치, 마이클 R. 캐넌과 소하일 U. 아메드의 이사회 퇴임 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 마이클(“마이크”) R. 캐넌과 소하일 U. 아메드가 램 이사회에서 은퇴하기로 한 각자의 결정을 회사에 통보했다고 발표했습니다...",
+      "source_fingerprint": "2bea512a8949b7afeaf7307cbb473f7597bb97376e3b94993ff3378b5403eca0",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-27-Lam-Research-Corporation-Announces-a-27-Increase-in-Quarterly-Dividend": {
+      "title_ko": "램 리서치 코퍼레이션, 분기 배당금 27% 인상 발표",
+      "summary_ko": "램 리서치 코퍼레이션(나스닥: LRCX)은 오늘 이사회가 보통주 1주당 분기 배당금을 0.26달러에서 0.33달러로 0.07달러(27%) 인상하는 안을 승인했다고 발표했다....",
+      "source_fingerprint": "7046d9634bd963e3b7d3c47123c08afc0918f9336056f3c553aacb74bc7f58d8",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://news.samsung.com/global/samsung-showcases-p9-and-p7-ssds-featuring-usb4-at-gamescom-2026": {
+      "title_ko": "삼성, ‘게임스컴 2026’에서 USB4를 탑재한 P9 및 P7 SSD 공개",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "1635c292b6b25917b27f5c107da884076f7b49bc625a8e8ec53417e034fa4bae",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://news.skhynix.com/en/dtf-2026/": {
+      "title_ko": "SK하이닉스, DTF 2026에서 AI 인프라에 최적화된 메모리 솔루션 풀 라인업 선보여",
+      "summary_ko": "태그: AI 메모리, cSSD, DellTechForum, DRAM, DTF, eSSD, HBM, NAND",
+      "source_fingerprint": "1b3b4e59f05b178e18b9ae3ad6cc4be158945bda1598b8862fc348106a0fb419",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-at-ai-infra-summit-2026.html": {
+      "title_ko": "2026 AI 인프라 서밋에 참가한 인텔",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "834992937acee66710f8af79b49b3e98aa097c3a44f95d0c07794664ba8f55b4",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-26-Lam-Research-Breaks-Ground-on-New-Oregon-Lab-to-Accelerate-AI-Era-Semiconductor-Research-Development-Locally,-Globally": {
+      "title_ko": "램 리서치, AI 시대 반도체 연구개발을 지역 및 전 세계적으로 가속화하기 위해 오리건주 신연구실 착공",
+      "summary_ko": "최첨단 ‘실리콘 포레스트’ 시설, 칩 제조사들과의 협업 혁신 지원; 30억 달러 이상 규모로 계획된 글로벌 연구소 네트워크 확장 계획의 첫 번째 이정표 오리건주 투알라틴, 2026년 8월 26일 /",
+      "source_fingerprint": "fc64d8fecd1b499bc05d72fd19f0b1aee615aecf779d3f2600d2cb01768f155d",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-26-Lam-Research-Corporation-Announces-Participation-at-Upcoming-Conferences": {
+      "title_ko": "램 리서치 코퍼레이션, 향후 개최될 컨퍼런스 참가 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 더그 베팅거(Doug Bettinger) 전무이사 겸 최고재무책임자(CFO)가 향후 개최될 다음과 같은 투자자 행사에 참석할 것이라고 발표했다. Citi 2026...",
+      "source_fingerprint": "93c3d4be169dd57129d2ef2e5f8730d962f4f6fde93800d55944e4e6bd3674f8",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.micron.com/about/blog/applications/ai/how-query-types-shape-gpu-demand-memory-and-power": {
+      "title_ko": "쿼리 유형이 GPU 수요, 메모리 및 전력 소비에 미치는 영향",
+      "summary_ko": "모든 LLM 쿼리가 똑같은 것은 아닙니다. 본 문서에서는 실제 환경에서 사용되는 6가지 프롬프트 유형이 GPU 메모리 대역폭, 전력, 처리량 및 에너지 효율성에 얼마나 상이한 부하를 주는지 분석하여, 인프라 팀이 AI 배포 규모를 적절히 조정하고 총 소유 비용을 최적화할 수 있도록 돕습니다.",
+      "source_fingerprint": "ba8f6da48d3ecd74522f6f0cd82dadc2ed5a2b8566e9ab4b5e85b5fc1698d14c",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://news.skhynix.com/en/tech-note-series-ep2/": {
+      "title_ko": "[기술 노트] 하이브리드 본딩: 반도체 성능 향상을 위한 핵심 기술로 진화 중",
+      "summary_ko": "태그: 첨단 패키징, 백엔드 공정, HBM, HBM4, 하이브리드 본딩, 패키징",
+      "source_fingerprint": "f0fd28d58b977d8a3af8bc034b9a266c95b1953cc678accafa7389fc847c55f1",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-outlines-architectures-for-agentic-ai-at-hot-chips-2026.html": {
+      "title_ko": "인텔, ‘핫 칩스 2026’에서 에이전트 기반 AI 아키텍처 개요 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "a3899bb94a142f0cf82f0d5406617319f24f425c86f3af545c1d9547e430dde0",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.tel.com/news/event/2026/20260824_001.html": {
+      "title_ko": "SEMICON 대만 2026",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "a37aea77f23be3efb4a7c3d214294f48e4f533dcae9ada52fce54c045afb4eac",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/521/kla-announces-upcoming-investor-webcasts": {
+      "title_ko": "KLA, 향후 예정된 투자자 대상 웹캐스트 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "3876c3719b4fdbde16300304e37f05735d802f43a1d4d3a791346ab207c67c99",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://news.skhynix.com/en/cpo-in-nature-electronics/": {
+      "title_ko": "AI 경쟁이 칩에서 시스템으로 전환되는 가운데, SK하이닉스의 코패키지드 옵틱스 기술 로드맵이 ‘네이처 일렉트로닉스’에 소개됐다",
+      "summary_ko": "태그: AI 인프라, AI 메모리, CoPackagedOptics, CPO, HBM, 이종 통합, Nature Electronics, 포토닉스",
+      "source_fingerprint": "f4cf363ad30a53dff6d05e11a395ea9e6da9627f3f84c1dbbcae972eb6a04301",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/opinion/count-the-work-not-just-the-cores.html": {
+      "title_ko": "코어 수만 세지 말고, 수행된 작업량을 세어보세요.",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "5dd548d43e2aa3e34799b6e9bc2f0955cd9f6629502c98280ec029e3fba2164d",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready.html": {
+      "title_ko": "경영진 10명 중 6명은 로봇에 대대적으로 투자하고 있다. 하지만 준비가 된 사람은 10명 중 4명에 불과하다.",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "4ca73364946aa50048e00bdc89ce8d4fcf535571dc3168c6d0f8ef77c0ca2f0b",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://news.skhynix.com/en/ai-ecosystem-series-ep1/": {
+      "title_ko": "[AI 생태계] AI 컴퓨팅의 패러다임 전환",
+      "summary_ko": "태그: 에이전트 기반 AI, AI 인프라, AI 메모리, 반도체 산업",
+      "source_fingerprint": "e70c79da59d99a4135e0a39c66209c3616168f461e202be3f259c7d92334bf8e",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conference-august-2026.html": {
+      "title_ko": "인텔, 다가오는 투자자 컨퍼런스에 참가 예정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "beb033221bb6e78b1f343f5aa910f4cdd41d7fb46744a0ffe3889569bac1e2e0",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260817_001.html": {
+      "title_ko": "도쿄 일렉트로, 2026년 구마모토 지진 구호 활동을 지원하기 위해 추가 기부",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "6409a778006018132575f52352d1d1ab972c17bc5f99413ee0b3015138b2ad17",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-participate-upcoming-investor-conferences-15": {
+      "title_ko": "애플라이드 머티리얼즈, 다가오는 투자자 컨퍼런스에 참가 예정",
+      "summary_ko": "캘리포니아주 산타클라라, 2026년 8월 14일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 경영진들이 다가오는 투자자 컨퍼런스에서 화톳불 대화(fireside chats)에 참여할 것이라고 발표했다. 브라이스 힐(Brice Hill) 수석 부사장 겸 최고재무책임자(CFO)는 ‘Citi 2026 글로벌 TMT 컨퍼런스’에 참여할 예정이다.",
+      "source_fingerprint": "9179192dfb16aabbed8c94c41ff774f2e67c4bdc4804a00b409612cadf38dd27",
+      "translated_at": "2026-09-12T12:42:24.148527+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-third-quarter-2026-results": {
+      "title_ko": "애플라이드 머티리얼즈, 2026년 3분기 실적 발표",
+      "summary_ko": "매출은 전년 대비 25% 증가한 91억 2천만 달러로 사상 최고치를 기록했으며, GAAP 기준 매출총이익률은 50.3%, 비-GAAP 기준 매출총이익률은 50.4%를 기록했습니다. GAAP 기준 주당순이익(EPS)은 3.17달러, 비-GAAP 기준 주당순이익은 3.50달러로 사상 최고치를 기록했으며, 전년 동기 대비 각각 43% 및 41% 증가 EPIC 센터의 R&amp;D 파트너십이 선도 기업들과의 11건의 협업으로 확대",
+      "source_fingerprint": "6489955e2b421f3dfb9673c473dcde3be334b0f4d0483010f75d816b88d75f3a",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-13-Lam-Research-Announces-Plans-to-Invest-More-than-3B-to-Expand-Global-Lab-Network,-Increase-Innovation-Velocity-in-the-AI-Era": {
+      "title_ko": "램 리서치, AI 시대에 글로벌 연구소 네트워크를 확장하고 혁신 속도를 높이기 위해 30억 달러 이상을 투자할 계획 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 향후 5년 동안 전 세계 연구개발(R&D) 연구소 네트워크를 확장하기 위해 30억 달러 이상을 투자할 계획이라고 발표했다. 이...",
+      "source_fingerprint": "f784308798964eb3c0f6dc3e514ae1438a50635aa9aa6d917f8c52c87aa4ab04",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260812-1.html": {
+      "title_ko": "키옥시아와 샌디스크, AI 및 데이터 집약적 애플리케이션을 위해 설계된 새로운 고성능 QLC 3D 플래시 메모리 기술 공개",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "1fc08976d0300d720bd16ba0a640a5d9f287f08d0a811197f3824646b0b19598",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-08-12-Lam-Research-and-NY-Creates-Team-Up-to-Enable-Training-of-University-Students-for-the-Semiconductor-Workforce": {
+      "title_ko": "램 리서치와 NY Creates, 반도체 인력 양성을 위한 대학생 교육 프로그램 추진을 위해 협력",
+      "summary_ko": "Lam의 ‘Semiverse® Solutions’ 가상 제조 플랫폼, NY Creates의 인력 개발 네트워크를 통해 뉴욕주 전역의 공학도들에게 실습 중심의 칩 제조 교육을 제공할 전망 뉴스 요약",
+      "source_fingerprint": "610665baa161397359ad8c65bf700a1a34522a79d429608f8444888f2c450835",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/uc-berkeley-join-applied-materials-epic-center-speed-chip": {
+      "title_ko": "UC 버클리, 반도체 혁신 가속화를 위해 어플라이드 머티리얼즈의 EPIC 센터에 합류",
+      "summary_ko": "이번 협력은 UC 버클리의 반도체 연구 역량과 어플라이드의 최첨단 장비 및 공정 통합 전문성을 결합한 것입니다. 실리콘밸리에 위치한 어플라이드의 EPIC 센터는 최첨단 칩 제조 장비를 활용할 수 있는 산업 규모의 R&amp;D 환경을 제공하여 신속한",
+      "source_fingerprint": "40cf3eb6147975022738354d90399b67d5a0a9fc646e9281fcf6d42a1234841a",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3332": {
+      "title_ko": "TSMC 이사회 회의 결의안",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "4de13bfc79cb604251a854b0d1da5395cee389448d4a6a18a5c6fe581ea8adbb",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3333": {
+      "title_ko": "소니 반도체 솔루션즈와 TSMC, 차세대 이미지 센서 합작회사 설립에 합의",
+      "summary_ko": "공식 출처: TSMC 홍보센터",
+      "source_fingerprint": "91bb96342db51c58b9082c47aa05755f24047c5fed5f27fb63929ae40c2dc7e6",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-announces-upsize-and-pricing-of-20-billion-common-stock-offering.html": {
+      "title_ko": "인텔, 200억 달러 규모 보통주 공모 규모 확대 및 가격 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "dc14da88b1b25e77b429ff4207c828cfc00ba625cdd6a1b81a24d8ba19f252e5",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://news.skhynix.com/en/ai-infrastructure-insigh-ep1/": {
+      "title_ko": "[AI 인프라 인사이트] AI 데이터 센터 내부에서는 어떤 변화가 일어나고 있을까?",
+      "summary_ko": "태그: AI, AI 데이터 센터, AI 인프라, AI 메모리",
+      "source_fingerprint": "62b5c7b29c406f0fe60831e3ed652e1bb4fcef0198adfa49e40accbe2276800e",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3329": {
+      "title_ko": "TSMC 2026년 7월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 홍보센터",
+      "source_fingerprint": "55de9b771dcab5d782d23497cdc38b12a1b7582d5bdf0b56075965ec9ada221b",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-announces-proposed-15-billion-common-stock-offering.html": {
+      "title_ko": "인텔, 150억 달러 규모의 보통주 발행 계획 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "6d97d3cea775b665c3c98297d2c5bd4f63697b434a0f61df118a9bc9fe2dbf89",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-gamer-days-2026-kicking-off-with-aaa-gaming-bundle-partnerships.html": {
+      "title_ko": "인텔 게이머 데이즈 2026, AAA급 게임 번들 및 파트너십과 함께 막을 올린다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "3dc8e8236baa03c7ea9dd68e74dac08607df10290aee4ec16f58433290808f29",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://news.skhynix.com/en/fms-2026/": {
+      "title_ko": "AI 시대의 차세대 메모리 아키텍처? SK하이닉스, ‘FMS 2026’에서 방향 제시",
+      "summary_ko": "태그: CXL, DRAM, FMS, HBF, HBM, NAND, SSD",
+      "source_fingerprint": "ef7e25a44c045295e1da46de7bcda0d773c7a2cdafe3e3e4ed48770561935854",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-announces-leadership-appointment-to-strengthen-customer-engagement-and-accelerate-growth.html": {
+      "title_ko": "인텔, 고객 관계 강화 및 성장 가속화를 위한 경영진 임명 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "6ac4955509e5e05cfb6eee60197d3ca4df1bfda49f6a7e136203a3fd9ea05d32",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/520/kla-declares-regular-cash-dividend": {
+      "title_ko": "KLA, 정기 현금 배당 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "8f9ccf56bb0e2462edab0940e8a7a7ebb09ecee47c2ee90d9c90c2eab518f936",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/creating-pathways-to-semiconductor-careers-intel-launches-sepp.html": {
+      "title_ko": "반도체 분야 진로를 위한 길 열기: 인텔, SEPP 프로그램 출범",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "668b0d47553a402689dce805a8320b989fbfdc8963a574e4dfb473cc8b010d73",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/519/kla-corporation-recommends-stockholders-reject-mini-tender": {
+      "title_ko": "KLA CORPORATION, 주주들에게 TUTANOTA LLC의 소규모 공개매수 제안을 거부할 것을 권고",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "e9b1e62ea9141023f21864f7217dbe9362abc30e47b32a1aa5d31c4c9c155dd8",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://news.samsung.com/global/samsung-unveils-next-gen-3d-memory-vision-at-fms-2026-charting-the-future-of-ai-infrastructure": {
+      "title_ko": "삼성, FMS 2026에서 차세대 3D 메모리 비전 공개… AI 인프라의 미래 제시",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "eb391896490a124281a4dbdd655ede36b91bf5a7a2f1da2e758545e4ed08b411",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260805-1.html": {
+      "title_ko": "KIOXIA GP 시리즈 초고 IOPS SSD, ‘FMS: the Future of Memory and Storage 2026’에서 ‘Best of Show’로 선정",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "f254480b2b3d4b2aa571ab4b85c66c43044cb406f8a324cca709b9a38ba4999c",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260804-2.html": {
+      "title_ko": "키옥시아와 샌디스크가 선보인 새로운 3D 플래시 메모리 기술, QLC NAND 부문에서 업계 최고 비트 밀도 달성",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "78affc6a85bbd72585d6e1a79351b2a79c9b58c71c143c1fd29249fffeea3584",
+      "translated_at": "2026-09-12T12:42:25.352734+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260804-1.html": {
+      "title_ko": "키옥시아, FMS 2026에서 AI 시대를 위한 플래시 스토리지 혁신 기술 선보여",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "7572b71d9f1d0141d6ee70a9747a4e7511da0e4e9b730a66cdd0aa5d564fa6f2",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260804-1.html": {
+      "title_ko": "키옥시아, AI 애플리케이션용 KIOXIA GP1 시리즈 초고 IOPS SSD 출시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "ee881ff3717c169a56df8ab495af34d648fbd3f1b02c5056a183eea6b4bb55a1",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260803-1.html": {
+      "title_ko": "키옥시아, AI 워크로드용 CXL™ 호환 메모리 확장 모듈 ‘KIOXIA XL1 시리즈’ 선보일 예정",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "f0be8e7dccaed678952ffd5bb03c371d4c8d21f00b30ac5300db107407b53d39",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/ahl7jh00000000fd-att/20260803_001_e.pdf": {
+      "title_ko": "자사주 매입 현황 및 완료에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "8e5e42885037bf675c2cc1d01acb0f3a4f46a6d56b7372c1f38508e5b38a015d",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/why-low-power-memory-is-finding-a-new-role-in-the-data-center": {
+      "title_ko": "AI 혁명의 숨은 원동력: 저전력 메모리가 데이터 센터에서 새로운 역할을 맡게 된 이유",
+      "summary_ko": "LPDDR 저전력 메모리가 AI 데이터 센터에서 새로운 역할을 찾아가고 있는 이유는, 추론 및 에이전트형 AI 워크로드가 요구하는 와트당 성능을 제공하기 때문입니다.",
+      "source_fingerprint": "d42dade10ddbe8a68cb16fa12ca4b77e7f3916dd0ac0dd3fe8ab83dfb574cae6",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.micron.com/about/blog/applications/ai/how-memory-and-storage-became-the-backbone-of-the-ai-era": {
+      "title_ko": "메모리와 스토리지가 어떻게 AI 시대의 중추가 되었는가",
+      "summary_ko": "추론 및 에이전트 기반 워크로드가 효율성, 확장성, 비용을 재정의함에 따라, 왜 컴퓨팅 능력만으로는 부족하고 메모리와 스토리지가 이제 AI 인프라를 정의하게 되었는지 알아보세요.",
+      "source_fingerprint": "bf277d4bc371facfe78fe400b08055071480557def1ccfe81fa0f32873b1d261",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260731_001.html": {
+      "title_ko": "도쿄 일렉트로, 2026년 구마모토 지진 구호 활동 지원을 위해 기부금 전달",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "a5c295d7b097c71a27d5994e0e915495b894ef8fdc0c70da4767f5308f262da3",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260730-1.html": {
+      "title_ko": "키옥시아, 9세대 BiCS FLASH™ 1Tb TLC 디바이스 샘플 출하 개시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "ce3171d5bcbd1fbce4f27e5680ffe7956dc7d244dd6df0843dd89226966e6a3d",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260730-1.html": {
+      "title_ko": "키옥시아, 최신 BiCS FLASH™ 10세대 플래시 메모리를 탑재한 최초의 PCIe® 6.0 엔터프라이즈 SSD 출시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "c721ecddc3538580cc8f34dbc0c1f4f1ebcd31282913174992303351cd0b5229",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/rf97m800000000g3-att/20260730_002_e.pdf": {
+      "title_ko": "일본 및 해외 TEL 그룹 임원 및 직원을 대상으로 한 주식 지급 제도의 지속에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "989628d937d3b84a28fb58b86a05088b4d30f5f0318663a9c78bd648f69e63f0",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260729-2.html": {
+      "title_ko": "키옥시아의 새로운 UFS 5.0 임베디드 플래시 메모리 디바이스, 온디바이스 AI 구현 가능",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "3333e3aa75ec5ce4cdbc1a16fdbcd7313628de9f8a2326fe9ea42768a9fc3b4c",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260729-1.html": {
+      "title_ko": "키옥시아, AI 및 하이퍼스케일 환경을 위한 차세대 E1.S SSD 출시 발표",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "300e803c0194f36662589e5aa28a1e2ad01c299c3118ae02353e6d589f9e6815",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/intel-foundry/intels-us-advanced-packaging-enables-next-generation-ai-semiconductors.html": {
+      "title_ko": "인텔의 미국 첨단 패키징 기술, 차세대 AI 반도체 구현을 가능하게 하다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "767bcf315665e800fbfc5c50991bf31abd9c4cf7c4533b7c46dee0a944eb2c2b",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-07-29-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-June-28,-2026": {
+      "title_ko": "램 리서치 코퍼레이션, 2026년 6월 28일 종료된 분기 실적 발표",
+      "summary_ko": "램 리서치 코퍼레이션(이하 “회사”, “램”, “램 리서치”)은 오늘 2026년 6월 28일로 종료된 분기(이하 “2026년 6월 분기”)의 재무 실적을 발표했습니다. 2026년 6월 분기의 주요 내용은 다음과 같습니다...",
+      "source_fingerprint": "4839a751584e2c6ec989633860b5072e3d5c73df68003bfbddd661b7c08eff6f",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.tel.com/news/disaster/2026/20260729_001.html": {
+      "title_ko": "2026년 구마모토 지진 보고서 (제2차 보고서)",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "509bc83f78cb8cc752a6a9ae4aeeedbecae5eb8ee60d1f68411b9b5a64c88d13",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.kla.com/advance/leadership/kla-announces-june-quarter-earnings-2026": {
+      "title_ko": "KLA, 6월 분기 실적 발표 | 경영진 | KLA",
+      "summary_ko": "아래 인포그래픽은 6월 분기 실적 보고서에서 발췌한 KLA의 주요 재무 정보를 보여줍니다. 전문을 보시려면",
+      "source_fingerprint": "1de21eb0e733bd862ed94429af7db5bf77d25cb0488518e2e1cea61cee74a077",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/518/kla-corporation-reports-fiscal-2026-fourth-quarter-and-full": {
+      "title_ko": "KLA 코퍼레이션, 2026 회계연도 4분기 및 연간 실적 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "3d9499007f63d7adfa366e6e2f4aa2ef07949b73e786e0da6beb614a7b3fc417",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/opinion/intel-secure-enclave-securing-high-performance-computing-at-the-tactical-edge.html": {
+      "title_ko": "인텔 시큐어 엔클레이브: 전술적 최전선에서의 고성능 컴퓨팅 보안",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔® 제품",
+      "source_fingerprint": "0428beea746b2e28131272990e9bdb82356f029aa366699ccd8efb51681c5b8a",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/intel-foundry/intel-completes-ramp-c-program-accelerating-momentum-for-secure-enclave.html": {
+      "title_ko": "인텔, RAMP-C 프로그램 완료… 시큐어 엔클레이브 추진 탄력",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "0888ccb0f8ae99314f3e6d1776ca4b1dc535928265b29eae4d82d20b9b0452e9",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://www.tel.com/news/disaster/2026/20260728_001.html": {
+      "title_ko": "7월 28일 일본 구마모토에서 발생한 지진에 대한 대응",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "3d0d68c9a35c68c50844bf8fda4caa273c0a2898833022733ce974e3d84df60c",
+      "translated_at": "2026-09-12T12:42:26.352374+00:00"
+    },
+    "https://news.samsung.com/global/samsung-electronics-and-broadcom-expand-strategic-collaboration-across-memory-and-foundry-technologies": {
+      "title_ko": "삼성전자와 브로드컴, 메모리 및 파운드리 기술 분야에서의 전략적 협력 확대",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "9016d09fc4faa1e005757b58c0f2986317f8a6205b62575dab4d46e2b92351d1",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era.html": {
+      "title_ko": "인텔과 렌즈 테크놀로지가 AI 시대를 위한 첨단 반도체 패키징 기술 개발을 위해 협력한다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "f44dc711ceea9780d7b97e6ca87406d1cedba859554c60c1be7bdfab51a4acd7",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/agentic-ai-on-amd-epyc-plus-micron-ddr5-8000-and-nvme": {
+      "title_ko": "애플리케이션 서버의 세대별 성능",
+      "summary_ko": "6세대 AMD EPYC 프로세서와 마이크론 DDR5-8000, 9650 Gen6 NVMe SSD를 조합하면 어떻게 3.8배 향상된 에이전트 기반 AI 성능을 제공하면서도 CPU 전력 효율은 2.9배 개선되는지 알아보세요.",
+      "source_fingerprint": "f88bd737a27287962d3f901bea305d4b39b9f33e6d935215cb7703fc5ffacc7c",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-report-fiscal-third-quarter-2026-results-aug": {
+      "title_ko": "애플라이드 머티리얼즈, 2026년 8월 13일 2026 회계연도 3분기 실적 발표 예정",
+      "summary_ko": "캘리포니아주 산타클라라, 2026년 7월 23일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 2026 회계연도 3분기 실적 컨퍼런스 콜을 2026년 8월 13일 목요일, 동부 표준시(ET) 오후 4시 30분 / 태평양 표준시(PT) 오후 1시 30분에 개최할 것이라고 발표했습니다. 이번 컨퍼런스 콜은 https://ir.appliedmaterials.com에서 생중계될 예정입니다.",
+      "source_fingerprint": "029efdda6bd09f42850a0fc5d154e69915bfdafc5ca0c20798cbe9feb591c939",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-reports-second-quarter-2026-financial-results.html": {
+      "title_ko": "인텔, 2026년 2분기 실적 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "88579f3c90a431b55983e2d640eafa94cbda5d9be5e3f746c6971537e3026f9a",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://news.skhynix.com/en/research-inside-ep1/": {
+      "title_ko": "[연구 속으로] SK하이닉스의 CTI 혁신, 176층 3D NAND 양산 가속화",
+      "summary_ko": "태그: 176층 NAND, CTI, IEDM, IEEE, NAND, Research Inside, 미세화",
+      "source_fingerprint": "4a06bac5f736f84502ddd46d91f951590f7c4926a1cb99a27422d7a0028fbdf8",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260721_001.html": {
+      "title_ko": "도쿄 일렉트로닉이 “FTSE4Good 지수 시리즈”, “FTSE JPX 블로섬 재팬 지수” 및 “FTSE JPX 블로섬 재팬 섹터 상대 지수”에 편입되었습니다.",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "9fe2e753ce6915b59d24ee9005e02e5db1d7926cc84cd07fe72ef9beb247b0a8",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/when-memory-changes-the-equation": {
+      "title_ko": "데이터 센터에서 LPDDR을 실제 적용하며 얻은 교훈",
+      "summary_ko": "마이크론과 메타의 엔지니어들은 오픈소스 DCPerf 벤치마크를 활용해 실제 하이퍼스케일 데이터 센터 워크로드에서 LPDDR5X 및 SOCAMM2 메모리의 성능을 측정했습니다.",
+      "source_fingerprint": "db41e1cdd1ea21c1cb92035dfc19cc81f5acda07604efee2f39cdd1386ffa851",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/opinion/artificial-intelligence/memory-bandwidth-may-be-most-overlooked-ai-performance-metric.html": {
+      "title_ko": "메모리 대역폭은 AI 성능 지표 중 가장 간과되기 쉬운 요소일 수 있다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "54a8669773d8d7ede3506883f6b35286965b174db5826aadeb14b32f7cab0949",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-powered-medical-exoskeleton-helps-patients-get-back-on-their-feet.html": {
+      "title_ko": "인텔 기술이 적용된 의료용 외골격 장치가 환자들이 다시 걸을 수 있도록 돕는다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "913f6d0995f0b285eaa1c59ef8cec9a8abb32c1b5e812ab0bcd03e11daafa172",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3326": {
+      "title_ko": "TSMC, 2분기 주당순이익(EPS) 27.25 대만달러 기록",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "694e191ae3e9ad8f9c9b2c0acd73c325fc3dceeea5f5e223dcb0764ba8b64ee5",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-google-cloud-announce-collaboration-to-accelerate-intel-ai-enabled-enterprise-transformation.html": {
+      "title_ko": "인텔과 구글 클라우드, 인텔의 AI 기반 기업 혁신 가속화를 위한 협력 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "103fefa480775b2d78bd9e6d9941b70b67f2d4d64389b9f68b187465c30560b0",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.tel.com/news/topics/2026/20260716_001.html": {
+      "title_ko": "도쿄 일렉트로닉과 엔비디아, 에이전트 기반 AI 및 로봇공학 분야 협력 확대",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "ec1bfa5c5b695629ddf5dcbf89882a477d7f17e4ee248f7b6b00d245fe5494a4",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/high-na-euv-reaches-new-readiness-milestone": {
+      "title_ko": "고 NA EUV, 최초의 대량 생산 로직 제품 출시로 새로운 준비 단계 달성",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "32465539cce0876b5ee02febf869da9e855b0b326abf7c9a8bf61bd74e108390",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results": {
+      "title_ko": "ASML, 2026년 2분기 총 순매출 93억 유로, 순이익 29억 유로 기록",
+      "summary_ko": "ASML은 실적 전망치를 상향 조정하며, 2026년 총 순매출이 430억 유로에서 450억 유로 사이가 될 것으로 예상하고, 매출총이익률은 54%에서 56% 사이가 될 것으로 전망했다.",
+      "source_fingerprint": "d4db2b5e592c77223c2bd3049ec333b5735dac52ad7df53668e8fe21d80e7706",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3323": {
+      "title_ko": "TSMC 2026년 6월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "c3daf7a9cee0a00fb68cb99fd024d9c0cffba0a06931df020c4f91dae150e2bc",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-invests-5-billion-euro-to-expand-manufacturing-in-europe.html": {
+      "title_ko": "인텔, 유럽 내 생산 시설 확충을 위해 50억 유로 투자",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "b8d33f498df50e8ec713e835ef15d39d31db061042f2965df1d64da78cb8bfaf",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260709_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘TEL E-COMPASS 물류 및 시설의 날’ 행사 개최",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "e92c46bcde9396badca518da93d8a25de6711b6e4bb3bb5096fbdeb80de1ce14",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://news.samsung.com/global/samsung-begins-mass-production-of-pm1763-ssd-optimized-for-next-generation-ai-infrastructure": {
+      "title_ko": "삼성, 차세대 AI 인프라에 최적화된 PM1763 SSD 양산 개시",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "1f5eb7fa6d13b42e4464e3ad6ccdba9d29872cdcd4a6b07db3e1ceeb6a1ace3d",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://news.skhynix.com/en/hbm-to-essd/": {
+      "title_ko": "HBM에서 eSSD까지: SK하이닉스가 풀스택 메모리의 미래를 어떻게 개척해 나가고 있는가",
+      "summary_ko": "태그: AI, AI 인프라, AI 메모리, cHBM, DRAM, eSSD, HBM, NAND",
+      "source_fingerprint": "d05aab73159dab0f05eed510f92b0eb51cb277751dc1d9f7e40e17baa5ebda40",
+      "translated_at": "2026-09-12T12:42:27.415961+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-07-08-Lam-Research-Corporation-Announces-June-Quarter-Financial-Conference-Call": {
+      "title_ko": "램 리서치 코퍼레이션, 6월 분기 실적 설명회 개최 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 2026년 7월 29일 수요일 오후 2시(태평양 표준시)부터 분기별 재무 컨퍼런스 콜 및 웹캐스트를 진행할 것이라고 발표했습니다...",
+      "source_fingerprint": "379f2b098790bf92acf9cf0b1872443678297558be6e3b727da069ab417b08e5",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://news.skhynix.com/en/2026-expert-column-series-ep4/": {
+      "title_ko": "[전문가 관점] AI 반도체에서 AI 서비스로: 생태계의 진화 양상",
+      "summary_ko": "태그: AI, AI 인프라, 인공 지능, HBM, 반도체 생태계, 반도체 산업",
+      "source_fingerprint": "28be8c2279125ab79ea1cb4720bb3576cd74c8a280b18768f8c22458c25646e7",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://news.skhynix.com/en/ai-competition-next-challenge/": {
+      "title_ko": "AI 인프라 시대에 첨단 메모리가 중요한 이유",
+      "summary_ko": "태그: AI, AI 인프라, AI 메모리, DRAM, eSSD, HBM",
+      "source_fingerprint": "2eb35c1fde2d66c8969574d9db026b642048f969ae231cd9dbf8c82b9786f7e0",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html": {
+      "title_ko": "키옥시아와 샌디스크, 키타카미 공장 Fab2에서 10세대 3D 플래시 메모리 제품 생산 개시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "674beb06916bbc1d54dee7930489b6a577ba9db1635c4f079fb44aff694f5aac",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.kioxia.com/en-jp/about/news/2026/20260703-1.html": {
+      "title_ko": "키옥시아, 고성능·대용량·저전력 소비를 자랑하는 10세대 BiCS FLASH™ 제품 샘플 출하 개시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "59b38a557532a4c3c0d3e8b9167795fe052223aef87b00a863553c5504c28e92",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/517/kla-announces-fourth-quarter-fiscal-year-2026-earnings-date": {
+      "title_ko": "KLA, 2026 회계연도 4분기 실적 발표 일정 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "06c86edfc555dd296e20812d0d1dd7f9c27051ef01a4f9aa1421f2e91b34d751",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/qlc-vs-hdd-how-real-world-io-distributions-reshape-storage-cost": {
+      "title_ko": "QLC 대 HDD: 실제 IO 분포가 스토리지 비용을 어떻게 변화시키는가",
+      "summary_ko": "워크로드는 단일하고 균일한 요청 크기가 아닌 다양한 IO 크기 분포를 생성하며, 이러한 분포는 QLC SSD와 HDD의 상대적 성능 및 용량 요구 사항에 상당한 영향을 미칩니다.",
+      "source_fingerprint": "a25fd154b2b012bf4b3b45478edc92bc8df23854a654c7a5431f72e6f2467327",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/why-agentic-ai-is-rewriting-the-rules-for-cpu-and-memory-infrastructure": {
+      "title_ko": "왜 행위자형 AI가 CPU 및 메모리 인프라의 규칙을 다시 쓰고 있는가",
+      "summary_ko": "에이전트형 AI가 CPU 및 DRAM 수요의 부활을 이끌고 있습니다. 자율 AI 에이전트가 데이터 센터 인프라를 어떻게 재편하고 있는지, 그리고 메모리가 왜 핵심 경로에 속하는지 알아보세요.",
+      "source_fingerprint": "71d0f18eb80cd26bcf35ae6242d7250632a6d2e189e4ff9b8ee0445e036a2a1a",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/i242su00000001c4-att/20260701_001_e.pdf": {
+      "title_ko": "자사주 매입 현황에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "e457d26f25838532e7425c5e28085e654ed566654928639fc01dab4953593d08",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/micron-broadens-lpddr5x-options-for-next-generation-edge-designs": {
+      "title_ko": "마이크론, 차세대 엣지 설계를 위한 LPDDR5X 제품군 확대",
+      "summary_ko": "마이크론은 새로운 1γ 비이진 옵션을 통해 LPDDR5X 제품군을 확장하며, 6GB, 12GB, 24GB 용량을 추가함으로써 모바일 및 클라이언트 PC 엣지 AI 설계 전반에 걸쳐 설계 유연성을 높이고, 성능을 향상시키며, 전력 효율을 개선합니다.",
+      "source_fingerprint": "71f1a25913a55f897c9a86d35d2a50c2b04cab3ca5cd1fa1e75dd3e56b873b55",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-to-report-second-quarter-2026-financial-results.html": {
+      "title_ko": "인텔, 2026년 2분기 실적 발표 예정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "084944915c9fecf6eea251c9c1196bea8b5ec8e5bf9169bb190aa675df77a5e4",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/three-ways-intel-msi-co-engineered-worlds-first-arc-g3-handheld.html": {
+      "title_ko": "인텔과 MSI가 세계 최초의 Arc G3 핸드헬드 기기를 공동 개발한 세 가지 방법",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "1753e6e2607360806db922c523d28136e0da85be352a84f87132987dd149e863",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/i242su00000000ee-att/20260630_002_e.pdf": {
+      "title_ko": "(정정) 주식 기반 보상(주식 매수권)을 위한 스톡옵션 부여",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "d8e13aeeaf7735910e86b2947e08332c5f0d306d06c103001e19c121e47f6dbd",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/20260630_001.html": {
+      "title_ko": "Tokyo Electron America, Inc.와 TEL Technology Center, America, LLC의 합병",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "015e6d6242507818026bf56e7b6a630c1cf2bb5df8033f143f5e74cea0358062",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/america-250-intel-is-advancing-us-innovation.html": {
+      "title_ko": "‘아메리카 250’: 국가적 전환점을 맞이한 지금, 인텔은 미국의 혁신, AI, 제조 산업을 선도하고 있습니다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "7a7a6cd4818f789d89387f0ab9775ea101d6d36e28dd68bb3529f638c49f4484",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/disaster/2026/20260629_001.html": {
+      "title_ko": "6월 26일 야마나시현과 6월 28일 도호쿠에서 발생한 지진에 대한 대응",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "74ac54e98075838e494cd4e700ea5ad1f2c1fb0f1bb38e88ee64143c4a65fd75",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/topics/2026/20260626_001.html": {
+      "title_ko": "도쿄 일렉트론, 2026년 ‘AI Breakthrough Awards’ 프로그램에서 ‘올해의 AI 반도체 제조 솔루션’ 상 수상",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "04572312825712e020fa7fb3df5dc49d5d47dec5b1148ead1f5be7d0643189fe",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-introduces-new-systems-accelerate-dram-and": {
+      "title_ko": "애플라이드 머티리얼즈, AI 칩용 DRAM 및 첨단 패키징 개발을 가속화할 신형 시스템 출시",
+      "summary_ko": "DRAM과 첨단 패키징에 걸친 혁신을 통해 최첨단 AI 칩의 기반이 되는 3D 아키텍처가 구현됩니다. DRAM 팹에 최적화된 새로운 에피택시 시스템은 핵심적인 로직급 공정을 추가함으로써, 제한된 팹 공간과 공급 제약 조건 내에서 생산량을 극대화하는 동시에 메모리 속도와 효율성을 향상시킵니다. 새로운",
+      "source_fingerprint": "cdffa550a41c05bb8fa9c8177e337ef24437f89a31fff9e307e6e1bf56492330",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/disaster/2026/20260625_001.html": {
+      "title_ko": "6월 25일 일본 도호쿠에서 발생한 지진에 대한 대응",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "292ffde6555b8a897b9e0e7b64a65064f0c1e40ebb8b56dfccaf00893b375d4c",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://news.skhynix.com/en/2026-expert-column-series-ep3/": {
+      "title_ko": "[전문가 관점] AI 반도체 경쟁의 진정한 격전지: 자본과 에너지 인프라",
+      "summary_ko": "태그: AI, AI 인프라, AI 메모리, AI 반도체, 반도체 인프라, 용인 반도체 클러스터",
+      "source_fingerprint": "e46fab06973ecf833a61ab03d0c870b9ed3c6923d11d48ba3223b62762ff91c2",
+      "translated_at": "2026-09-12T12:42:28.493242+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/dm494s00000000ed-att/20260624_001_e.pdf": {
+      "title_ko": "인사 변경에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "e29c431ea400251b01e600178bb35226cb60dc40051435d9918e048be35a40d5",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://news.samsung.com/global/samsung-unveils-industrys-fastest-ufs-5-0-solution-for-next-gen-on-device-ai-applications": {
+      "title_ko": "삼성, 차세대 온디바이스 AI 애플리케이션을 위한 업계 최고 속도의 UFS 5.0 솔루션 공개",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "389cd4a42af74477937ea890887648231629a127bbeab5159336f613e53ed097",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://news.skhynix.com/en/5-things-about-skhynix/": {
+      "title_ko": "SK하이닉스와 AI 메모리의 미래에 대해 알아야 할 5가지",
+      "summary_ko": "태그: AI, AI 인프라, AI 메모리, 데이터센터, DRAM, HBM, NAND",
+      "source_fingerprint": "c068873fb91337c412fc98ecfc7b7d883f1f48df9cd1f5bd8085d8d4961f6b77",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qhnfr100000000i6-att/20260623_002_e.pdf": {
+      "title_ko": "주식 기반 보상(주식 매수권)을 위한 스톡옵션 부여",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "d14fef5a294c2362ee3298dc3b7b801f43967322aecef3644ec1037fd4676eda",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qhnfr100000000g9-att/20260623_001_e.pdf": {
+      "title_ko": "대표이사 변경 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "fe43bdb0242730fe528d9c76db9223eab1682459043475dfbe3a38703c756ec0",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/20260622_001.html": {
+      "title_ko": "2026 회계연도 연간 증권 보고서 제출",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "4e0311f47346027f6d39bb6ca88237a367f409593489e0d68be4f28394ee2b46",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://news.skhynix.com/en/hpe-discover-2026/": {
+      "title_ko": "SK하이닉스, HPED 2026에서 ‘풀스택 AI 메모리 크리에이터’로서 기술 리더십 선보이며 HPE와의 견고한 파트너십 재확인",
+      "summary_ko": "태그: AI, AI 메모리, CXL, eSSD, HBM, HEP Discover, HPE",
+      "source_fingerprint": "5e4dfd497a5c2dd1ac38f38834ba66c9989de52584cb2477bb661ba93cfd5045",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing.html": {
+      "title_ko": "인텔, 개발 및 제조 가속화를 위해 인텔 파운드리(Intel Foundry) 리더십 인사 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "f29057758cf0234017654cf1440b68e67090887e0366b066bbf735bbb6244f78",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-senztm-fully-integrated-visual-system": {
+      "title_ko": "애플라이드 머티리얼즈, 차세대 스마트 글래스를 위한 완전 통합형 시각 시스템 ‘SENZ™’ 공개",
+      "summary_ko": "SENZ는 고객과 파트너에게 공동 최적화된 솔루션을 제공하여 고성능 증강현실 디스플레이를 더 빠르게 시장에 출시할 예정입니다. 이 획기적인 기술은 차세대 스마트 글래스를 위해 세계 최고 수준의 시각적 성능, 원활한 통합, 그리고 확장 가능한 제조 능력을 제공할 것입니다. SANTA",
+      "source_fingerprint": "14a6d68e39fdd409c05f10810a223502dadb39ff984726cc856b3001da36212a",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/ceo-letter-2025-26-intel-corporate-responsibility-report.html": {
+      "title_ko": "CEO 서문: 2025-26 인텔 기업 사회적 책임 보고서",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "68b5c96494e9250cc7b806522b6356c1d7e9abbefb0ad41b77f90b9e8296b13c",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-advances-growth-in-ai-era-2025-2026-csr-report.html": {
+      "title_ko": "인텔, ‘2025-2026 기업 사회적 책임 보고서’를 통해 책임 있는 경영 관행과 AI 주도 성장을 추진",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "14393a1215d1aca65a2d899819d22065e90ddc8e6e3089f677494ef940018ae5",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/essilorluxottica-and-applied-materials-join-forces-advance": {
+      "title_ko": "에실로럭소티카와 어플라이드 머티리얼즈, 차세대 스마트 글래스를 위한 증강현실 광학 플랫폼 개발을 위해 협력",
+      "summary_ko": "이번 공동 개발 협약은 스마트 안경 및 증강현실(AR)용 광학 렌즈 스택을 위한 차세대 지능형 광학 시스템의 상용화를 가속화하는 것을 목표로 합니다. 이번 파트너십은 재료 공학, 렌즈 및 스마트 안경 분야의 세계적 수준의 전문성을 결합하여 경량화된,",
+      "source_fingerprint": "90d48defa0d8ec43d27d72bd5a64c926848e9e34f4b497a63fa5a7ce505c1e57",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-foundry-details-process-milestones-future-innovation-at-vlsi-symposium.html": {
+      "title_ko": "인텔 파운드리, VLSI 심포지엄에서 공정 개발 주요 성과 및 향후 혁신 계획 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "96c74b723e78b55cbb497173732e7eec49b9fd6b7f40f00bb6bb64889a0737d9",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-deposition-and-selective-etch-systems": {
+      "title_ko": "애플라이드 머티리얼즈, 3D 칩 미세화 촉진을 위한 증착 및 선택적 식각 시스템 공개",
+      "summary_ko": "새로운 시스템은 종횡비(aspect ratio)가 높은 3D 로직 및 메모리 칩 구조에서 정밀한 재료 공학을 가능하게 합니다. Centris™ Spectral™ SiN ALD는 혁신적인 마이크로파 플라즈마 기술을 활용하여 까다로운 3D 구조에서도 균일한 실리콘 질화물 증착을 구현합니다. Producer™ Selectra™ Mo Etch는 선택적으로",
+      "source_fingerprint": "e964ca42e25b1581276e3474423411f0fc8979b73af1db6bd3c0e827c732f8ce",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.asml.com/en/company/stories/2026/machines-behind-machines": {
+      "title_ko": "기계 뒤에 숨은 기계들",
+      "summary_ko": "ASML이 차세대 기술 시대를 위해 AI 네이티브 엔지니어링을 어떻게 적용하고 있는지 알아보세요.",
+      "source_fingerprint": "7dcb1fb47e72724f2f4674947cf74e598551092890b8a39dd333375e8377bbf2",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/a75d7s00000000ec-att/20260612_001_e.pdf": {
+      "title_ko": "조직 개편 및 인사 변경에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "864f4b6a4a371f6b47a5fd46076cdc208b38e6a20c7a5f4f0c25b9c1f25480e0",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://news.skhynix.com/en/computex-2026-review/": {
+      "title_ko": "[SOD 리뷰] COMPUTEX 2026: 메모리를 넘어선 SK하이닉스 – AI 공장 시대가 회사의 정체성을 어떻게 재편하고 있는가",
+      "summary_ko": "태그: AI, AI 팩토리, AI 인프라, AI 메모리, COMPUTEX, HBM, iHBM, SOCAMM2",
+      "source_fingerprint": "50ab2cd33f8d1f87232bbdf9ab7e5c41c7fe3728bb70ca89c9a198992bfcaf18",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3320": {
+      "title_ko": "TSMC 2026년 5월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "5a54b0aa770a121870125b6d58eaca1f23a9e24bba4a5d3bca2743d3ee708725",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/wireless/intel-5g-network-bridges-digital-divide.html": {
+      "title_ko": "미국 50개 도시의 디지털 격차 해소를 위한 새로운 스마트 시티 시범 네트워크",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 무선",
+      "source_fingerprint": "e73e9e5753df0db6c8307f0d046016828afe3cbdb39360cc1eecd3a09adbd7a4",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/postcard-from-computex-2026-new-intel-core-series-3-laptops-for-everyday-creation-and-all-day-productivity.html": {
+      "title_ko": "컴퓨텍스 2026 현장 소식: 일상적인 창작 활동과 하루 종일 이어지는 생산성을 위한 새로운 인텔® 코어™ 시리즈 3 노트북",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "85569e2700a6a0bb23b0943866ed78008cc39575e464a3c9508f05f2d46d61c9",
+      "translated_at": "2026-09-12T12:42:29.655858+00:00"
+    },
+    "https://news.skhynix.com/en/ai-partnership-foxconn-2026/": {
+      "title_ko": "‘칩에서 AI 시스템까지’… 최 회장, 폭스콘과의 협력 관계 강화",
+      "summary_ko": "태그: AI, AI 메모리, 폭스콘, HBM, 반도체 산업",
+      "source_fingerprint": "cf6b8aca578107107c2caa85872cf102c6aba524a01c4747791e1636bedc7202",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3317": {
+      "title_ko": "TSMC 주주총회 결의안",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "70e926135202889d954e5467f3aa089c16519a7e7ca4dfcf3bd30c85e408f1ff",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/20260604_001.html": {
+      "title_ko": "ISS의 제63차 정기주주총회에 상정될 안건에 대한 수정된 의결 권고 사항에 관한 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "e2b6b34f87fb7cfdedea7bf3992e6209f23d2acbc6f569cfffc77cf386576050",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://news.skhynix.com/en/ai-partnership-tsmc-2026/": {
+      "title_ko": "SK그룹 최태원 회장이 대만에서 TSMC의 C.C. 웨이 회장 겸 CEO를 만나 글로벌 AI 칩 파트너십을 공고히 했다",
+      "summary_ko": "태그: AI, AI 메모리, HBM, TSMC",
+      "source_fingerprint": "c9ccb4c7148f43126f866e41e3cdec6932a00c6d49c1b2456a8b97bfdea4768b",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://news.skhynix.com/en/computex-2026/": {
+      "title_ko": "메모리 솔루션, AI 열풍을 주도하다 — SK하이닉스, ‘컴퓨텍스 2026’에서 존재감 과시",
+      "summary_ko": "태그: AI, AI 메모리, COMPUTEX, CXL, HBM, LPCAMM2, LPDDR, SOCAMM2",
+      "source_fingerprint": "d5baa3c49f0cfaa29689ad14c8a2e902e32ce9eaf80cc6f0741a7163f50e3a21",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://news.skhynix.com/en/computex-2026-booth-tour/": {
+      "title_ko": "최태원 회장과 젠슨 황 CEO, ‘컴퓨텍스 타이베이 2026’에서 재회",
+      "summary_ko": "태그: AI, AI 메모리, COMPUTEX, NVIDIA",
+      "source_fingerprint": "86a4fd2e3abef273a531cb3303ffc5c2ab26e968d48dc1509969cc87047b5485",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.kioxia-holdings.com/en-jp/news/2026/20260602-1.html": {
+      "title_ko": "키옥시아, ‘투자자의 날’ 행사에서 AI 추론 시대를 위한 성장 전략 발표",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "5d0433468a9ca23500c501804ed82998fe59f432024b292c5fd57c31be9bb0c3",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/computex-2026-an-intelligent-world-built-on-silicon.html": {
+      "title_ko": "컴퓨텍스 2026: 실리콘을 기반으로 한 지능형 세계",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "46f435b80ad1be18abaaeadf823ceba2cca119d0ad73f242e7eea466b3c08d2a",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/data-center/intel-introduces-ethernet-e835-controllers-network-adapters.html": {
+      "title_ko": "인텔, 클라우드·엣지·기업용 데이터 센터 인프라를 위한 이더넷 E835 컨트롤러 및 네트워크 어댑터 출시",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 데이터 센터",
+      "source_fingerprint": "0be3a4960904f0787de96ada211184af9b184ab5f4f71fdeb7ccb63afbeb951c",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://news.skhynix.com/en/gtc-taipei-2026-keynote/": {
+      "title_ko": "SK그룹 최태원 회장이 ‘GTC 타이베이 2026’ 기조연설에 참석해 ‘차세대 AI 아키텍처를 함께 구축하는 혁신적인 파트너’라는 비전을 재확인했다.",
+      "summary_ko": "태그: AI, AI 메모리, GTC, HBF, HBM",
+      "source_fingerprint": "c063e6143a55bca360264648abf059ed2032577e1dcfe47f64a4b343ef09d8b9",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/data-center/intel-puts-agentic-ai-xeon-6-networking-ai-systems.html": {
+      "title_ko": "인텔, 제온 6+ 및 네트워킹, AI 시스템에 에이전틱 AI 적용",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 데이터 센터",
+      "source_fingerprint": "88fd45d2e9af9e78e24f026ceb8108afd5ef0972416a2e2f15099cfe41bb3e27",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/press-hub/press-kit/artificial-intelligence/press-kit-intel-at-computex-2026.html": {
+      "title_ko": "보도 자료: 컴퓨텍스 2026에서 인텔",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "3075dea11b7a484b4fc68e4490cd708e9e904b68dd1dec21319059d35a237609",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-announces-new-ai-innovations-at-computex.html": {
+      "title_ko": "인텔, 컴퓨텍스에서 새로운 AI 혁신 기술 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "cdde8da172c86fe6341289ca45073981fb9aff3a1e9dbaeab7502c796dec6c0e",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/hdnjh300000000h4-att/20260601_002_e.pdf": {
+      "title_ko": "ISS의 의결 권고에 대한 도쿄 일렉트로ンの 입장",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "be607f60029aa057942f749517ec2e07d34fdb23d57ad7ecba38c9f8e2365668",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/customers-choose-intel-for-edge-devices.html": {
+      "title_ko": "130여 곳의 고객사가 엣지 디바이스용으로 인텔 시리즈 3 프로세서를 선택했습니다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "7b76d7ebc346ddd9c0dd2422f64c131201664d56d40d4adff59886b98474481e",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples": {
+      "title_ko": "삼성전자, 업계 최초의 HBM4E 샘플 출하 개시",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "2c8d07455f92888684cd7c51fed044f9624e3680bb14670d79bcebcdbce30ba8",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qncnjq00000000p7-att/20260529_003_e.pdf": {
+      "title_ko": "도쿄 일렉트로닉 이사회 효율성 평가 결과 요약",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "c11d2b5f5a523f3dc60edc2943d94cb0a038270e12476aaddfd2a2cc8c277b8a",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qncnjq00000000na-att/20260529_002_e.pdf": {
+      "title_ko": "자사주 매입 제도 도입에 관한 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "ea2423945200168ba168455b21c37b53e8128ce8d4fb33ad01c73b0b827301c3",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qncnjq00000000ld-att/20260529_001_e.pdf": {
+      "title_ko": "주식 분할 및 이에 따른 정관 일부 개정 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "a29851fd89747a06cf68fe8f11fed779ccb47012e27d0772bdd4c7697e5b0846",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-arc-g-series-processors-set-a-new-standard-for-handheld-pc-gaming.html": {
+      "title_ko": "인텔 아크 G 시리즈 프로세서, 휴대용 PC 게임의 새로운 기준을 제시하다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "5be76d14474748031d421fd41bf22bf3cba02b803e4ea6bf12d964b158c8efff",
+      "translated_at": "2026-09-12T12:42:30.510414+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/meet-the-inventor-of-emib.html": {
+      "title_ko": "EMIB 칩 패키징을 이끈 인텔의 선구자를 만나보세요",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
+      "source_fingerprint": "eb91c2128cb1e1a27b2aef965eb94beda11a579e0d7a21ecb584c93b631e0855",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/20260522_001.html": {
+      "title_ko": "도쿄 일렉트로닉, 규슈에 신사옥 건설 예정",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "65d885c99cbde12c01e117ef69662f931836bc5d99af328f0a15a772eb0d002f",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intels-2025-outstanding-researcher-awards-honor-10-academic-innovators.html": {
+      "title_ko": "인텔의 ‘2025년 우수 연구자상’이 10명의 학계 혁신가들을 선정했다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "24f0fda54d9b9475d8907c2d8df7570d51b5877acaf1f3ab242e660fafedc434",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-05-21-Lam-Research-Corporation-Declares-Quarterly-Dividend": {
+      "title_ko": "램 리서치 코퍼레이션, 분기 배당금 발표",
+      "summary_ko": "램 리서치 코퍼레이션(나스닥: LRCX)은 오늘 이사회가 보통주 1주당 0.26달러의 분기 배당금을 승인했다고 발표했다. 배당금은 7월...에 지급될 예정이다.",
+      "source_fingerprint": "65d9d48ca4ed769a91dd692af551b596e5ec53c996c48b7a93a9ab6853d9ed4e",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://news.skhynix.com/en/dtw-2026/": {
+      "title_ko": "라스베이거스에서 델과 SK하이닉스가 한자리에 모인 이유는 무엇일까? HBM에서 cSSD에 이르기까지, AI 메모리의 무한한 확장성을 재확인하다",
+      "summary_ko": "태그: AI, AI 메모리, cSSD, DTW, eSSD, HBM",
+      "source_fingerprint": "b1e2f70df2ddf860e6d64e6d5e6c5e9d97c193d8bf538e7936667c2ce7ef015e",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/opinion/artificial-intelligence/solving-the-agentic-ai-trilemma-cost-scale-and-data-security.html": {
+      "title_ko": "에이전트 기반 AI의 3대 딜레마 해결 - 비용, 확장성, 데이터 보안",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "191465a710758400f0087931a3278d7977b430d7ef24edfc549e5657dd53f965",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-core-ultra-series-3-for-edge-ai-robotics.html": {
+      "title_ko": "인텔 코어 울트라 시리즈 3: 엣지 AI 로봇 공학 컴퓨팅을 위한 새로운 표준",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "05df097a8a5da6d684c73dd39bc79310f80d99624fd9cabe543da354192ea4e1",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://newsroom.lamresearch.com/Lam-Research-Establishes-Panel-Level-Packaging-CoE": {
+      "title_ko": "램 리서치, 오스트리아 잘츠부르크에 패널 레벨 패키징 우수 센터 설립",
+      "summary_ko": "오스트리아 잘츠부르크, 2026년 5월 20일 — 램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 오스트리아 잘츠부르크에 패널 레벨 패키징 센터 오브 엑설런스(CoE)를 설립했다고 발표했으며, 이는...",
+      "source_fingerprint": "c21df16cb2d535a7c08af718960c7cf6cb3a019596e810503174c827660074ed",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.micron.com/about/blog/memory/dram/new-stac-a2-record-shows-how-mrdimms-scale-financial-risk-analytics": {
+      "title_ko": "새로운 STAC-A2 기록은 MRDIMM이 금융 리스크 분석을 어떻게 확장하는지 보여준다",
+      "summary_ko": "마이크론 MRDIMM과 인텔 제온 6이 어떻게 STAC-A2 벤치마크의 새로운 기준을 수립하여 금융 리스크 분석의 처리량, 효율성 및 속도를 향상시켰는지 알아보세요.",
+      "source_fingerprint": "7ae43f679da9e1e3ad79300c94f0dc833242fbca9624ec2e3eeb49802c4bb686",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/tata-electronics-and-asml-announce-strategic-partnership": {
+      "title_ko": "타타 일렉트로닉스와 ASML, 인도 반도체 제조 생태계 발전을 위한 전략적 파트너십 체결",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "d8c6b294637faa181eb3a24ec25dd7df36cec723dda0f340fe8cf1691e2c7a58",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260515-1.html": {
+      "title_ko": "키옥시아와 델 테크놀로지스, 9.8 PB 용량의 플래시 스토리지를 탑재한 고밀도 서버를 최초로 출시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "2f6e951ee6bd80c94a4662108545677f43d4fef5f20bb04335303e530b993ae1",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3314": {
+      "title_ko": "TSMC, 뱅가드 인터내셔널 세미컨덕터의 지분 8.1% 매각 예정",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "aa8936100aa0736f2c75372279cabc5afae74063e0ae52c9d8cbacf932746337",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260515_001.html": {
+      "title_ko": "도쿄 일렉트로닉 규슈, RBA VAP에서 플래티넘 등급 획득",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "e46b39a28c9796b3f09bc2166617749ebde6f990b3375253156998af463bbcdc",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260514-1.html": {
+      "title_ko": "키옥시아, PC OEM 업체를 위한 고성능 ‘KIOXIA XG10’ 시리즈 SSD 공개",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "59b3053155d66ed8ab1b6468646e21fc15a44249112ece68d03f91c62ff13886",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-named-official-compute-partner-of-mclaren-racing.html": {
+      "title_ko": "인텔, 맥라렌 레이싱의 공식 컴퓨팅 파트너로 선정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "4a0139b71727c793beb690c8da547ddf266f6eaf0bece751fecf985e807798ad",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.kla.com/advance/innovation/innovation-beyond-the-chip-exploring-advanced-packaging-architectures": {
+      "title_ko": "칩을 넘어선 혁신: 첨단 패키징 아키텍처 탐구 | 혁신 | KLA",
+      "summary_ko": "AI, HPC 및 차세대 반도체 혁신을 주도하는 5가지 첨단 패키징 아키텍처—하이브리드 본딩, 인터포저, 임베디드 브리지, 유리 기판, 코패키징 광학 소자—를 살펴보세요.",
+      "source_fingerprint": "a59bd6578fd8f2160e99c782a4d7caf838967f10822d1cf6d0236f47bb4b7ce5",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.asml.com/en/company/stories/2026/marco-pieters-asml-cto": {
+      "title_ko": "ASML 최고기술책임자(CTO) 마르코 피터스를 만나보세요",
+      "summary_ko": "ASML의 신임 최고기술책임자(CTO) 마르코 피터스는 수십 년에 걸친 혁신과 고객 중심 철학을 바탕으로 ASML의 새로운 장을 열어갈 것입니다.",
+      "source_fingerprint": "22e18709f26ce502f40511d67386fff8eb7ca47787fe588727d2cef42be059ec",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://news.skhynix.com/en/tech-note-series-ep1/": {
+      "title_ko": "[테크 노트 EP.1] ‘메모리가 관건이다’, AI의 미래는 메모리에 달려 있다",
+      "summary_ko": "태그: AI, HBF, HBM, 물리적 AI, 용인 반도체 클러스터",
+      "source_fingerprint": "a737c159749c21e02498e2d06844e484dcfecf4bd9c967c38619e75981c2b413",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/gdv06900000000fd-att/20260512_001_e.pdf": {
+      "title_ko": "잉여금 배당금 지급에 관한 공고 (2026년 3월 31일 종료 회계연도)",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "9bb719aa4631d1ee728145a7bcb4c547ff404b8a24916c22e87ce99b013ac4ca",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260512_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘다우존스 베스트-인-클래스 아시아 태평양 지수’에 선정",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "806c38cdd16f40ac9ed10f2e40926811a53187492b95a0e44c918ae96b2d5673",
+      "translated_at": "2026-09-12T12:42:31.632491+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3305": {
+      "title_ko": "TSMC 2026년 4월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "3a6f20daa8080fac70479334f88985a4425ee01fa16d7e27caf631d01931d775",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3308": {
+      "title_ko": "소니 반도체 솔루션즈와 TSMC, 차세대 이미지 센서 전략적 파트너십을 위한 예비 협약 체결",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "a4edc256dae14d2ac52c22ffd66454618088443aeff598e4a81620848ae061e3",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/515/kla-corporation-announces-ten-to-one-stock-split-and": {
+      "title_ko": "KLA 코퍼레이션, 10대 1 주식 분할 및 분기별 현금 배당금 지급 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "73c410382f148c8c34fbb3c3293c6843848be0cffc23a8611b9dc38bb3998187",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/asml-ceo-christophe-fouquet-co-signed-opinion-piece": {
+      "title_ko": "ASML의 크리스토프 푸케 CEO가 유럽 기술 기업들과 함께 기고문을 공동 서명했다",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "225e65da74bc3a2f43850dd50b5750fb790e4866ff6284c2a6a34c2ba3e28f2b",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/micron-6600-ion-redefining-data-center-storage": {
+      "title_ko": "마이크론 6600 ION 245TB가 출시되었습니다 — 대규모 데이터 센터 스토리지의 새로운 기준을 제시합니다",
+      "summary_ko": "빌 볼렌지어의 6600 ION 245TB 출시 관련 블로그 게시물.",
+      "source_fingerprint": "7ec0549710044aaea8cf846ef7d6023a0d3a6da66ff5a5074c210bf0d63d7676",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-at-computex-2026-the-next-era-of-ai-driven-computing.html": {
+      "title_ko": "2026 컴퓨텍스에서 인텔: AI 기반 컴퓨팅의 다음 시대를 선도하다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "0c717bf3b5f4a38b9c495d0eb979c7eb7f14cc4ef0131034057e0827286ed18d",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conferences-may-2026.html": {
+      "title_ko": "인텔, 다가오는 투자자 컨퍼런스에 참가 예정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "e1d0910a0152fe0817c2b5cc1bea50b190e1cbd59da74a63068d713e735ac811",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-client-computing-and-innovation-leadership-news-may-2026.html": {
+      "title_ko": "인텔, 클라이언트 컴퓨팅 발전 및 미래 혁신 추진을 위한 경영진 인사 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "0ed98e18ed8e0e1b55daa040ce3f419b6772152d016da76f890f4427a0b0dbb7",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.tel.com/news/event/2026/20260501_001.html": {
+      "title_ko": "SEMICON 동남아시아 2026",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "dbf5e78931acc3b0ecd346a145e636a46c91d6999dd001c295b66e3708d8850d",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.kla.com/advance/leadership/kla-announces-march-quarter-earnings-2026": {
+      "title_ko": "KLA, 3월 분기 실적 발표 | 경영진 | KLA",
+      "summary_ko": "KLA의 3월 분기 실적에 대해 알아보기",
+      "source_fingerprint": "47b615961ca506bf5cee8b7148c1ec89205ec68d9112475b78768b093401e766",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/514/kla-corporation-reports-fiscal-2026-third-quarter-results": {
+      "title_ko": "KLA 코퍼레이션, 2026 회계연도 3분기 실적 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "43b59f57abac90b4b3c440129e7a737df7b09e17db3c3cfd7088910467203b06",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/chatppt-collaborates-with-intel-to-launch-hybrid-ai-pc-edition.html": {
+      "title_ko": "ChatPPT, 인텔과 협력해 하이브리드 AI PC 에디션 출시",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "87a5590263b8d50d2acd3deed49d4d3ab41f51a0dac91e00bba6df699e633d4c",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/vmware-vmmark-4-world-record-dell-technologies-and-micron-power-performance-of-virtualization-platforms": {
+      "title_ko": "VMware® VMmark® 4 세계 신기록: Dell Technologies®와 Micron®이 가상화 플랫폼의 성능을 뒷받침하다",
+      "summary_ko": "4노드 클러스터. 334대의 가상 머신. VMmark 4 점수 12.4. VMware에 따르면, 이는 2026년 1월 20일에 검증된 새로운 세계 기록입니다. 이 기록은 기존 기록을 18.1% 상회하며, 동일한 클러스터 규모에서 가상 머신을 48대 더 추가한 것입니다. 연구팀은 이 결과를 레퍼런스 아키텍처에 기록했으며, 해당 아키텍처에는 연구 결과가 자세히 설명되어 있습니다 <RA 링크>. 이 블로그에서는 해당 연구와 결과를 요약하여 소개합니다.",
+      "source_fingerprint": "960284fe1589f2f3571a4d0a9922cf854d9485c12384dc0f8eb8047232b00e00",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://news.skhynix.com/en/opinion-local-economy-pt7/": {
+      "title_ko": "기업 주도의 이니셔티브를 통한 침체 지역 활성화의 경제학적 측면",
+      "summary_ko": "태그: 첨단 패키징, AI 인프라, 균형 잡힌 지역 발전, P&T7, 패키지, 지역 활성화, 반도체 산업",
+      "source_fingerprint": "411f16a1668bb04d947c14a759aff64877b8229ca35dbd889f727f71a9989e1a",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.tel.com/news/notice/2026/iuqupt00000000ff-att/20260427_001_e.pdf": {
+      "title_ko": "당사 대만 자회사에 대한 판결 관련 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "7e93bb5ccf69f918e84e7620defe46bed70276e3be0bad5290c75872423929bd",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/power-efficiency-enables-ai-era-client-performance": {
+      "title_ko": "전력 효율성이 AI 시대의 클라이언트 성능을 가능하게 합니다",
+      "summary_ko": "최고의 성능을 발휘하는 동시에 활성 대기 전력 소비를 대폭 줄이고 와트당 성능을 향상시킨 마이크론 3610은 엣지 AI 플랫폼이 직면한 핵심 과제, 즉 에너지 소비를 최소화하면서 높은 성능을 지속적으로 유지하는 문제를 해결합니다.",
+      "source_fingerprint": "ab0c416beb1a716848512115d5efe729383fcd26f021df5bd23dd41c8c1e54fb",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.tel.com/news/topics/2026/20260424_001.html": {
+      "title_ko": "도쿄 일렉트로, 2024 회계연도 일본 경제산업성(METI) ‘글로벌 사우스 미래 지향적 공동창조 프로젝트’에 선정",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "5362cce559eb0c68fcdce3f26b7b88d13b5716548f88152731c3833e5d3d0a7c",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://news.skhynix.com/en/tsmc-technology-symposium-2026/": {
+      "title_ko": "“기술적 한계를 극복하려면 메모리와 로직의 통합이 필요하다”: SK하이닉스, TSMC 심포지엄에서 비전 제시",
+      "summary_ko": "태그: HBM, HBM3E, HBM4, TSMC",
+      "source_fingerprint": "5dcd041149a831f9eaaed58867b7c447b2cb0ccedeefa44e3fabf92146f838c4",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260423-1.html": {
+      "title_ko": "키옥시아, PC OEM 업체를 위한 새로운 주류형 KIOXIA BG8 시리즈 SSD 출시",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "34f5f1aae353db42f403329114f16c7b0522c72ed12f221b34f5cd0539a051a8",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3302": {
+      "title_ko": "TSMC, 2026년 북미 기술 심포지엄에서 A13 공정 기술 첫 공개",
+      "summary_ko": "공식 출처: TSMC 언론센터",
+      "source_fingerprint": "cb9e47f0677740a2193bd2a4c4cd104e186b19be4fc19d018c318c5910de75e4",
+      "translated_at": "2026-09-12T12:42:32.649837+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-reports-first-quarter-2026-financial-results.html": {
+      "title_ko": "인텔, 2026년 1분기 실적 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "48001d899f7aedc7586d8346fabd047e0882e0d149b9e00e5c40809abd1e7da9",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/asml-discloses-2026-agm-results": {
+      "title_ko": "ASML, 2026년 정기주주총회 결과 발표",
+      "summary_ko": "ASML 공식 보도자료",
+      "source_fingerprint": "5c5033b90115d963edb115b232b43f7587fe0c4240646e6819a401e890c1938f",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://news.skhynix.com/en/skhynix-chungju-pt7/": {
+      "title_ko": "P&T7은 청주에게 어떤 의미를 가질까? 새로운 AI 메모리 생산 거점이자 지역 경제의 원동력",
+      "summary_ko": "태그: 첨단 패키징, AI 인프라, AI 메모리, 균형 잡힌 지역 발전, P&T7, 지역 활성화",
+      "source_fingerprint": "2935d8d0ff389490d8f4f70985fdbf69305f90adb73d178a5c5c7a22258c80b3",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-04-22-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-March-29,-2026": {
+      "title_ko": "램 리서치 코퍼레이션, 2026년 3월 29일 종료된 분기 실적 발표",
+      "summary_ko": "램 리서치 코퍼레이션(이하 “회사”, “램”, “램 리서치”)은 오늘 2026년 3월 29일로 종료된 분기(이하 “2026년 3월 분기”)의 재무 실적을 발표했습니다. 2026년 3월 분기의 주요 내용은 다음과 같습니다...",
+      "source_fingerprint": "d0ee2f999d1115c8ef127a200e8fc21ad873a9cc5a47a5a2c0566fcea1ffa7ad",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260421-1.html": {
+      "title_ko": "키옥시아, PC OEM 업체를 위한 가성비 중심의 QLC 기반 ‘KIOXIA EG7’ 시리즈 SSD 공개",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "3e7c58fd9337fc077cd81c47b79cf41b481f772ec78ac600a6f4e995757dc36e",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.tel.com/news/disaster/2026/20260420_001.html": {
+      "title_ko": "4월 20일 일본 도호쿠에서 발생한 지진에 대한 대응",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "3925603193b7ce04ff33d4b0794a7cfab8dc680401e53f8611e7a09a12b12ee7",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3297": {
+      "title_ko": "TSMC, 1분기 주당순이익(EPS) 22.08 대만달러 기록",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "973f8889c2edb7497d0bffe5d1d6eeeb5165903325a97a395adc4ef7d84f8537",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3300": {
+      "title_ko": "TSMC, 2025년도 20-F 양식 연례 보고서 제출",
+      "summary_ko": "공식 출처: TSMC 보도자료 센터",
+      "source_fingerprint": "0713e6c90d86f6a9997dcb474ad8997d1b4e0b50994b983793d768534bd82255",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-launches-intel-core-series-3-processors-changing-the-game-for-everyday-computing.html": {
+      "title_ko": "인텔, 인텔 코어 시리즈 3 프로세서 출시: 일상적인 컴퓨팅의 판도를 바꾸다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "bec06b05c26e6c25e0787c11a0e30eda170c69d0d208b89be584dc25dd90158a",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.tel.com/news/product/2026/20260416_001.html": {
+      "title_ko": "도쿄 일렉트로닉, 신형 디바이스 프로버 ‘Prexa™ SDP’ 출시",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "0df1f51520488c44a873e02c53b2c477930f334aa29493289ccea3b7b0340b8c",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results": {
+      "title_ko": "ASML, 2026년 1분기 총 순매출 88억 유로, 순이익 28억 유로 기록",
+      "summary_ko": "ASML은 현재 2026년 총 순매출이 360억 유로에서 400억 유로 사이가 될 것으로 전망하며, 매출총이익률은 51%에서 53% 사이가 될 것으로 보고 있습니다.",
+      "source_fingerprint": "b6d88c7257cbd6715ea3bcd287e55dac0421879ad5004b3a717b588a334bbe47",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.micron.com/about/blog/storage/ssd/why-io-size-changes-the-economics-of-qlc-vs-hdd": {
+      "title_ko": "IO 크기가 QLC와 HDD의 경제성을 어떻게 변화시키는가",
+      "summary_ko": "스토리지 성능과 비용은 일반적으로 $/TB 단위로 비교되지만, 워크로드의 IO 크기는 주어진 수준의 처리량을 달성하는 데 필요한 용량에 가장 큰 영향을 미칩니다.",
+      "source_fingerprint": "00ea2e74da90fa746b63ecc28496d4757d1f62fba2f27cffd5f27f1b4ef497a0",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/wireless/intel-dell-nokia-redefine-upf-deployment-at-the-far-edge.html": {
+      "title_ko": "인텔, 델 테크놀로지스, 노키아, ‘파 에지’에서 UPF 구축의 새로운 기준을 제시하다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 무선",
+      "source_fingerprint": "9af98c744a0aa8195d4e01ddd4da48876cb2a6624ca02c5ab29e409757a7b1e6",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://pr.tsmc.com/english/news/3294": {
+      "title_ko": "TSMC 2026년 3월 매출 보고서",
+      "summary_ko": "공식 출처: TSMC 프레스 센터",
+      "source_fingerprint": "9621cd7fc6c05f05348263760e1c9734758833dc8661d27d1b99034c59a307a5",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-google-deepen-collaboration-to-advance-ai-infrastructure.html": {
+      "title_ko": "인텔과 구글, AI 인프라 발전을 위해 협력 강화",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "3b175f6898e732c72f0eb997cdffba35dafb6b976672586843b782111fa882de",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://news.skhynix.com/en/begin-supply-321-layer-qlc-nand-cssd/": {
+      "title_ko": "SK하이닉스, 321층 QLC NAND cSSD 공급 개시… AI PC 스토리지 분야 리더십 강화",
+      "summary_ko": "태그: 321층 4D NAND, AI, NAND 플래시, PQC21, QLC",
+      "source_fingerprint": "1747823f5f131cf8f54309676a4eb86074a05ec93a5e98c031eb22f8bc1f368d",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-and-sambanova-advance-agentic-ai-with-xeon-6.html": {
+      "title_ko": "인텔과 삼바노바, 제온 6을 통해 에이전트 기반 AI 발전 이끌어",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "e0893c285cc9183a27883d77559c8fa0f4613f9ab4cd98891f32a4822cff3684",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/anll7d00000000um-att/20260406_001_e.pdf": {
+      "title_ko": "대표이사 변경 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "6b72381ec9d35da53ab6056ba578ada625926687d7592eaf2e4a2f06d1710272",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.tel.com/news/topics/2026/20260406_001.html": {
+      "title_ko": "도쿄 일렉트로닉, 프로 골퍼 타케다 리오와 후원 계약 체결",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "839d31dba46d7409f19b21ec99865e1dc2dd4a51c691c81e924b4a2f36fea168",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-appoints-aparna-bawa-as-executive-vice-president-and-chief-legal-people-officer.html": {
+      "title_ko": "인텔, 아파르나 바와를 부사장 겸 최고법무·인사책임자로 임명",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "e08cdb6f9d8000f37f9bca00b9d4a5d8691b715f353f2f0f56a5a825b48db2ed",
+      "translated_at": "2026-09-12T12:42:33.641010+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-delivers-ai-performance-mlperf-inference-v6-0.html": {
+      "title_ko": "인텔, MLPerf 추론 v6.0에서 개방적이고 확장 가능한 AI 성능 제공",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "59ae4a00ccc20b74627e8118b47c7d305a5cb4a7feb67e82eb2ccec21f589d87",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-repurchase-49-equity-interest-ireland-fab-joint-venture.html": {
+      "title_ko": "인텔, 아일랜드 반도체 공장 합작사의 지분 49%를 재매입할 예정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "07972516eaccb43fe5ec1bdbcdb62477365098a63e8e2d12e723ce07ac0063dd",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-04-01-Lam-Research-Corporation-Announces-March-Quarter-Financial-Conference-Call": {
+      "title_ko": "램 리서치 코퍼레이션, 3월 분기 실적 설명회 개최 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 2026년 4월 22일 수요일 오후 2시(태평양 표준시)부터 분기별 재무 실적 컨퍼런스 콜 및 웹캐스트를 진행할 것이라고 발표했습니다...",
+      "source_fingerprint": "58999202a3b4e59482641c1b9f91d1bf5a2002fc3a2ee335e1298de3cb3c6960",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/513/kla-announces-third-quarter-fiscal-year-2026-earnings-date": {
+      "title_ko": "KLA, 2026 회계연도 3분기 실적 발표일 발표",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "be895f6c40a2b785547669286a5026d1d5c807466870d635bb027e15b0877f4c",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-to-report-first-quarter-2026-financial-results.html": {
+      "title_ko": "인텔, 2026년 1분기 실적 발표 예정",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "60bbe006144523fbeb3a73b69469f914775f5166d3e3b788616cddfa72424e18",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://news.skhynix.com/en/gtc-2026-review/": {
+      "title_ko": "[SOD 리뷰] GTC 2026: 모델에서 인프라로 – AI 경쟁의 변화 양상과 SK하이닉스에 미치는 의미",
+      "summary_ko": "태그: AI, AI 메모리, DRAM, eSSD, GTC, HBM4, NAND",
+      "source_fingerprint": "be126dcf92213a339d575758f349b7381b2768276f2a2ee969f8437cdeb678c1",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/kn008f00000000jl-att/20260327_003_e.pdf": {
+      "title_ko": "자사주 소각 공고",
+      "summary_ko": "도쿄 일렉트로ンの 공식 뉴스룸 기사",
+      "source_fingerprint": "5e1b7bd6bd7a2c60d8e052e5f09d3a05341ae2f3cf2f11b241596c237ddf155d",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/kn008f00000000fr-att/20260327_001_e.pdf": {
+      "title_ko": "이사회 이사 변경에 관한 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "6336a27234c4d29736c9c83937661346aae8438d3b07fbb53a01b0c5151e2eef",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.tel.com/news/topics/2026/20260327_001.html": {
+      "title_ko": "도쿄 일렉트로닉, 텍사스 인스트루먼트의 ‘2025년 우수 공급업체 상’ 수상",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "8640075664504dc86bcb60f00772dc5fea812ce929ccee3de6ca6276129572c8",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-named-one-of-americas-most-innovative-companies-by-fortune.html": {
+      "title_ko": "인텔, 포춘지가 선정한 ‘미국에서 가장 혁신적인 기업’ 중 하나로 꼽혀",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "ac3610686c3b23b2d8456dc574eb4bf3aee3b38ee9461aa77e841191828d9b58",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-crowdstrike-expand-collaboration-help-businesses-adopt-ai.html": {
+      "title_ko": "인텔과 크라우드스트라이크, 기업들이 AI를 안전하게 도입할 수 있도록 협력 범위 확대",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
+      "source_fingerprint": "fa68faf155d5c8b78620ca684113593e364f111be980b4aff949bc6319f38cd0",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/press-hub/press-kit/client-computing/press-kit-intel-pro-day-2026.html": {
+      "title_ko": "보도 자료: 인텔 프로 데이 2026",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "f0f8b06c11938e9b2437ba6402f8be101a0fffae0d4a9fee907b163ab7e66d6b",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-core-ultra-series-3-with-vpro-powers-next-gen-pcs-on-18a.html": {
+      "title_ko": "인텔 vPro를 탑재한 인텔 코어 울트라 시리즈 3, 인텔 18A 기반 차세대 상업용 PC에 힘을 실어주다",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "14edb27ca5ae15ba7eaae7cf51f39be97a6c182b33b536da195e1cc597727a78",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260323_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘닛케이 통합 보고서 어워드 2025’ 준대상 수상",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "7540b0a5a87d1b4bac1205dfb77ea65972ae3447af65dd5ee9bfb47bbe368842",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260323_002.html": {
+      "title_ko": "도쿄 일렉트로닉, S&P 글로벌 ‘지속가능성 연감 회원사’로 선정",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "1a642b8f2ba0ffbb87fea90a40a94ee978ff2e7acc0e2d214322172b3489ea10",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.kla.com/advance/leadership/the-road-ahead-is-paved-with-50-years-of-innovation-and-customer-success": {
+      "title_ko": "KLA의 50년 혁신과 고객 성공 | 리더십 | KLA",
+      "summary_ko": "KLA는 반도체 기술 분야에서 50년간 이어온 혁신을 기념하며, 고객의 성공 사례와 업계에 미친 영향, 그리고 향후 50년을 향한 미래 지향적인 비전을 강조합니다.",
+      "source_fingerprint": "1168372db5146a1707745e935c4fd1cb1681646b2f5190163ccf8c1eb49b7e98",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-announces-2026-epic-supplier-award-recipients.html": {
+      "title_ko": "인텔, 2026년 EPIC 공급업체 상 수상자 발표",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
+      "source_fingerprint": "f9d70cd84b5ea573f755c338e5c0b14012fb6c86e52ba1091df2e55fdb1a2965",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://www.kla.com/advance/leadership/kla-rings-nasdaq-bell-celebrating-50-years-of-innovation": {
+      "title_ko": "KLA, 2026년 투자자의 날을 맞아 나스닥 종장 종을 울리다 | 리더십 | KLA",
+      "summary_ko": "KLA는 2026년 ‘투자자의 날’을 맞아 나스닥 종가 종을 울리며, 반도체 산업 분야에서 50년간 이어온 혁신, 고객과의 협력, 그리고 리더십을 기념했습니다.",
+      "source_fingerprint": "1e49355603ddfce692a6a87b5357d1eb123d0bd08200be606955532aa4736799",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://news.samsung.com/global/samsung-and-amd-expand-strategic-collaboration-on-next-generation-ai-memory-solutions": {
+      "title_ko": "삼성전자와 AMD, 차세대 AI 메모리 솔루션 분야 전략적 협력 확대",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "8418acb3649c0ff6dc26a97088598e82f5d290d63264a060d9be2457ee29bd35",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-03-18-Ethisphere-Recognizes-Lam-Research-as-One-of-the-Worlds-Most-Ethical-Companies-R-for-Fourth-Consecutive-Year": {
+      "title_ko": "에티스피어(Ethisphere), 램 리서치(Lam Research)를 4년 연속 ‘세계에서 가장 윤리적인 기업®’ 중 하나로 선정",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 윤리 기준을 정의하고 발전시키는 데 있어 세계적인 선도 기관인 에티스피어(Ethisphere)로부터 ‘2026년 세계에서 가장 윤리적인 기업®’ 중 하나로 선정되었다고 발표했습니다...",
+      "source_fingerprint": "101a21ce6d731cbbb9b65c0d3608381457826be8e216f7635915527061b710fc",
+      "translated_at": "2026-09-12T12:42:34.660158+00:00"
+    },
+    "https://news.samsung.com/global/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026": {
+      "title_ko": "삼성, NVIDIA GTC 2026에서 HBM4E 공개… 포괄적인 AI 솔루션, NVIDIA와의 파트너십 및 비전 선보여",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "7bab733616400a4bd4d096e0b4c18c7bb7718726a4cd4a07ea3bb56e6fa83190",
+      "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    },
+    "https://news.skhynix.com/en/gtc-2026-ai-partnership/": {
+      "title_ko": "SK그룹 최태원 회장이 GTC 2026에 처음으로 참석하며, AI 생태계 내 ‘혁신 파트너’로서의 입지를 공고히 했다",
+      "summary_ko": "태그: AI 메모리, GTC, HBM, HBM4, 파트너십",
+      "source_fingerprint": "6465ef64f9986d25e6aed44d63967e21c6ce4017f68219c5e9f9db0d14950348",
+      "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    },
+    "https://www.kioxia.com/en-jp/business/news/2026/20260317-1.html": {
+      "title_ko": "키옥시아, AI GPU 기반 워크로드에 최적화된 신규 SSD 모델 발표",
+      "summary_ko": "공식 분류: 보도자료",
+      "source_fingerprint": "c2646ddac5b5d631a01163e9c0e7dd0ae909f962892ec91b3a48b286db03c7da",
+      "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    },
+    "https://www.intel.com/content/www/us/en/newsroom/news/client-computing/intel-launches-core-ultra-200hx-plus-series-mobile-processors.html": {
+      "title_ko": "인텔, 새로운 코어 울트라 200HX 플러스 시리즈 모바일 프로세서 출시",
+      "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
+      "source_fingerprint": "41e865312b3f019bdc917facb65f8912be8643b7c25dcb708daa6d9b32d8c608",
+      "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260317_001.html": {
+      "title_ko": "TEL, 제5회 연례 E-COMPASS 데이 개최",
+      "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
+      "source_fingerprint": "f6ba5b96f9d78a0704c144ac27d250eea1d0a1ffbd14b0d0a9cc39c8578c0eaa",
+      "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    }
+  }
 }
