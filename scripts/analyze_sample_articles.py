@@ -109,10 +109,23 @@ def cap_summary_confidence(analysis: dict) -> list[str]:
     return notes
 
 
-def cap_metadata_confidence(analysis: dict) -> list[str]:
+def cap_metadata_confidence(
+    analysis: dict, *, company: str, title: str
+) -> list[str]:
     """공식 제목만 사용한 결과는 항상 낮은 확신도로 표시한다."""
 
     notes = ["공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한"]
+    # 짧은 제목에서는 모델이 근거 문구를 의역하면 기계 검증에 실패하기 쉽다.
+    # 공식 제목 자체를 하나의 최소 사실로 고정해 과장과 문자열 불일치를 막는다.
+    analysis["facts"] = [
+        {
+            "statement_ko": (
+                f"{company} 공식 기사 제목에서 ‘{title}’ 관련 발표임을 확인할 수 있습니다."
+            ),
+            "evidence_en": title,
+        }
+    ]
+    notes.append("제목 기반 사실 근거를 공식 기사 제목 원문 1개로 고정")
     analysis["overall_confidence"] = "low"
     implications = analysis.get("company_implications")
     if isinstance(implications, list):
@@ -383,7 +396,13 @@ def main() -> None:
             if row.get("extraction_method") == "official_feed_summary":
                 normalization_notes.extend(cap_summary_confidence(analysis))
             elif row.get("extraction_method") == "official_index_metadata":
-                normalization_notes.extend(cap_metadata_confidence(analysis))
+                normalization_notes.extend(
+                    cap_metadata_confidence(
+                        analysis,
+                        company=str(row.get("company") or "해당 회사"),
+                        title=str(row.get("title") or ""),
+                    )
+                )
             issues = validate_analysis(analysis, body)
             result.update(
                 {
