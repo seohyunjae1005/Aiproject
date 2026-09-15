@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -27,7 +28,8 @@ REQUEST_PATH = PROJECT_ROOT / "runtime" / "analysis_requests.json"
 BODY_PATH = PROJECT_ROOT / "runtime" / "article_bodies.json"
 RESULT_PATH = PROJECT_ROOT / "runtime" / "analysis_results.json"
 REPORT_PATH = PROJECT_ROOT / "runtime" / "analysis_validation.md"
-DEFAULT_MODEL = "gemini-3.8-flash"
+DEFAULT_MODEL = "gemini-3.5-flash-lite"
+FALLBACK_MODELS = ("gemini-3.1-flash-lite",)
 MAX_ARTICLES = 3
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
 
@@ -53,7 +55,20 @@ def extract_json(text: str) -> dict:
     return parsed
 
 
-def call_gemini(prompt: str, api_key: str, model: str) -> dict:
+def call_gemini(prompt: str, api_key: str, model: str) -> tuple[dict, str]:
+    """혼잡 오류에는 재시도한 뒤 무료 경량 모델로 전환한다."""
+
+    models = list(dict.fromkeys((model, *FALLBACK_MODELS)))
+    errors: list[str] = []
+    for candidate_model in models:
+        try:
+            return call_one_model(prompt, api_key, candidate_model), candidate_model
+        except RuntimeError as exc:
+            errors.append(f"{candidate_model}: {exc}")
+    raise RuntimeError(" / ".join(errors))
+
+
+def call_one_model(prompt: str, api_key: str, model: str) -> dict:
     model_path = urllib.parse.quote(model, safe="-.")
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
@@ -96,7 +111,7 @@ def call_gemini(prompt: str, api_key: str, model: str) -> dict:
         except (urllib.error.URLError, TimeoutError) as exc:
             last_error = exc
         if attempt < 2:
-            time.sleep(2 ** attempt)
+            time.sleep((2 ** (attempt + 1)) + random.uniform(0.2, 1.0))
     raise RuntimeError(str(last_error or "Gemini 호출에 실패했습니다."))
 
 
@@ -240,10 +255,13 @@ def main() -> None:
             "generated_at": datetime.now(timezone.utc).isoformat(),
         }
         try:
-            analysis = call_gemini(str(row.get("prompt") or ""), api_key, model)
+            analysis, used_model = call_gemini(
+                str(row.get("prompt") or ""), api_key, model
+            )
             issues = validate_analysis(analysis, body)
             result.update(
                 {
+                    "model": used_model,
                     "analysis": analysis,
                     "validation_status": "PASS" if not issues else "FAIL",
                     "validation_issues": issues,
