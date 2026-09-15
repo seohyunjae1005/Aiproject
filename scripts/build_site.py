@@ -23,6 +23,7 @@ from trend_tracker.classification import (
 INPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 OUTPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
 TRANSLATION_CACHE_PATH = PROJECT_ROOT / "data" / "translations" / "ko.json"
+ANALYSIS_CACHE_PATH = PROJECT_ROOT / "data" / "analysis" / "validated_cache.json"
 
 
 def _translation_cache() -> dict:
@@ -34,6 +35,28 @@ def _translation_cache() -> dict:
         print("경고: 번역 캐시가 손상되어 원문만 게시합니다.")
         return {}
     return payload.get("translations") or {}
+
+
+def _validated_analysis_cache() -> tuple[dict, dict]:
+    """공식 원문과 근거 검사를 통과한 회사별 분석만 읽는다."""
+    if not ANALYSIS_CACHE_PATH.exists():
+        return {}, {}
+    try:
+        payload = json.loads(ANALYSIS_CACHE_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        print("경고: AI 분석 캐시가 손상되어 분석 없이 게시합니다.")
+        return {}, {}
+
+    analyses: dict[str, dict] = {}
+    for item in (payload.get("companies") or {}).values():
+        if (
+            isinstance(item, dict)
+            and item.get("validation_status") == "PASS"
+            and item.get("url")
+            and isinstance(item.get("analysis"), dict)
+        ):
+            analyses[str(item["url"])] = item
+    return analyses, payload
 
 
 def _fingerprint(article: dict) -> str:
@@ -48,8 +71,10 @@ def main() -> None:
 
     payload = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
     translations = _translation_cache()
+    analyses, analysis_payload = _validated_analysis_cache()
     published_articles: list[dict] = []
     translated_count = 0
+    analyzed_count = 0
     for article in payload.get("articles", []):
         enriched = enrich_article(article)
         translated = translations.get(str(article.get("url") or ""))
@@ -62,6 +87,16 @@ def main() -> None:
             enriched["summary_ko"] = translated.get("summary_ko") or ""
             enriched["translation_provider"] = "DeepL"
             translated_count += 1
+        cached_analysis = analyses.get(str(article.get("url") or ""))
+        if cached_analysis:
+            enriched["ai_analysis"] = {
+                "analysis": cached_analysis["analysis"],
+                "validation_status": cached_analysis["validation_status"],
+                "review_status": cached_analysis.get("review_status") or "machine_validated",
+                "source_scope": cached_analysis.get("source_scope") or "official_article_body",
+                "generated_at": cached_analysis.get("generated_at"),
+            }
+            analyzed_count += 1
         published_articles.append(enriched)
     payload["articles"] = published_articles
     payload["article_count"] = len(payload["articles"])
@@ -75,12 +110,19 @@ def main() -> None:
         "provider": "DeepL",
         "translated_count": translated_count,
     }
+    payload["ai_analysis"] = {
+        "analyzed_count": analyzed_count,
+        "cached_company_count": len(analyses),
+        "updated_at": analysis_payload.get("updated_at"),
+        "notice": "AI가 공식 원문을 바탕으로 작성하고 기계적으로 근거를 검사한 참고용 초안입니다.",
+    }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     print(f"웹 데이터 생성: {payload.get('article_count', 0)}건")
+    print(f"AI 직무 분석 연결: {analyzed_count}건")
     print(f"저장 위치: {OUTPUT_PATH}")
 
 

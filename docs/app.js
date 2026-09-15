@@ -78,6 +78,67 @@ function badgeList(values, className, limit = 3) {
     .join("");
 }
 
+function confidenceLabel(value) {
+  return { high: "높음", medium: "보통", low: "낮음" }[value] || "미표시";
+}
+
+function renderAiAnalysis(item) {
+  if (!item?.analysis || item.validation_status !== "PASS") return "";
+  const analysis = item.analysis;
+  const roles = (analysis.role_insights || []).map((insight) => `
+    <section class="role-insight">
+      <h4>${escapeHtml(insight.role || "관련 직무")}</h4>
+      <p>${escapeHtml(insight.why_relevant_ko || "")}</p>
+      ${(insight.considerations_ko || []).length ? `
+        <strong>현업에서 생각할 점</strong>
+        <ul>${insight.considerations_ko.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
+      ` : ""}
+      ${(insight.study_points_ko || []).length ? `
+        <strong>취업 준비 학습 포인트</strong>
+        <ul>${insight.study_points_ko.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
+      ` : ""}
+    </section>
+  `).join("");
+  const facts = (analysis.facts || []).map((fact) => `
+    <li>
+      ${escapeHtml(fact.statement_ko || "")}
+      ${fact.evidence_en ? `<small>원문 근거: “${escapeHtml(fact.evidence_en)}”</small>` : ""}
+    </li>
+  `).join("");
+  const implications = (analysis.company_implications || []).map((value) => `
+    <li><strong>${escapeHtml(value.target_company || "대상 기업")}</strong> — ${escapeHtml(value.inference_ko || "")}
+      ${value.basis_ko ? `<small>판단 근거: ${escapeHtml(value.basis_ko)}</small>` : ""}
+    </li>
+  `).join("");
+
+  return `
+    <details class="ai-analysis">
+      <summary>AI 직무 인사이트 보기</summary>
+      <div class="analysis-body">
+        <div class="analysis-notice">
+          <span>공식 원문 기반 · 자동 근거검사 통과</span>
+          <span>신뢰도 ${confidenceLabel(analysis.overall_confidence)}</span>
+        </div>
+        <p class="analysis-summary">${escapeHtml(analysis.summary_ko || "")}</p>
+        ${(analysis.technology_signals || []).length ? `
+          <div class="technology-signals" aria-label="핵심 기술 신호">
+            ${badgeList(analysis.technology_signals, "technology", 8)}
+          </div>
+        ` : ""}
+        ${roles ? `<div class="role-insights"><h3>직무별 인사이트</h3>${roles}</div>` : ""}
+        ${implications ? `<div class="analysis-section"><h3>기업 관점의 의미</h3><ul>${implications}</ul></div>` : ""}
+        ${facts ? `<details class="evidence-details"><summary>확인된 사실과 원문 근거</summary><ul>${facts}</ul></details>` : ""}
+        ${(analysis.uncertainties_ko || []).length ? `
+          <div class="analysis-section uncertainty"><h3>추가 확인이 필요한 부분</h3>
+            <ul>${analysis.uncertainties_ko.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
+          </div>
+        ` : ""}
+        <p class="ai-disclaimer">AI가 작성한 참고용 초안입니다. 지원서·업무 판단에 사용하기 전 공식 원문을 확인하세요.</p>
+      </div>
+    </details>
+  `;
+}
+
 function render() {
   const rows = visibleArticles();
   resultLine.textContent = `${rows.length}개의 기술 신호를 표시합니다.`;
@@ -109,6 +170,7 @@ function render() {
           : [article.source_category || "공식 발표"]
         ).slice(0, 6).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
       </div>
+      ${renderAiAnalysis(article.ai_analysis)}
       <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기 →</a>
     </article>
   `;
@@ -219,6 +281,7 @@ async function loadData() {
     state.translatedCount = Number(data.translation?.translated_count || 0);
     document.querySelector("#total-count").textContent = data.article_count ?? state.articles.length;
     document.querySelector("#company-count").textContent = companies.length;
+    document.querySelector("#analysis-count").textContent = Number(data.ai_analysis?.analyzed_count || 0);
     document.querySelector("#updated").textContent = `최근 갱신 ${formatDate(data.generated_at)}`;
     createCompanyFilters(companies);
     fillSelect("#job-filter", options.job_roles || [], "job_roles");

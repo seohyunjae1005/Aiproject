@@ -134,6 +134,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 
 .article-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .article-card { display: flex; flex-direction: column; min-height: 15rem; padding: 1.3rem; border: 1px solid var(--line); background: linear-gradient(145deg, var(--surface), rgba(12, 24, 35, 0.55)); }
+.article-card:has(.ai-analysis[open]) { grid-column: 1 / -1; }
 .card-meta { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: 0.8rem; }
 .company { color: var(--accent-2); font-weight: 700; }
 .article-card h2 { margin: 1rem 0 0.8rem; font-size: 1.15rem; line-height: 1.45; letter-spacing: -0.02em; }
@@ -154,10 +155,36 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 .badge.job { background: rgba(106, 169, 255, 0.15); color: #9ac2ff; }
 .badge.domain { border: 1px solid #345063; color: #c7d5de; }
 .badge.signal { background: rgba(190, 133, 255, 0.12); color: #d5b7f8; }
+.badge.technology { border: 1px solid rgba(84, 224, 188, 0.45); color: #9cf2dc; }
 .keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 1rem; }
 .keyword { padding: 0.2rem 0.5rem; border: 1px solid #345063; color: #c7d5de; font-size: 0.75rem; }
 .source-link { align-self: flex-start; margin-top: 1rem; color: var(--accent); text-underline-offset: 0.25rem; }
 .source-link:hover { color: #91f4da; }
+.ai-analysis { margin-top: 1rem; border: 1px solid #345063; background: rgba(7, 16, 25, 0.55); }
+.ai-analysis > summary, .evidence-details > summary {
+  padding: 0.7rem 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+}
+.ai-analysis > summary:hover, .ai-analysis > summary:focus-visible { background: rgba(84, 224, 188, 0.08); }
+.analysis-body { padding: 0 0.85rem 0.9rem; }
+.analysis-notice { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; padding: 0.55rem 0; border-block: 1px solid var(--line); color: var(--muted); font-size: 0.7rem; }
+.analysis-summary { color: #dce7ed; font-size: 0.87rem; }
+.technology-signals { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.role-insights h3, .analysis-section h3 { margin: 1rem 0 0.5rem; font-size: 0.9rem; }
+.role-insights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; }
+.role-insights > h3 { grid-column: 1 / -1; }
+.role-insight { margin-top: 0.65rem; padding: 0.75rem; border-left: 2px solid var(--accent-2); background: rgba(18, 35, 49, 0.65); }
+.role-insight h4 { margin: 0; color: #9ac2ff; font-size: 0.85rem; }
+.role-insight p, .role-insight ul, .analysis-section ul, .evidence-details ul { margin: 0.35rem 0; font-size: 0.78rem; }
+.role-insight strong { display: block; margin-top: 0.55rem; color: #c7d5de; font-size: 0.75rem; }
+.role-insight li + li, .analysis-section li + li, .evidence-details li + li { margin-top: 0.35rem; }
+.evidence-details { margin-top: 0.8rem; border-top: 1px solid var(--line); }
+.evidence-details > summary { padding-inline: 0; color: #c7d5de; font-size: 0.78rem; }
+.evidence-details small, .analysis-section small { display: block; margin-top: 0.2rem; color: var(--muted); }
+.uncertainty { color: var(--muted); }
+.ai-disclaimer { margin: 0.9rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.7rem; }
 .empty { padding: 4rem 1rem; text-align: center; border: 1px dashed var(--line); color: var(--muted); }
 .empty h2 { color: var(--text); font-size: 1.2rem; }
 footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8rem; }
@@ -170,6 +197,7 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .metric { flex: 1; min-width: 0; }
   .search input { width: 100%; }
   .article-grid { grid-template-columns: 1fr; }
+  .role-insights { grid-template-columns: 1fr; }
   .filter-panel { grid-template-columns: 1fr; }
   .select-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .reset-button { width: 100%; }
