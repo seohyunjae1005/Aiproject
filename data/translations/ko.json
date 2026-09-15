@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-12T12:42:35.434833+00:00",
+  "updated_at": "2026-09-15T12:17:09.064006+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1473,6 +1473,18 @@
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "source_fingerprint": "f6ba5b96f9d78a0704c144ac27d250eea1d0a1ffbd14b0d0a9cc39c8578c0eaa",
       "translated_at": "2026-09-12T12:42:35.434812+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260915_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘2026 통합 보고서’ 발간",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "ea660ec6ba50d3798c8d5fd8e8a699ec91f4eb33b85e9b9dbaa4140110c12178",
+      "translated_at": "2026-09-15T12:17:09.063976+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/qlfobq00000000ia-att/20260915_001_e.pdf": {
+      "title_ko": "조직 개편 및 인사 발령에 관한 공지",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "864f4b6a4a371f6b47a5fd46076cdc208b38e6a20c7a5f4f0c25b9c1f25480e0",
+      "translated_at": "2026-09-15T12:17:09.063976+00:00"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "validated_analysis_cache_v1",
-  "updated_at": "2026-09-15T05:41:27.109611+00:00",
+  "updated_at": "2026-09-15T12:21:21.473506+00:00",
   "review_notice": "Machine-validated draft cache. Human approval is required before publication.",
-  "company_count": 9,
+  "company_count": 10,
   "companies": {
     "Samsung Electronics": {
       "company": "Samsung Electronics",
@@ -793,6 +793,70 @@
           "KLA가 제공하는 구체적인 계측 및 검사 장비의 모델명이나 성능 스펙"
         ],
         "overall_confidence": "high"
+      }
+    },
+    "TSMC": {
+      "company": "TSMC",
+      "title": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium",
+      "url": "https://pr.tsmc.com/english/news/3302",
+      "model": "gemini-3.5-flash-lite",
+      "generated_at": "2026-09-15T12:20:58.950536+00:00",
+      "analysis_version": "semiconductor_job_analysis_v1",
+      "extraction_method": "official_index_metadata",
+      "source_scope": "official_index_metadata",
+      "validation_status": "PASS",
+      "review_status": "machine_validated",
+      "publish_ready": false,
+      "normalization_notes": [
+        "공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한"
+      ],
+      "analysis": {
+        "analysis_version": "semiconductor_job_analysis_v1",
+        "summary_ko": "TSMC는 2026 북미 기술 심포지엄에서 A13 기술을 새롭게 공개하였습니다. 이는 첨단 로직 공정 및 소자 기술 분야의 새로운 발전 가능성을 시사합니다.",
+        "facts": [
+          {
+            "statement_ko": "TSMC가 2026 북미 기술 심포지엄에서 A13 기술을 공개하였습니다.",
+            "evidence_en": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium"
+          }
+        ],
+        "technology_signals": [
+          "A13 Technology"
+        ],
+        "company_implications": [
+          {
+            "target_company": "Samsung Electronics",
+            "inference_ko": "TSMC의 새로운 A13 기술 공개에 대응하여 자사 첨단 로직 공정 및 파운드리 경쟁력 강화 전략을 재점검할 수 있습니다.",
+            "basis_ko": "제목에 명시된 TSMC의 A13 기술 발표 외에 세부 수율이나 공정 조건이 확인되지 않으므로 일반적인 경쟁 구도 관점의 추론입니다.",
+            "confidence": "low"
+          }
+        ],
+        "role_insights": [
+          {
+            "role": "소자",
+            "why_relevant_ko": "새로운 A13 기술 도입에 따른 트랜지스터 소자 구조 및 성능 특성 분석이 필요하기 때문입니다.",
+            "considerations_ko": [
+              "신규 공정 노드에서의 소자 성능 및 전기적 특성 변화 파악"
+            ],
+            "study_points_ko": [
+              "차세대 로직 소자 구조 및 게이트 전극 관련 기초 지식"
+            ]
+          },
+          {
+            "role": "공정기술·양산기술",
+            "why_relevant_ko": "공개된 A13 기술의 양산 공정 적용 가능성과 수율 확보 방안을 검토해야 합니다.",
+            "considerations_ko": [
+              "신규 공정 도입에 따른 양산성 및 공정 복잡도 증가 대응"
+            ],
+            "study_points_ko": [
+              "파운드리 미세 공정의 양산 기술 및 수율 관리 방법론"
+            ]
+          }
+        ],
+        "uncertainties_ko": [
+          "입력 범위 규칙에 따라 제목 외의 본문 내용이 제공되지 않아 A13 기술의 세부 공정 조건, 수율, 양산 일정 등을 확인할 수 없습니다.",
+          "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
+        ],
+        "overall_confidence": "low"
       }
     }
   }
