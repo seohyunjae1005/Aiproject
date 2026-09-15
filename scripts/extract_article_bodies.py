@@ -14,7 +14,7 @@ SRC = PROJECT_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from trend_tracker.article_body import fetch_article_body
+from trend_tracker.article_body import extract_official_summary, fetch_article_body
 
 
 INPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
@@ -148,10 +148,27 @@ def main() -> None:
             print(f"  미리보기: {console_safe(preview)}...")
             break
         else:
-            print(
-                f"[실패] {company}: 기술 우선 후보 "
-                f"{len(company_candidates)}건에서 본문을 얻지 못했습니다."
-            )
+            fallback = None
+            for article in company_candidates:
+                try:
+                    fallback = extract_official_summary(article)
+                except (ValueError, RuntimeError):
+                    continue
+                break
+            if fallback is not None:
+                row = fallback.to_dict()
+                results.append(row)
+                print(
+                    f"[제한적 성공] {company}: 공식 RSS 요약 "
+                    f"{row['character_count']}자"
+                )
+                print(f"  기사: {console_safe(row['title'])}")
+            else:
+                print(
+                    f"[실패] {company}: 기술 우선 후보 "
+                    f"{len(company_candidates)}건에서 본문 또는 공식 요약을 "
+                    "얻지 못했습니다."
+                )
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(

@@ -62,6 +62,14 @@ def build_analysis_prompt(article: dict, body: str) -> str:
     schema_text = json.dumps(OUTPUT_EXAMPLE, ensure_ascii=False, indent=2)
     hint_text = json.dumps(source_hints, ensure_ascii=False)
     role_text = ", ".join(ALLOWED_ROLES)
+    input_scope = str(article.get("analysis_input_scope") or "full_article")
+    scope_rule = (
+        "이 입력은 공식 RSS가 제공한 제한적인 요약입니다. 본문 전체를 읽었다고 "
+        "표현하지 말고, overall_confidence는 medium 또는 low로 작성하며 "
+        "uncertainties_ko에 전체 기사 미확인 한계를 포함하십시오."
+        if input_scope == "official_feed_summary"
+        else "이 입력은 공식 기사에서 추출한 본문입니다."
+    )
 
     return f"""당신은 반도체 산업 공개자료를 검토하는 분석 보조자입니다.
 
@@ -86,6 +94,7 @@ def build_analysis_prompt(article: dict, body: str) -> str:
 10. 규칙 기반 사전 분류는 참고값이며, 본문 근거와 다르면 본문을 우선하십시오.
 11. 한국어로 작성하되 기술명과 근거 구절은 원문의 영문을 유지할 수 있습니다.
 12. 설명이나 Markdown 없이 아래 JSON 구조와 같은 유효한 JSON 하나만 반환하십시오.
+13. 입력 범위 규칙: {scope_rule}
 
 [용어 표기]
 - High-NA EUV: 고개구수(High-NA) EUV
@@ -98,6 +107,7 @@ def build_analysis_prompt(article: dict, body: str) -> str:
 제목: {article.get('title', '')}
 게시일: {article.get('published_at', '')}
 공식 URL: {article.get('url', '')}
+분석 입력 범위: {input_scope}
 사전 분류 참고값: {hint_text}
 
 [출력 구조 예시]

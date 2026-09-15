@@ -38,13 +38,17 @@ def main() -> None:
         body = str(body_row.get("body") or "").strip()
         if not article or len(body) < 300:
             continue
-        prompt = build_analysis_prompt(article, body)
+        extraction_method = str(body_row.get("extraction_method") or "unknown")
+        article_context = dict(article)
+        article_context["analysis_input_scope"] = extraction_method
+        prompt = build_analysis_prompt(article_context, body)
         requests.append(
             {
                 "analysis_version": ANALYSIS_VERSION,
                 "company": article.get("company"),
                 "title": article.get("title"),
                 "url": url,
+                "extraction_method": extraction_method,
                 "body_character_count": len(body),
                 "prompt_character_count": len(prompt),
                 "prompt": prompt,
@@ -67,4 +71,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

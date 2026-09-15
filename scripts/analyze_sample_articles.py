@@ -89,6 +89,26 @@ def sanitize_analysis(analysis: dict, body: str) -> tuple[dict, list[str]]:
     return cleaned, notes
 
 
+def cap_summary_confidence(analysis: dict) -> list[str]:
+    """공식 요약만 사용한 분석이 본문 분석처럼 과신되지 않게 제한한다."""
+
+    notes: list[str] = []
+    if analysis.get("overall_confidence") == "high":
+        analysis["overall_confidence"] = "medium"
+        notes.append("공식 RSS 요약 기반이므로 전체 신뢰도를 medium으로 제한")
+    implications = analysis.get("company_implications")
+    if isinstance(implications, list):
+        for item in implications:
+            if isinstance(item, dict) and item.get("confidence") == "high":
+                item["confidence"] = "medium"
+        notes.append("공식 RSS 요약 기반 회사 영향 가설은 최대 medium으로 제한")
+    uncertainties = analysis.get("uncertainties_ko")
+    limitation = "공식 RSS 요약만 분석하여 전체 기사의 세부 내용은 확인하지 못했습니다."
+    if isinstance(uncertainties, list) and limitation not in uncertainties:
+        uncertainties.append(limitation)
+    return notes
+
+
 def extract_json(text: str) -> dict:
     cleaned = text.strip()
     if cleaned.startswith("```"):
@@ -301,6 +321,7 @@ def main() -> None:
             "company": row.get("company"),
             "title": row.get("title"),
             "url": url,
+            "extraction_method": row.get("extraction_method"),
             "model": model,
             "generated_at": datetime.now(timezone.utc).isoformat(),
         }
@@ -333,6 +354,8 @@ def main() -> None:
                     normalization_notes.append(
                         f"짧은 근거 재생성 실패: {type(repair_error).__name__}"
                     )
+            if row.get("extraction_method") == "official_feed_summary":
+                normalization_notes.extend(cap_summary_confidence(analysis))
             issues = validate_analysis(analysis, body)
             result.update(
                 {

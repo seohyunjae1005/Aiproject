@@ -59,6 +59,12 @@ BOILERPLATE_PHRASES = (
     "subscribe to",
 )
 
+GENERIC_SUMMARY_PHRASES = (
+    "official source:",
+    "official intel newsroom category:",
+    "official applied materials news release",
+)
+
 
 @dataclass(frozen=True)
 class ExtractedBody:
@@ -240,6 +246,34 @@ def _validate_url(url: str) -> None:
     parsed = urlparse(url)
     if parsed.scheme != "https" or parsed.hostname not in ALLOWED_HOSTS:
         raise ValueError(f"허용하지 않은 공식 출처입니다: {url}")
+
+
+def extract_official_summary(article: dict, minimum_length: int = 180) -> ExtractedBody:
+    """본문 접근 실패 시 충분히 긴 공식 RSS 요약만 제한적으로 사용한다."""
+
+    url = str(article.get("url") or "")
+    _validate_url(url)
+    summary = _clean_text(str(article.get("summary") or ""))
+    folded = summary.casefold()
+    if (
+        len(summary) < minimum_length
+        or any(folded.startswith(marker) for marker in GENERIC_SUMMARY_PHRASES)
+    ):
+        raise RuntimeError("분석에 사용할 수 있는 공식 요약이 없습니다.")
+
+    title = _clean_text(str(article.get("title") or ""))
+    body = f"{title}\n\n{summary}" if title else summary
+    return ExtractedBody(
+        company=str(article.get("company") or "Unknown"),
+        title=title,
+        url=url,
+        published_at=article.get("published_at"),
+        extraction_method="official_feed_summary",
+        body=body,
+        character_count=len(body),
+        paragraph_count=2 if title else 1,
+        fetched_at=datetime.now(timezone.utc).isoformat(),
+    )
 
 
 def fetch_article_body(article: dict, timeout: int = 30) -> ExtractedBody:
