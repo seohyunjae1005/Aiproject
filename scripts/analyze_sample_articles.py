@@ -21,7 +21,11 @@ SRC = PROJECT_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from trend_tracker.analysis_schema import ALLOWED_ROLES, ANALYSIS_VERSION
+from trend_tracker.analysis_schema import (
+    ALLOWED_ROLES,
+    ANALYSIS_VERSION,
+    build_fact_repair_prompt,
+)
 
 
 REQUEST_PATH = PROJECT_ROOT / "runtime" / "analysis_requests.json"
@@ -305,6 +309,30 @@ def main() -> None:
                 str(row.get("prompt") or ""), api_key, model
             )
             analysis, normalization_notes = sanitize_analysis(raw_analysis, body)
+            if not analysis.get("facts"):
+                try:
+                    repair_prompt = build_fact_repair_prompt(row, body)
+                    repaired, repair_model = call_gemini(
+                        repair_prompt, api_key, used_model
+                    )
+                    repaired_facts = (
+                        repaired.get("facts") if isinstance(repaired, dict) else None
+                    )
+                    if isinstance(repaired_facts, list):
+                        raw_analysis["facts"] = repaired_facts
+                        analysis, repair_notes = sanitize_analysis(raw_analysis, body)
+                        normalization_notes.extend(
+                            [
+                                "검증 가능한 짧은 근거가 없어 사실 항목을 1회 재생성",
+                                *repair_notes,
+                            ]
+                        )
+                        used_model = repair_model
+                except Exception as repair_error:
+                    # 보조 호출 실패가 이미 생성된 나머지 분석까지 지우지 않게 한다.
+                    normalization_notes.append(
+                        f"짧은 근거 재생성 실패: {type(repair_error).__name__}"
+                    )
             issues = validate_analysis(analysis, body)
             result.update(
                 {

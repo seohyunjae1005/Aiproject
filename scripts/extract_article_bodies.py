@@ -69,6 +69,16 @@ LOW_PRIORITY_TITLE_TERMS = (
     "conference participation",
 )
 
+MAX_CANDIDATES_PER_COMPANY = 5
+DEFAULT_TIMEOUT_SECONDS = 25
+COMPANY_TIMEOUT_SECONDS = {
+    # 아래 사이트들은 GitHub Actions 환경에서 응답이 느리거나 일시적으로
+    # 접근을 거부하는 경우가 있어 다른 회사보다 조금 더 기다린다.
+    "TSMC": 35,
+    "Intel": 35,
+    "Applied Materials": 45,
+}
+
 
 def technical_priority(article: dict) -> int:
     """최근 기사 안에서 취업·현업에 유용한 기술 발표를 먼저 고른다."""
@@ -95,8 +105,15 @@ def priority_candidates(articles: list[dict]) -> dict[str, list[dict]]:
             recent_high,
             key=technical_priority,
             reverse=True,
-        )[:3]
+        )[:MAX_CANDIDATES_PER_COMPANY]
     return selected
+
+
+def console_safe(value: str) -> str:
+    """Windows 기본 콘솔에서 표시할 수 없는 문자만 안전하게 바꾼다."""
+
+    encoding = sys.stdout.encoding or "utf-8"
+    return value.encode(encoding, errors="replace").decode(encoding)
 
 
 def main() -> None:
@@ -106,9 +123,10 @@ def main() -> None:
 
     print("=== 3주차 본문 추출 시험 ===")
     for company, company_candidates in candidates.items():
+        timeout = COMPANY_TIMEOUT_SECONDS.get(company, DEFAULT_TIMEOUT_SECONDS)
         for attempt, article in enumerate(company_candidates, start=1):
             try:
-                extracted = fetch_article_body(article, timeout=15)
+                extracted = fetch_article_body(article, timeout=timeout)
             except (
                 HTTPError,
                 URLError,
@@ -126,11 +144,14 @@ def main() -> None:
                 f"[성공] {company}: {row['character_count']}자 / "
                 f"{row['extraction_method']}"
             )
-            print(f"  기사: {row['title']}")
-            print(f"  미리보기: {preview}...")
+            print(f"  기사: {console_safe(row['title'])}")
+            print(f"  미리보기: {console_safe(preview)}...")
             break
         else:
-            print(f"[실패] {company}: 기술 우선 후보 3건에서 본문을 얻지 못했습니다.")
+            print(
+                f"[실패] {company}: 기술 우선 후보 "
+                f"{len(company_candidates)}건에서 본문을 얻지 못했습니다."
+            )
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
