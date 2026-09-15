@@ -112,7 +112,7 @@ def cap_summary_confidence(analysis: dict) -> list[str]:
 def cap_metadata_confidence(
     analysis: dict, *, company: str, title: str
 ) -> list[str]:
-    """공식 제목만 사용한 결과는 항상 낮은 확신도로 표시한다."""
+    """공식 제목만 사용한 결과를 검증 가능한 최소 형식으로 제한한다."""
 
     notes = ["공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한"]
     # 짧은 제목에서는 모델이 근거 문구를 의역하면 기계 검증에 실패하기 쉽다.
@@ -126,20 +126,84 @@ def cap_metadata_confidence(
         }
     ]
     notes.append("제목 기반 사실 근거를 공식 기사 제목 원문 1개로 고정")
-    analysis["overall_confidence"] = "low"
+    analysis["analysis_version"] = ANALYSIS_VERSION
+    if not isinstance(analysis.get("summary_ko"), str) or not analysis["summary_ko"].strip():
+        analysis["summary_ko"] = (
+            f"{company}의 공식 기사 제목에서 {title} 관련 기술 동향을 확인했습니다. "
+            "본문을 확보하지 못했으므로 세부 내용은 원문 확인이 필요합니다."
+        )
+
+    title_folded = title.casefold()
+    signal_rules = (
+        (("packag", "bonding", "substrate", "interconnect"), "첨단 패키징"),
+        (("euv", "lithograph"), "EUV 노광"),
+        (("memory", "dram", "nand", "hbm"), "메모리"),
+        (("foundry", "process", "manufactur"), "반도체 공정·제조"),
+        (("metrology", "inspection"), "계측·검사"),
+    )
+    fallback_signals = [
+        label
+        for keywords, label in signal_rules
+        if any(keyword in title_folded for keyword in keywords)
+    ]
+    signals = analysis.get("technology_signals")
+    if not isinstance(signals, list) or not any(
+        isinstance(item, str) and item.strip() for item in signals
+    ):
+        analysis["technology_signals"] = fallback_signals or ["반도체 기술 동향"]
+        notes.append("빈 기술 목록을 공식 제목의 기술어로 보완")
+
     implications = analysis.get("company_implications")
-    if isinstance(implications, list):
-        for item in implications:
-            if isinstance(item, dict):
-                item["confidence"] = "low"
+    if not isinstance(implications, list):
+        implications = []
+    valid_implications = []
+    for item in implications:
+        if not isinstance(item, dict):
+            continue
+        if item.get("target_company") not in {"Samsung Electronics", "SK hynix"}:
+            continue
+        item["confidence"] = "low"
+        valid_implications.append(item)
+    analysis["company_implications"] = valid_implications
+
     roles = analysis.get("role_insights")
-    if isinstance(roles, list) and len(roles) > 2:
-        analysis["role_insights"] = roles[:2]
+    valid_roles = []
+    if isinstance(roles, list):
+        for item in roles:
+            if not isinstance(item, dict) or item.get("role") not in ALLOWED_ROLES:
+                continue
+            if not isinstance(item.get("considerations_ko"), list) or not item["considerations_ko"]:
+                continue
+            if not isinstance(item.get("study_points_ko"), list) or not item["study_points_ko"]:
+                continue
+            valid_roles.append(item)
+    if not valid_roles:
+        fallback_role = (
+            "P&T·패키지개발"
+            if any(term in title_folded for term in ("packag", "bonding", "substrate", "interconnect"))
+            else "R&D공정·공정설계"
+        )
+        valid_roles = [
+            {
+                "role": fallback_role,
+                "why_relevant_ko": "공식 제목에 나타난 기술 주제와 관련된 직무입니다.",
+                "considerations_ko": ["기사 본문에서 적용 대상과 양산 영향을 추가 확인해야 합니다."],
+                "study_points_ko": ["제목에 나온 기술의 공정 원리와 핵심 지표를 확인합니다."],
+            }
+        ]
+        notes.append("허용 형식의 직무가 없어 제목 기반 관련 직무 1개로 보완")
+    analysis["role_insights"] = valid_roles[:2]
+
+    analysis["overall_confidence"] = "low"
+    if len(valid_roles) > 2:
         notes.append("제목 기반 분석이므로 관련 직무를 최대 2개로 제한")
     uncertainties = analysis.get("uncertainties_ko")
     limitation = "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
-    if isinstance(uncertainties, list) and limitation not in uncertainties:
+    if not isinstance(uncertainties, list):
+        uncertainties = []
+    if limitation not in uncertainties:
         uncertainties.append(limitation)
+    analysis["uncertainties_ko"] = uncertainties
     return notes
 
 
@@ -423,6 +487,9 @@ def main() -> None:
             )
         results.append(result)
         print(f"{index}/{len(requests)} {row.get('company')}: {result['validation_status']}")
+        if result["validation_status"] != "PASS":
+            for issue in result.get("validation_issues") or []:
+                print(f"  - 검증 실패 이유: {issue}")
 
     RESULT_PATH.parent.mkdir(parents=True, exist_ok=True)
     RESULT_PATH.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
