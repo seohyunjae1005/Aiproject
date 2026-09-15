@@ -74,6 +74,8 @@ def build_analysis_prompt(article: dict, body: str) -> str:
 3. facts에는 본문에서 직접 확인되는 내용만 정확히 3개 작성하십시오.
 4. 각 fact의 evidence_en은 본문에 실제로 존재하는 짧은 연속 구절이어야 합니다.
 5. evidence_en은 여유를 두고 한 항목당 영문 20단어 이내로 작성하십시오.
+5-1. statement_ko의 모든 내용은 바로 아래 evidence_en 한 구절만으로 확인할 수 있어야 합니다.
+5-2. evidence_en에 없는 대상, 기술, 일정, 성과를 statement_ko에 덧붙이지 마십시오.
 6. 회사 영향은 사실이 아니라 가설이므로 company_implications에만 작성하십시오.
 7. 기사에서 알 수 없는 수율 수치, 공정 조건, 비용, 일정은 만들어내지 마십시오.
 8. 관련성이 낮은 직무를 억지로 포함하지 말고 1~4개만 선택하십시오.
@@ -81,6 +83,12 @@ def build_analysis_prompt(article: dict, body: str) -> str:
 10. 규칙 기반 사전 분류는 참고값이며, 본문 근거와 다르면 본문을 우선하십시오.
 11. 한국어로 작성하되 기술명과 근거 구절은 원문의 영문을 유지할 수 있습니다.
 12. 설명이나 Markdown 없이 아래 JSON 구조와 같은 유효한 JSON 하나만 반환하십시오.
+
+[용어 표기]
+- High-NA EUV: 고개구수(High-NA) EUV
+- stitching: 스티칭
+- availability: 가동률 또는 가용성
+- PDK: 공정설계키트(PDK)
 
 [기사 정보]
 회사: {article.get('company', '')}

@@ -44,15 +44,6 @@ def evidence_word_count(value: str) -> int:
     return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", value))
 
 
-def trim_evidence(value: str, limit: int = 25) -> str:
-    """인용문의 앞부분을 단어 경계를 유지해 제한 길이로 줄인다."""
-
-    matches = list(re.finditer(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", value))
-    if len(matches) <= limit:
-        return value.strip()
-    return value[: matches[limit - 1].end()].strip()
-
-
 def sanitize_analysis(analysis: dict, body: str) -> tuple[dict, list[str]]:
     """근거를 새로 만들지 않고, 검증 가능한 사실만 안전하게 남긴다."""
 
@@ -69,11 +60,10 @@ def sanitize_analysis(analysis: dict, body: str) -> tuple[dict, list[str]]:
             notes.append(f"사실 {index}: 객체 형식이 아니어서 제외")
             continue
         evidence = str(fact.get("evidence_en") or "").strip()
-        shortened = trim_evidence(evidence)
-        if shortened != evidence:
-            notes.append(f"사실 {index}: 근거 구절을 25단어로 축약")
-        fact["evidence_en"] = shortened
-        if not shortened or normalize_text(shortened) not in normalized_body:
+        if evidence_word_count(evidence) > 25:
+            notes.append(f"사실 {index}: 근거 구절이 25단어를 넘어 제외")
+            continue
+        if not evidence or normalize_text(evidence) not in normalized_body:
             notes.append(f"사실 {index}: 원문과 정확히 일치하지 않아 제외")
             continue
         verified_facts.append(fact)
