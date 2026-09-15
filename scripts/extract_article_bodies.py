@@ -1,4 +1,4 @@
-"""우선순위 기업별 최신 핵심 기사 한 건의 본문을 시험 추출한다."""
+"""주요 기업별 최근 핵심 기술 기사 한 건의 본문을 시험 추출한다."""
 
 from __future__ import annotations
 
@@ -19,18 +19,83 @@ from trend_tracker.article_body import fetch_article_body
 
 INPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
 OUTPUT_PATH = PROJECT_ROOT / "runtime" / "article_bodies.json"
-TARGET_COMPANIES = ("Samsung Electronics", "SK hynix", "ASML")
+TARGET_COMPANIES = (
+    "Samsung Electronics",
+    "SK hynix",
+    "Micron",
+    "Kioxia",
+    "TSMC",
+    "Intel",
+    "ASML",
+    "Applied Materials",
+    "Lam Research",
+    "Tokyo Electron",
+    "KLA",
+)
+
+TECHNICAL_TITLE_TERMS = (
+    "process",
+    "technology",
+    "manufacturing",
+    "production",
+    "fab",
+    "foundry",
+    "wafer",
+    "yield",
+    "memory",
+    "dram",
+    "nand",
+    "hbm",
+    "packaging",
+    "bonding",
+    "lithography",
+    "euv",
+    "etch",
+    "deposition",
+    "metrology",
+    "inspection",
+    "transistor",
+    "node",
+    "equipment",
+)
+
+LOW_PRIORITY_TITLE_TERMS = (
+    "dividend",
+    "quarterly results",
+    "financial results",
+    "appoints",
+    "appointment",
+    "award",
+    "conference participation",
+)
+
+
+def technical_priority(article: dict) -> int:
+    """최근 기사 안에서 취업·현업에 유용한 기술 발표를 먼저 고른다."""
+
+    title = str(article.get("title") or "").casefold()
+    score = sum(4 for term in TECHNICAL_TITLE_TERMS if term in title)
+    score -= sum(8 for term in LOW_PRIORITY_TITLE_TERMS if term in title)
+    score += min(len(article.get("matched_keywords") or []), 6) * 2
+    score += min(len(article.get("tech_domains") or []), 4)
+    score += min(len(article.get("job_roles") or []), 4)
+    return score
 
 
 def priority_candidates(articles: list[dict]) -> dict[str, list[dict]]:
     selected: dict[str, list[dict]] = {}
     for company in TARGET_COMPANIES:
-        selected[company] = [
+        recent_high = [
             article
             for article in articles
             if article.get("company") == company
             and article.get("relevance") == "high"
-        ][:2]
+        ][:10]
+        selected[company] = sorted(
+            recent_high,
+            key=technical_priority,
+            reverse=True,
+        )[:3]
     return selected
 
 
@@ -65,7 +130,7 @@ def main() -> None:
             print(f"  미리보기: {preview}...")
             break
         else:
-            print(f"[실패] {company}: 최신 핵심 기사 2건에서 본문을 얻지 못했습니다.")
+            print(f"[실패] {company}: 기술 우선 후보 3건에서 본문을 얻지 못했습니다.")
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(

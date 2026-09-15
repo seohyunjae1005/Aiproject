@@ -16,9 +16,19 @@ from urllib.request import Request, urlopen
 
 
 ALLOWED_HOSTS = {
+    "ir.appliedmaterials.com",
+    "ir.kla.com",
     "news.samsung.com",
     "news.skhynix.com",
+    "newsroom.lamresearch.com",
+    "pr.tsmc.com",
     "www.asml.com",
+    "www.intel.com",
+    "www.kioxia-holdings.com",
+    "www.kioxia.com",
+    "www.kla.com",
+    "www.micron.com",
+    "www.tel.com",
 }
 
 USER_AGENT = (

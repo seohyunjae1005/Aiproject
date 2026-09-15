@@ -2,6 +2,16 @@ name: Pilot semiconductor job analysis
 
 on:
   workflow_dispatch:
+    inputs:
+      article_limit:
+        description: "분석할 기업별 대표 기사 수"
+        required: true
+        default: "3"
+        type: choice
+        options:
+          - "3"
+          - "6"
+          - "11"
 
 permissions:
   contents: read
@@ -9,7 +19,7 @@ permissions:
 jobs:
   analysis-pilot:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
       - name: Check out repository
@@ -20,15 +30,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Extract three public official articles
+      - name: Extract representative public official articles
         run: python scripts/extract_article_bodies.py
 
       - name: Prepare evidence-grounded analysis requests
         run: python scripts/build_analysis_requests.py
 
-      - name: Analyze three articles with Gemini
+      - name: Analyze selected articles with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANALYSIS_MAX_ARTICLES: ${{ inputs.article_limit }}
         run: python scripts/analyze_sample_articles.py
 
       - name: Upload review-only results

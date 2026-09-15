@@ -30,7 +30,8 @@ RESULT_PATH = PROJECT_ROOT / "runtime" / "analysis_results.json"
 REPORT_PATH = PROJECT_ROOT / "runtime" / "analysis_validation.md"
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
 FALLBACK_MODELS = ("gemini-3.1-flash-lite",)
-MAX_ARTICLES = 3
+DEFAULT_MAX_ARTICLES = 3
+MAX_ARTICLE_LIMIT = 11
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
 
 
@@ -42,6 +43,15 @@ def normalize_text(value: str) -> str:
 
 def evidence_word_count(value: str) -> int:
     return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", value))
+
+
+def configured_max_articles() -> int:
+    raw_value = os.environ.get("ANALYSIS_MAX_ARTICLES", str(DEFAULT_MAX_ARTICLES))
+    try:
+        value = int(raw_value)
+    except ValueError:
+        value = DEFAULT_MAX_ARTICLES
+    return max(1, min(value, MAX_ARTICLE_LIMIT))
 
 
 def sanitize_analysis(analysis: dict, body: str) -> tuple[dict, list[str]]:
@@ -240,7 +250,7 @@ def write_report(results: list[dict], model: str) -> None:
         f"- 검증 실패: {failed}건",
         f"- API/파싱 오류: {errors}건",
         "",
-        "> 이 결과는 공개 기사 3건의 시험 분석이며, 사람의 최종 검토 전에는 웹사이트에 게시하지 않습니다.",
+        "> 이 결과는 공개 기사의 시험 분석이며, 사람의 최종 검토 전에는 웹사이트에 게시하지 않습니다.",
         "",
     ]
     for row in results:
@@ -271,14 +281,15 @@ def main() -> None:
     if not REQUEST_PATH.exists() or not BODY_PATH.exists():
         raise SystemExit("먼저 본문 추출과 분석 요청 준비 스크립트를 실행하세요.")
 
-    requests = json.loads(REQUEST_PATH.read_text(encoding="utf-8"))[:MAX_ARTICLES]
+    max_articles = configured_max_articles()
+    requests = json.loads(REQUEST_PATH.read_text(encoding="utf-8"))[:max_articles]
     bodies = json.loads(BODY_PATH.read_text(encoding="utf-8"))
     body_by_url = {str(row.get("url") or ""): str(row.get("body") or "") for row in bodies}
     if not requests:
         raise SystemExit("분석할 요청이 없습니다.")
 
     results: list[dict] = []
-    print(f"=== Gemini 직무 분석 시험 시작: 최대 {MAX_ARTICLES}건 ===")
+    print(f"=== Gemini 직무 분석 시험 시작: 최대 {max_articles}건 ===")
     for index, row in enumerate(requests, start=1):
         url = str(row.get("url") or "")
         body = body_by_url.get(url, "")
