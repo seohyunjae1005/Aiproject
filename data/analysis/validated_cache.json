@@ -1,8 +1,8 @@
 {
   "schema_version": "validated_analysis_cache_v1",
-  "updated_at": "2026-09-15T12:21:21.473506+00:00",
+  "updated_at": "2026-09-15T12:49:21.007188+00:00",
   "review_notice": "Machine-validated draft cache. Human approval is required before publication.",
-  "company_count": 10,
+  "company_count": 11,
   "companies": {
     "Samsung Electronics": {
       "company": "Samsung Electronics",
@@ -854,6 +854,64 @@
         ],
         "uncertainties_ko": [
           "입력 범위 규칙에 따라 제목 외의 본문 내용이 제공되지 않아 A13 기술의 세부 공정 조건, 수율, 양산 일정 등을 확인할 수 없습니다.",
+          "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
+        ],
+        "overall_confidence": "low"
+      }
+    },
+    "Intel": {
+      "company": "Intel",
+      "title": "Intel and Lens Technology Collaborate to Enable Advanced Semiconductor Packaging for the AI Era",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era.html",
+      "model": "gemini-3.5-flash-lite",
+      "generated_at": "2026-09-15T12:49:18.715790+00:00",
+      "analysis_version": "semiconductor_job_analysis_v1",
+      "extraction_method": "official_index_metadata",
+      "source_scope": "official_index_metadata",
+      "validation_status": "PASS",
+      "review_status": "machine_validated",
+      "publish_ready": false,
+      "normalization_notes": [
+        "공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한",
+        "제목 기반 사실 근거를 공식 기사 제목 원문 1개로 고정"
+      ],
+      "analysis": {
+        "analysis_version": "semiconductor_job_analysis_v1",
+        "summary_ko": "Intel과 Lens Technology가 AI 시대를 위한 첨단 반도체 패키징 구현을 위해 협력한다는 내용의 공식 발표입니다.",
+        "facts": [
+          {
+            "statement_ko": "Intel 공식 기사 제목에서 ‘Intel and Lens Technology Collaborate to Enable Advanced Semiconductor Packaging for the AI Era’ 관련 발표임을 확인할 수 있습니다.",
+            "evidence_en": "Intel and Lens Technology Collaborate to Enable Advanced Semiconductor Packaging for the AI Era"
+          }
+        ],
+        "technology_signals": [
+          "Advanced Semiconductor Packaging"
+        ],
+        "company_implications": [],
+        "role_insights": [
+          {
+            "role": "P&T·패키지개발",
+            "why_relevant_ko": "제목에 첨단 반도체 패키징(Advanced Semiconductor Packaging) 협력이 명시되어 있어 패키지 공정 개발과 연관됩니다.",
+            "considerations_ko": [
+              "파트너십을 통한 패키징 기술 혁신 범위 파악"
+            ],
+            "study_points_ko": [
+              "첨단 패키징 공정 및 파운드리 생태계 협력 방식"
+            ]
+          },
+          {
+            "role": "소자",
+            "why_relevant_ko": "AI 시대를 위한 반도체 패키징 및 소자 연계 가능성이 있습니다.",
+            "considerations_ko": [
+              "패키징 기술 변화에 따른 소자 특성 영향"
+            ],
+            "study_points_ko": [
+              "AI용 반도체 구조 및 패키징 트렌드"
+            ]
+          }
+        ],
+        "uncertainties_ko": [
+          "입력 범위가 공식 제목 및 목록 정보로 한정되어 있어 구체적인 패키징 기술 방식, 세부 협력 조건, 일정 등을 확인할 수 없습니다.",
           "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
         ],
         "overall_confidence": "low"
