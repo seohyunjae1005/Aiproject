@@ -298,9 +298,6 @@ def write_report(results: list[dict], model: str) -> None:
 
 
 def main() -> None:
-    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        raise SystemExit("GEMINI_API_KEY가 없습니다. GitHub Actions 비밀키를 확인하세요.")
     model = os.environ.get("GEMINI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
     if not REQUEST_PATH.exists() or not BODY_PATH.exists():
         raise SystemExit("먼저 본문 추출과 분석 요청 준비 스크립트를 실행하세요.")
@@ -310,7 +307,15 @@ def main() -> None:
     bodies = json.loads(BODY_PATH.read_text(encoding="utf-8"))
     body_by_url = {str(row.get("url") or ""): str(row.get("body") or "") for row in bodies}
     if not requests:
-        raise SystemExit("분석할 요청이 없습니다.")
+        RESULT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        RESULT_PATH.write_text("[]\n", encoding="utf-8")
+        write_report([], model)
+        print("신규 분석 대상이 없습니다. 기존 검증 결과를 재사용하며 API 호출은 0건입니다.")
+        return
+
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        raise SystemExit("GEMINI_API_KEY가 없습니다. GitHub Actions 비밀키를 확인하세요.")
 
     results: list[dict] = []
     print(f"=== Gemini 직무 분석 시험 시작: 최대 {max_articles}건 ===")
