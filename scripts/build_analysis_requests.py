@@ -20,6 +20,7 @@ ARTICLE_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
 OUTPUT_PATH = PROJECT_ROOT / "runtime" / "analysis_requests.json"
 CACHE_PATH = PROJECT_ROOT / "data" / "analysis" / "validated_cache.json"
 SOURCE_QUALITY = {
+    "official_index_metadata": 0,
     "official_feed_summary": 1,
     "filtered_html_blocks": 2,
     "json_ld_article_body": 2,
@@ -67,7 +68,8 @@ def main() -> None:
         url = str(body_row.get("url") or "")
         article = articles_by_url.get(url)
         body = str(body_row.get("body") or "").strip()
-        if not article or len(body) < 300:
+        minimum_length = 60 if body_row.get("extraction_method") == "official_index_metadata" else 300
+        if not article or len(body) < minimum_length:
             continue
         extraction_method = str(body_row.get("extraction_method") or "unknown")
         company = str(article.get("company") or "")

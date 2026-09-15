@@ -276,6 +276,37 @@ def extract_official_summary(article: dict, minimum_length: int = 180) -> Extrac
     )
 
 
+def extract_official_index_metadata(article: dict) -> ExtractedBody:
+    """본문·요약 접근이 모두 막힌 경우 공식 목록의 최소 정보만 보존한다.
+
+    이 값은 기사 본문을 대신하지 않는다. 분석 단계에서 낮은 확신도로만
+    사용하며, 이후 본문이 확보되면 캐시의 결과가 자동 교체된다.
+    """
+
+    url = str(article.get("url") or "")
+    _validate_url(url)
+    title = _clean_text(str(article.get("title") or ""))
+    if len(title) < 25:
+        raise RuntimeError("분석에 사용할 수 있는 공식 제목 정보가 없습니다.")
+
+    summary = _clean_text(str(article.get("summary") or ""))
+    body_parts = [f"Official article title: {title}"]
+    if summary:
+        body_parts.append(f"Official listing context: {summary}")
+    body = "\n\n".join(body_parts)
+    return ExtractedBody(
+        company=str(article.get("company") or "Unknown"),
+        title=title,
+        url=url,
+        published_at=article.get("published_at"),
+        extraction_method="official_index_metadata",
+        body=body,
+        character_count=len(body),
+        paragraph_count=len(body_parts),
+        fetched_at=datetime.now(timezone.utc).isoformat(),
+    )
+
+
 def fetch_article_body(article: dict, timeout: int = 30) -> ExtractedBody:
     url = str(article.get("url") or "")
     _validate_url(url)

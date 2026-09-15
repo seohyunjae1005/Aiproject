@@ -17,6 +17,7 @@ CACHE_PATH = PROJECT_ROOT / "data" / "analysis" / "validated_cache.json"
 REPORT_PATH = PROJECT_ROOT / "runtime" / "analysis_cache_update.md"
 CACHE_VERSION = "validated_analysis_cache_v1"
 SOURCE_QUALITY = {
+    "official_index_metadata": 0,
     "official_feed_summary": 1,
     "filtered_html_blocks": 2,
     "json_ld_article_body": 2,
@@ -69,9 +70,10 @@ def safe_entry(row: dict) -> dict | None:
         "generated_at": row.get("generated_at"),
         "analysis_version": row["analysis"].get("analysis_version"),
         "extraction_method": method,
-        "source_scope": (
-            "official_summary" if method == "official_feed_summary" else "official_article_body"
-        ),
+        "source_scope": {
+            "official_index_metadata": "official_index_metadata",
+            "official_feed_summary": "official_summary",
+        }.get(method, "official_article_body"),
         "validation_status": "PASS",
         "review_status": "machine_validated",
         "publish_ready": False,

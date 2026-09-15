@@ -16,7 +16,7 @@ concurrency:
 jobs:
   collect-and-publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
 
     steps:
       - name: Check out repository
@@ -35,17 +35,33 @@ jobs:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python scripts/translate_articles.py
 
+      - name: Extract representative public official articles
+        run: python scripts/extract_article_bodies.py
+
+      - name: Prepare only new evidence-grounded analysis requests
+        run: python scripts/build_analysis_requests.py
+
+      - name: Analyze at most three new articles with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANALYSIS_MAX_ARTICLES: "3"
+          ANALYSIS_FAIL_ON_ALL_ERRORS: "0"
+        run: python scripts/analyze_sample_articles.py
+
+      - name: Preserve machine-validated company analyses
+        run: python scripts/merge_analysis_cache.py
+
       - name: Build public website data
         run: python scripts/build_site.py
 
       - name: Commit updated website data
         run: |
-          if git diff --quiet -- docs/data/latest.json data/translations/ko.json; then
+          if git diff --quiet -- docs/data/latest.json data/translations/ko.json data/analysis/validated_cache.json; then
             echo "No website data changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/latest.json data/translations/ko.json
+          git add docs/data/latest.json data/translations/ko.json data/analysis/validated_cache.json
           git commit -m "Update daily semiconductor news"
           git push

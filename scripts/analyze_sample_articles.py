@@ -109,6 +109,27 @@ def cap_summary_confidence(analysis: dict) -> list[str]:
     return notes
 
 
+def cap_metadata_confidence(analysis: dict) -> list[str]:
+    """공식 제목만 사용한 결과는 항상 낮은 확신도로 표시한다."""
+
+    notes = ["공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한"]
+    analysis["overall_confidence"] = "low"
+    implications = analysis.get("company_implications")
+    if isinstance(implications, list):
+        for item in implications:
+            if isinstance(item, dict):
+                item["confidence"] = "low"
+    roles = analysis.get("role_insights")
+    if isinstance(roles, list) and len(roles) > 2:
+        analysis["role_insights"] = roles[:2]
+        notes.append("제목 기반 분석이므로 관련 직무를 최대 2개로 제한")
+    uncertainties = analysis.get("uncertainties_ko")
+    limitation = "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
+    if isinstance(uncertainties, list) and limitation not in uncertainties:
+        uncertainties.append(limitation)
+    return notes
+
+
 def extract_json(text: str) -> dict:
     cleaned = text.strip()
     if cleaned.startswith("```"):
@@ -361,6 +382,8 @@ def main() -> None:
                     )
             if row.get("extraction_method") == "official_feed_summary":
                 normalization_notes.extend(cap_summary_confidence(analysis))
+            elif row.get("extraction_method") == "official_index_metadata":
+                normalization_notes.extend(cap_metadata_confidence(analysis))
             issues = validate_analysis(analysis, body)
             result.update(
                 {
@@ -387,7 +410,10 @@ def main() -> None:
     write_report(results, model)
     print(f"결과: {RESULT_PATH}")
     print(f"검증 보고서: {REPORT_PATH}")
-    if all(row.get("validation_status") == "ERROR" for row in results):
+    fail_on_all_errors = os.environ.get("ANALYSIS_FAIL_ON_ALL_ERRORS", "1") != "0"
+    if fail_on_all_errors and all(
+        row.get("validation_status") == "ERROR" for row in results
+    ):
         raise SystemExit("모든 기사 분석이 실패했습니다. 로그의 오류 메시지를 확인하세요.")
 
 

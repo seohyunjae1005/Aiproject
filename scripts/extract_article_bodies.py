@@ -14,7 +14,11 @@ SRC = PROJECT_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from trend_tracker.article_body import extract_official_summary, fetch_article_body
+from trend_tracker.article_body import (
+    extract_official_index_metadata,
+    extract_official_summary,
+    fetch_article_body,
+)
 
 
 INPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
@@ -70,6 +74,7 @@ LOW_PRIORITY_TITLE_TERMS = (
 )
 
 MAX_CANDIDATES_PER_COMPANY = 5
+METADATA_FALLBACK_COMPANIES = {"TSMC", "Intel"}
 DEFAULT_TIMEOUT_SECONDS = 25
 COMPANY_TIMEOUT_SECONDS = {
     # 아래 사이트들은 GitHub Actions 환경에서 응답이 느리거나 일시적으로
@@ -160,6 +165,14 @@ def main() -> None:
                 results.append(row)
                 print(
                     f"[제한적 성공] {company}: 공식 RSS 요약 "
+                    f"{row['character_count']}자"
+                )
+                print(f"  기사: {console_safe(row['title'])}")
+            elif company in METADATA_FALLBACK_COMPANIES and company_candidates:
+                row = extract_official_index_metadata(company_candidates[0]).to_dict()
+                results.append(row)
+                print(
+                    f"[최소 정보 성공] {company}: 공식 목록 제목·분류 "
                     f"{row['character_count']}자"
                 )
                 print(f"  기사: {console_safe(row['title'])}")
