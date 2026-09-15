@@ -44,6 +44,47 @@ def evidence_word_count(value: str) -> int:
     return len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", value))
 
 
+def trim_evidence(value: str, limit: int = 25) -> str:
+    """인용문의 앞부분을 단어 경계를 유지해 제한 길이로 줄인다."""
+
+    matches = list(re.finditer(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", value))
+    if len(matches) <= limit:
+        return value.strip()
+    return value[: matches[limit - 1].end()].strip()
+
+
+def sanitize_analysis(analysis: dict, body: str) -> tuple[dict, list[str]]:
+    """근거를 새로 만들지 않고, 검증 가능한 사실만 안전하게 남긴다."""
+
+    cleaned = json.loads(json.dumps(analysis, ensure_ascii=False))
+    notes: list[str] = []
+    facts = cleaned.get("facts")
+    if not isinstance(facts, list):
+        return cleaned, notes
+
+    verified_facts: list[dict] = []
+    normalized_body = normalize_text(body)
+    for index, fact in enumerate(facts, start=1):
+        if not isinstance(fact, dict):
+            notes.append(f"사실 {index}: 객체 형식이 아니어서 제외")
+            continue
+        evidence = str(fact.get("evidence_en") or "").strip()
+        shortened = trim_evidence(evidence)
+        if shortened != evidence:
+            notes.append(f"사실 {index}: 근거 구절을 25단어로 축약")
+        fact["evidence_en"] = shortened
+        if not shortened or normalize_text(shortened) not in normalized_body:
+            notes.append(f"사실 {index}: 원문과 정확히 일치하지 않아 제외")
+            continue
+        verified_facts.append(fact)
+
+    if len(verified_facts) > 5:
+        notes.append(f"사실 항목 {len(verified_facts)}개 중 앞의 5개만 유지")
+        verified_facts = verified_facts[:5]
+    cleaned["facts"] = verified_facts
+    return cleaned, notes
+
+
 def extract_json(text: str) -> dict:
     cleaned = text.strip()
     if cleaned.startswith("```"):
@@ -220,6 +261,10 @@ def write_report(results: list[dict], model: str) -> None:
                 f"- 상태: **{row.get('validation_status')}**",
             ]
         )
+        notes = row.get("normalization_notes") or []
+        if notes:
+            lines.append("- 자동 정리:")
+            lines.extend(f"  - {note}" for note in notes)
         issues = row.get("validation_issues") or []
         if issues:
             lines.append("- 확인사항:")
@@ -255,14 +300,16 @@ def main() -> None:
             "generated_at": datetime.now(timezone.utc).isoformat(),
         }
         try:
-            analysis, used_model = call_gemini(
+            raw_analysis, used_model = call_gemini(
                 str(row.get("prompt") or ""), api_key, model
             )
+            analysis, normalization_notes = sanitize_analysis(raw_analysis, body)
             issues = validate_analysis(analysis, body)
             result.update(
                 {
                     "model": used_model,
                     "analysis": analysis,
+                    "normalization_notes": normalization_notes,
                     "validation_status": "PASS" if not issues else "FAIL",
                     "validation_issues": issues,
                 }
