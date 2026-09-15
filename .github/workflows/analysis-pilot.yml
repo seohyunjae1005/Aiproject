@@ -14,7 +14,11 @@ on:
           - "11"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: repository-data-updates
+  cancel-in-progress: false
 
 jobs:
   analysis-pilot:
@@ -42,6 +46,22 @@ jobs:
           ANALYSIS_MAX_ARTICLES: ${{ inputs.article_limit }}
         run: python scripts/analyze_sample_articles.py
 
+      - name: Preserve machine-validated company analyses
+        run: python scripts/merge_analysis_cache.py
+
+      - name: Commit validated analysis cache
+        run: |
+          if git diff --quiet -- data/analysis/validated_cache.json; then
+            echo "No validated analysis cache changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/analysis/validated_cache.json
+          git commit -m "Update validated semiconductor analysis cache"
+          git pull --rebase origin main
+          git push
+
       - name: Upload review-only results
         if: always()
         uses: actions/upload-artifact@v4
@@ -50,5 +70,6 @@ jobs:
           path: |
             runtime/analysis_results.json
             runtime/analysis_validation.md
+            runtime/analysis_cache_update.md
           if-no-files-found: warn
           retention-days: 7

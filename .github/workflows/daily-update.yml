@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: daily-semiconductor-update
+  group: repository-data-updates
   cancel-in-progress: false
 
 jobs:
