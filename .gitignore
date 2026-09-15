@@ -9,7 +9,7 @@ data/raw/*.json
 data/processed/*.json
 logs/
 data/translations/*.tmp
-runtime/*.json
+runtime/
 
 # 비밀정보
 credentials*.json

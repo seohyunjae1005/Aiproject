@@ -1,0 +1,43 @@
+name: Pilot semiconductor job analysis
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analysis-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Extract three public official articles
+        run: python scripts/extract_article_bodies.py
+
+      - name: Prepare evidence-grounded analysis requests
+        run: python scripts/build_analysis_requests.py
+
+      - name: Analyze three articles with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/analyze_sample_articles.py
+
+      - name: Upload review-only results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analysis-pilot-results
+          path: |
+            runtime/analysis_results.json
+            runtime/analysis_validation.md
+          if-no-files-found: warn
+          retention-days: 7
