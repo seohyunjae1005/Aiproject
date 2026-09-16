@@ -1,6 +1,6 @@
 {
   "schema_version": "validated_analysis_cache_v1",
-  "updated_at": "2026-09-15T22:04:15.306109+00:00",
+  "updated_at": "2026-09-16T22:04:48.489543+00:00",
   "review_notice": "Machine-validated draft cache. Human approval is required before publication.",
   "company_count": 11,
   "companies": {
@@ -797,10 +797,10 @@
     },
     "TSMC": {
       "company": "TSMC",
-      "title": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium",
-      "url": "https://pr.tsmc.com/english/news/3302",
+      "title": "Sony Semiconductor Solutions and TSMC Enter Preliminary Agreement for Next-Generation Image Sensor Strategic Partnership",
+      "url": "https://pr.tsmc.com/english/news/3308",
       "model": "gemini-3.5-flash-lite",
-      "generated_at": "2026-09-15T22:04:09.607412+00:00",
+      "generated_at": "2026-09-16T22:04:45.032703+00:00",
       "analysis_version": "semiconductor_job_analysis_v1",
       "extraction_method": "filtered_html_blocks",
       "source_scope": "official_article_body",
@@ -808,83 +808,60 @@
       "review_status": "machine_validated",
       "publish_ready": false,
       "normalization_notes": [
-        "사실 1: 원문과 정확히 일치하지 않아 제외",
         "사실 2: 근거 구절이 25단어를 넘어 제외"
       ],
       "analysis": {
         "analysis_version": "semiconductor_job_analysis_v1",
-        "summary_ko": "TSMC는 2026 북미 기술 심포지엄에서 A13 공정을 새롭게 공개했으며, A14 대비 면적 절감 및 호환성을 제공하고 2029년 양산에 돌입할 예정이다. 이와 함께 A12, N2U, CoWoS 확장, SoIC, COUPE, N2A 등 AI와 HPC를 겨냥한 다양한 선단 공정 및 패키징 기술을 선보였다.",
+        "summary_ko": "Sony Semiconductor Solutions와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십 추진 업무협약(MOU)을 체결하고, 구마모토현 코시시에 설립되는 소니의 신규 팹에 개발 및 생산 라인을 구축하기 위한 합작법인(JV) 설립을 논의하고 있습니다. 양사는 소니의 센서 설계 역량과 TSMC의 공정 기술 및 제조 강점을 결합하여 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 새로운 기회를 모색할 예정입니다.",
         "facts": [
           {
-            "statement_ko": "TSMC는 약 10개의 대형 컴퓨팅 다이와 20개의 HBM 스택을 통합할 수 있는 14레티클 사이즈 CoWoS를 2028년 양산할 계획이다.",
-            "evidence_en": "A 14-reticle size CoWoS , capable of integrating approximately 10 large compute dies and 20 HBM stacks, is slated for production in 2028."
+            "statement_ko": "Sony와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십을 체결하기 위해 구속력 없는 양해각서(MOU)에 서명했습니다.",
+            "evidence_en": "signing of a non-binding memorandum of understanding (“MOU”) to form a strategic partnership for the development and manufacturing of next-generation image sensors."
+          },
+          {
+            "statement_ko": "이번 파트너십은 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 신흥 기회를 탐색하고 해결하고자 합니다.",
+            "evidence_en": "seeks to explore and address emerging opportunities in physical AI applications, such as automotive and robotics"
           }
         ],
         "technology_signals": [
-          "A13 process",
-          "A12 Super Power Rail",
-          "N2U",
-          "CoWoS (14-reticle size)",
-          "A14-to-A14 SoIC",
-          "TSMC-COUPE",
-          "N2A automotive-grade process",
-          "N16HV process"
+          "Next-generation image sensors",
+          "CMOS image sensor business",
+          "Physical AI applications"
         ],
         "company_implications": [
           {
             "target_company": "Samsung Electronics",
-            "inference_ko": "TSMC의 공격적인 A13 및 N2U 등 선단 공정 로드맵 발표에 대응하여 GAA(Gate-All-Around) 공정의 수율 안정화와 PPA(전력·성능·면적) 경쟁력 입증이 시급해질 수 있다.",
-            "basis_ko": "TSMC가 A14의 후속인 A13과 N2U 등 구체적인 양산 연도를 제시하며 고객사 생태계 선점에 나서고 있기 때문",
-            "confidence": "high"
-          },
-          {
-            "target_company": "SK hynix",
-            "inference_ko": "TSMC의 대형 CoWoS 확장 및 HBM 스택 통합 가속화에 발맞추어 고성능 HBM 제품의 공급망 협력을 더욱 강화해야 할 것이다.",
-            "basis_ko": "TSMC가 14레티클 사이즈 CoWoS로 20개의 HBM 스택 통합을 예고하는 등 패키징 단위의 메모리 연계가 필수가 되고 있기 때문",
+            "inference_ko": "소니와 TSMC의 파트너십 강화로 인해 이미지 센서 및 파운드리 시장에서의 경쟁 압력이 가중될 수 있습니다.",
+            "basis_ko": "소니와 TSMC가 합작법인을 통해 차세대 이미지 센서 생산 능력을 확대하고 물리적 AI 응용 분야를 공동 공략하기 때문입니다.",
             "confidence": "medium"
           }
         ],
         "role_insights": [
           {
-            "role": "공정기술·양산기술",
-            "why_relevant_ko": "A13 및 N2U 등 나노시트 트랜지스터 기반 선단 공정의 2028~2029년 양산을 위한 수율 확보와 공정 안정화가 핵심 과제이기 때문이다.",
+            "role": "R&D공정·공정설계",
+            "why_relevant_ko": "차세대 이미지 센서 제조를 위한 공정 기술 협력 및 라인 구축이 추진되기 때문입니다.",
             "considerations_ko": [
-              "나노시트 구조에서의 공정 변동성 관리 방안",
-              "수율 향상을 위한 패터닝 및 식각 공정 최적화"
+              "신규 팹 내 이미지 센서 공정 통합 및 최적화 방안"
             ],
             "study_points_ko": [
-              "GAA(Gate-All-Around) 공정의 구조적 특징",
-              "DTCO(Design-Technology Co-Optimization)의 개념"
-            ]
-          },
-          {
-            "role": "P&T·패키지개발",
-            "why_relevant_ko": "14레티클 크기의 대형 CoWoS 및 SoIC, COUPE 등 이종 통합 패키징 기술이 대거 공개되었기 때문이다.",
-            "considerations_ko": [
-              "대형 패키지에서의 휨(Warpage) 현상 제어 및 열 관리",
-              "다이 간 I/O 밀도 및 대역폭 향상 기술"
-            ],
-            "study_points_ko": [
-              "CoWoS 및 SoIC 등 2.5D/3D 패키징 구조",
-              "실리콘 포토닉스(CPO) 기반 광엔진 통합 방식"
+              "CMOS 이미지 센서(CIS) 제조 공정 및 파운드리 연계 공정 기술"
             ]
           },
           {
             "role": "소자",
-            "why_relevant_ko": "A13, A12(Super Power Rail), N2A 등 첨단 소자 구조 설계 및 특성 개선이 지속적으로 요구되기 때문이다.",
+            "why_relevant_ko": "차세대 이미지 센서 소자의 성능 향상과 물리적 AI 응용을 위한 소자 특성 개선이 요구됩니다.",
             "considerations_ko": [
-              "후면 전력 배달(Backside Power Delivery) 도입에 따른 소자 특성 변화",
-              "오토모티브 등 극한 환경에서의 소자 신뢰성 확보"
+              "자동차 및 로보틱스용 센서 소자의 신뢰성 및 성능 확보"
             ],
             "study_points_ko": [
-              " nanosheet transistor(나노시트 트랜지스터) 동작 원리",
-              "BSPDN(Backside Power Delivery Network) 소자 영향"
+              "이미지 센서 소자 구조 및 픽셀 파인 피치(fine-pitch) 기술"
             ]
           }
         ],
         "uncertainties_ko": [
-          "A13 및 A12 공정의 구체적인 수율 수치와 세부 제조 공정 조건",
-          "대형 CoWoS 및 SoIC 생산을 위한 구체적인 장비 반입 일정 및 투자 비용"
+          "구체적인 투자 규모 및 단계별 일정",
+          "합작법인 설립을 위한 최종 구속력 있는 계약 체결 여부",
+          "일본 정부의 구체적인 지원 수준"
         ],
         "overall_confidence": "high"
       }
