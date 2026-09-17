@@ -1,6 +1,6 @@
 {
   "schema_version": "validated_analysis_cache_v1",
-  "updated_at": "2026-09-16T22:04:48.489543+00:00",
+  "updated_at": "2026-09-17T22:04:44.169413+00:00",
   "review_notice": "Machine-validated draft cache. Human approval is required before publication.",
   "company_count": 11,
   "companies": {
@@ -797,73 +797,60 @@
     },
     "TSMC": {
       "company": "TSMC",
-      "title": "Sony Semiconductor Solutions and TSMC Enter Preliminary Agreement for Next-Generation Image Sensor Strategic Partnership",
-      "url": "https://pr.tsmc.com/english/news/3308",
+      "title": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium",
+      "url": "https://pr.tsmc.com/english/news/3302",
       "model": "gemini-3.5-flash-lite",
-      "generated_at": "2026-09-16T22:04:45.032703+00:00",
+      "generated_at": "2026-09-17T22:04:41.904535+00:00",
       "analysis_version": "semiconductor_job_analysis_v1",
-      "extraction_method": "filtered_html_blocks",
-      "source_scope": "official_article_body",
+      "extraction_method": "official_index_metadata",
+      "source_scope": "official_index_metadata",
       "validation_status": "PASS",
       "review_status": "machine_validated",
       "publish_ready": false,
       "normalization_notes": [
-        "사실 2: 근거 구절이 25단어를 넘어 제외"
+        "공식 목록의 제목·분류만 사용하여 전체 신뢰도를 low로 제한",
+        "제목 기반 사실 근거를 공식 기사 제목 원문 1개로 고정"
       ],
       "analysis": {
         "analysis_version": "semiconductor_job_analysis_v1",
-        "summary_ko": "Sony Semiconductor Solutions와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십 추진 업무협약(MOU)을 체결하고, 구마모토현 코시시에 설립되는 소니의 신규 팹에 개발 및 생산 라인을 구축하기 위한 합작법인(JV) 설립을 논의하고 있습니다. 양사는 소니의 센서 설계 역량과 TSMC의 공정 기술 및 제조 강점을 결합하여 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 새로운 기회를 모색할 예정입니다.",
+        "summary_ko": "TSMC는 2026 북미 기술 심포지엄에서 A13 기술을 공개하였습니다. 본 입력은 제목 및 메타데이터 중심의 제한된 정보로 구성되어 있습니다.",
         "facts": [
           {
-            "statement_ko": "Sony와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십을 체결하기 위해 구속력 없는 양해각서(MOU)에 서명했습니다.",
-            "evidence_en": "signing of a non-binding memorandum of understanding (“MOU”) to form a strategic partnership for the development and manufacturing of next-generation image sensors."
-          },
-          {
-            "statement_ko": "이번 파트너십은 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 신흥 기회를 탐색하고 해결하고자 합니다.",
-            "evidence_en": "seeks to explore and address emerging opportunities in physical AI applications, such as automotive and robotics"
+            "statement_ko": "TSMC 공식 기사 제목에서 ‘TSMC Debuts A13 Technology at 2026 North America Technology Symposium’ 관련 발표임을 확인할 수 있습니다.",
+            "evidence_en": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium"
           }
         ],
         "technology_signals": [
-          "Next-generation image sensors",
-          "CMOS image sensor business",
-          "Physical AI applications"
+          "A13 Technology"
         ],
-        "company_implications": [
-          {
-            "target_company": "Samsung Electronics",
-            "inference_ko": "소니와 TSMC의 파트너십 강화로 인해 이미지 센서 및 파운드리 시장에서의 경쟁 압력이 가중될 수 있습니다.",
-            "basis_ko": "소니와 TSMC가 합작법인을 통해 차세대 이미지 센서 생산 능력을 확대하고 물리적 AI 응용 분야를 공동 공략하기 때문입니다.",
-            "confidence": "medium"
-          }
-        ],
+        "company_implications": [],
         "role_insights": [
           {
-            "role": "R&D공정·공정설계",
-            "why_relevant_ko": "차세대 이미지 센서 제조를 위한 공정 기술 협력 및 라인 구축이 추진되기 때문입니다.",
+            "role": "소자",
+            "why_relevant_ko": "A13과 같은 새로운 공정 기술의 소자 구조 및 성능 검토가 필요하기 때문입니다.",
             "considerations_ko": [
-              "신규 팹 내 이미지 센서 공정 통합 및 최적화 방안"
+              "A13 공정의 소자 특성 변화 확인 필요"
             ],
             "study_points_ko": [
-              "CMOS 이미지 센서(CIS) 제조 공정 및 파운드리 연계 공정 기술"
+              "최신 로직 소자 구조 및 스케일링 트렌드"
             ]
           },
           {
-            "role": "소자",
-            "why_relevant_ko": "차세대 이미지 센서 소자의 성능 향상과 물리적 AI 응용을 위한 소자 특성 개선이 요구됩니다.",
+            "role": "공정기술·양산기술",
+            "why_relevant_ko": "새롭게 공개된 A13 기술의 양산 공정 적용 가능성을 검토해야 합니다.",
             "considerations_ko": [
-              "자동차 및 로보틱스용 센서 소자의 신뢰성 및 성능 확보"
+              "공정 난이도 및 수율 확보 방안"
             ],
             "study_points_ko": [
-              "이미지 센서 소자 구조 및 픽셀 파인 피치(fine-pitch) 기술"
+              "선단 파운드리 공정의 양산 기술 동향"
             ]
           }
         ],
         "uncertainties_ko": [
-          "구체적인 투자 규모 및 단계별 일정",
-          "합작법인 설립을 위한 최종 구속력 있는 계약 체결 여부",
-          "일본 정부의 구체적인 지원 수준"
+          "본문 본문 내용이 제공되지 않아 A13 기술의 세부 스펙, 수율, 공정 노드 정보, 구체적인 양산 일정 등을 확인할 수 없습니다.",
+          "공식 기사 본문을 확보하지 못해 제목과 공식 목록 정보만 분석했습니다."
         ],
-        "overall_confidence": "high"
+        "overall_confidence": "low"
       }
     },
     "Intel": {

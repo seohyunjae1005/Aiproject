@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-15T12:17:09.064006+00:00",
+  "updated_at": "2026-09-17T22:02:21.929788+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1485,6 +1485,18 @@
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "source_fingerprint": "864f4b6a4a371f6b47a5fd46076cdc208b38e6a20c7a5f4f0c25b9c1f25480e0",
       "translated_at": "2026-09-15T12:17:09.063976+00:00"
+    },
+    "https://news.skhynix.com/en/ai-infra-summit-2026/": {
+      "title_ko": "SK하이닉스, ‘AI 인프라 서밋 2026’에서 AI 인프라를 위한 ‘뉴 스펙트럼’ 선보여",
+      "summary_ko": "태그: AI, AI 인프라 서밋, AI 메모리, eSSD, HBF, PIM, SALT-KV",
+      "source_fingerprint": "d2bf291dcb06c688d5b1e2c2ebac1efb5879eed504ea965f3bdbcc3171e26eb5",
+      "translated_at": "2026-09-17T22:02:21.929763+00:00"
+    },
+    "https://www.tel.com/news/ir/2026/b4np7600000000ii-att/20260917_001_e.pdf": {
+      "title_ko": "후원형 ADR(미국예탁증서) 프로그램 신설에 관한 공고",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "2b96034c76edbe10fd7bdd7211db97a27f8d286f02ffe21214e2738d27847375",
+      "translated_at": "2026-09-17T22:02:21.929763+00:00"
     }
   }
 }
