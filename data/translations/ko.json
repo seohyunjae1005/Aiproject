@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-17T22:02:21.929788+00:00",
+  "updated_at": "2026-09-18T22:01:43.613998+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1497,6 +1497,12 @@
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "source_fingerprint": "2b96034c76edbe10fd7bdd7211db97a27f8d286f02ffe21214e2738d27847375",
       "translated_at": "2026-09-17T22:02:21.929763+00:00"
+    },
+    "https://news.skhynix.com/en/sk-hynix-ventures/": {
+      "title_ko": "SK하이닉스, 글로벌 AI 생태계 투자 확대를 위해 실리콘밸리에 ‘SK하이닉스 벤처스’ 출범",
+      "summary_ko": "▪ 곽노정 CEO와 주요 임원진이 글로벌 벤처캐피털(VC) 및 스타트업 리더들과 함께 실리콘밸리에서 열린 제1회 ‘SK하이닉스 벤처스 데이’에 참석했다 ▪ 회사는 AI 생태계 전반에 걸쳐 투자를 확대할 계획이다 ▪ 다음과 같은 파트너십 강화 전략을 논의했다",
+      "source_fingerprint": "d1b86c12adef1f829860d69ca011b1fa73bd2e4758c00642207419470e06393f",
+      "translated_at": "2026-09-18T22:01:43.613970+00:00"
     }
   }
 }
