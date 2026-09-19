@@ -25,6 +25,7 @@ INPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.js
 OUTPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
 TRANSLATION_CACHE_PATH = PROJECT_ROOT / "data" / "translations" / "ko.json"
 ANALYSIS_CACHE_PATH = PROJECT_ROOT / "data" / "analysis" / "validated_cache.json"
+MONTHLY_TREND_CACHE_PATH = PROJECT_ROOT / "data" / "analysis" / "monthly_trend_cache.json"
 
 
 def _translation_cache() -> dict:
@@ -58,6 +59,19 @@ def _validated_analysis_cache() -> tuple[dict, dict]:
         ):
             analyses[str(item["url"])] = item
     return analyses, payload
+
+
+def _monthly_trend_cache() -> dict:
+    if not MONTHLY_TREND_CACHE_PATH.exists():
+        return {}
+    try:
+        payload = json.loads(MONTHLY_TREND_CACHE_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        print("경고: 월간 AI 동향 캐시가 손상되어 통계 동향판만 게시합니다.")
+        return {}
+    if payload.get("validation_status") != "PASS" or not isinstance(payload.get("report"), dict):
+        return {}
+    return payload
 
 
 def _fingerprint(article: dict) -> str:
@@ -123,6 +137,15 @@ def main() -> None:
     trend_issues = validate_trend_summary(payload["trend_summary"], payload["articles"])
     if trend_issues:
         raise SystemExit("동향 집계 검증 실패: " + " / ".join(trend_issues))
+    monthly_cache = _monthly_trend_cache()
+    if monthly_cache:
+        payload["monthly_trend_report"] = {
+            "generated_at": monthly_cache.get("generated_at"),
+            "model": monthly_cache.get("model"),
+            "report": monthly_cache.get("report"),
+            "evidence": monthly_cache.get("evidence"),
+            "notice": "공식 기사 통계와 제목만 사용하고 근거 ID를 자동 검사한 AI 참고용 리포트입니다.",
+        }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),

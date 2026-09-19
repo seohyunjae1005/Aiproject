@@ -11,6 +11,7 @@ const state = {
   translatedCount: 0,
   trendDays: "30",
   trendSummary: null,
+  monthlyTrendReport: null,
 };
 
 const grid = document.querySelector("#article-grid");
@@ -132,6 +133,49 @@ function renderCompanyProfiles(rows) {
       <span class="profile-tags">${profileTags(row.top_job_roles)}</span>
     </button>
   `).join("");
+}
+
+function renderMonthlyReport() {
+  const payload = state.monthlyTrendReport;
+  const container = document.querySelector("#monthly-ai-report");
+  const report = payload?.report;
+  if (!report) {
+    container.hidden = true;
+    return;
+  }
+  container.hidden = false;
+  document.querySelector("#monthly-report-title").textContent = report.headline_ko || "최근 30일 공정 직무 동향";
+  document.querySelector("#monthly-report-date").textContent = `분석 ${formatDate(payload.generated_at)}`;
+  document.querySelector("#monthly-report-summary").textContent = report.summary_ko || "";
+  const metrics = new Map((payload.evidence?.metrics || []).map((row) => [row.id, row.text_ko]));
+  const articles = new Map((payload.evidence?.articles || []).map((row) => [row.id, row]));
+  document.querySelector("#monthly-findings").innerHTML = (report.key_findings || []).map((row) => `
+    <article>
+      <strong>${escapeHtml(row.title_ko)}</strong>
+      <p>${escapeHtml(row.interpretation_ko)}</p>
+      <div class="evidence-chips">${(row.evidence_metric_ids || []).map((id) => `<span title="${escapeHtml(metrics.get(id) || "")}">${escapeHtml(id)}</span>`).join("")}</div>
+    </article>
+  `).join("");
+  const processActions = (report.role_actions || []).filter((row) => row.role === "공정기술·양산기술");
+  document.querySelector("#monthly-role-actions").innerHTML = processActions.map((row) => `
+    <article>
+      <strong>${escapeHtml(row.role)}</strong>
+      <span>현업에서 볼 것</span>
+      <ul>${(row.watch_points_ko || []).map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
+      <span>취업 준비 학습</span>
+      <ul>${(row.study_points_ko || []).map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
+    </article>
+  `).join("") || '<p class="trend-empty">공정 직무 제안이 검증되지 않아 표시하지 않습니다.</p>';
+  const citedMetricIds = new Set((report.key_findings || []).flatMap((row) => row.evidence_metric_ids || []));
+  const citedArticleIds = new Set((report.company_insights || []).flatMap((row) => row.evidence_article_ids || []));
+  document.querySelector("#monthly-evidence-list").innerHTML = [
+    ...[...citedMetricIds].map((id) => metrics.has(id) ? `<p><strong>${escapeHtml(id)}</strong> ${escapeHtml(metrics.get(id))}</p>` : ""),
+    ...[...citedArticleIds].map((id) => {
+      const row = articles.get(id);
+      return row ? `<p><strong>${escapeHtml(id)}</strong> <a href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.company)} — ${escapeHtml(row.title)}</a></p>` : "";
+    }),
+  ].join("");
+  document.querySelector("#monthly-limitations").innerHTML = (report.limitations_ko || []).map((value) => `<li>${escapeHtml(value)}</li>`).join("");
 }
 
 function renderTrendSummary() {
@@ -380,6 +424,7 @@ async function loadData() {
     const companies = Object.keys(data.company_counts || {});
     const options = data.filter_options || {};
     state.trendSummary = data.trend_summary || null;
+    state.monthlyTrendReport = data.monthly_trend_report || null;
     state.translatedCount = Number(data.translation?.translated_count || 0);
     document.querySelector("#total-count").textContent = data.article_count ?? state.articles.length;
     document.querySelector("#company-count").textContent = companies.length;
@@ -391,6 +436,7 @@ async function loadData() {
     fillSelect("#signal-filter", options.signal_types || [], "signal_types");
     updateLanguageButton();
     renderTrendSummary();
+    renderMonthlyReport();
     render();
   } catch (error) {
     resultLine.textContent = "데이터를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.";

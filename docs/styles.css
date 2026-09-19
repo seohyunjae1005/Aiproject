@@ -118,6 +118,24 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 .momentum-groups li + li { margin-top: 0.25rem; }
 .momentum-groups li strong { color: var(--accent); }
 .trend-methodology { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.7rem; }
+.monthly-ai-report { margin-top: 1rem; padding: 1rem; border: 1px solid rgba(84, 224, 188, 0.5); background: rgba(84, 224, 188, 0.05); }
+.monthly-report-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+.monthly-report-heading h3 { margin: 0; font-size: 1.05rem; }
+.monthly-report-heading > span { color: var(--muted); font-size: 0.68rem; }
+.monthly-report-summary { margin: 0.7rem 0; color: #dce7ed; font-size: 0.85rem; }
+.monthly-report-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.monthly-report-grid > section { padding: 0.75rem; border: 1px solid var(--line); background: rgba(7, 16, 25, 0.45); }
+.monthly-report-grid h4 { margin: 0 0 0.55rem; color: var(--accent); font-size: 0.8rem; }
+.monthly-report-grid article + article { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
+.monthly-report-grid article > strong { display: block; font-size: 0.78rem; }
+.monthly-report-grid article > span { display: block; margin-top: 0.45rem; color: var(--muted); font-size: 0.67rem; font-weight: 700; }
+.monthly-report-grid p, .monthly-report-grid ul { margin: 0.25rem 0; font-size: 0.73rem; }
+.evidence-chips { display: flex; gap: 0.25rem; }
+.evidence-chips span { padding: 0.08rem 0.3rem; border: 1px solid var(--accent-2); color: #9ac2ff; font-size: 0.6rem; }
+.monthly-evidence { margin-top: 0.7rem; border-top: 1px solid var(--line); }
+.monthly-evidence summary { padding-top: 0.6rem; color: var(--muted); font-size: 0.7rem; cursor: pointer; }
+.monthly-evidence p, .monthly-evidence li { margin: 0.35rem 0; color: var(--muted); font-size: 0.68rem; }
+.monthly-evidence a { color: var(--accent-2); }
 .company-trend-panel { margin-top: 0.8rem; padding: 1rem; border: 1px solid var(--line); background: rgba(7, 16, 25, 0.52); }
 .company-trend-panel h3 { margin: 0; font-size: 0.95rem; }
 .company-trend-panel > div:first-child > p:last-child { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.76rem; }
@@ -285,6 +303,7 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .trend-columns { grid-template-columns: 1fr; }
   .momentum-panel { grid-template-columns: 1fr; }
   .company-profile-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .monthly-report-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
