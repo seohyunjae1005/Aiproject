@@ -110,6 +110,30 @@ function momentumList(rows) {
   `).join("");
 }
 
+function profileTags(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return '<span class="profile-empty">분류 없음</span>';
+  return rows.map((row) => `
+    <span>${escapeHtml(row.name)} <small>${Number(row.count || 0)}</small></span>
+  `).join("");
+}
+
+function renderCompanyProfiles(rows) {
+  const container = document.querySelector("#company-profile-list");
+  if (!Array.isArray(rows) || rows.length === 0) {
+    container.innerHTML = '<p class="trend-empty">최근 30일 핵심 기업 신호가 없습니다.</p>';
+    return;
+  }
+  container.innerHTML = rows.map((row) => `
+    <button class="company-profile" type="button" data-profile-company="${escapeHtml(row.company)}">
+      <span class="profile-title"><strong>${escapeHtml(row.company)}</strong><em>${Number(row.high_relevance_count || 0)}건</em></span>
+      <span class="profile-label">기술</span>
+      <span class="profile-tags">${profileTags(row.top_tech_domains)}</span>
+      <span class="profile-label">직무</span>
+      <span class="profile-tags">${profileTags(row.top_job_roles)}</span>
+    </button>
+  `).join("");
+}
+
 function renderTrendSummary() {
   const summary = state.trendSummary;
   const board = document.querySelector("#trend-board");
@@ -128,6 +152,7 @@ function renderTrendSummary() {
   document.querySelector("#trend-company-list").innerHTML = rankingList(windowData.top_companies);
   document.querySelector("#momentum-tech-list").innerHTML = momentumList(summary.momentum_30d?.tech_domains);
   document.querySelector("#momentum-job-list").innerHTML = momentumList(summary.momentum_30d?.job_roles);
+  renderCompanyProfiles(summary.company_profiles_30d);
   document.querySelector("#trend-methodology").textContent = summary.methodology || "";
 }
 
@@ -140,6 +165,21 @@ function bindTrendPeriodTabs() {
     });
     state.trendDays = button.dataset.trendDays;
     renderTrendSummary();
+  });
+}
+
+function bindCompanyProfiles() {
+  document.querySelector("#company-profile-list").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-profile-company]");
+    if (!button) return;
+    state.company = button.dataset.profileCompany;
+    state.days = "30";
+    document.querySelectorAll("#company-filters button").forEach((item) => {
+      item.classList.toggle("active", item.dataset.company === state.company);
+    });
+    document.querySelector("#days-filter").value = "30";
+    render();
+    document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
 
@@ -373,4 +413,5 @@ document.querySelector("#language-toggle").addEventListener("click", () => {
 
 bindFilters();
 bindTrendPeriodTabs();
+bindCompanyProfiles();
 loadData();

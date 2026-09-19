@@ -118,6 +118,30 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 .momentum-groups li + li { margin-top: 0.25rem; }
 .momentum-groups li strong { color: var(--accent); }
 .trend-methodology { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.7rem; }
+.company-trend-panel { margin-top: 0.8rem; padding: 1rem; border: 1px solid var(--line); background: rgba(7, 16, 25, 0.52); }
+.company-trend-panel h3 { margin: 0; font-size: 0.95rem; }
+.company-trend-panel > div:first-child > p:last-child { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.76rem; }
+.company-profile-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.65rem; margin-top: 0.8rem; }
+.company-profile {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.company-profile:hover, .company-profile:focus-visible { border-color: var(--accent); background: rgba(84, 224, 188, 0.07); }
+.profile-title { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.profile-title strong { color: var(--accent-2); font-size: 0.8rem; }
+.profile-title em { color: var(--accent); font-size: 0.72rem; font-style: normal; }
+.profile-label { margin-top: 0.25rem; color: var(--muted); font-size: 0.65rem; font-weight: 700; }
+.profile-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.profile-tags > span { padding: 0.12rem 0.32rem; border: 1px solid #345063; color: #c7d5de; font-size: 0.65rem; }
+.profile-tags small { color: var(--muted); }
+.profile-empty { color: var(--muted); font-size: 0.65rem; }
 
 .controls { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding: 1rem 0; border-block: 1px solid var(--line); }
 .company-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -260,6 +284,7 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .trend-heading { align-items: stretch; flex-direction: column; }
   .trend-columns { grid-template-columns: 1fr; }
   .momentum-panel { grid-template-columns: 1fr; }
+  .company-profile-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 480px) {
@@ -268,4 +293,5 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .trend-metrics { grid-template-columns: 1fr; }
   .trend-metrics div + div { border-top: 1px solid var(--line); border-left: 0; }
   .momentum-groups { grid-template-columns: 1fr; }
+  .company-profile-list { grid-template-columns: 1fr; }
 }
