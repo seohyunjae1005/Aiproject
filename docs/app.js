@@ -166,6 +166,13 @@ function renderMonthlyReport() {
       <ul>${(row.study_points_ko || []).map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>
     </article>
   `).join("") || '<p class="trend-empty">공정 직무 제안이 검증되지 않아 표시하지 않습니다.</p>';
+  document.querySelector("#monthly-company-insights").innerHTML = (report.company_insights || []).map((row) => `
+    <article>
+      <strong>${escapeHtml(row.company)}</strong>
+      <p>${escapeHtml(row.observation_ko)}</p>
+      <div class="evidence-chips">${(row.evidence_article_ids || []).map((id) => `<span>${escapeHtml(id)}</span>`).join("")}</div>
+    </article>
+  `).join("");
   const citedMetricIds = new Set((report.key_findings || []).flatMap((row) => row.evidence_metric_ids || []));
   const citedArticleIds = new Set((report.company_insights || []).flatMap((row) => row.evidence_article_ids || []));
   document.querySelector("#monthly-evidence-list").innerHTML = [
@@ -222,6 +229,27 @@ function bindCompanyProfiles() {
       item.classList.toggle("active", item.dataset.company === state.company);
     });
     document.querySelector("#days-filter").value = "30";
+    render();
+    document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function bindProcessFocusButton() {
+  document.querySelector("#process-focus-button").addEventListener("click", () => {
+    state.company = "all";
+    state.relevance = "high";
+    state.job = "공정기술·양산기술";
+    state.days = "30";
+    state.query = "";
+    document.querySelector("#search").value = "";
+    document.querySelector("#job-filter").value = state.job;
+    document.querySelector("#days-filter").value = state.days;
+    document.querySelectorAll("#company-filters button").forEach((button) => {
+      button.classList.toggle("active", button.dataset.company === "all");
+    });
+    document.querySelectorAll("#importance-filters button").forEach((button) => {
+      button.classList.toggle("active", button.dataset.relevance === "high");
+    });
     render();
     document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -460,4 +488,5 @@ document.querySelector("#language-toggle").addEventListener("click", () => {
 bindFilters();
 bindTrendPeriodTabs();
 bindCompanyProfiles();
+bindProcessFocusButton();
 loadData();

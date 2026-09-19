@@ -123,7 +123,9 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 .monthly-report-heading h3 { margin: 0; font-size: 1.05rem; }
 .monthly-report-heading > span { color: var(--muted); font-size: 0.68rem; }
 .monthly-report-summary { margin: 0.7rem 0; color: #dce7ed; font-size: 0.85rem; }
-.monthly-report-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.process-focus-button { margin: 0 0 0.8rem; padding: 0.55rem 0.8rem; border: 1px solid var(--accent); border-radius: 0.35rem; background: rgba(84, 224, 188, 0.1); color: var(--accent); cursor: pointer; }
+.process-focus-button:hover, .process-focus-button:focus-visible { background: rgba(84, 224, 188, 0.2); color: var(--text); }
+.monthly-report-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem; }
 .monthly-report-grid > section { padding: 0.75rem; border: 1px solid var(--line); background: rgba(7, 16, 25, 0.45); }
 .monthly-report-grid h4 { margin: 0 0 0.55rem; color: var(--accent); font-size: 0.8rem; }
 .monthly-report-grid article + article { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
