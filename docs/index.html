@@ -39,6 +39,54 @@
         </div>
       </section>
 
+      <section class="trend-board" id="trend-board" aria-labelledby="trend-title" hidden>
+        <div class="trend-heading">
+          <div>
+            <p class="eyebrow">INDUSTRY TREND</p>
+            <h2 id="trend-title">기사 여러 건을 모아 본 산업 동향</h2>
+            <p class="trend-copy">공식 기사에 붙인 기술·직무 분류를 기간별로 집계했습니다.</p>
+          </div>
+          <div class="trend-period-tabs" id="trend-period-tabs" aria-label="동향 집계 기간">
+            <button type="button" data-trend-days="7">7일</button>
+            <button class="active" type="button" data-trend-days="30">30일</button>
+            <button type="button" data-trend-days="90">90일</button>
+          </div>
+        </div>
+
+        <div class="trend-metrics" aria-label="선택 기간 동향 현황">
+          <div><strong id="trend-article-count">-</strong><span>전체 공식 기사</span></div>
+          <div><strong id="trend-high-count">-</strong><span>핵심 기술 기사</span></div>
+          <div><strong id="trend-company-count">-</strong><span>발표 기업</span></div>
+        </div>
+
+        <div class="trend-columns">
+          <section class="trend-panel">
+            <h3>많이 등장한 기술 분야</h3>
+            <ol id="trend-tech-list"></ol>
+          </section>
+          <section class="trend-panel">
+            <h3>연관성이 높은 직무</h3>
+            <ol id="trend-job-list"></ol>
+          </section>
+          <section class="trend-panel">
+            <h3>핵심 발표가 많은 기업</h3>
+            <ol id="trend-company-list"></ol>
+          </section>
+        </div>
+
+        <section class="momentum-panel" id="momentum-panel">
+          <div>
+            <p class="momentum-kicker">30-DAY MOMENTUM</p>
+            <h3>직전 30일보다 발표가 늘어난 신호</h3>
+          </div>
+          <div class="momentum-groups">
+            <div><strong>기술</strong><ul id="momentum-tech-list"></ul></div>
+            <div><strong>직무</strong><ul id="momentum-job-list"></ul></div>
+          </div>
+        </section>
+        <p class="trend-methodology" id="trend-methodology"></p>
+      </section>
+
       <section class="controls" aria-label="기사 필터">
         <div class="company-filters" id="company-filters">
           <button class="filter active" type="button" data-company="all">전체</button>

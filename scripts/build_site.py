@@ -19,6 +19,7 @@ from trend_tracker.classification import (
     TECH_DOMAIN_ORDER,
     enrich_article,
 )
+from trend_tracker.trend_summary import build_trend_summary, validate_trend_summary
 
 INPUT_PATH = PROJECT_ROOT / "data" / "processed" / "latest_semiconductor_news.json"
 OUTPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
@@ -116,6 +117,12 @@ def main() -> None:
         "updated_at": analysis_payload.get("updated_at"),
         "notice": "AI가 공식 원문을 바탕으로 작성하고 기계적으로 근거를 검사한 참고용 초안입니다.",
     }
+    payload["trend_summary"] = build_trend_summary(
+        payload["articles"], payload.get("generated_at")
+    )
+    trend_issues = validate_trend_summary(payload["trend_summary"], payload["articles"])
+    if trend_issues:
+        raise SystemExit("동향 집계 검증 실패: " + " / ".join(trend_issues))
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2),
@@ -123,6 +130,13 @@ def main() -> None:
     )
     print(f"웹 데이터 생성: {payload.get('article_count', 0)}건")
     print(f"AI 직무 분석 연결: {analyzed_count}건")
+    print(
+        "동향 집계: "
+        + ", ".join(
+            f"{days}일 {row['article_count']}건"
+            for days, row in payload["trend_summary"]["windows"].items()
+        )
+    )
     print(f"저장 위치: {OUTPUT_PATH}")
 
 

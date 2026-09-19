@@ -9,6 +9,8 @@ const state = {
   query: "",
   language: "original",
   translatedCount: 0,
+  trendDays: "30",
+  trendSummary: null,
 };
 
 const grid = document.querySelector("#article-grid");
@@ -80,6 +82,65 @@ function badgeList(values, className, limit = 3) {
 
 function confidenceLabel(value) {
   return { high: "높음", medium: "보통", low: "낮음" }[value] || "미표시";
+}
+
+function rankingList(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return '<li class="trend-empty">집계할 신호가 아직 없습니다.</li>';
+  }
+  const maximum = Math.max(...rows.map((row) => Number(row.count || 0)), 1);
+  return rows.map((row) => {
+    const count = Number(row.count || 0);
+    const width = Math.max(8, Math.round((count / maximum) * 100));
+    return `
+      <li>
+        <div class="rank-label"><span>${escapeHtml(row.name)}</span><strong>${count}건</strong></div>
+        <span class="rank-bar" aria-hidden="true"><i style="width:${width}%"></i></span>
+      </li>
+    `;
+  }).join("");
+}
+
+function momentumList(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return '<li class="trend-empty">뚜렷하게 증가한 신호가 없습니다.</li>';
+  }
+  return rows.map((row) => `
+    <li><span>${escapeHtml(row.name)}</span><strong>+${Number(row.delta || 0)}건</strong></li>
+  `).join("");
+}
+
+function renderTrendSummary() {
+  const summary = state.trendSummary;
+  const board = document.querySelector("#trend-board");
+  const windowData = summary?.windows?.[state.trendDays];
+  if (!windowData) {
+    board.hidden = true;
+    return;
+  }
+
+  board.hidden = false;
+  document.querySelector("#trend-article-count").textContent = windowData.article_count ?? 0;
+  document.querySelector("#trend-high-count").textContent = windowData.high_relevance_count ?? 0;
+  document.querySelector("#trend-company-count").textContent = windowData.company_count ?? 0;
+  document.querySelector("#trend-tech-list").innerHTML = rankingList(windowData.top_tech_domains);
+  document.querySelector("#trend-job-list").innerHTML = rankingList(windowData.top_job_roles);
+  document.querySelector("#trend-company-list").innerHTML = rankingList(windowData.top_companies);
+  document.querySelector("#momentum-tech-list").innerHTML = momentumList(summary.momentum_30d?.tech_domains);
+  document.querySelector("#momentum-job-list").innerHTML = momentumList(summary.momentum_30d?.job_roles);
+  document.querySelector("#trend-methodology").textContent = summary.methodology || "";
+}
+
+function bindTrendPeriodTabs() {
+  document.querySelector("#trend-period-tabs").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-trend-days]");
+    if (!button) return;
+    document.querySelectorAll("#trend-period-tabs button").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+    state.trendDays = button.dataset.trendDays;
+    renderTrendSummary();
+  });
 }
 
 function renderAiAnalysis(item) {
@@ -278,6 +339,7 @@ async function loadData() {
     state.articles = data.articles || [];
     const companies = Object.keys(data.company_counts || {});
     const options = data.filter_options || {};
+    state.trendSummary = data.trend_summary || null;
     state.translatedCount = Number(data.translation?.translated_count || 0);
     document.querySelector("#total-count").textContent = data.article_count ?? state.articles.length;
     document.querySelector("#company-count").textContent = companies.length;
@@ -288,6 +350,7 @@ async function loadData() {
     fillSelect("#domain-filter", options.tech_domains || [], "tech_domains");
     fillSelect("#signal-filter", options.signal_types || [], "signal_types");
     updateLanguageButton();
+    renderTrendSummary();
     render();
   } catch (error) {
     resultLine.textContent = "데이터를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.";
@@ -309,4 +372,5 @@ document.querySelector("#language-toggle").addEventListener("click", () => {
 });
 
 bindFilters();
+bindTrendPeriodTabs();
 loadData();

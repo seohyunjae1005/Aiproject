@@ -63,6 +63,62 @@ main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
 .metric strong { display: block; color: var(--accent); font-size: 1.7rem; line-height: 1; }
 .metric span { display: block; margin-top: 0.5rem; color: var(--muted); font-size: 0.82rem; }
 
+.trend-board {
+  margin-top: 2.5rem;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(18, 35, 49, 0.92), rgba(7, 16, 25, 0.82));
+}
+.trend-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.trend-heading h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -0.035em; }
+.trend-copy { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.trend-period-tabs { display: flex; gap: 0.35rem; }
+.trend-period-tabs button {
+  min-width: 3.5rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.trend-period-tabs button:hover, .trend-period-tabs button:focus-visible, .trend-period-tabs button.active {
+  border-color: var(--accent);
+  background: rgba(84, 224, 188, 0.1);
+  color: var(--text);
+}
+.trend-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 1.25rem; border-block: 1px solid var(--line); }
+.trend-metrics div { padding: 0.8rem 1rem; }
+.trend-metrics div + div { border-left: 1px solid var(--line); }
+.trend-metrics strong { color: var(--accent); font-size: 1.45rem; }
+.trend-metrics span { margin-left: 0.5rem; color: var(--muted); font-size: 0.78rem; }
+.trend-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+.trend-panel { padding: 1rem; border: 1px solid var(--line); background: rgba(7, 16, 25, 0.52); }
+.trend-panel h3, .momentum-panel h3 { margin: 0 0 0.8rem; font-size: 0.95rem; }
+.trend-panel ol, .momentum-panel ul { margin: 0; padding: 0; list-style: none; }
+.trend-panel li + li { margin-top: 0.7rem; }
+.rank-label { display: flex; justify-content: space-between; gap: 0.7rem; color: #dce7ed; font-size: 0.78rem; }
+.rank-label strong { flex: 0 0 auto; color: var(--muted); }
+.rank-bar { display: block; height: 0.22rem; margin-top: 0.3rem; overflow: hidden; border-radius: 999px; background: #1e3443; }
+.rank-bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.trend-empty { color: var(--muted); font-size: 0.76rem; }
+.momentum-panel {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.7fr) 2fr;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border-left: 3px solid var(--accent-2);
+  background: rgba(106, 169, 255, 0.07);
+}
+.momentum-kicker { margin: 0 0 0.25rem; color: var(--accent-2); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; }
+.momentum-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.momentum-groups > div > strong { display: block; margin-bottom: 0.4rem; color: var(--muted); font-size: 0.74rem; }
+.momentum-groups li { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.76rem; }
+.momentum-groups li + li { margin-top: 0.25rem; }
+.momentum-groups li strong { color: var(--accent); }
+.trend-methodology { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.7rem; }
+
 .controls { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding: 1rem 0; border-block: 1px solid var(--line); }
 .company-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .filter { padding: 0.55rem 0.9rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
@@ -201,9 +257,15 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .filter-panel { grid-template-columns: 1fr; }
   .select-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .reset-button { width: 100%; }
+  .trend-heading { align-items: stretch; flex-direction: column; }
+  .trend-columns { grid-template-columns: 1fr; }
+  .momentum-panel { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .select-grid { grid-template-columns: 1fr; }
   .filter-group { align-items: flex-start; flex-direction: column; }
+  .trend-metrics { grid-template-columns: 1fr; }
+  .trend-metrics div + div { border-top: 1px solid var(--line); border-left: 0; }
+  .momentum-groups { grid-template-columns: 1fr; }
 }
