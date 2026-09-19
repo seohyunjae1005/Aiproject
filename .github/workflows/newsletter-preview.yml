@@ -1,0 +1,42 @@
+name: Build newsletter preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      digest_days:
+        description: "미리보기에 포함할 최근 기간"
+        required: true
+        default: "1"
+        type: choice
+        options:
+          - "1"
+          - "3"
+          - "7"
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build privacy-safe preview without sending
+        env:
+          DIGEST_DAYS: ${{ inputs.digest_days }}
+        run: python scripts/build_email_digest.py
+      - name: Upload preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-preview
+          path: |
+            runtime/email_digest_preview.html
+            runtime/email_digest_meta.json
+          if-no-files-found: error
+          retention-days: 7
