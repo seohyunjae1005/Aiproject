@@ -11,9 +11,14 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = PROJECT_ROOT / "docs" / "data" / "latest.json"
-OUTPUT_PATH = PROJECT_ROOT / "runtime" / "email_digest_preview.html"
-META_PATH = PROJECT_ROOT / "runtime" / "email_digest_meta.json"
+OUTPUT_PATH = PROJECT_ROOT / os.environ.get(
+    "DIGEST_OUTPUT_PATH", "runtime/email_digest_preview.html"
+)
+META_PATH = PROJECT_ROOT / os.environ.get(
+    "DIGEST_META_PATH", "runtime/email_digest_meta.json"
+)
 SITE_URL = "https://seohyunjae1005.github.io/Aiproject/"
+SUBSCRIPTION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe3Vm-nkOof2qsQfEIIH5pPNs6JE2stnCWOv_4Y_DsQi8YpUQ/viewform?usp=dialog"
 
 
 def _number(name: str, default: int, minimum: int, maximum: int) -> int:
@@ -100,7 +105,7 @@ def build_digest(payload: dict, articles: list[dict], days: int) -> tuple[str, d
       <tr><td style="padding:0 24px"><h2 style="font-size:18px">최근 {days}일 공식 기사</h2><table role="presentation" width="100%">{article_rows}</table></td></tr>
       <tr><td style="padding:20px 24px;border-top:1px solid #263b4a;color:#78909c;font-size:11px;line-height:1.6">
         공식 뉴스룸 기반 참고용 자료입니다. 중요한 판단 전 원문을 확인하세요.<br>
-        실제 발송 단계에서는 수신 동의 일시와 구독 해지 방법을 반드시 제공합니다. 이 미리보기에는 추적 픽셀이 없습니다.
+        이 이메일에는 추적 픽셀이 없습니다. <a href="{SUBSCRIPTION_FORM_URL}" style="color:#6aa9ff">구독 변경·해지 요청</a>
       </td></tr>
     </table>
   </td></tr></table>
