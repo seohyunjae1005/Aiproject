@@ -476,10 +476,23 @@ function previewLatestSubscriberPersonalization() {
   const subscriber = latestApprovedSubscriber();
   const kind = deliveryKind(subscriber.frequency);
   if (!kind) throw new Error('선택한 희망 발송 주기를 해석할 수 없습니다.');
-  const digest = buildPersonalizedDigest(fetchPublicPayload(), kind, subscriber, true);
+  const payload = fetchPublicPayload();
+  console.log(
+    `Sheet ${subscriber.sheetRow}행 / 신청 주기 ${kind} / 관심 직무 ${subscriber.jobInterests.join(', ') || '선택 없음'} / 관심 기업 ${subscriber.companyInterests.join(', ') || '선택 없음'}`
+  );
+
+  let previewKind = kind;
+  let digest = buildPersonalizedDigest(payload, previewKind, subscriber, true);
+  if (!digest && kind === 'daily') {
+    previewKind = 'weekly';
+    digest = buildPersonalizedDigest(payload, previewKind, subscriber, true);
+    if (digest) {
+      console.log('최근 24시간에 새 기사가 없어 실제 일일 메일은 발송하지 않습니다. 기능 확인용으로 최근 7일 기사를 보여줍니다.');
+    }
+  }
   if (!digest) throw new Error('관심 분야 및 공정·양산 대체 기준에 맞는 새 기사가 없습니다.');
   console.log(
-    `Sheet ${subscriber.sheetRow}행 / ${kind} / 맞춤 기사 ${digest.articleCount}건 / 공정·양산 대체 ${digest.fallback ? '예' : '아니오'}`
+    `미리보기 기준 ${previewKind} / 맞춤 기사 ${digest.articleCount}건 / 공정·양산 대체 ${digest.fallback ? '예' : '아니오'}`
   );
 }
 
