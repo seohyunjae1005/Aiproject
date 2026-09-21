@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-18T22:01:43.613998+00:00",
+  "updated_at": "2026-09-21T22:01:53.763925+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1503,6 +1503,12 @@
       "summary_ko": "▪ 곽노정 CEO와 주요 임원진이 글로벌 벤처캐피털(VC) 및 스타트업 리더들과 함께 실리콘밸리에서 열린 제1회 ‘SK하이닉스 벤처스 데이’에 참석했다 ▪ 회사는 AI 생태계 전반에 걸쳐 투자를 확대할 계획이다 ▪ 다음과 같은 파트너십 강화 전략을 논의했다",
       "source_fingerprint": "d1b86c12adef1f829860d69ca011b1fa73bd2e4758c00642207419470e06393f",
       "translated_at": "2026-09-18T22:01:43.613970+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-host-investor-breakfast-presentation-during": {
+      "title_ko": "애플라이드 머티리얼즈, SEMICON West 기간 중 투자자 조찬 설명회 개최",
+      "summary_ko": "캘리포니아주 산타클라라, 2026년 9월 21일 (GLOBE NEWSWIRE) -- 어플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘, 2026년 10월 13일 화요일 SEMICON West 행사 기간 중 임원진이 ‘투자자 조찬 프레젠테이션’에 참석할 것이라고 발표했다. 프레젠테이션은 오전 8시에 시작될 예정이다.",
+      "source_fingerprint": "9f705bada8eec902dde30c328b7a38c51017a20e585a75a31fd5740b5663269e",
+      "translated_at": "2026-09-21T22:01:53.763898+00:00"
     }
   }
 }
