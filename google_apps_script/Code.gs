@@ -221,7 +221,12 @@ function canonicalCompany(value) {
 
 function companyGroupMembers(preference) {
   const token = normalizedToken(preference);
-  if (token.includes('전체') || token.includes('모든기업') || token.includes('all')) return ['*'];
+  if (
+    token.includes('전체') ||
+    token.includes('모든') ||
+    token.includes('전기업') ||
+    token.includes('all')
+  ) return ['*'];
   if (token.includes('메모리')) {
     return ['Samsung Electronics', 'SK hynix', 'Kioxia', 'Micron'];
   }
