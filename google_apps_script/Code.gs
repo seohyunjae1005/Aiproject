@@ -91,6 +91,36 @@ function findResponseSheet() {
   throw new Error('Google Form 응답 시트를 찾을 수 없습니다. 질문 제목을 확인하세요.');
 }
 
+/** 응답 시트 연결을 확인한다. 이메일 주소는 출력하지 않는다. */
+function inspectResponseSheets() {
+  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  console.log(`현재 연결된 스프레드시트: ${spreadsheet.getName()}`);
+  const selected = findResponseSheet();
+  spreadsheet.getSheets().forEach((sheet) => {
+    const lastRow = sheet.getLastRow();
+    const lastColumn = sheet.getLastColumn();
+    if (lastRow < 1 || lastColumn < 1) return;
+    const headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0];
+    let indexes;
+    try {
+      indexes = headerIndexes(headers);
+    } catch (error) {
+      return;
+    }
+    const last = lastRow >= 2
+      ? sheet.getRange(lastRow, 1, 1, lastColumn).getDisplayValues()[0]
+      : [];
+    console.log(
+      `${sheet === selected ? '[현재 읽는 시트] ' : '[다른 응답 시트] '}` +
+      `${sheet.getName()} / 마지막 행 ${lastRow} / ` +
+      `발송 주기 ${valueAt(last, indexes.frequency) || '없음'} / ` +
+      `관심 기업 ${valueAt(last, indexes.companyInterests) || '없음'} / ` +
+      `요청 ${valueAt(last, indexes.requestType) || '없음'} / ` +
+      `동의 유효 ${hasValidConsent(valueAt(last, indexes.consent)) ? '예' : '아니오'}`
+    );
+  });
+}
+
 function hasValidConsent(value) {
   const consent = normalizedHeader(value);
   return consent.includes('동의') && !consent.includes('미동의') && !consent.includes('동의하지');
