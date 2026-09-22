@@ -55,23 +55,24 @@ function normalizedToken(value) {
   return normalizedHeader(value).toLowerCase().replace(/[^0-9a-z가-힣]/g, '');
 }
 
-function findHeaderIndex(headers, aliases, required) {
+function findHeaderIndices(headers, aliases, required) {
   const normalized = headers.map(normalizedHeader);
-  for (const alias of aliases) {
-    const index = normalized.indexOf(alias);
-    if (index >= 0) return index;
+  const indices = normalized
+    .map((header, index) => aliases.includes(header) ? index : -1)
+    .filter((index) => index >= 0);
+  if (required && !indices.length) {
+    throw new Error(`필수 열을 찾을 수 없습니다: ${aliases[0]}`);
   }
-  if (required) throw new Error(`필수 열을 찾을 수 없습니다: ${aliases[0]}`);
-  return -1;
+  return indices;
 }
 
 function headerIndexes(headers) {
   const indexes = {};
   Object.entries(REQUIRED_HEADERS).forEach(([key, aliases]) => {
-    indexes[key] = findHeaderIndex(headers, aliases, true);
+    indexes[key] = findHeaderIndices(headers, aliases, true);
   });
   Object.entries(OPTIONAL_HEADERS).forEach(([key, aliases]) => {
-    indexes[key] = findHeaderIndex(headers, aliases, false);
+    indexes[key] = findHeaderIndices(headers, aliases, false);
   });
   return indexes;
 }
@@ -111,7 +112,7 @@ function inspectResponseSheets() {
       ? sheet.getRange(lastRow, 1, 1, lastColumn).getDisplayValues()[0]
       : [];
     console.log(
-      `${sheet === selected ? '[현재 읽는 시트] ' : '[다른 응답 시트] '}` +
+      `${sheet.getName() === selected.getName() ? '[현재 읽는 시트] ' : '[다른 응답 시트] '}` +
       `${sheet.getName()} / 마지막 행 ${lastRow} / ` +
       `발송 주기 ${valueAt(last, indexes.frequency) || '없음'} / ` +
       `관심 기업 ${valueAt(last, indexes.companyInterests) || '없음'} / ` +
@@ -140,8 +141,14 @@ function splitSelections(value) {
     .filter(Boolean);
 }
 
-function valueAt(row, index) {
-  return index >= 0 ? String(row[index] || '').trim() : '';
+function valueAt(row, indices) {
+  // 양식 질문을 다시 만들면 동일한 제목의 열이 뒤에 추가될 수 있다.
+  // 해당 응답에서 값이 있는 가장 오른쪽 열을 사용하고, 예전 응답은 앞쪽 열로 되돌아간다.
+  for (let i = indices.length - 1; i >= 0; i -= 1) {
+    const value = String(row[indices[i]] || '').trim();
+    if (value) return value;
+  }
+  return '';
 }
 
 function readLatestStates() {
@@ -297,10 +304,13 @@ function selectPersonalizedArticles(payload, kind, subscriber) {
       const companyMatch = articleMatchesCompany(article, subscriber.companyInterests);
       return {
         article,
+        jobMatch,
+        companyMatch,
         score: (jobMatch ? 6 : 0) + (companyMatch ? 4 : 0),
       };
     })
-    .filter((row) => row.score > 0)
+    // 직무를 선택했다면 기업명만 일치하는 일반 사업 소식은 제외한다.
+    .filter((row) => subscriber.jobInterests.length ? row.jobMatch : row.companyMatch)
     .sort((a, b) => b.score - a.score || String(b.article.published_at || '').localeCompare(String(a.article.published_at || '')));
 
   let articles = uniqueArticles(scored.map((row) => row.article)).slice(0, MAX_ARTICLES_PER_EMAIL);
@@ -520,7 +530,15 @@ function previewLatestSubscriberPersonalization() {
       console.log('최근 24시간에 새 기사가 없어 실제 일일 메일은 발송하지 않습니다. 기능 확인용으로 최근 7일 기사를 보여줍니다.');
     }
   }
-  if (!digest) throw new Error('관심 분야 및 공정·양산 대체 기준에 맞는 새 기사가 없습니다.');
+  if (!digest) {
+    console.log(
+      `관심 직무 및 공정·양산 대체 기준에 맞는 새 기사가 없습니다. ` +
+      `전체 공식 기사: 최근 24시간 ${recentArticles(payload, 'daily').length}건, ` +
+      `최근 7일 ${recentArticles(payload, 'weekly').length}건. ` +
+      '실제 이메일은 발송하지 않습니다.'
+    );
+    return;
+  }
   console.log(
     `미리보기 기준 ${previewKind} / 맞춤 기사 ${digest.articleCount}건 / 공정·양산 대체 ${digest.fallback ? '예' : '아니오'}`
   );
