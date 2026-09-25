@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-21T22:01:53.763925+00:00",
+  "updated_at": "2026-09-25T22:02:10.958224+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1509,6 +1509,12 @@
       "summary_ko": "캘리포니아주 산타클라라, 2026년 9월 21일 (GLOBE NEWSWIRE) -- 어플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘, 2026년 10월 13일 화요일 SEMICON West 행사 기간 중 임원진이 ‘투자자 조찬 프레젠테이션’에 참석할 것이라고 발표했다. 프레젠테이션은 오전 8시에 시작될 예정이다.",
       "source_fingerprint": "9f705bada8eec902dde30c328b7a38c51017a20e585a75a31fd5740b5663269e",
       "translated_at": "2026-09-21T22:01:53.763898+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260925_001.html": {
+      "title_ko": "도쿄 일렉트로닉, ‘그린 파트너’ 선정",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "6ff4fbe1b2575e7d62ab38bc2097a88f0e076ed043e1db13ff809a25726a680f",
+      "translated_at": "2026-09-25T22:02:10.958198+00:00"
     }
   }
 }
