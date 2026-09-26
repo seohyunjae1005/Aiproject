@@ -6,7 +6,7 @@ import re
 from typing import Iterable
 
 
-CLASSIFICATION_VERSION = "job_tech_taxonomy_v1"
+CLASSIFICATION_VERSION = "job_tech_taxonomy_v2"
 
 JOB_ROLE_ORDER = (
     "공정기술·양산기술",
@@ -55,6 +55,48 @@ EQUIPMENT_COMPANIES = {
     "Tokyo Electron",
     "KLA",
 }
+
+# 공정 직무는 단순히 process/manufacturing이라는 넓은 단어가 등장했다는
+# 이유만으로 부여하지 않는다. 실제 단위 공정 분야가 잡히거나, 반도체 제조·
+# 양산·생산능력처럼 공정 현업과 직접 연결되는 표현이 있는 핵심 기사에만 붙인다.
+PROCESS_ROLE_STRONG_KEYWORDS = (
+    "semiconductor manufacturing",
+    "chip manufacturing",
+    "wafer manufacturing",
+    "manufacturing process",
+    "process technology",
+    "foundry process",
+    "process milestone",
+    "process milestones",
+    "process roadmap",
+    "process control",
+    "process window",
+    "mass production",
+    "volume production",
+    "production capacity",
+    "high-volume manufacturing",
+    "high volume manufacturing",
+    "yield ramp",
+    "yield improvement",
+    "hybrid bonding",
+    "wafer bonding",
+    "back-end process",
+    "back end process",
+    "advanced packaging process",
+    "packaging process",
+    "panel-level packaging",
+    "panel level packaging",
+    "반도체 제조",
+    "반도체 생산",
+    "제조 공정",
+    "공정 기술",
+    "공정 제어",
+    "공정 조건",
+    "수율 개선",
+    "양산",
+    "대량 생산",
+    "생산 능력",
+)
 
 DOMAIN_KEYWORDS = {
     "노광·마스크": (
@@ -160,13 +202,11 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
     unit_process_domains = {
         "노광·마스크", "식각", "증착·박막", "이온주입·열처리", "세정·CMP", "계측·검사·수율",
     }
-    if domain_set & unit_process_domains or _has_any(
-        text,
-        (
-            "process", "mass production", "volume production", "production capacity",
-            "manufacturing", "recipe", "공정", "양산",
-        ),
-    ):
+    has_unit_process_domain = bool(domain_set & unit_process_domains)
+    has_explicit_process_evidence = relevance == "high" and _has_any(
+        text, PROCESS_ROLE_STRONG_KEYWORDS
+    )
+    if has_unit_process_domain or has_explicit_process_evidence:
         roles.append("공정기술·양산기술")
 
     if relevance == "high" and (
