@@ -10,6 +10,7 @@ data/processed/*.json
 logs/
 data/translations/*.tmp
 runtime/
+review_outputs/
 
 # 비밀정보
 credentials*.json
