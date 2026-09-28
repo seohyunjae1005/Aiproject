@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-25T22:02:10.958224+00:00",
+  "updated_at": "2026-09-28T22:02:02.033872+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1515,6 +1515,18 @@
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "source_fingerprint": "6ff4fbe1b2575e7d62ab38bc2097a88f0e076ed043e1db13ff809a25726a680f",
       "translated_at": "2026-09-25T22:02:10.958198+00:00"
+    },
+    "https://news.skhynix.com/en/tsmc-oip-conference-2026/": {
+      "title_ko": "“AI의 급속한 성장 뒤에는 메모리가 있다” — SK하이닉스, TSMC OIP 컨퍼런스에서 차세대 메모리 포트폴리오 공개",
+      "summary_ko": "태그: AI 반도체, eSSD, HBF, HBM, SOCAMM2, SSD, TSMC OIP",
+      "source_fingerprint": "52a388d8f04358a0fd0687797036b8f444cfd7d85f4d1da721e6fc4e19ed5e8f",
+      "translated_at": "2026-09-28T22:02:02.033829+00:00"
+    },
+    "https://www.tel.com/news/sustainability/2026/20260928_001.html": {
+      "title_ko": "도쿄 일렉트로가 “MSCI 선정 지수”에 편입되었습니다.",
+      "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
+      "source_fingerprint": "efe2a76c9ddded6048f03c942f0c80d7d69546ed3c5512fad766cf6e12b0a566",
+      "translated_at": "2026-09-28T22:02:02.033829+00:00"
     }
   }
 }
