@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-28T22:02:02.033872+00:00",
+  "updated_at": "2026-09-29T22:01:50.255349+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1527,6 +1527,18 @@
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "source_fingerprint": "efe2a76c9ddded6048f03c942f0c80d7d69546ed3c5512fad766cf6e12b0a566",
       "translated_at": "2026-09-28T22:02:02.033829+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-and-kioxia-partner-epic-center-advance-next": {
+      "title_ko": "애플라이드 머티리얼즈와 키옥시아, 차세대 메모리 기술 발전을 위해 EPIC 센터에서 협력",
+      "summary_ko": "각사는 AI 메모리 성능을 향상시키기 위해 첨단 메모리 구조, 칩 적층 기술 및 소재 공학 혁신을 개발하기 위해 협력할 예정이다. KIOXIA는 칩 제조사, 칩 설계사, 장비 파트너사 등이 참여하는 Applied Materials의 성장 중인 EPIC 센터 생태계에 합류하며,",
+      "source_fingerprint": "86f0a6108fc982156124dbb73b68ae480799effaeac28ed57b3a02314be63166",
+      "translated_at": "2026-09-29T22:01:50.255324+00:00"
+    },
+    "https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix": {
+      "title_ko": "삼성, AI 인프라 기업 헬릭스에 10억 달러 투자 예정",
+      "summary_ko": "공식 분류: 반도체",
+      "source_fingerprint": "82707c5fb17e0b2b629338cced6f0b008ea23e2d0eb8fbf3895a07cba91b31ba",
+      "translated_at": "2026-09-29T22:01:50.255324+00:00"
     }
   }
 }
