@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="반도체 기술동향 트래커의 개인정보 없는 사용성 테스트입니다." />
+    <title>3분 사용성 테스트 | 반도체 기술동향 트래커</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="tester.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand tester-brand" href="index.html" aria-label="트래커로 돌아가기">
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <div>
+          <h1>3분 사용성 테스트</h1>
+          <p>이름·이메일을 받지 않는 기능 검증</p>
+        </div>
+      </a>
+      <a class="back-link" href="index.html">트래커로 돌아가기</a>
+    </header>
+
+    <main class="tester-main">
+      <section class="tester-intro">
+        <p class="eyebrow">WEEK 12 · USER TEST</p>
+        <h2>설명 없이도 원하는 정보를 찾을 수 있는지 확인해 주세요</h2>
+        <p>아래 5가지 행동을 실제 트래커에서 해 본 뒤 결과를 표시해 주세요. 입력 내용은 어디에도 자동 전송되거나 저장되지 않습니다.</p>
+      </section>
+
+      <form id="tester-form" class="tester-form">
+        <section class="tester-panel">
+          <label for="tester-code"><strong>테스트 구분</strong><span>개인정보 대신 구분 문자만 사용합니다.</span></label>
+          <select id="tester-code" name="testerCode" required>
+            <option value="">선택</option>
+            <option>테스터 A</option><option>테스터 B</option><option>테스터 C</option><option>추가 테스터</option>
+          </select>
+        </section>
+
+        <fieldset class="tester-panel task-list">
+          <legend>기능 확인 5가지</legend>
+          <p class="panel-help">각 행동을 시도하고 성공 여부를 선택하세요.</p>
+          <div class="test-task" data-task="1">
+            <p><strong>1. 최근 갱신일과 전체 기사 수를 찾았다.</strong><span>첫 화면 위쪽을 확인하세요.</span></p>
+            <div class="task-options"><label><input type="radio" name="task1" value="성공" required /> 성공</label><label><input type="radio" name="task1" value="부분 성공" /> 부분 성공</label><label><input type="radio" name="task1" value="실패" /> 실패</label></div>
+          </div>
+          <div class="test-task" data-task="2">
+            <p><strong>2. 삼성전자 기사만 골라 보았다.</strong><span>회사 버튼을 사용하세요.</span></p>
+            <div class="task-options"><label><input type="radio" name="task2" value="성공" required /> 성공</label><label><input type="radio" name="task2" value="부분 성공" /> 부분 성공</label><label><input type="radio" name="task2" value="실패" /> 실패</label></div>
+          </div>
+          <div class="test-task" data-task="3">
+            <p><strong>3. 공정·양산 관련 기사만 골라 보았다.</strong><span>‘공정·양산 집중 보기’를 사용하세요.</span></p>
+            <div class="task-options"><label><input type="radio" name="task3" value="성공" required /> 성공</label><label><input type="radio" name="task3" value="부분 성공" /> 부분 성공</label><label><input type="radio" name="task3" value="실패" /> 실패</label></div>
+          </div>
+          <div class="test-task" data-task="4">
+            <p><strong>4. 기사 한 건의 공정 관련 판단 근거를 찾았다.</strong><span>기사 카드의 직접·간접 관련 표시를 확인하세요.</span></p>
+            <div class="task-options"><label><input type="radio" name="task4" value="성공" required /> 성공</label><label><input type="radio" name="task4" value="부분 성공" /> 부분 성공</label><label><input type="radio" name="task4" value="실패" /> 실패</label></div>
+          </div>
+          <div class="test-task" data-task="5">
+            <p><strong>5. AI 직무 인사이트와 공식 원문을 구분했다.</strong><span>AI 분석이 있는 카드와 공식 원문 링크를 확인하세요.</span></p>
+            <div class="task-options"><label><input type="radio" name="task5" value="성공" required /> 성공</label><label><input type="radio" name="task5" value="부분 성공" /> 부분 성공</label><label><input type="radio" name="task5" value="실패" /> 실패</label></div>
+          </div>
+        </fieldset>
+
+        <section class="tester-panel rating-grid">
+          <label><strong>찾기 쉬움</strong><span>1점 매우 어려움 · 5점 매우 쉬움</span><select name="ease" required><option value="">점수</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label><strong>취업 준비 도움</strong><span>1점 도움 안 됨 · 5점 매우 도움</span><select name="usefulness" required><option value="">점수</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label><strong>근거 신뢰도</strong><span>1점 믿기 어려움 · 5점 신뢰 가능</span><select name="trust" required><option value="">점수</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        </section>
+
+        <section class="tester-panel">
+          <label for="feedback-note"><strong>가장 불편했거나 고치면 좋을 점</strong><span>없으면 ‘없음’이라고 적어도 됩니다.</span></label>
+          <textarea id="feedback-note" name="note" rows="4" required placeholder="예: 공정 집중 보기 버튼을 처음에 찾기 어려웠음"></textarea>
+        </section>
+
+        <div class="tester-actions">
+          <button class="tester-primary" type="submit">결과 문장 만들기</button>
+          <a class="tester-secondary" href="index.html" target="_blank" rel="noopener">트래커 새 창에서 열기</a>
+        </div>
+      </form>
+
+      <section class="tester-result" id="tester-result" hidden aria-live="polite">
+        <div><h2>테스트 결과</h2><p>아래 문장을 프로젝트 담당자에게 전달하면 됩니다.</p></div>
+        <pre id="feedback-output"></pre>
+        <button class="tester-primary" id="copy-feedback" type="button">결과 복사</button>
+        <p id="copy-status" class="copy-status"></p>
+      </section>
+    </main>
+
+    <footer><p>이 페이지는 입력값을 서버로 보내지 않으며, 브라우저를 닫으면 입력 내용이 사라집니다.</p></footer>
+  </body>
+</html>
