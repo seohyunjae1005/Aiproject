@@ -13,6 +13,7 @@ const state = {
   trendSummary: null,
   monthlyTrendReport: null,
   processFocus: false,
+  chapter: "trend",
 };
 
 const grid = document.querySelector("#article-grid");
@@ -228,6 +229,25 @@ function bindTrendPeriodTabs() {
   });
 }
 
+function showChapter(chapter) {
+  state.chapter = chapter;
+  document.querySelector("#trend-chapter").hidden = chapter !== "trend";
+  document.querySelector("#news-chapter").hidden = chapter !== "news";
+  document.querySelectorAll("button[data-chapter]").forEach((button) => {
+    const active = button.dataset.chapter === chapter;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+}
+
+function bindChapterTabs() {
+  document.querySelector(".chapter-tabs").addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-chapter]");
+    if (!button) return;
+    showChapter(button.dataset.chapter);
+  });
+}
+
 function bindCompanyProfiles() {
   document.querySelector("#company-profile-list").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-profile-company]");
@@ -238,6 +258,7 @@ function bindCompanyProfiles() {
       item.classList.toggle("active", item.dataset.company === state.company);
     });
     document.querySelector("#days-filter").value = "30";
+    showChapter("news");
     render();
     document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -261,6 +282,7 @@ function bindProcessFocusButton() {
       button.classList.toggle("active", button.dataset.relevance === "high");
     });
     updateProcessFocusButton();
+    showChapter("news");
     render();
     document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -539,9 +561,11 @@ document.querySelector("#language-toggle").addEventListener("click", () => {
 });
 
 bindFilters();
+bindChapterTabs();
 bindTrendPeriodTabs();
 bindCompanyProfiles();
 bindProcessFocusButton();
 bindProcessOnlyToggle();
 updateProcessFocusButton();
+showChapter("trend");
 loadData();

@@ -8,7 +8,7 @@ function buildSummary(data) {
   const tasks = [1, 2, 3, 4, 5].map((number) => `${number}:${data.get(`task${number}`)}`);
   const successes = tasks.filter((task) => task.endsWith(":성공")).length;
   return [
-    `[반도체 기술동향 트래커 사용성 테스트]`,
+    `[반도체 산업 동향 사용성 테스트]`,
     `구분: ${data.get("testerCode")}`,
     `기능 수행: ${successes}/5개 성공 (${tasks.join(", ")})`,
     `찾기 쉬움: ${data.get("ease")}/5`,
