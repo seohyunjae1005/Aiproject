@@ -8,8 +8,8 @@
  * - 같은 구독자에게 같은 맞춤 콘텐츠를 두 번 보내지 않는다.
  */
 
-const PUBLIC_DATA_URL = 'https://seohyunjae1005.github.io/Aiproject/data/latest.json';
-const SITE_URL = 'https://seohyunjae1005.github.io/Aiproject/';
+const PUBLIC_DATA_URL = 'https://seohyunjae1005.github.io/data/latest.json';
+const SITE_URL = 'https://seohyunjae1005.github.io/';
 const SUBSCRIPTION_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe3Vm-nkOof2qsQfEIIH5pPNs6JE2stnCWOv_4Y_DsQi8YpUQ/viewform?usp=dialog';
 
 // 맞춤 시험이 끝날 때까지 false로 둔다. true로 바꾸기 전에는 다중 발송이 실행되지 않는다.

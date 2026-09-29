@@ -17,7 +17,7 @@ OUTPUT_PATH = PROJECT_ROOT / os.environ.get(
 META_PATH = PROJECT_ROOT / os.environ.get(
     "DIGEST_META_PATH", "runtime/email_digest_meta.json"
 )
-SITE_URL = "https://seohyunjae1005.github.io/Aiproject/"
+SITE_URL = "https://seohyunjae1005.github.io/"
 SUBSCRIPTION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe3Vm-nkOof2qsQfEIIH5pPNs6JE2stnCWOv_4Y_DsQi8YpUQ/viewform?usp=dialog"
 
 
