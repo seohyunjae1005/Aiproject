@@ -224,12 +224,13 @@ def render_report(metrics: dict) -> str:
     judged = process["정확"] + process["과대 분류"] + process["누락"]
     compared = metrics["compared"]
     comparison_count = len(compared)
+    complete = metrics["total"] > 0 and metrics["reviewed"] == metrics["total"]
     lines = [
-        "# 반도체 기사 분류 중간 평가 결과",
+        f"# 반도체 기사 분류 {'최종' if complete else '중간'} 평가 결과",
         "",
         f"- 생성일: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M')}",
         f"- 검토 진행: {metrics['reviewed']}/{metrics['total']}건",
-        "- 상태: 30건 완료 전 중간 결과",
+        f"- 상태: {'전체 검토 완료' if complete else '검토 진행 중'}",
         "",
         "## 현재 평가표 결과",
         "",
@@ -284,7 +285,12 @@ def render_report(metrics: dict) -> str:
             "",
             "## 해석 시 주의",
             "",
-            "현재 수치는 검토가 끝난 기사만 사용한 중간 결과이다. 30건 검토가 끝나기 전에는 최종 정확도로 사용하지 않는다. 사람의 공정 관련성에서 `직접`과 `간접`은 관련으로, `무관`은 비관련으로 계산하였다.",
+            (
+                "전체 표본의 검토가 완료되었다. 이 수치는 오류를 찾기 위해 균형 있게 고른 30건 표본의 결과이며 전체 기사 정확도로 그대로 해석하지 않는다. "
+                if complete
+                else "현재 수치는 검토가 끝난 기사만 사용한 중간 결과이다. 전체 검토가 끝나기 전에는 최종 정확도로 사용하지 않는다. "
+            )
+            + "사람의 공정 관련성에서 `직접`과 `간접`은 관련으로, `무관`은 비관련으로 계산하였다.",
             "",
         ]
     )
@@ -292,7 +298,7 @@ def render_report(metrics: dict) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="수동 평가표 중간 결과 계산")
+    parser = argparse.ArgumentParser(description="수동 평가표 결과 계산")
     parser.add_argument("--workbook", type=Path, default=DEFAULT_WORKBOOK)
     parser.add_argument("--articles", type=Path, default=DEFAULT_ARTICLES)
     parser.add_argument("--output", type=Path, default=DEFAULT_REPORT)

@@ -91,7 +91,16 @@ def main() -> None:
     translated_count = 0
     analyzed_count = 0
     for article in payload.get("articles", []):
-        enriched = enrich_article(article)
+        cached_analysis = analyses.get(str(article.get("url") or ""))
+        classification_input = dict(article)
+        if cached_analysis:
+            classification_input["ai_analysis"] = {
+                "analysis": cached_analysis["analysis"],
+                "validation_status": cached_analysis["validation_status"],
+                "source_scope": cached_analysis.get("source_scope")
+                or "official_article_body",
+            }
+        enriched = enrich_article(classification_input)
         translated = translations.get(str(article.get("url") or ""))
         if (
             translated
@@ -102,7 +111,6 @@ def main() -> None:
             enriched["summary_ko"] = translated.get("summary_ko") or ""
             enriched["translation_provider"] = "DeepL"
             translated_count += 1
-        cached_analysis = analyses.get(str(article.get("url") or ""))
         if cached_analysis:
             enriched["ai_analysis"] = {
                 "analysis": cached_analysis["analysis"],

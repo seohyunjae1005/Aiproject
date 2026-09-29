@@ -6,7 +6,7 @@ import re
 from typing import Iterable
 
 
-CLASSIFICATION_VERSION = "job_tech_taxonomy_v2"
+CLASSIFICATION_VERSION = "job_tech_taxonomy_v3"
 
 JOB_ROLE_ORDER = (
     "공정기술·양산기술",
@@ -76,6 +76,10 @@ PROCESS_ROLE_STRONG_KEYWORDS = (
     "production capacity",
     "high-volume manufacturing",
     "high volume manufacturing",
+    "production line",
+    "production lines",
+    "manufacturing line",
+    "manufacturing lines",
     "yield ramp",
     "yield improvement",
     "hybrid bonding",
@@ -86,6 +90,11 @@ PROCESS_ROLE_STRONG_KEYWORDS = (
     "packaging process",
     "panel-level packaging",
     "panel level packaging",
+    "device prober",
+    "wafer prober",
+    "known good device",
+    "kgd screening",
+    "screening test",
     "반도체 제조",
     "반도체 생산",
     "제조 공정",
@@ -93,9 +102,22 @@ PROCESS_ROLE_STRONG_KEYWORDS = (
     "공정 제어",
     "공정 조건",
     "수율 개선",
-    "양산",
+    "양산 전환",
+    "양산 공정",
+    "양산 라인",
+    "양산 계획",
+    "양산 체제",
+    "양산 개시",
     "대량 생산",
     "생산 능력",
+    "생산 라인",
+)
+
+PROCESS_ROLE_INDIRECT_KEYWORDS = (
+    "semiconductor infrastructure",
+    "dram capacity",
+    "반도체 인프라",
+    "디램 용량",
 )
 
 DOMAIN_KEYWORDS = {
@@ -157,9 +179,28 @@ DOMAIN_KEYWORDS = {
 
 
 def _flatten(value: object) -> str:
+    if isinstance(value, dict):
+        return " ".join(_flatten(item) for item in value.values())
     if isinstance(value, (list, tuple, set)):
-        return " ".join(str(item) for item in value)
+        return " ".join(_flatten(item) for item in value)
     return str(value or "")
+
+
+def _analysis_evidence(article: dict) -> str:
+    """검증된 공식 본문 분석에서 사실과 기술 신호만 분류 근거로 사용한다."""
+    payload = article.get("ai_analysis")
+    if not isinstance(payload, dict) or payload.get("validation_status") != "PASS":
+        return ""
+    analysis = payload.get("analysis")
+    if not isinstance(analysis, dict):
+        return ""
+
+    evidence: list[object] = [analysis.get("summary_ko")]
+    for fact in analysis.get("facts") or []:
+        if isinstance(fact, dict):
+            evidence.extend((fact.get("statement_ko"), fact.get("evidence_en")))
+    evidence.append(analysis.get("technology_signals"))
+    return _flatten(evidence)
 
 
 def _article_text(article: dict) -> str:
@@ -167,6 +208,7 @@ def _article_text(article: dict) -> str:
         article.get("title"),
         article.get("summary"),
         article.get("source_category"),
+        _analysis_evidence(article),
     )
     return f" {' '.join(_flatten(value) for value in values).casefold()} "
 
@@ -206,7 +248,14 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
     has_explicit_process_evidence = relevance == "high" and _has_any(
         text, PROCESS_ROLE_STRONG_KEYWORDS
     )
-    if has_unit_process_domain or has_explicit_process_evidence:
+    has_indirect_process_evidence = relevance == "high" and _has_any(
+        text, PROCESS_ROLE_INDIRECT_KEYWORDS
+    )
+    if (
+        has_unit_process_domain
+        or has_explicit_process_evidence
+        or has_indirect_process_evidence
+    ):
         roles.append("공정기술·양산기술")
 
     if relevance == "high" and (

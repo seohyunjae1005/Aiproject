@@ -90,6 +90,110 @@ class ProcessRoleClassificationTest(unittest.TestCase):
         self.assert_process(high)
         self.assert_not_process(context)
 
+    def test_device_prober_is_process_role(self) -> None:
+        self.assert_process(
+            article(
+                "Tokyo Electron Releases a New Device Prober",
+                "The KGD screening test uses precise thermal control to improve final yield.",
+                company="Tokyo Electron",
+            )
+        )
+
+    def test_semiconductor_infrastructure_is_indirect_process_signal(self) -> None:
+        self.assert_process(
+            article(
+                "Strategic Partnership for Intelligence-Driven Semiconductor Infrastructure",
+                "Official semiconductor newsroom announcement.",
+                company="Samsung Electronics",
+            )
+        )
+
+    def test_dram_capacity_is_an_indirect_process_signal(self) -> None:
+        self.assert_process(
+            article(
+                "Redefining local AI computing",
+                "DRAM capacity and bandwidth set the ceiling for edge AI performance.",
+                company="Micron",
+            )
+        )
+
+    def test_gpu_memory_bandwidth_is_not_a_process_signal(self) -> None:
+        self.assert_not_process(
+            article(
+                "How query types shape GPU demand, memory, and power",
+                "We profile GPU memory bandwidth, power, throughput, and energy efficiency.",
+                company="Micron",
+            )
+        )
+
+    def test_validated_server_performance_facts_are_not_process_evidence(self) -> None:
+        row = article(
+            "Generational performance for the application server",
+            "A server combines DDR5 memory and an NVMe SSD.",
+            company="Micron",
+        )
+        row["ai_analysis"] = {
+            "validation_status": "PASS",
+            "analysis": {
+                "summary_ko": "서버용 메모리와 SSD의 성능을 비교한다.",
+                "facts": [
+                    {
+                        "statement_ko": "최고 메모리 대역폭을 높였다.",
+                        "evidence_en": "raises the memory bandwidth",
+                    },
+                    {
+                        "statement_ko": "최초의 양산형 PCIe Gen6 SSD 중 하나다.",
+                        "evidence_en": "among the first production PCIe Gen6 data center SSDs",
+                    },
+                ],
+                "technology_signals": ["DDR5 DRAM", "NVMe SSD"],
+            },
+        }
+        self.assert_not_process(row)
+
+    def test_validated_official_facts_can_supply_process_evidence(self) -> None:
+        row = article(
+            "Image Sensor Joint Venture",
+            "Official press center announcement.",
+            company="TSMC",
+        )
+        row["ai_analysis"] = {
+            "validation_status": "PASS",
+            "analysis": {
+                "summary_ko": "첨단 공정기술을 이용한 이미지센서 양산을 준비한다.",
+                "facts": [
+                    {
+                        "statement_ko": "신규 생산 라인에서 양산을 추진한다.",
+                        "evidence_en": "development and production lines for image sensors",
+                    }
+                ],
+                "technology_signals": ["advanced manufacturing process technology"],
+                "role_insights": [
+                    {
+                        "role": "공정기술·양산기술",
+                        "study_points_ko": ["기사에 없는 수율 조건"],
+                    }
+                ],
+            },
+        }
+        self.assert_process(row)
+
+    def test_unvalidated_analysis_is_not_classification_evidence(self) -> None:
+        row = article(
+            "Corporate Partnership",
+            "General business update.",
+            company="TSMC",
+        )
+        row["ai_analysis"] = {
+            "validation_status": "FAIL",
+            "analysis": {
+                "summary_ko": "공정 제어와 수율 개선",
+                "facts": [],
+                "technology_signals": [],
+            },
+        }
+        self.assert_not_process(row)
+
 
 if __name__ == "__main__":
     unittest.main()
