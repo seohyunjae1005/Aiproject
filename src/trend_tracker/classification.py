@@ -213,6 +213,16 @@ def _article_text(article: dict) -> str:
     return f" {' '.join(_flatten(value) for value in values).casefold()} "
 
 
+def _article_core_text(article: dict) -> str:
+    """기사 자체 내용만 반환한다. 뉴스룸 분류명은 직무 근거로 사용하지 않는다."""
+    values = (
+        article.get("title"),
+        article.get("summary"),
+        _analysis_evidence(article),
+    )
+    return f" {' '.join(_flatten(value) for value in values).casefold()} "
+
+
 def _contains(text: str, keyword: str) -> bool:
     needle = keyword.casefold()
     if needle.startswith(" ") or needle.endswith(" "):
@@ -238,6 +248,7 @@ def classify_tech_domains(article: dict) -> list[str]:
 
 def classify_job_roles(article: dict, domains: list[str], relevance: str) -> list[str]:
     text = _article_text(article)
+    core_text = _article_core_text(article)
     domain_set = set(domains)
     roles: list[str] = []
 
@@ -260,14 +271,19 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
 
     if relevance == "high" and (
         domain_set & unit_process_domains
-        or _has_any(text, ("research", "development", "next-gen", "new technology", "innovation", "신기술", "차세대"))
+        or _has_any(
+            core_text,
+            ("research", "development", "next-gen", "new technology", "신기술", "차세대"),
+        )
     ):
         roles.append("R&D공정·공정설계")
 
     if (
-        article.get("company") in EQUIPMENT_COMPANIES and relevance == "high"
+        article.get("company") in EQUIPMENT_COMPANIES
+        and relevance == "high"
+        and domain_set != {"기업·산업 일반"}
     ) or _has_any(
-        text,
+        core_text,
         ("equipment", "tool", "scanner", "system", "maintenance", "facility", "장비", "설비"),
     ):
         roles.append("설비기술·기반기술")
@@ -298,7 +314,31 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
     ):
         roles.append("AE·솔루션")
 
-    if "AI·데이터" in domain_set:
+    semiconductor_tech_domains = domain_set - {
+        "기업·산업 일반",
+        "장비·Fab·인프라",
+        "AI·데이터",
+    }
+    has_direct_ai_work = _has_any(
+        core_text,
+        (
+            "machine learning",
+            "data analytics",
+            "digital twin",
+            "automation",
+            "robotics",
+            "software platform",
+            "머신러닝",
+            "데이터 분석",
+            "디지털 트윈",
+            "자동화",
+            "로보틱스",
+            "소프트웨어 플랫폼",
+        ),
+    )
+    if "AI·데이터" in domain_set and (
+        semiconductor_tech_domains or has_direct_ai_work
+    ):
         roles.append("SW·데이터·AI")
 
     if _has_any(

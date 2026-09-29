@@ -61,6 +61,29 @@ def _validated_analysis_cache() -> tuple[dict, dict]:
     return analyses, payload
 
 
+def _published_analysis_cache() -> dict[str, dict]:
+    """직전 공개자료에 포함된 검증 완료 분석을 URL별로 보존한다."""
+    if not OUTPUT_PATH.exists():
+        return {}
+    try:
+        payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+    analyses: dict[str, dict] = {}
+    for article in payload.get("articles") or []:
+        url = str(article.get("url") or "")
+        analysis = article.get("ai_analysis")
+        if (
+            url
+            and isinstance(analysis, dict)
+            and analysis.get("validation_status") == "PASS"
+            and isinstance(analysis.get("analysis"), dict)
+        ):
+            analyses[url] = analysis
+    return analyses
+
+
 def _monthly_trend_cache() -> dict:
     if not MONTHLY_TREND_CACHE_PATH.exists():
         return {}
@@ -86,7 +109,9 @@ def main() -> None:
 
     payload = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
     translations = _translation_cache()
-    analyses, analysis_payload = _validated_analysis_cache()
+    latest_analyses, analysis_payload = _validated_analysis_cache()
+    analyses = _published_analysis_cache()
+    analyses.update(latest_analyses)
     published_articles: list[dict] = []
     translated_count = 0
     analyzed_count = 0
@@ -135,7 +160,8 @@ def main() -> None:
     }
     payload["ai_analysis"] = {
         "analyzed_count": analyzed_count,
-        "cached_company_count": len(analyses),
+        "cached_company_count": len(latest_analyses),
+        "preserved_analysis_count": len(analyses),
         "updated_at": analysis_payload.get("updated_at"),
         "notice": "AI가 공식 원문을 바탕으로 작성하고 기계적으로 근거를 검사한 참고용 초안입니다.",
     }

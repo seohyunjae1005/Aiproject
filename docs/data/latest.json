@@ -46,7 +46,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품",
@@ -357,8 +357,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "공정기술·양산기술",
-        "SW·데이터·AI"
+        "공정기술·양산기술"
       ],
       "signal_types": [
         "기술·제품"
@@ -1196,7 +1195,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "행사·인재"
@@ -1227,7 +1226,6 @@
       "job_roles": [
         "R&D공정·공정설계",
         "설비기술·기반기술",
-        "SW·데이터·AI",
         "인프라·안전"
       ],
       "signal_types": [
@@ -1443,8 +1441,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "AE·솔루션",
-        "SW·데이터·AI"
+        "AE·솔루션"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -1554,7 +1551,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -1580,7 +1577,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -1746,7 +1743,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "투자·생산"
@@ -1806,8 +1803,7 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "설비기술·기반기술"
+        "R&D공정·공정설계"
       ],
       "signal_types": [
         "기술·제품",
@@ -1890,14 +1886,63 @@
       ],
       "source_category": "Technology",
       "relevance": "high",
+      "ai_analysis": {
+        "analysis": {
+          "analysis_version": "semiconductor_job_analysis_v1",
+          "summary_ko": "소니와 TSMC가 일본 구마모토현 고시시에 차세대 이미지 센서 양산을 위한 합작법인(JV) 'Advanced Vision Semiconductor Manufacturing Corporation'을 설립하는 구속력 있는 최종 계약을 체결했습니다. 합작법인은 2029년 양산 개시를 목표로 하며, 소니는 핵심 기술 개발과 제품 기획을, TSMC는 선단 공정 기술과 제조 전문성을 제공할 예정입니다.",
+          "facts": [
+            {
+              "statement_ko": "소니와 TSMC는 일본 구마모토현 고시시에 합작법인 'Advanced Vision Semiconductor Manufacturing Corporation'을 설립하기로 최종 계약했습니다.",
+              "evidence_en": "establishment of Advanced Vision Semiconductor Manufacturing Corporation as a joint venture (“JV”) in Koshi City, Kumamoto Prefecture, Japan"
+            }
+          ],
+          "technology_signals": [
+            "advanced manufacturing process technology",
+            "image sensors for smartphones"
+          ],
+          "company_implications": [
+            {
+              "target_company": "Samsung Electronics",
+              "inference_ko": "모바일 이미지 센서 시장에서 소니와 TSMC의 연합 공세가 강화됨에 따라 점유율 방어를 위한 파운드리 및 센서 공정 경쟁력 제고가 요구될 수 있습니다.",
+              "basis_ko": "소니와 TSMC가 대규모 합작법인을 통해 모바일 이미지 센서 양산 체제를 2029년까지 구축하고 생산 능력을 강화하기 때문입니다.",
+              "confidence": "medium"
+            }
+          ],
+          "role_insights": [
+            {
+              "role": "R&D공정·공정설계",
+              "why_relevant_ko": "차세대 스마트폰용 이미지 센서 양산을 위한 선단 공정 기술 도입과 제조 공정 최적화가 필수적이기 때문입니다.",
+              "considerations_ko": [
+                "이미지 센서 미세화에 따른 공정 변수 관리",
+                "파운드리 공정과의 연계성 검토"
+              ],
+              "study_points_ko": [
+                "CMOS Image Sensor (CIS) 구조 및 공정 플로우",
+                "선단 파운드리 공정 기술 연계 방안"
+              ]
+            }
+          ],
+          "uncertainties_ko": [
+            "규제 당국의 승인 여부 및 최종 클로징 일정의 변동 가능성",
+            "일본 정부의 구체적인 보조금 지원 규모와 집행 시기"
+          ],
+          "overall_confidence": "high"
+        },
+        "validation_status": "PASS",
+        "review_status": "machine_validated",
+        "source_scope": "official_article_body",
+        "generated_at": "2026-09-20T22:03:48.422136+00:00"
+      },
       "tech_domains": [
-        "기업·산업 일반"
+        "장비·Fab·인프라"
       ],
       "job_roles": [
+        "공정기술·양산기술",
         "R&D공정·공정설계"
       ],
       "signal_types": [
         "기술·제품",
+        "투자·생산",
         "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v3",
@@ -2197,8 +2242,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "SW·데이터·AI"
+        "R&D공정·공정설계"
       ],
       "signal_types": [
         "기술·제품"
@@ -2308,7 +2352,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품"
@@ -2335,8 +2379,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "AE·솔루션",
-        "SW·데이터·AI"
+        "AE·솔루션"
       ],
       "signal_types": [
         "기술·제품"
@@ -2593,8 +2636,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "SW·데이터·AI"
+        "R&D공정·공정설계"
       ],
       "signal_types": [
         "기술·제품"
@@ -3267,7 +3309,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "협업·공급망"
@@ -3410,7 +3452,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품",
@@ -3883,7 +3925,6 @@
         "평가분석·품질·PE",
         "설계",
         "AE·솔루션",
-        "SW·데이터·AI",
         "인프라·안전"
       ],
       "signal_types": [
@@ -4021,8 +4062,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품",
@@ -4086,8 +4126,7 @@
       "job_roles": [
         "공정기술·양산기술",
         "설비기술·기반기술",
-        "AE·솔루션",
-        "SW·데이터·AI"
+        "AE·솔루션"
       ],
       "signal_types": [
         "기술·제품",
@@ -4591,7 +4630,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -4647,7 +4686,6 @@
       ],
       "job_roles": [
         "공정기술·양산기술",
-        "R&D공정·공정설계",
         "소자"
       ],
       "signal_types": [
@@ -4674,7 +4712,7 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "설비기술·기반기술"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품"
@@ -4983,7 +5021,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품",
@@ -5010,7 +5048,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -5094,7 +5132,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -5120,7 +5158,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -5146,7 +5184,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -5505,7 +5543,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -5984,8 +6022,6 @@
         "기업·산업 일반"
       ],
       "job_roles": [
-        "R&D공정·공정설계",
-        "설비기술·기반기술",
         "AE·솔루션"
       ],
       "signal_types": [
@@ -6123,15 +6159,82 @@
       ],
       "source_category": "Technology",
       "relevance": "high",
+      "ai_analysis": {
+        "analysis": {
+          "analysis_version": "semiconductor_job_analysis_v1",
+          "summary_ko": "Sony Semiconductor Solutions와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십 추진 업무협약(MOU)을 체결하고, 구마모토현 코시시에 설립되는 소니의 신규 팹에 개발 및 생산 라인을 구축하기 위한 합작법인(JV) 설립을 논의하고 있습니다. 양사는 소니의 센서 설계 역량과 TSMC의 공정 기술 및 제조 강점을 결합하여 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 새로운 기회를 모색할 예정입니다.",
+          "facts": [
+            {
+              "statement_ko": "Sony와 TSMC는 차세대 이미지 센서의 개발 및 제조를 위한 전략적 파트너십을 체결하기 위해 구속력 없는 양해각서(MOU)에 서명했습니다.",
+              "evidence_en": "signing of a non-binding memorandum of understanding (“MOU”) to form a strategic partnership for the development and manufacturing of next-generation image sensors."
+            },
+            {
+              "statement_ko": "이번 파트너십은 자동차 및 로보틱스와 같은 물리적 AI(physical AI) 응용 분야의 신흥 기회를 탐색하고 해결하고자 합니다.",
+              "evidence_en": "seeks to explore and address emerging opportunities in physical AI applications, such as automotive and robotics"
+            }
+          ],
+          "technology_signals": [
+            "Next-generation image sensors",
+            "CMOS image sensor business",
+            "Physical AI applications"
+          ],
+          "company_implications": [
+            {
+              "target_company": "Samsung Electronics",
+              "inference_ko": "소니와 TSMC의 파트너십 강화로 인해 이미지 센서 및 파운드리 시장에서의 경쟁 압력이 가중될 수 있습니다.",
+              "basis_ko": "소니와 TSMC가 합작법인을 통해 차세대 이미지 센서 생산 능력을 확대하고 물리적 AI 응용 분야를 공동 공략하기 때문입니다.",
+              "confidence": "medium"
+            }
+          ],
+          "role_insights": [
+            {
+              "role": "R&D공정·공정설계",
+              "why_relevant_ko": "차세대 이미지 센서 제조를 위한 공정 기술 협력 및 라인 구축이 추진되기 때문입니다.",
+              "considerations_ko": [
+                "신규 팹 내 이미지 센서 공정 통합 및 최적화 방안"
+              ],
+              "study_points_ko": [
+                "CMOS 이미지 센서(CIS) 제조 공정 및 파운드리 연계 공정 기술"
+              ]
+            },
+            {
+              "role": "소자",
+              "why_relevant_ko": "차세대 이미지 센서 소자의 성능 향상과 물리적 AI 응용을 위한 소자 특성 개선이 요구됩니다.",
+              "considerations_ko": [
+                "자동차 및 로보틱스용 센서 소자의 신뢰성 및 성능 확보"
+              ],
+              "study_points_ko": [
+                "이미지 센서 소자 구조 및 픽셀 파인 피치(fine-pitch) 기술"
+              ]
+            }
+          ],
+          "uncertainties_ko": [
+            "구체적인 투자 규모 및 단계별 일정",
+            "합작법인 설립을 위한 최종 구속력 있는 계약 체결 여부",
+            "일본 정부의 구체적인 지원 수준"
+          ],
+          "overall_confidence": "high"
+        },
+        "validation_status": "PASS",
+        "review_status": "machine_validated",
+        "source_scope": "official_article_body",
+        "generated_at": "2026-09-16T22:04:45.032703+00:00"
+      },
       "tech_domains": [
-        "파운드리·로직·소자"
+        "파운드리·로직·소자",
+        "장비·Fab·인프라",
+        "AI·데이터"
       ],
       "job_roles": [
+        "공정기술·양산기술",
         "R&D공정·공정설계",
-        "소자"
+        "소자",
+        "설계",
+        "SW·데이터·AI"
       ],
       "signal_types": [
         "기술·제품",
+        "투자·생산",
         "협업·공급망"
       ],
       "classification_version": "job_tech_taxonomy_v3",
@@ -6234,7 +6337,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -6392,7 +6495,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기술·제품"
@@ -6512,7 +6615,6 @@
       "job_roles": [
         "평가분석·품질·PE",
         "AE·솔루션",
-        "SW·데이터·AI",
         "인프라·안전"
       ],
       "signal_types": [
@@ -7185,7 +7287,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "협업·공급망"
@@ -7240,7 +7342,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -7348,8 +7450,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "평가분석·품질·PE",
-        "SW·데이터·AI"
+        "평가분석·품질·PE"
       ],
       "signal_types": [
         "기업·산업 일반"
@@ -7456,7 +7557,7 @@
         "AI·데이터"
       ],
       "job_roles": [
-        "SW·데이터·AI"
+        "산업·사업 공통"
       ],
       "signal_types": [
         "협업·공급망"
@@ -7619,8 +7720,9 @@
     "translated_count": 235
   },
   "ai_analysis": {
-    "analyzed_count": 11,
+    "analyzed_count": 13,
     "cached_company_count": 11,
+    "preserved_analysis_count": 13,
     "updated_at": "2026-09-28T22:03:44.863157+00:00",
     "notice": "AI가 공식 원문을 바탕으로 작성하고 기계적으로 근거를 검사한 참고용 초안입니다."
   },
@@ -7658,15 +7760,15 @@
         ],
         "top_job_roles": [
           {
-            "name": "SW·데이터·AI",
-            "count": 2
-          },
-          {
             "name": "AE·솔루션",
             "count": 1
           },
           {
             "name": "R&D공정·공정설계",
+            "count": 1
+          },
+          {
+            "name": "SW·데이터·AI",
             "count": 1
           }
         ],
@@ -7735,15 +7837,15 @@
         ],
         "top_job_roles": [
           {
-            "name": "SW·데이터·AI",
-            "count": 8
-          },
-          {
             "name": "공정기술·양산기술",
             "count": 7
           },
           {
             "name": "R&D공정·공정설계",
+            "count": 6
+          },
+          {
+            "name": "SW·데이터·AI",
             "count": 6
           },
           {
@@ -7819,7 +7921,7 @@
           },
           {
             "name": "장비·Fab·인프라",
-            "count": 7
+            "count": 8
           },
           {
             "name": "파운드리·로직·소자",
@@ -7829,7 +7931,7 @@
         "top_job_roles": [
           {
             "name": "SW·데이터·AI",
-            "count": 34
+            "count": 26
           },
           {
             "name": "R&D공정·공정설계",
@@ -7837,14 +7939,14 @@
           },
           {
             "name": "공정기술·양산기술",
-            "count": 12
+            "count": 13
           },
           {
             "name": "평가분석·품질·PE",
             "count": 11
           },
           {
-            "name": "설비기술·기반기술",
+            "name": "인프라·안전",
             "count": 8
           }
         ],
@@ -7855,7 +7957,7 @@
           },
           {
             "name": "투자·생산",
-            "count": 16
+            "count": 17
           },
           {
             "name": "협업·공급망",
@@ -7893,8 +7995,8 @@
         {
           "name": "공정기술·양산기술",
           "current_count": 7,
-          "previous_count": 2,
-          "delta": 5
+          "previous_count": 3,
+          "delta": 4
         },
         {
           "name": "소자",
@@ -7983,10 +8085,6 @@
           }
         ],
         "top_job_roles": [
-          {
-            "name": "SW·데이터·AI",
-            "count": 2
-          },
           {
             "name": "공정기술·양산기술",
             "count": 2

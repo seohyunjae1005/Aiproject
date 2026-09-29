@@ -194,6 +194,32 @@ class ProcessRoleClassificationTest(unittest.TestCase):
         }
         self.assert_not_process(row)
 
+    def test_generic_equipment_company_ai_story_has_no_specialized_job(self) -> None:
+        row = article(
+            "The machines behind the machines",
+            "Discover how ASML is applying AI-native engineering for the next technology era.",
+            company="ASML",
+        )
+        self.assertEqual(enrich_article(row)["job_roles"], ["산업·사업 공통"])
+
+    def test_ai_newsroom_category_alone_does_not_create_ai_job(self) -> None:
+        row = article(
+            "Intel Invests EUR 5 Billion to Expand Manufacturing in Europe",
+            "Official Intel Newsroom category: Artificial Intelligence (AI)",
+            company="Intel",
+        )
+        row["source_category"] = "Artificial Intelligence (AI)"
+        self.assertEqual(enrich_article(row)["job_roles"], ["산업·사업 공통"])
+
+    def test_broad_innovation_language_does_not_create_rnd_or_ai_jobs(self) -> None:
+        row = article(
+            "America 250: Intel is Advancing U.S. Innovation, AI, and Manufacturing",
+            "Official Intel Newsroom category: Artificial Intelligence (AI)",
+            company="Intel",
+        )
+        row["source_category"] = "Artificial Intelligence (AI)"
+        self.assertEqual(enrich_article(row)["job_roles"], ["산업·사업 공통"])
+
 
 if __name__ == "__main__":
     unittest.main()
