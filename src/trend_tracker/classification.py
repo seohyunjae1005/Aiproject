@@ -6,7 +6,7 @@ import re
 from typing import Iterable
 
 
-CLASSIFICATION_VERSION = "job_tech_taxonomy_v3"
+CLASSIFICATION_VERSION = "job_tech_taxonomy_v4"
 
 JOB_ROLE_ORDER = (
     "공정기술·양산기술",
@@ -118,6 +118,57 @@ PROCESS_ROLE_INDIRECT_KEYWORDS = (
     "dram capacity",
     "반도체 인프라",
     "디램 용량",
+)
+
+PROCESS_EVIDENCE_GROUPS = (
+    (
+        "반도체 제조·양산",
+        (
+            "semiconductor manufacturing", "chip manufacturing", "wafer manufacturing",
+            "mass production", "volume production", "high-volume manufacturing",
+            "high volume manufacturing", "반도체 제조", "반도체 생산", "대량 생산",
+        ),
+    ),
+    (
+        "공정 기술·제어",
+        (
+            "manufacturing process", "process technology", "foundry process",
+            "process milestone", "process milestones", "process roadmap", "process control",
+            "process window", "제조 공정", "공정 기술", "공정 제어", "공정 조건",
+        ),
+    ),
+    (
+        "수율 개선·양산 안정화",
+        ("yield ramp", "yield improvement", "수율 개선", "양산 전환", "양산 공정"),
+    ),
+    (
+        "생산능력·생산라인",
+        (
+            "production capacity", "production line", "production lines",
+            "manufacturing line", "manufacturing lines", "생산 능력", "생산 라인",
+            "양산 라인", "양산 계획", "양산 체제", "양산 개시",
+        ),
+    ),
+    (
+        "웨이퍼·하이브리드 본딩",
+        ("hybrid bonding", "wafer bonding"),
+    ),
+    (
+        "첨단 패키징 공정",
+        (
+            "back-end process", "back end process", "advanced packaging process",
+            "packaging process", "panel-level packaging", "panel level packaging",
+        ),
+    ),
+    (
+        "검사·KGD 선별",
+        ("device prober", "wafer prober", "known good device", "kgd screening", "screening test"),
+    ),
+)
+
+PROCESS_INDIRECT_EVIDENCE_GROUPS = (
+    ("반도체 인프라", ("semiconductor infrastructure", "반도체 인프라")),
+    ("DRAM 용량·대역폭", ("dram capacity", "디램 용량")),
 )
 
 DOMAIN_KEYWORDS = {
@@ -350,6 +401,37 @@ def classify_job_roles(article: dict, domains: list[str], relevance: str) -> lis
     return ordered or ["산업·사업 공통"]
 
 
+def classify_process_fit(
+    article: dict, domains: list[str], relevance: str
+) -> tuple[str, list[str]]:
+    """공정·양산 직무와의 관련 단계와 사람이 확인할 수 있는 근거를 반환한다."""
+    text = _article_text(article)
+    unit_process_domains = {
+        "노광·마스크", "식각", "증착·박막", "이온주입·열처리", "세정·CMP", "계측·검사·수율",
+    }
+    direct_evidence = [
+        domain for domain in TECH_DOMAIN_ORDER if domain in unit_process_domains and domain in domains
+    ]
+    for label, keywords in PROCESS_EVIDENCE_GROUPS:
+        if _has_any(text, keywords) and label not in direct_evidence:
+            direct_evidence.append(label)
+
+    has_strong_evidence = relevance == "high" and _has_any(
+        text, PROCESS_ROLE_STRONG_KEYWORDS
+    )
+    if (set(domains) & unit_process_domains) or has_strong_evidence:
+        return "direct", direct_evidence[:4] or ["공정·양산 명시 표현"]
+
+    indirect_evidence = [
+        label
+        for label, keywords in PROCESS_INDIRECT_EVIDENCE_GROUPS
+        if _has_any(text, keywords)
+    ]
+    if relevance == "high" and indirect_evidence:
+        return "indirect", indirect_evidence[:4]
+    return "background", []
+
+
 def classify_signal_types(article: dict, relevance: str) -> list[str]:
     text = _article_text(article)
     signals: list[str] = []
@@ -383,12 +465,15 @@ def enrich_article(article: dict) -> dict:
     domains = classify_tech_domains(article)
     roles = classify_job_roles(article, domains, relevance)
     signals = classify_signal_types(article, relevance)
+    process_fit, process_evidence = classify_process_fit(article, domains, relevance)
     enriched.update(
         {
             "relevance": relevance,
             "tech_domains": domains,
             "job_roles": roles,
             "signal_types": signals,
+            "process_fit": process_fit,
+            "process_evidence": process_evidence,
             "classification_version": CLASSIFICATION_VERSION,
         }
     )

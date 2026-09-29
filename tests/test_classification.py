@@ -91,13 +91,16 @@ class ProcessRoleClassificationTest(unittest.TestCase):
         self.assert_not_process(context)
 
     def test_device_prober_is_process_role(self) -> None:
-        self.assert_process(
+        row = enrich_article(
             article(
                 "Tokyo Electron Releases a New Device Prober",
                 "The KGD screening test uses precise thermal control to improve final yield.",
                 company="Tokyo Electron",
             )
         )
+        self.assertIn(PROCESS_ROLE, row["job_roles"])
+        self.assertEqual(row["process_fit"], "direct")
+        self.assertIn("검사·KGD 선별", row["process_evidence"])
 
     def test_semiconductor_infrastructure_is_indirect_process_signal(self) -> None:
         self.assert_process(
@@ -109,22 +112,28 @@ class ProcessRoleClassificationTest(unittest.TestCase):
         )
 
     def test_dram_capacity_is_an_indirect_process_signal(self) -> None:
-        self.assert_process(
+        row = enrich_article(
             article(
                 "Redefining local AI computing",
                 "DRAM capacity and bandwidth set the ceiling for edge AI performance.",
                 company="Micron",
             )
         )
+        self.assertIn(PROCESS_ROLE, row["job_roles"])
+        self.assertEqual(row["process_fit"], "indirect")
+        self.assertEqual(row["process_evidence"], ["DRAM 용량·대역폭"])
 
     def test_gpu_memory_bandwidth_is_not_a_process_signal(self) -> None:
-        self.assert_not_process(
+        row = enrich_article(
             article(
                 "How query types shape GPU demand, memory, and power",
                 "We profile GPU memory bandwidth, power, throughput, and energy efficiency.",
                 company="Micron",
             )
         )
+        self.assertNotIn(PROCESS_ROLE, row["job_roles"])
+        self.assertEqual(row["process_fit"], "background")
+        self.assertEqual(row["process_evidence"], [])
 
     def test_validated_server_performance_facts_are_not_process_evidence(self) -> None:
         row = article(

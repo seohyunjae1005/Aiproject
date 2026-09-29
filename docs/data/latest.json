@@ -52,7 +52,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3"
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4"
     },
     {
       "source_id": "sk_hynix",
@@ -83,7 +85,9 @@
         "기술·제품",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "“AI의 급속한 성장 뒤에는 메모리가 있다” — SK하이닉스, TSMC OIP 컨퍼런스에서 차세대 메모리 포트폴리오 공개",
       "summary_ko": "태그: AI 반도체, eSSD, HBF, HBM, SOCAMM2, SSD, TSMC OIP",
       "translation_provider": "DeepL"
@@ -111,7 +115,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로가 “MSCI 선정 지수”에 편입되었습니다.",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -140,7 +146,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, ‘그린 파트너’ 선정",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -167,7 +175,9 @@
         "경영·실적",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, SEMICON West 기간 중 투자자 조찬 설명회 개최",
       "summary_ko": "캘리포니아주 산타클라라, 2026년 9월 21일 (GLOBE NEWSWIRE) -- 어플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘, 2026년 10월 13일 화요일 SEMICON West 행사 기간 중 임원진이 ‘투자자 조찬 프레젠테이션’에 참석할 것이라고 발표했다. 프레젠테이션은 오전 8시에 시작될 예정이다.",
       "translation_provider": "DeepL"
@@ -198,7 +208,9 @@
         "기술·제품",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스, ‘AI 인프라 서밋 2026’에서 AI 인프라를 위한 ‘뉴 스펙트럼’ 선보여",
       "summary_ko": "태그: AI, AI 인프라 서밋, AI 메모리, eSSD, HBF, PIM, SALT-KV",
       "translation_provider": "DeepL"
@@ -226,7 +238,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "후원형 ADR(미국예탁증서) 프로그램 신설에 관한 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -254,7 +268,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "조직 개편 및 인사 발령에 관한 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -283,7 +299,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, ‘2026 통합 보고서’ 발간",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -309,7 +327,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
       "summary_ko": "캘리포니아주 산타클라라, 2026년 9월 10일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 이사회가 자사 보통주에 대해 주당 0.53달러의 분기별 현금 배당금을 승인했다고 발표했다. 이 배당금은 2026년 11월 기준 주주명부에 등재된 주주들에게 2026년 12월 10일에 지급될 예정이다.",
       "translation_provider": "DeepL"
@@ -335,7 +355,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 8월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -362,7 +384,11 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "indirect",
+      "process_evidence": [
+        "반도체 인프라"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성전자와 미스트랄 AI, 지능형 반도체 인프라 구축을 위한 전략적 파트너십 체결",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -392,7 +418,9 @@
         "기술·제품",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스, ‘2026 퓨처 포럼’에서 사업 및 기술 방향 제시—“지금이 도약할 절호의 기회”",
       "summary_ko": "태그: 3D 메모리, AI 메모리, AX, 퓨처 반도체, SK하이닉스 퓨처 포럼",
       "translation_provider": "DeepL"
@@ -418,7 +446,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML, 아인트호벤 신규 캠퍼스 착공… 브레인포트 지역 내 입지 강화",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -548,7 +578,11 @@
         "협업·공급망",
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 파운드리와 ASML, 고수차(High-NA) EUV의 산업적 도입 가속화를 위해 협력",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -581,7 +615,11 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성전자와 ASML, 차세대 반도체 제조를 위한 전략적 협력 확대",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -612,7 +650,11 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC와 ASML, 고 NA EUV용 대형 포토마스크로의 업계 전환을 선도하기 위한 이니셔티브 발표",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -642,7 +684,11 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성전자와 ASML, 차세대 반도체 제조를 위한 전략적 협력 확대",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -668,7 +714,11 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML과 TSMC, 고 NA EUV용 대형 포토마스크로의 업계 전환을 선도하기 위한 이니셔티브 발표",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -696,7 +746,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, ‘정보 보안 보고서 2026’ 발간",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -727,7 +779,11 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 파운드리와 ASML, 고수차(High-NA) EUV 기술 도입을 위한 업계 준비 가속화",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -755,7 +811,9 @@
       "signal_types": [
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SEMICON India 2026",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -781,7 +839,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 에이전틱 PC, ASU 미식축구팀에 경기장에서의 우위를 제공하다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -811,7 +871,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[AI 생태계] 진정한 병목 현상: 연산 능력이 아닌 데이터",
       "summary_ko": "태그: AI, AI 메모리, HBF, HBM",
       "translation_provider": "DeepL"
@@ -842,7 +904,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "indirect",
+      "process_evidence": [
+        "DRAM 용량·대역폭"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "지역 AI 컴퓨팅의 재정의",
       "summary_ko": "OpenClaw와 같은 자율 AI 에이전트는 지능을 로컬 하드웨어로 이전하고 있습니다. DRAM 용량과 대역폭이 엣지 AI 성능의 상한선을 결정하는 이유를 확인해 보세요.",
       "translation_provider": "DeepL"
@@ -870,7 +936,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 재단과 PLTW, 반도체 분야 진로 진출 경로 확대",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -900,7 +968,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[AI 인프라 인사이트] 왜 더 빠른 GPU만으로는 AI 성능을 보장할 수 없는가",
       "summary_ko": "태그: AI 데이터 센터, AI 인프라, AI 메모리, GPU",
       "translation_provider": "DeepL"
@@ -926,7 +996,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 아카시 팔키왈라를 이사회 이사로 선임",
       "summary_ko": "캘리포니아주 산타클라라, 2026년 8월 27일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 아카시 팔키왈라(Akash Palkhiwala) 씨를 이사회 이사로 선임했다고 발표했다. 퀄컴(Qualcomm Incorporated)의 최고재무책임자(CFO) 겸 최고운영책임자(COO)인 팔키왈라 씨는,",
       "translation_provider": "DeepL"
@@ -954,7 +1026,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아와 샌디스크, 일본에 310억 달러 이상 투자… 메모리 산업 선도적 입지 공고히 할 전망",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -1060,7 +1134,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "생산능력·생산라인"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, 키타카미 공장의 신규 Fab3를 통해 3D 플래시 메모리 생산 능력 확대",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -1086,7 +1164,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치, 마이클 R. 캐넌과 소하일 U. 아메드의 이사회 퇴임 발표",
       "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 마이클(“마이크”) R. 캐넌과 소하일 U. 아메드가 램 이사회에서 은퇴하기로 한 각자의 결정을 회사에 통보했다고 발표했습니다...",
       "translation_provider": "DeepL"
@@ -1112,7 +1192,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 분기 배당금 27% 인상 발표",
       "summary_ko": "램 리서치 코퍼레이션(나스닥: LRCX)은 오늘 이사회가 보통주 1주당 분기 배당금을 0.26달러에서 0.33달러로 0.07달러(27%) 인상하는 안을 승인했다고 발표했다....",
       "translation_provider": "DeepL"
@@ -1140,7 +1222,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성, ‘게임스컴 2026’에서 USB4를 탑재한 P9 및 P7 SSD 공개",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -1174,7 +1258,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스, DTF 2026에서 AI 인프라에 최적화된 메모리 솔루션 풀 라인업 선보여",
       "summary_ko": "태그: AI 메모리, cSSD, DellTechForum, DRAM, DTF, eSSD, HBM, NAND",
       "translation_provider": "DeepL"
@@ -1200,7 +1286,9 @@
       "signal_types": [
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "2026 AI 인프라 서밋에 참가한 인텔",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -1231,7 +1319,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치, AI 시대 반도체 연구개발을 지역 및 전 세계적으로 가속화하기 위해 오리건주 신연구실 착공",
       "summary_ko": "최첨단 ‘실리콘 포레스트’ 시설, 칩 제조사들과의 협업 혁신 지원; 30억 달러 이상 규모로 계획된 글로벌 연구소 네트워크 확장 계획의 첫 번째 이정표 오리건주 투알라틴, 2026년 8월 26일 /",
       "translation_provider": "DeepL"
@@ -1257,7 +1347,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 향후 개최될 컨퍼런스 참가 발표",
       "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 더그 베팅거(Doug Bettinger) 전무이사 겸 최고재무책임자(CFO)가 향후 개최될 다음과 같은 투자자 행사에 참석할 것이라고 발표했다. Citi 2026...",
       "translation_provider": "DeepL"
@@ -1286,7 +1378,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "쿼리 유형이 GPU 수요, 메모리 및 전력 소비에 미치는 영향",
       "summary_ko": "모든 LLM 쿼리가 똑같은 것은 아닙니다. 본 문서에서는 실제 환경에서 사용되는 6가지 프롬프트 유형이 GPU 메모리 대역폭, 전력, 처리량 및 에너지 효율성에 얼마나 상이한 부하를 주는지 분석하여, 인프라 팀이 AI 배포 규모를 적절히 조정하고 총 소유 비용을 최적화할 수 있도록 돕습니다.",
       "translation_provider": "DeepL"
@@ -1420,7 +1514,13 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산",
+        "웨이퍼·하이브리드 본딩",
+        "첨단 패키징 공정"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[기술 노트] 하이브리드 본딩: 반도체 성능 향상을 위한 핵심 기술로 진화 중",
       "summary_ko": "태그: 첨단 패키징, 백엔드 공정, HBM, HBM4, 하이브리드 본딩, 패키징",
       "translation_provider": "DeepL"
@@ -1446,7 +1546,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, ‘핫 칩스 2026’에서 에이전트 기반 AI 아키텍처 개요 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -1474,7 +1576,9 @@
       "signal_types": [
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SEMICON 대만 2026",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -1500,7 +1604,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA, 향후 예정된 투자자 대상 웹캐스트 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -1530,7 +1636,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "AI 경쟁이 칩에서 시스템으로 전환되는 가운데, SK하이닉스의 코패키지드 옵틱스 기술 로드맵이 ‘네이처 일렉트로닉스’에 소개됐다",
       "summary_ko": "태그: AI 인프라, AI 메모리, CoPackagedOptics, CPO, HBM, 이종 통합, Nature Electronics, 포토닉스",
       "translation_provider": "DeepL"
@@ -1556,7 +1664,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "코어 수만 세지 말고, 수행된 작업량을 세어보세요.",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -1582,7 +1692,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "경영진 10명 중 6명은 로봇에 대대적으로 투자하고 있다. 하지만 준비가 된 사람은 10명 중 4명에 불과하다.",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -1613,7 +1725,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[AI 생태계] AI 컴퓨팅의 패러다임 전환",
       "summary_ko": "태그: 에이전트 기반 AI, AI 인프라, AI 메모리, 반도체 산업",
       "translation_provider": "DeepL"
@@ -1640,7 +1754,9 @@
         "경영·실적",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 다가오는 투자자 컨퍼런스에 참가 예정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -1668,7 +1784,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로, 2026년 구마모토 지진 구호 활동을 지원하기 위해 추가 기부",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -1695,7 +1813,9 @@
         "경영·실적",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 다가오는 투자자 컨퍼런스에 참가 예정",
       "summary_ko": "캘리포니아주 산타클라라, 2026년 8월 14일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 경영진들이 다가오는 투자자 컨퍼런스에서 화톳불 대화(fireside chats)에 참여할 것이라고 발표했다. 브라이스 힐(Brice Hill) 수석 부사장 겸 최고재무책임자(CFO)는 ‘Citi 2026 글로벌 TMT 컨퍼런스’에 참여할 예정이다.",
       "translation_provider": "DeepL"
@@ -1721,7 +1841,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 2026년 3분기 실적 발표",
       "summary_ko": "매출은 전년 대비 25% 증가한 91억 2천만 달러로 사상 최고치를 기록했으며, GAAP 기준 매출총이익률은 50.3%, 비-GAAP 기준 매출총이익률은 50.4%를 기록했습니다. GAAP 기준 주당순이익(EPS)은 3.17달러, 비-GAAP 기준 주당순이익은 3.50달러로 사상 최고치를 기록했으며, 전년 동기 대비 각각 43% 및 41% 증가 EPIC 센터의 R&amp;D 파트너십이 선도 기업들과의 11건의 협업으로 확대",
       "translation_provider": "DeepL"
@@ -1748,7 +1870,9 @@
       "signal_types": [
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치, AI 시대에 글로벌 연구소 네트워크를 확장하고 혁신 속도를 높이기 위해 30억 달러 이상을 투자할 계획 발표",
       "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 향후 5년 동안 전 세계 연구개발(R&D) 연구소 네트워크를 확장하기 위해 30억 달러 이상을 투자할 계획이라고 발표했다. 이...",
       "translation_provider": "DeepL"
@@ -1778,7 +1902,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아와 샌디스크, AI 및 데이터 집약적 애플리케이션을 위해 설계된 새로운 고성능 QLC 3D 플래시 메모리 기술 공개",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -1809,7 +1935,9 @@
         "기술·제품",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치와 NY Creates, 반도체 인력 양성을 위한 대학생 교육 프로그램 추진을 위해 협력",
       "summary_ko": "Lam의 ‘Semiverse® Solutions’ 가상 제조 플랫폼, NY Creates의 인력 개발 네트워크를 통해 뉴욕주 전역의 공학도들에게 실습 중심의 칩 제조 교육을 제공할 전망 뉴스 요약",
       "translation_provider": "DeepL"
@@ -1840,7 +1968,9 @@
         "기술·제품",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "UC 버클리, 반도체 혁신 가속화를 위해 어플라이드 머티리얼즈의 EPIC 센터에 합류",
       "summary_ko": "이번 협력은 UC 버클리의 반도체 연구 역량과 어플라이드의 최첨단 장비 및 공정 통합 전문성을 결합한 것입니다. 실리콘밸리에 위치한 어플라이드의 EPIC 센터는 최첨단 칩 제조 장비를 활용할 수 있는 산업 규모의 R&amp;D 환경을 제공하여 신속한",
       "translation_provider": "DeepL"
@@ -1866,7 +1996,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 이사회 회의 결의안",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -1945,7 +2077,13 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산",
+        "공정 기술·제어",
+        "생산능력·생산라인"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "소니 반도체 솔루션즈와 TSMC, 차세대 이미지 센서 합작회사 설립에 합의",
       "summary_ko": "공식 출처: TSMC 홍보센터",
       "translation_provider": "DeepL"
@@ -1971,7 +2109,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 200억 달러 규모 보통주 공모 규모 확대 및 가격 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -2000,7 +2140,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[AI 인프라 인사이트] AI 데이터 센터 내부에서는 어떤 변화가 일어나고 있을까?",
       "summary_ko": "태그: AI, AI 데이터 센터, AI 인프라, AI 메모리",
       "translation_provider": "DeepL"
@@ -2026,7 +2168,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 7월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 홍보센터",
       "translation_provider": "DeepL"
@@ -2052,7 +2196,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 150억 달러 규모의 보통주 발행 계획 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -2078,7 +2224,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 게이머 데이즈 2026, AAA급 게임 번들 및 파트너십과 함께 막을 올린다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -2113,7 +2261,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "AI 시대의 차세대 메모리 아키텍처? SK하이닉스, ‘FMS 2026’에서 방향 제시",
       "summary_ko": "태그: CXL, DRAM, FMS, HBF, HBM, NAND, SSD",
       "translation_provider": "DeepL"
@@ -2139,7 +2289,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 고객 관계 강화 및 성장 가속화를 위한 경영진 임명 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -2165,7 +2317,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA, 정기 현금 배당 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -2193,7 +2347,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "반도체 분야 진로를 위한 길 열기: 인텔, SEPP 프로그램 출범",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -2219,7 +2375,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA CORPORATION, 주주들에게 TUTANOTA LLC의 소규모 공개매수 제안을 거부할 것을 권고",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -2247,7 +2405,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성, FMS 2026에서 차세대 3D 메모리 비전 공개… AI 인프라의 미래 제시",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -2274,7 +2434,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KIOXIA GP 시리즈 초고 IOPS SSD, ‘FMS: the Future of Memory and Storage 2026’에서 ‘Best of Show’로 선정",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2302,7 +2464,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아와 샌디스크가 선보인 새로운 3D 플래시 메모리 기술, QLC NAND 부문에서 업계 최고 비트 밀도 달성",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2330,7 +2494,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, FMS 2026에서 AI 시대를 위한 플래시 스토리지 혁신 기술 선보여",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2357,7 +2523,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, AI 애플리케이션용 KIOXIA GP1 시리즈 초고 IOPS SSD 출시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2384,7 +2552,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, AI 워크로드용 CXL™ 호환 메모리 확장 모듈 ‘KIOXIA XL1 시리즈’ 선보일 예정",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2412,7 +2582,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "자사주 매입 현황 및 완료에 관한 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -2442,7 +2614,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "AI 혁명의 숨은 원동력: 저전력 메모리가 데이터 센터에서 새로운 역할을 맡게 된 이유",
       "summary_ko": "LPDDR 저전력 메모리가 AI 데이터 센터에서 새로운 역할을 찾아가고 있는 이유는, 추론 및 에이전트형 AI 워크로드가 요구하는 와트당 성능을 제공하기 때문입니다.",
       "translation_provider": "DeepL"
@@ -2470,7 +2644,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "메모리와 스토리지가 어떻게 AI 시대의 중추가 되었는가",
       "summary_ko": "추론 및 에이전트 기반 워크로드가 효율성, 확장성, 비용을 재정의함에 따라, 왜 컴퓨팅 능력만으로는 부족하고 메모리와 스토리지가 이제 AI 인프라를 정의하게 되었는지 알아보세요.",
       "translation_provider": "DeepL"
@@ -2498,7 +2674,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로, 2026년 구마모토 지진 구호 활동 지원을 위해 기부금 전달",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -2527,7 +2705,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, 9세대 BiCS FLASH™ 1Tb TLC 디바이스 샘플 출하 개시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2557,7 +2737,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, 최신 BiCS FLASH™ 10세대 플래시 메모리를 탑재한 최초의 PCIe® 6.0 엔터프라이즈 SSD 출시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2585,7 +2767,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "일본 및 해외 TEL 그룹 임원 및 직원을 대상으로 한 주식 지급 제도의 지속에 관한 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -2614,7 +2798,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아의 새로운 UFS 5.0 임베디드 플래시 메모리 디바이스, 온디바이스 AI 구현 가능",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2641,7 +2827,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, AI 및 하이퍼스케일 환경을 위한 차세대 E1.S SSD 출시 발표",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -2675,7 +2863,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔의 미국 첨단 패키징 기술, 차세대 AI 반도체 구현을 가능하게 하다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -2701,7 +2891,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 2026년 6월 28일 종료된 분기 실적 발표",
       "summary_ko": "램 리서치 코퍼레이션(이하 “회사”, “램”, “램 리서치”)은 오늘 2026년 6월 28일로 종료된 분기(이하 “2026년 6월 분기”)의 재무 실적을 발표했습니다. 2026년 6월 분기의 주요 내용은 다음과 같습니다...",
       "translation_provider": "DeepL"
@@ -2729,7 +2921,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "2026년 구마모토 지진 보고서 (제2차 보고서)",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -2755,7 +2949,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA, 6월 분기 실적 발표 | 경영진 | KLA",
       "summary_ko": "아래 인포그래픽은 6월 분기 실적 보고서에서 발췌한 KLA의 주요 재무 정보를 보여줍니다. 전문을 보시려면",
       "translation_provider": "DeepL"
@@ -2781,7 +2977,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA 코퍼레이션, 2026 회계연도 4분기 및 연간 실적 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -2807,7 +3005,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 시큐어 엔클레이브: 전술적 최전선에서의 고성능 컴퓨팅 보안",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔® 제품",
       "translation_provider": "DeepL"
@@ -2833,7 +3033,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, RAMP-C 프로그램 완료… 시큐어 엔클레이브 추진 탄력",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -2861,7 +3063,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "7월 28일 일본 구마모토에서 발생한 지진에 대한 대응",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -2890,7 +3094,9 @@
         "기술·제품",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성전자와 브로드컴, 메모리 및 파운드리 기술 분야에서의 전략적 협력 확대",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -2970,7 +3176,9 @@
         "기술·제품",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 렌즈 테크놀로지가 AI 시대를 위한 첨단 반도체 패키징 기술 개발을 위해 협력한다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -3070,7 +3278,9 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플리케이션 서버의 세대별 성능",
       "summary_ko": "6세대 AMD EPYC 프로세서와 마이크론 DDR5-8000, 9650 Gen6 NVMe SSD를 조합하면 어떻게 3.8배 향상된 에이전트 기반 AI 성능을 제공하면서도 CPU 전력 효율은 2.9배 개선되는지 알아보세요.",
       "translation_provider": "DeepL"
@@ -3097,7 +3307,9 @@
         "경영·실적",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 2026년 8월 13일 2026 회계연도 3분기 실적 발표 예정",
       "summary_ko": "캘리포니아주 산타클라라, 2026년 7월 23일 (GLOBE NEWSWIRE) -- 애플라이드 머티리얼즈(Applied Materials, Inc.)는 오늘 2026 회계연도 3분기 실적 컨퍼런스 콜을 2026년 8월 13일 목요일, 동부 표준시(ET) 오후 4시 30분 / 태평양 표준시(PT) 오후 1시 30분에 개최할 것이라고 발표했습니다. 이번 컨퍼런스 콜은 https://ir.appliedmaterials.com에서 생중계될 예정입니다.",
       "translation_provider": "DeepL"
@@ -3123,7 +3335,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 2026년 2분기 실적 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -3152,7 +3366,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[연구 속으로] SK하이닉스의 CTI 혁신, 176층 3D NAND 양산 가속화",
       "summary_ko": "태그: 176층 NAND, CTI, IEDM, IEEE, NAND, Research Inside, 미세화",
       "translation_provider": "DeepL"
@@ -3180,7 +3398,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉이 “FTSE4Good 지수 시리즈”, “FTSE JPX 블로섬 재팬 지수” 및 “FTSE JPX 블로섬 재팬 섹터 상대 지수”에 편입되었습니다.",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -3208,7 +3428,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "데이터 센터에서 LPDDR을 실제 적용하며 얻은 교훈",
       "summary_ko": "마이크론과 메타의 엔지니어들은 오픈소스 DCPerf 벤치마크를 활용해 실제 하이퍼스케일 데이터 센터 워크로드에서 LPDDR5X 및 SOCAMM2 메모리의 성능을 측정했습니다.",
       "translation_provider": "DeepL"
@@ -3236,7 +3458,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "메모리 대역폭은 AI 성능 지표 중 가장 간과되기 쉬운 요소일 수 있다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -3262,7 +3486,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 기술이 적용된 의료용 외골격 장치가 환자들이 다시 걸을 수 있도록 돕는다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -3288,7 +3514,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC, 2분기 주당순이익(EPS) 27.25 대만달러 기록",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -3314,7 +3542,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 구글 클라우드, 인텔의 AI 기반 기업 혁신 가속화를 위한 협력 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -3343,7 +3573,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉과 엔비디아, 에이전트 기반 AI 및 로봇공학 분야 협력 확대",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -3376,7 +3608,11 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "고 NA EUV, 최초의 대량 생산 로직 제품 출시로 새로운 준비 단계 달성",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -3402,7 +3638,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML, 2026년 2분기 총 순매출 93억 유로, 순이익 29억 유로 기록",
       "summary_ko": "ASML은 실적 전망치를 상향 조정하며, 2026년 총 순매출이 430억 유로에서 450억 유로 사이가 될 것으로 예상하고, 매출총이익률은 54%에서 56% 사이가 될 것으로 전망했다.",
       "translation_provider": "DeepL"
@@ -3428,7 +3666,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 6월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -3458,7 +3698,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 유럽 내 생산 시설 확충을 위해 50억 유로 투자",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -3487,7 +3729,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, ‘TEL E-COMPASS 물류 및 시설의 날’ 행사 개최",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -3605,7 +3849,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성, 차세대 AI 인프라에 최적화된 PM1763 SSD 양산 개시",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -3638,7 +3886,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "HBM에서 eSSD까지: SK하이닉스가 풀스택 메모리의 미래를 어떻게 개척해 나가고 있는가",
       "summary_ko": "태그: AI, AI 인프라, AI 메모리, cHBM, DRAM, eSSD, HBM, NAND",
       "translation_provider": "DeepL"
@@ -3665,7 +3915,9 @@
         "경영·실적",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 6월 분기 실적 설명회 개최 발표",
       "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 2026년 7월 29일 수요일 오후 2시(태평양 표준시)부터 분기별 재무 컨퍼런스 콜 및 웹캐스트를 진행할 것이라고 발표했습니다...",
       "translation_provider": "DeepL"
@@ -3695,7 +3947,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[전문가 관점] AI 반도체에서 AI 서비스로: 생태계의 진화 양상",
       "summary_ko": "태그: AI, AI 인프라, 인공 지능, HBM, 반도체 생태계, 반도체 산업",
       "translation_provider": "DeepL"
@@ -3727,7 +3981,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "AI 인프라 시대에 첨단 메모리가 중요한 이유",
       "summary_ko": "태그: AI, AI 인프라, AI 메모리, DRAM, eSSD, HBM",
       "translation_provider": "DeepL"
@@ -3758,7 +4014,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아와 샌디스크, 키타카미 공장 Fab2에서 10세대 3D 플래시 메모리 제품 생산 개시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -3788,7 +4046,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, 고성능·대용량·저전력 소비를 자랑하는 10세대 BiCS FLASH™ 제품 샘플 출하 개시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -3814,7 +4074,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA, 2026 회계연도 4분기 실적 발표 일정 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -3842,7 +4104,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "QLC 대 HDD: 실제 IO 분포가 스토리지 비용을 어떻게 변화시키는가",
       "summary_ko": "워크로드는 단일하고 균일한 요청 크기가 아닌 다양한 IO 크기 분포를 생성하며, 이러한 분포는 QLC SSD와 HDD의 상대적 성능 및 용량 요구 사항에 상당한 영향을 미칩니다.",
       "translation_provider": "DeepL"
@@ -3870,7 +4134,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "왜 행위자형 AI가 CPU 및 메모리 인프라의 규칙을 다시 쓰고 있는가",
       "summary_ko": "에이전트형 AI가 CPU 및 DRAM 수요의 부활을 이끌고 있습니다. 자율 AI 에이전트가 데이터 센터 인프라를 어떻게 재편하고 있는지, 그리고 메모리가 왜 핵심 경로에 속하는지 알아보세요.",
       "translation_provider": "DeepL"
@@ -3898,7 +4164,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "자사주 매입 현황에 관한 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -3930,7 +4198,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "마이크론, 차세대 엣지 설계를 위한 LPDDR5X 제품군 확대",
       "summary_ko": "마이크론은 새로운 1γ 비이진 옵션을 통해 LPDDR5X 제품군을 확장하며, 6GB, 12GB, 24GB 용량을 추가함으로써 모바일 및 클라이언트 PC 엣지 AI 설계 전반에 걸쳐 설계 유연성을 높이고, 성능을 향상시키며, 전력 효율을 개선합니다.",
       "translation_provider": "DeepL"
@@ -3956,7 +4226,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 2026년 2분기 실적 발표 예정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -3982,7 +4254,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 MSI가 세계 최초의 Arc G3 핸드헬드 기기를 공동 개발한 세 가지 방법",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -4010,7 +4284,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "(정정) 주식 기반 보상(주식 매수권)을 위한 스톡옵션 부여",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4038,7 +4314,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "Tokyo Electron America, Inc.와 TEL Technology Center, America, LLC의 합병",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4068,7 +4346,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "‘아메리카 250’: 국가적 전환점을 맞이한 지금, 인텔은 미국의 혁신, AI, 제조 산업을 선도하고 있습니다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -4096,7 +4376,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "6월 26일 야마나시현과 6월 28일 도호쿠에서 발생한 지진에 대한 대응",
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4133,7 +4415,11 @@
         "투자·생산",
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트론, 2026년 ‘AI Breakthrough Awards’ 프로그램에서 ‘올해의 AI 반도체 제조 솔루션’ 상 수상",
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4257,7 +4543,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "증착·박막"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, AI 칩용 DRAM 및 첨단 패키징 개발을 가속화할 신형 시스템 출시",
       "summary_ko": "DRAM과 첨단 패키징에 걸친 혁신을 통해 최첨단 AI 칩의 기반이 되는 3D 아키텍처가 구현됩니다. DRAM 팹에 최적화된 새로운 에피택시 시스템은 핵심적인 로직급 공정을 추가함으로써, 제한된 팹 공간과 공급 제약 조건 내에서 생산량을 극대화하는 동시에 메모리 속도와 효율성을 향상시킵니다. 새로운",
       "translation_provider": "DeepL"
@@ -4285,7 +4575,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "6월 25일 일본 도호쿠에서 발생한 지진에 대한 대응",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4317,7 +4609,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[전문가 관점] AI 반도체 경쟁의 진정한 격전지: 자본과 에너지 인프라",
       "summary_ko": "태그: AI, AI 인프라, AI 메모리, AI 반도체, 반도체 인프라, 용인 반도체 클러스터",
       "translation_provider": "DeepL"
@@ -4345,7 +4639,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인사 변경에 관한 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4376,7 +4672,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성, 차세대 온디바이스 AI 애플리케이션을 위한 업계 최고 속도의 UFS 5.0 솔루션 공개",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -4408,7 +4706,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스와 AI 메모리의 미래에 대해 알아야 할 5가지",
       "summary_ko": "태그: AI, AI 인프라, AI 메모리, 데이터센터, DRAM, HBM, NAND",
       "translation_provider": "DeepL"
@@ -4436,7 +4736,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "주식 기반 보상(주식 매수권)을 위한 스톡옵션 부여",
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4464,7 +4766,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "대표이사 변경 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4492,7 +4796,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "2026 회계연도 연간 증권 보고서 제출",
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4524,7 +4830,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스, HPED 2026에서 ‘풀스택 AI 메모리 크리에이터’로서 기술 리더십 선보이며 HPE와의 견고한 파트너십 재확인",
       "summary_ko": "태그: AI, AI 메모리, CXL, eSSD, HBM, HEP Discover, HPE",
       "translation_provider": "DeepL"
@@ -4554,7 +4862,9 @@
       "signal_types": [
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 개발 및 제조 가속화를 위해 인텔 파운드리(Intel Foundry) 리더십 인사 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -4583,7 +4893,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "애플라이드 머티리얼즈, 차세대 스마트 글래스를 위한 완전 통합형 시각 시스템 ‘SENZ™’ 공개",
       "summary_ko": "SENZ는 고객과 파트너에게 공동 최적화된 솔루션을 제공하여 고성능 증강현실 디스플레이를 더 빠르게 시장에 출시할 예정입니다. 이 획기적인 기술은 차세대 스마트 글래스를 위해 세계 최고 수준의 시각적 성능, 원활한 통합, 그리고 확장 가능한 제조 능력을 제공할 것입니다. SANTA",
       "translation_provider": "DeepL"
@@ -4609,7 +4921,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "CEO 서문: 2025-26 인텔 기업 사회적 책임 보고서",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -4635,7 +4949,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, ‘2025-2026 기업 사회적 책임 보고서’를 통해 책임 있는 경영 관행과 AI 주도 성장을 추진",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -4662,7 +4978,9 @@
         "기술·제품",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "에실로럭소티카와 어플라이드 머티리얼즈, 차세대 스마트 글래스를 위한 증강현실 광학 플랫폼 개발을 위해 협력",
       "summary_ko": "이번 공동 개발 협약은 스마트 안경 및 증강현실(AR)용 광학 렌즈 스택을 위한 차세대 지능형 광학 시스템의 상용화를 가속화하는 것을 목표로 합니다. 이번 파트너십은 재료 공학, 렌즈 및 스마트 안경 분야의 세계적 수준의 전문성을 결합하여 경량화된,",
       "translation_provider": "DeepL"
@@ -4691,7 +5009,11 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "공정 기술·제어"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 파운드리, VLSI 심포지엄에서 공정 개발 주요 성과 및 향후 혁신 계획 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -4717,7 +5039,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "기계 뒤에 숨은 기계들",
       "summary_ko": "ASML이 차세대 기술 시대를 위해 AI 네이티브 엔지니어링을 어떻게 적용하고 있는지 알아보세요.",
       "translation_provider": "DeepL"
@@ -4747,7 +5071,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[SOD 리뷰] COMPUTEX 2026: 메모리를 넘어선 SK하이닉스 – AI 공장 시대가 회사의 정체성을 어떻게 재편하고 있는가",
       "summary_ko": "태그: AI, AI 팩토리, AI 인프라, AI 메모리, COMPUTEX, HBM, iHBM, SOCAMM2",
       "translation_provider": "DeepL"
@@ -4773,7 +5099,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 5월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -4799,7 +5127,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "미국 50개 도시의 디지털 격차 해소를 위한 새로운 스마트 시티 시범 네트워크",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 무선",
       "translation_provider": "DeepL"
@@ -4825,7 +5155,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "컴퓨텍스 2026 현장 소식: 일상적인 창작 활동과 하루 종일 이어지는 생산성을 위한 새로운 인텔® 코어™ 시리즈 3 노트북",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -4855,7 +5187,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "‘칩에서 AI 시스템까지’… 최 회장, 폭스콘과의 협력 관계 강화",
       "summary_ko": "태그: AI, AI 메모리, 폭스콘, HBM, 반도체 산업",
       "translation_provider": "DeepL"
@@ -4881,7 +5215,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 주주총회 결의안",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -4909,7 +5245,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ISS의 제63차 정기주주총회에 상정될 안건에 대한 수정된 의결 권고 사항에 관한 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -4938,7 +5276,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK그룹 최태원 회장이 대만에서 TSMC의 C.C. 웨이 회장 겸 CEO를 만나 글로벌 AI 칩 파트너십을 공고히 했다",
       "summary_ko": "태그: AI, AI 메모리, HBM, TSMC",
       "translation_provider": "DeepL"
@@ -4971,7 +5311,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "메모리 솔루션, AI 열풍을 주도하다 — SK하이닉스, ‘컴퓨텍스 2026’에서 존재감 과시",
       "summary_ko": "태그: AI, AI 메모리, COMPUTEX, CXL, HBM, LPCAMM2, LPDDR, SOCAMM2",
       "translation_provider": "DeepL"
@@ -4999,7 +5341,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "최태원 회장과 젠슨 황 CEO, ‘컴퓨텍스 타이베이 2026’에서 재회",
       "summary_ko": "태그: AI, AI 메모리, COMPUTEX, NVIDIA",
       "translation_provider": "DeepL"
@@ -5027,7 +5371,9 @@
         "기술·제품",
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, ‘투자자의 날’ 행사에서 AI 추론 시대를 위한 성장 전략 발표",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -5053,7 +5399,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "컴퓨텍스 2026: 실리콘을 기반으로 한 지능형 세계",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -5079,7 +5427,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 클라우드·엣지·기업용 데이터 센터 인프라를 위한 이더넷 E835 컨트롤러 및 네트워크 어댑터 출시",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 데이터 센터",
       "translation_provider": "DeepL"
@@ -5111,7 +5461,9 @@
         "기술·제품",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK그룹 최태원 회장이 ‘GTC 타이베이 2026’ 기조연설에 참석해 ‘차세대 AI 아키텍처를 함께 구축하는 혁신적인 파트너’라는 비전을 재확인했다.",
       "summary_ko": "태그: AI, AI 메모리, GTC, HBF, HBM",
       "translation_provider": "DeepL"
@@ -5137,7 +5489,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 제온 6+ 및 네트워킹, AI 시스템에 에이전틱 AI 적용",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 데이터 센터",
       "translation_provider": "DeepL"
@@ -5163,7 +5517,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "보도 자료: 컴퓨텍스 2026에서 인텔",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -5189,7 +5545,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 컴퓨텍스에서 새로운 AI 혁신 기술 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -5217,7 +5575,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ISS의 의결 권고에 대한 도쿄 일렉트로ンの 입장",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5243,7 +5603,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "130여 곳의 고객사가 엣지 디바이스용으로 인텔 시리즈 3 프로세서를 선택했습니다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -5271,7 +5633,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "삼성전자, 업계 최초의 HBM4E 샘플 출하 개시",
       "summary_ko": "공식 분류: 반도체",
       "translation_provider": "DeepL"
@@ -5299,7 +5663,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉 이사회 효율성 평가 결과 요약",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5328,7 +5694,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "자사주 매입 제도 도입에 관한 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5356,7 +5724,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "주식 분할 및 이에 따른 정관 일부 개정 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5382,7 +5752,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 아크 G 시리즈 프로세서, 휴대용 PC 게임의 새로운 기준을 제시하다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -5412,7 +5784,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "EMIB 칩 패키징을 이끈 인텔의 선구자를 만나보세요",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인텔 파운드리",
       "translation_provider": "DeepL"
@@ -5440,7 +5814,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, 규슈에 신사옥 건설 예정",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5466,7 +5842,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔의 ‘2025년 우수 연구자상’이 10명의 학계 혁신가들을 선정했다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -5492,7 +5870,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 분기 배당금 발표",
       "summary_ko": "램 리서치 코퍼레이션(나스닥: LRCX)은 오늘 이사회가 보통주 1주당 0.26달러의 분기 배당금을 승인했다고 발표했다. 배당금은 7월...에 지급될 예정이다.",
       "translation_provider": "DeepL"
@@ -5522,7 +5902,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "라스베이거스에서 델과 SK하이닉스가 한자리에 모인 이유는 무엇일까? HBM에서 cSSD에 이르기까지, AI 메모리의 무한한 확장성을 재확인하다",
       "summary_ko": "태그: AI, AI 메모리, cSSD, DTW, eSSD, HBM",
       "translation_provider": "DeepL"
@@ -5548,7 +5930,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "에이전트 기반 AI의 3대 딜레마 해결 - 비용, 확장성, 데이터 보안",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -5574,7 +5958,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 코어 울트라 시리즈 3: 엣지 AI 로봇 공학 컴퓨팅을 위한 새로운 표준",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -5686,7 +6072,14 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "식각",
+        "증착·박막",
+        "세정·CMP",
+        "첨단 패키징 공정"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치, 오스트리아 잘츠부르크에 패널 레벨 패키징 우수 센터 설립",
       "summary_ko": "오스트리아 잘츠부르크, 2026년 5월 20일 — 램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘 오스트리아 잘츠부르크에 패널 레벨 패키징 센터 오브 엑설런스(CoE)를 설립했다고 발표했으며, 이는...",
       "translation_provider": "DeepL"
@@ -5714,7 +6107,9 @@
         "기술·제품",
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "새로운 STAC-A2 기록은 MRDIMM이 금융 리스크 분석을 어떻게 확장하는지 보여준다",
       "summary_ko": "마이크론 MRDIMM과 인텔 제온 6이 어떻게 STAC-A2 벤치마크의 새로운 기준을 수립하여 금융 리스크 분석의 처리량, 효율성 및 속도를 향상시켰는지 알아보세요.",
       "translation_provider": "DeepL"
@@ -5745,7 +6140,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "반도체 제조·양산"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "타타 일렉트로닉스와 ASML, 인도 반도체 제조 생태계 발전을 위한 전략적 파트너십 체결",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -5772,7 +6171,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아와 델 테크놀로지스, 9.8 PB 용량의 플래시 스토리지를 탑재한 고밀도 서버를 최초로 출시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -5800,7 +6201,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC, 뱅가드 인터내셔널 세미컨덕터의 지분 8.1% 매각 예정",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -5828,7 +6231,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉 규슈, RBA VAP에서 플래티넘 등급 획득",
       "summary_ko": "도쿄 일렉트로닉 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -5855,7 +6260,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, PC OEM 업체를 위한 고성능 ‘KIOXIA XG10’ 시리즈 SSD 공개",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -5881,7 +6288,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 맥라렌 레이싱의 공식 컴퓨팅 파트너로 선정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -6001,7 +6410,12 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "공정 기술·제어",
+        "웨이퍼·하이브리드 본딩"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "칩을 넘어선 혁신: 첨단 패키징 아키텍처 탐구 | 혁신 | KLA",
       "summary_ko": "AI, HPC 및 차세대 반도체 혁신을 주도하는 5가지 첨단 패키징 아키텍처—하이브리드 본딩, 인터포저, 임베디드 브리지, 유리 기판, 코패키징 광학 소자—를 살펴보세요.",
       "translation_provider": "DeepL"
@@ -6027,7 +6441,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML 최고기술책임자(CTO) 마르코 피터스를 만나보세요",
       "summary_ko": "ASML의 신임 최고기술책임자(CTO) 마르코 피터스는 수십 년에 걸친 혁신과 고객 중심 철학을 바탕으로 ASML의 새로운 장을 열어갈 것입니다.",
       "translation_provider": "DeepL"
@@ -6057,7 +6473,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "[테크 노트 EP.1] ‘메모리가 관건이다’, AI의 미래는 메모리에 달려 있다",
       "summary_ko": "태그: AI, HBF, HBM, 물리적 AI, 용인 반도체 클러스터",
       "translation_provider": "DeepL"
@@ -6085,7 +6503,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "잉여금 배당금 지급에 관한 공고 (2026년 3월 31일 종료 회계연도)",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -6113,7 +6533,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, ‘다우존스 베스트-인-클래스 아시아 태평양 지수’에 선정",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -6139,7 +6561,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 4월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -6237,7 +6661,12 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "공정 기술·제어",
+        "생산능력·생산라인"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "소니 반도체 솔루션즈와 TSMC, 차세대 이미지 센서 전략적 파트너십을 위한 예비 협약 체결",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -6263,7 +6692,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA 코퍼레이션, 10대 1 주식 분할 및 분기별 현금 배당금 지급 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -6289,7 +6720,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML의 크리스토프 푸케 CEO가 유럽 기술 기업들과 함께 기고문을 공동 서명했다",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -6316,7 +6749,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "마이크론 6600 ION 245TB가 출시되었습니다 — 대규모 데이터 센터 스토리지의 새로운 기준을 제시합니다",
       "summary_ko": "빌 볼렌지어의 6600 ION 245TB 출시 관련 블로그 게시물.",
       "translation_provider": "DeepL"
@@ -6342,7 +6777,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "2026 컴퓨텍스에서 인텔: AI 기반 컴퓨팅의 다음 시대를 선도하다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -6368,7 +6805,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 다가오는 투자자 컨퍼런스에 참가 예정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -6394,7 +6833,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 클라이언트 컴퓨팅 발전 및 미래 혁신 추진을 위한 경영진 인사 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -6422,7 +6863,9 @@
       "signal_types": [
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SEMICON 동남아시아 2026",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -6448,7 +6891,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA, 3월 분기 실적 발표 | 경영진 | KLA",
       "summary_ko": "KLA의 3월 분기 실적에 대해 알아보기",
       "translation_provider": "DeepL"
@@ -6474,7 +6919,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "KLA 코퍼레이션, 2026 회계연도 3분기 실적 발표",
       "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
       "translation_provider": "DeepL"
@@ -6500,7 +6947,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ChatPPT, 인텔과 협력해 하이브리드 AI PC 에디션 출시",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -6530,7 +6979,9 @@
         "기술·제품",
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "VMware® VMmark® 4 세계 신기록: Dell Technologies®와 Micron®이 가상화 플랫폼의 성능을 뒷받침하다",
       "summary_ko": "4노드 클러스터. 334대의 가상 머신. VMmark 4 점수 12.4. VMware에 따르면, 이는 2026년 1월 20일에 검증된 새로운 세계 기록입니다. 이 기록은 기존 기록을 18.1% 상회하며, 동일한 클러스터 규모에서 가상 머신을 48대 더 추가한 것입니다. 연구팀은 이 결과를 레퍼런스 아키텍처에 기록했으며, 해당 아키텍처에는 연구 결과가 자세히 설명되어 있습니다 <RA 링크>. 이 블로그에서는 해당 연구와 결과를 요약하여 소개합니다.",
       "translation_provider": "DeepL"
@@ -6562,7 +7013,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "기업 주도의 이니셔티브를 통한 침체 지역 활성화의 경제학적 측면",
       "summary_ko": "태그: 첨단 패키징, AI 인프라, 균형 잡힌 지역 발전, P&T7, 패키지, 지역 활성화, 반도체 산업",
       "translation_provider": "DeepL"
@@ -6591,7 +7044,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "당사 대만 자회사에 대한 판결 관련 공지",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -6620,7 +7075,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "전력 효율성이 AI 시대의 클라이언트 성능을 가능하게 합니다",
       "summary_ko": "최고의 성능을 발휘하는 동시에 활성 대기 전력 소비를 대폭 줄이고 와트당 성능을 향상시킨 마이크론 3610은 엣지 AI 플랫폼이 직면한 핵심 과제, 즉 에너지 소비를 최소화하면서 높은 성능을 지속적으로 유지하는 문제를 해결합니다.",
       "translation_provider": "DeepL"
@@ -6648,7 +7105,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로, 2024 회계연도 일본 경제산업성(METI) ‘글로벌 사우스 미래 지향적 공동창조 프로젝트’에 선정",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -6676,7 +7135,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "“기술적 한계를 극복하려면 메모리와 로직의 통합이 필요하다”: SK하이닉스, TSMC 심포지엄에서 비전 제시",
       "summary_ko": "태그: HBM, HBM3E, HBM4, TSMC",
       "translation_provider": "DeepL"
@@ -6703,7 +7164,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, PC OEM 업체를 위한 새로운 주류형 KIOXIA BG8 시리즈 SSD 출시",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -6816,7 +7279,11 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "노광·마스크"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC, 2026년 북미 기술 심포지엄에서 A13 공정 기술 첫 공개",
       "summary_ko": "공식 출처: TSMC 언론센터",
       "translation_provider": "DeepL"
@@ -6842,7 +7309,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 2026년 1분기 실적 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -6868,7 +7337,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML, 2026년 정기주주총회 결과 발표",
       "summary_ko": "ASML 공식 보도자료",
       "translation_provider": "DeepL"
@@ -6902,7 +7373,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "P&T7은 청주에게 어떤 의미를 가질까? 새로운 AI 메모리 생산 거점이자 지역 경제의 원동력",
       "summary_ko": "태그: 첨단 패키징, AI 인프라, AI 메모리, 균형 잡힌 지역 발전, P&T7, 지역 활성화",
       "translation_provider": "DeepL"
@@ -6928,7 +7401,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "램 리서치 코퍼레이션, 2026년 3월 29일 종료된 분기 실적 발표",
       "summary_ko": "램 리서치 코퍼레이션(이하 “회사”, “램”, “램 리서치”)은 오늘 2026년 3월 29일로 종료된 분기(이하 “2026년 3월 분기”)의 재무 실적을 발표했습니다. 2026년 3월 분기의 주요 내용은 다음과 같습니다...",
       "translation_provider": "DeepL"
@@ -6955,7 +7430,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "키옥시아, PC OEM 업체를 위한 가성비 중심의 QLC 기반 ‘KIOXIA EG7’ 시리즈 SSD 공개",
       "summary_ko": "공식 분류: 보도자료",
       "translation_provider": "DeepL"
@@ -6983,7 +7460,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "4월 20일 일본 도호쿠에서 발생한 지진에 대한 대응",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -7009,7 +7488,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC, 1분기 주당순이익(EPS) 22.08 대만달러 기록",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -7035,7 +7516,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC, 2025년도 20-F 양식 연례 보고서 제출",
       "summary_ko": "공식 출처: TSMC 보도자료 센터",
       "translation_provider": "DeepL"
@@ -7061,7 +7544,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 인텔 코어 시리즈 3 프로세서 출시: 일상적인 컴퓨팅의 판도를 바꾸다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -7160,7 +7645,12 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "direct",
+      "process_evidence": [
+        "계측·검사·수율",
+        "검사·KGD 선별"
+      ],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, 신형 디바이스 프로버 ‘Prexa™ SDP’ 출시",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -7186,7 +7676,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "ASML, 2026년 1분기 총 순매출 88억 유로, 순이익 28억 유로 기록",
       "summary_ko": "ASML은 현재 2026년 총 순매출이 360억 유로에서 400억 유로 사이가 될 것으로 전망하며, 매출총이익률은 51%에서 53% 사이가 될 것으로 보고 있습니다.",
       "translation_provider": "DeepL"
@@ -7214,7 +7706,9 @@
         "기술·제품",
         "투자·생산"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "IO 크기가 QLC와 HDD의 경제성을 어떻게 변화시키는가",
       "summary_ko": "스토리지 성능과 비용은 일반적으로 $/TB 단위로 비교되지만, 워크로드의 IO 크기는 주어진 수준의 처리량을 달성하는 데 필요한 용량에 가장 큰 영향을 미칩니다.",
       "translation_provider": "DeepL"
@@ -7240,7 +7734,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 델 테크놀로지스, 노키아, ‘파 에지’에서 UPF 구축의 새로운 기준을 제시하다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 무선",
       "translation_provider": "DeepL"
@@ -7266,7 +7762,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "TSMC 2026년 3월 매출 보고서",
       "summary_ko": "공식 출처: TSMC 프레스 센터",
       "translation_provider": "DeepL"
@@ -7292,7 +7790,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 구글, AI 인프라 발전을 위해 협력 강화",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -7321,7 +7821,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "SK하이닉스, 321층 QLC NAND cSSD 공급 개시… AI PC 스토리지 분야 리더십 강화",
       "summary_ko": "태그: 321층 4D NAND, AI, NAND 플래시, PQC21, QLC",
       "translation_provider": "DeepL"
@@ -7347,7 +7849,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 삼바노바, 제온 6을 통해 에이전트 기반 AI 발전 이끌어",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -7375,7 +7879,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "대표이사 변경 공고",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -7403,7 +7909,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "도쿄 일렉트로닉, 프로 골퍼 타케다 리오와 후원 계약 체결",
       "summary_ko": "도쿄 일렉트론 공식 뉴스룸 기사",
       "translation_provider": "DeepL"
@@ -7429,7 +7937,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 아파르나 바와를 부사장 겸 최고법무·인사책임자로 임명",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -7455,7 +7965,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, MLPerf 추론 v6.0에서 개방적이고 확장 가능한 AI 성능 제공",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -7484,7 +7996,9 @@
         "투자·생산",
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 아일랜드 반도체 공장 합작사의 지분 49%를 재매입할 예정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -7510,7 +8024,9 @@
       "signal_types": [
         "경영·실적"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 2026년 1분기 실적 발표 예정",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -7536,7 +8052,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 포춘지가 선정한 ‘미국에서 가장 혁신적인 기업’ 중 하나로 꼽혀",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -7562,7 +8080,9 @@
       "signal_types": [
         "협업·공급망"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔과 크라우드스트라이크, 기업들이 AI를 안전하게 도입할 수 있도록 협력 범위 확대",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 인공지능(AI)",
       "translation_provider": "DeepL"
@@ -7588,7 +8108,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "보도 자료: 인텔 프로 데이 2026",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -7617,7 +8139,9 @@
       "signal_types": [
         "기술·제품"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔 vPro를 탑재한 인텔 코어 울트라 시리즈 3, 인텔 18A 기반 차세대 상업용 PC에 힘을 실어주다",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"
@@ -7643,7 +8167,9 @@
       "signal_types": [
         "행사·인재"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 2026년 EPIC 공급업체 상 수상자 발표",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 기업 정보",
       "translation_provider": "DeepL"
@@ -7669,7 +8195,9 @@
       "signal_types": [
         "기업·산업 일반"
       ],
-      "classification_version": "job_tech_taxonomy_v3",
+      "process_fit": "background",
+      "process_evidence": [],
+      "classification_version": "job_tech_taxonomy_v4",
       "title_ko": "인텔, 새로운 코어 울트라 200HX 플러스 시리즈 모바일 프로세서 출시",
       "summary_ko": "인텔 공식 뉴스룸 카테고리: 클라이언트 컴퓨팅",
       "translation_provider": "DeepL"

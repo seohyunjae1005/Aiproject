@@ -12,6 +12,7 @@ const state = {
   trendDays: "30",
   trendSummary: null,
   monthlyTrendReport: null,
+  processFocus: false,
 };
 
 const grid = document.querySelector("#article-grid");
@@ -63,6 +64,7 @@ function visibleArticles() {
       ...(article.tech_domains || []),
       ...(article.job_roles || []),
       ...(article.signal_types || []),
+      ...(article.process_evidence || []),
     ].join(" ").toLocaleLowerCase("ko");
 
     return (state.company === "all" || article.company === state.company)
@@ -70,8 +72,15 @@ function visibleArticles() {
       && includesValue(article.job_roles, state.job)
       && includesValue(article.tech_domains, state.domain)
       && includesValue(article.signal_types, state.signal)
+      && (!state.processFocus || ["direct", "indirect"].includes(article.process_fit))
       && withinDays(article.published_at, state.days)
       && (!query || searchable.includes(query));
+  }).sort((left, right) => {
+    if (!state.processFocus) return 0;
+    const rank = { direct: 0, indirect: 1, background: 2 };
+    const fitDifference = (rank[left.process_fit] ?? 2) - (rank[right.process_fit] ?? 2);
+    if (fitDifference !== 0) return fitDifference;
+    return new Date(right.published_at).getTime() - new Date(left.published_at).getTime();
   });
 }
 
@@ -241,6 +250,7 @@ function bindProcessFocusButton() {
     state.job = "공정기술·양산기술";
     state.days = "30";
     state.query = "";
+    state.processFocus = true;
     document.querySelector("#search").value = "";
     document.querySelector("#job-filter").value = state.job;
     document.querySelector("#days-filter").value = state.days;
@@ -250,9 +260,47 @@ function bindProcessFocusButton() {
     document.querySelectorAll("#importance-filters button").forEach((button) => {
       button.classList.toggle("active", button.dataset.relevance === "high");
     });
+    updateProcessFocusButton();
     render();
     document.querySelector("#result-line").scrollIntoView({ behavior: "smooth", block: "start" });
   });
+}
+
+function updateProcessFocusButton() {
+  const button = document.querySelector("#process-only-toggle");
+  button.classList.toggle("active", state.processFocus);
+  button.setAttribute("aria-pressed", String(state.processFocus));
+  button.textContent = state.processFocus ? "집중 보기 해제" : "공정·양산 집중 보기";
+}
+
+function bindProcessOnlyToggle() {
+  document.querySelector("#process-only-toggle").addEventListener("click", () => {
+    state.processFocus = !state.processFocus;
+    updateProcessFocusButton();
+    render();
+  });
+}
+
+function processFitLabel(value) {
+  return {
+    direct: "공정 직접 관련",
+    indirect: "공정 간접 관련",
+    background: "산업 배경 동향",
+  }[value] || "산업 배경 동향";
+}
+
+function renderProcessFit(article) {
+  const fit = article.process_fit || "background";
+  const evidence = article.process_evidence || [];
+  const description = evidence.length
+    ? `판단 근거: ${evidence.slice(0, 4).join(" · ")}`
+    : "공정·양산 직접 근거 없음. 산업 흐름을 이해하는 참고 자료입니다.";
+  return `
+    <div class="process-fit-panel ${escapeHtml(fit)}">
+      <span class="badge process-fit ${escapeHtml(fit)}">${processFitLabel(fit)}</span>
+      <span class="process-fit-copy">${escapeHtml(description)}</span>
+    </div>
+  `;
 }
 
 function renderAiAnalysis(item) {
@@ -314,7 +362,9 @@ function renderAiAnalysis(item) {
 
 function render() {
   const rows = visibleArticles();
-  resultLine.textContent = `${rows.length}개의 기술 신호를 표시합니다.`;
+  resultLine.textContent = state.processFocus
+    ? `공정·양산 관련 기술 신호 ${rows.length}개를 직접 관련 순으로 표시합니다.`
+    : `${rows.length}개의 기술 신호를 표시합니다.`;
   empty.hidden = rows.length !== 0;
   grid.innerHTML = rows.map((article) => {
     const showKorean = state.language === "ko" && article.title_ko;
@@ -337,6 +387,7 @@ function render() {
         ${badgeList(article.tech_domains, "domain")}
         ${badgeList(article.signal_types, "signal", 2)}
       </div>
+      ${renderProcessFit(article)}
       <div class="keywords" aria-label="분류 근거">
         ${((article.matched_keywords || []).length
           ? article.matched_keywords
@@ -429,6 +480,7 @@ function bindFilters() {
     state.signal = "all";
     state.days = "all";
     state.query = "";
+    state.processFocus = false;
     document.querySelector("#search").value = "";
     document.querySelectorAll("#company-filters button").forEach((button) => {
       button.classList.toggle("active", button.dataset.company === "all");
@@ -439,6 +491,7 @@ function bindFilters() {
     ["#job-filter", "#domain-filter", "#signal-filter", "#days-filter"].forEach((selector) => {
       document.querySelector(selector).value = "all";
     });
+    updateProcessFocusButton();
     render();
   });
 }
@@ -489,4 +542,6 @@ bindFilters();
 bindTrendPeriodTabs();
 bindCompanyProfiles();
 bindProcessFocusButton();
+bindProcessOnlyToggle();
+updateProcessFocusButton();
 loadData();
