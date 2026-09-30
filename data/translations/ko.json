@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-29T22:01:50.255349+00:00",
+  "updated_at": "2026-09-30T22:02:43.699576+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1539,6 +1539,18 @@
       "summary_ko": "공식 분류: 반도체",
       "source_fingerprint": "82707c5fb17e0b2b629338cced6f0b008ea23e2d0eb8fbf3895a07cba91b31ba",
       "translated_at": "2026-09-29T22:01:50.255324+00:00"
+    },
+    "https://news.skhynix.com/en/ai-infrastructure-insight-ep3/": {
+      "title_ko": "[AI 인프라 인사이트] 전력 및 냉각이 AI 데이터 센터의 차기 과제가 된 이유",
+      "summary_ko": "태그: AI, AI 데이터 센터, AI 인프라",
+      "source_fingerprint": "7cd2cf1c276fe7a43e957b937a0ac12c6baa427aa643d55fadbd13b1f8c3b16a",
+      "translated_at": "2026-09-30T22:02:43.699545+00:00"
+    },
+    "https://newsroom.lamresearch.com/2026-09-30-Lam-Research-Corporation-Announces-September-Quarter-Financial-Conference-Call": {
+      "title_ko": "램 리서치 코퍼레이션, 9월 분기 실적 설명회 개최 발표",
+      "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 2026년 10월 21일 수요일 오후 2시(태평양 표준시)부터 분기별 재무 컨퍼런스 콜 및 웹캐스트를 개최할 것이라고 발표했습니다...",
+      "source_fingerprint": "aac48fb09d937c048176cf2285a59957b38f60557d6bb84aef02be0ab671bc6a",
+      "translated_at": "2026-09-30T22:02:43.699545+00:00"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "validated_analysis_cache_v1",
-  "updated_at": "2026-09-28T22:03:44.863157+00:00",
+  "updated_at": "2026-09-30T22:05:10.628457+00:00",
   "review_notice": "Machine-validated draft cache. Human approval is required before publication.",
   "company_count": 11,
   "companies": {
@@ -360,10 +360,10 @@
     },
     "ASML": {
       "company": "ASML",
-      "title": "Intel Foundry and ASML Collaborate to Accelerate Industry Readiness for High-NA EUV",
-      "url": "https://www.asml.com/en/news/press-releases/2026/intel-foundry-and-asml-collaborate-to-accelerate-industry-readiness-for-high-na-euv",
+      "title": "The machines behind the machines",
+      "url": "https://www.asml.com/en/company/stories/2026/machines-behind-machines",
       "model": "gemini-3.5-flash-lite",
-      "generated_at": "2026-09-15T05:41:03.780803+00:00",
+      "generated_at": "2026-09-30T22:05:05.689497+00:00",
       "analysis_version": "semiconductor_job_analysis_v1",
       "extraction_method": "filtered_html_blocks",
       "source_scope": "official_article_body",
@@ -373,86 +373,78 @@
       "normalization_notes": [],
       "analysis": {
         "analysis_version": "semiconductor_job_analysis_v1",
-        "summary_ko": "Intel Foundry와 ASML은 High-NA EUV 노광 기술의 양산 적용 및 생태계 확대를 위한 협력을 강조하며, 100만 장 이상의 웨이퍼 처리 실적과 6인치 마스크 기반 스티칭 기술 진척 상황을 공유했습니다.",
+        "summary_ko": "ASML은 인공지능(AI) 기술을 자사 제품과 운영 전반에 통합하여 설계 주기 단축, 시스템 성능 향상, 결함 검출 개선, 서비스 시간 단축을 추진하고 있으며, 특히 Mistral AI와의 파트너십을 통해 광 근접 보정(OPC), EUV 광원 최적화, 전자빔 검사 처리량 향상 등 반도체 제조 공정 전반의 효율성을 높이고 있습니다.",
         "facts": [
           {
-            "statement_ko": "Intel Foundry는 High-NA EUV를 사용하여 지금까지 100만 장 이상의 웨이퍼를 처리했습니다.",
-            "evidence_en": "more than one million wafers processed to date"
+            "statement_ko": "ASML은 Mistral AI와의 파트너십을 통해 광 근접 보정(OPC)에서 레시피 품질을 개선하고 솔루션 도출 시간을 단축하고 있으며, 2026년 1월에 첫 번째 생성형 AI 기능에 대한 초기 검증을 완료했습니다.",
+            "evidence_en": "In January 2026, we completed early validation of our first generative AI capability with a customer."
           },
           {
-            "statement_ko": "Intel 18A 공정의 특정 레이어에 High-NA를 적용해 제조된 제품은 NXE 플랫폼과 동등하거나 그 이상의 성능을 보여줍니다.",
-            "evidence_en": "Products manufactured on Intel 18A using High NA for select layers continue to deliver performance that meets or exceeds comparable layers"
+            "statement_ko": "AI는 EUV 소스 설정을 최적화하고 교정하는 데 도움을 주어 수동 시행착오를 줄이고, 고객사 EUV 스캐너에서 웨이퍼 레벨 전력 이득 증가를 이끌어냈습니다.",
+            "evidence_en": "Early tests have delivered increased wafer-level power gain in EUV scanners at a customer."
           },
           {
-            "statement_ko": "고객은 6인치 마스크 내 플로어플래닝이나 Intel Foundry의 스티칭 기능 및 PDK 솔루션을 통해 High-NA의 이점을 누릴 수 있습니다.",
-            "evidence_en": "by floor-planning within the 6-inch mask or by utilizing Intel Foundry’s stitching capabilities and process design kit (PDK) solutions"
+            "statement_ko": "Mistral AI와의 초기 파일럿에서 AI 기반 진단은 엔지니어의 정확도를 유지하면서 특정 서브시스템 오류를 70% 이상 더 빠르게 식별했습니다.",
+            "evidence_en": "AI-driven diagnostics have identified certain sub-system errors more than 70% faster while matching engineers’ accuracy."
           }
         ],
         "technology_signals": [
-          "고개구수(High-NA) EUV",
-          "스티칭",
-          "공정설계키트(PDK)",
-          "Intel 18A"
+          "AI-integrated holistic lithography and metrology systems",
+          "Generative AI for optical proximity correction (OPC)",
+          "AI-optimized EUV light source calibration",
+          "AI-driven e-beam metrology and inspection throughput enhancement",
+          "AI-powered error diagnostics and service log analysis"
         ],
         "company_implications": [
           {
             "target_company": "Samsung Electronics",
-            "inference_ko": "파운드리 및 로직 반도체 선단 공정에서 High-NA EUV 도입 시기 및 6인치 마스크 활용·스티칭 기술 적용 검토가 가속화될 수 있습니다.",
-            "basis_ko": "경쟁사인 Intel이 High-NA를 양산에 적용하고 100만 장 이상의 처리 실적을 공개함에 따라 기술 추격 압박이 커지기 때문입니다.",
+            "inference_ko": "ASML의 AI 기반 EUV 소스 최적화 및 OPC 솔루션을 도입함으로써 첨단 노드에서 웨이퍼 생산성과 수율 안정성을 더욱 높일 수 있을 것입니다.",
+            "basis_ko": "ASML이 EUV 스캐너의 웨이퍼 레벨 전력 이득과 OPC 레시피 품질 개선을 검증했기 때문입니다.",
             "confidence": "high"
           },
           {
             "target_company": "SK hynix",
-            "inference_ko": "향후 D램 메모리 미세공정 전환 과정에서 High-NA EUV 도입을 위한 장비 확보 및 패키징·마스크 생태계 동향을 주시하게 될 것입니다.",
-            "basis_ko": "메모리 반도체 역시 향후 선단 노드에서 High-NA EUV 도입이 필수적이며, 관련 인프라 표준화가 진행되고 있기 때문입니다.",
+            "inference_ko": "EUV 공정과 e-beam 검사 장비의 가동률 및 처리량(throughput) 향상을 통해 메모리 반도체 양산 효율성을 극대화할 수 있습니다.",
+            "basis_ko": "기사에서 AI를 통해 e-beam 검사 및 측정 시스템의 처리량을 유지하면서 정확도를 높였다고 언급했기 때문입니다.",
             "confidence": "medium"
           }
         ],
         "role_insights": [
           {
             "role": "공정기술·양산기술",
-            "why_relevant_ko": "High-NA EUV 장비를 실제 양산 라인에 적용하고 수율과 생산성을 확보해야 하므로 직접적인 연관성이 있습니다.",
+            "why_relevant_ko": "ASML 장비의 AI 도입으로 인해 팹 내에서 EUV 스캐너 설정, OPC 적용, 결함 검사 프로세스의 최적화가 진행되기 때문입니다.",
             "considerations_ko": [
-              "오버레이, 처리량(Throughput), 가동률(Availability) 관리 방안"
+              "장비 제조사의 AI 기반 기능 업데이트가 실제 팹 양산 수율에 미치는 영향 파악"
             ],
             "study_points_ko": [
-              "노광 공정의 오버레이 3대 요소 및 수율 개선 기법"
-            ]
-          },
-          {
-            "role": "R&D공정·공정설계",
-            "why_relevant_ko": "High-NA EUV 노광을 활용한 패터닝 공정과 스티칭, PDK(공정설계키트) 연계 설계를 수행해야 합니다.",
-            "considerations_ko": [
-              "6인치 마스크 활용 및 스티칭 적용 시 디자인 룰 제약 사항"
-            ],
-            "study_points_ko": [
-              "High-NA EUV 도입에 따른 0.55 NA 광학계 특성과 스티칭 원리"
+              "광 근접 보정(OPC) 원리 및 반도체 노광 공정의 수율 관리 지표"
             ]
           },
           {
             "role": "설비기술·기반기술",
-            "why_relevant_ko": "EXE 시스템 등 차세대 고개구수 노광 장비의 설치, 툴 퀄리피케이션, 가용성 유지 관리가 필수적입니다.",
+            "why_relevant_ko": "EUV 광원 최적화 및 시스템 가동 중단 시간(downtime) 단축을 위한 AI 진단 솔루션이 도입되고 있기 때문입니다.",
             "considerations_ko": [
-              "신규 장비 도입 초기 안정화 및 유지보수 프로세스"
+              "장비 로그 데이터와 AI 진단 툴을 연계한 예방 유지보수(PM) 역량 강화"
             ],
             "study_points_ko": [
-              "EUV 스캐너 장비 구조 및 펠리클, 광원 기술의 이해"
+              "EUV 리소그래피 시스템 구조 및 장비 트러블슈팅 방법론"
             ]
           },
           {
-            "role": "소자",
-            "why_relevant_ko": "Intel 18A와 같은 선단 노드에서 High-NA 패턴 적용에 따른 트랜지스터 및 소자 특성 검증이 필요합니다.",
+            "role": "평가분석·품질·PE",
+            "why_relevant_ko": "e-beam 검사 및 계측 시스템에서 AI를 통한 이미지 품질 향상과 처리량 최적화가 이루어지기 때문입니다.",
             "considerations_ko": [
-              "NXE 플랫폼(0.33 NA) 대비 소자 성능 및 신뢰성 비교"
+              "결함 검출(defect detection) 공정에서 검사 속도와 정확도의 트레이드오프 극복 방안"
             ],
             "study_points_ko": [
-              "선단 로직 소자 구조 및 EUV 패터닝이 전기적 특성에 미치는 영향"
+              "전자빔(e-beam) 기반 검사·계측 장비의 동작 원리 및 데이터 분석 기법"
             ]
           }
         ],
         "uncertainties_ko": [
-          "High-NA EUV 장비의 구체적인 수율 수치나 경제성 분석 결과",
-          "6x12인치 대형 마스크 포맷의 상용화 구체적 일정"
+          "고객사에 도입된 AI 기능의 구체적인 명칭 및 상용화 일정",
+          "Mistral AI와의 파트너십을 통해 개발된 모델의 상세 아키텍처 및 하드웨어 연동 방식",
+          "웨이퍼 레벨 전력 이득 증가의 정량적 수치 및 범용 적용 여부"
         ],
         "overall_confidence": "high"
       }
