@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --bg: #fafaf8;
+  --bg: #ffffff;
   --surface: #ffffff;
   --surface-2: #f1f3ed;
   --line: #e2e5dd;
@@ -120,7 +120,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .trend-metrics strong { color: var(--accent); font-size: 1.45rem; }
 .trend-metrics span { margin-left: 0.5rem; color: var(--muted); font-size: 0.78rem; }
 .trend-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1rem; }
-.trend-panel { padding: 1.15rem; border: 1px solid var(--line); border-radius: 0.35rem; background: #fcfcfa; }
+.trend-panel { padding: 1.15rem; border: 1px solid var(--line); border-radius: 0.35rem; background: var(--surface); }
 .trend-panel h3, .momentum-panel h3 { margin: 0 0 0.8rem; font-size: 0.95rem; }
 .trend-panel ol, .momentum-panel ul { margin: 0; padding: 0; list-style: none; }
 .trend-panel li + li { margin-top: 0.7rem; }
@@ -165,7 +165,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .monthly-evidence summary { padding-top: 0.6rem; color: var(--muted); font-size: 0.7rem; cursor: pointer; }
 .monthly-evidence p, .monthly-evidence li { margin: 0.35rem 0; color: var(--muted); font-size: 0.68rem; }
 .monthly-evidence a { color: var(--accent-strong); }
-.company-trend-panel { margin-top: 0.8rem; padding: 1.15rem; border: 1px solid var(--line); border-radius: 0.35rem; background: #fcfcfa; }
+.company-trend-panel { margin-top: 0.8rem; padding: 1.15rem; border: 1px solid var(--line); border-radius: 0.35rem; background: var(--surface); }
 .company-trend-panel h3 { margin: 0; font-size: 0.95rem; }
 .company-trend-panel > div:first-child > p:last-child { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.76rem; }
 .company-profile-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.65rem; margin-top: 0.8rem; }
@@ -248,7 +248,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
   padding: 1rem;
   border: 1px solid var(--line);
   border-top: 0;
-  background: #f5f6f2;
+  background: var(--surface);
 }
 .filter-group { display: flex; align-items: center; gap: 0.8rem; }
 .filter-label, .select-grid label span {
@@ -331,7 +331,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
   margin-top: 0.8rem;
   padding: 0.62rem 0.7rem;
   border-left: 2px solid var(--line);
-  background: #f7f8f5;
+  background: var(--surface);
 }
 .process-fit-panel.direct { border-left-color: var(--accent); }
 .process-fit-panel.indirect { border-left-color: #909b84; }
@@ -344,7 +344,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .keyword { padding: 0.2rem 0.5rem; border: 1px solid var(--line-strong); color: #555d51; font-size: 0.75rem; }
 .source-link { align-self: flex-start; margin-top: 1rem; color: var(--accent); text-underline-offset: 0.25rem; }
 .source-link:hover { color: var(--accent-strong); }
-.ai-analysis { margin-top: 1rem; border: 1px solid var(--line-strong); background: #f8f9f6; }
+.ai-analysis { margin-top: 1rem; border: 1px solid var(--line-strong); background: var(--surface); }
 .ai-analysis > summary, .evidence-details > summary {
   padding: 0.7rem 0.85rem;
   color: var(--accent);
