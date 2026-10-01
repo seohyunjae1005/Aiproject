@@ -417,7 +417,7 @@ function render() {
         ).slice(0, 6).map((word) => `<span class="keyword">${escapeHtml(word)}</span>`).join("")}
       </div>
       ${renderAiAnalysis(article.ai_analysis)}
-      <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기 →</a>
+      <a class="source-link" href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">공식 원문 보기</a>
     </article>
   `;
   }).join("");
