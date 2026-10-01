@@ -318,7 +318,26 @@ function renderJdAnalysis(result) {
 
 function bindJdAnalyzer() {
   const dateInput = document.querySelector("#jd-collected-at");
+  const fileInput = document.querySelector("#jd-pdf-file");
+  const fileStatus = document.querySelector("#jd-file-status");
   dateInput.value = new Date().toISOString().slice(0, 10);
+  fileInput.addEventListener("change", async () => {
+    const file = fileInput.files?.[0];
+    if (!file) return;
+    fileStatus.className = "jd-file-status loading";
+    try {
+      const extracted = await window.JDPdfImport.extract(file, (message) => {
+        fileStatus.textContent = message;
+      });
+      document.querySelector("#jd-text").value = extracted.text;
+      fileStatus.className = "jd-file-status success";
+      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 자동 분석했습니다.`;
+      document.querySelector("#jd-form").requestSubmit();
+    } catch (error) {
+      fileStatus.className = "jd-file-status error";
+      fileStatus.textContent = error.message || "PDF에서 글자를 읽지 못했습니다.";
+    }
+  });
   document.querySelector("#jd-form").addEventListener("submit", (event) => {
     event.preventDefault();
     try {
@@ -334,6 +353,8 @@ function bindJdAnalyzer() {
   document.querySelector("#jd-reset").addEventListener("click", () => {
     document.querySelector("#jd-form").reset();
     dateInput.value = new Date().toISOString().slice(0, 10);
+    fileStatus.textContent = "";
+    fileStatus.className = "jd-file-status";
     document.querySelector("#jd-results").hidden = true;
   });
 }
