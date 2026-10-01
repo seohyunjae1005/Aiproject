@@ -233,10 +233,108 @@ function showChapter(chapter) {
   state.chapter = chapter;
   document.querySelector("#trend-chapter").hidden = chapter !== "trend";
   document.querySelector("#news-chapter").hidden = chapter !== "news";
+  document.querySelector("#jd-chapter").hidden = chapter !== "jd";
   document.querySelectorAll("button[data-chapter]").forEach((button) => {
     const active = button.dataset.chapter === chapter;
     button.classList.toggle("active", active);
     button.setAttribute("aria-selected", String(active));
+  });
+}
+
+function jdLevelLabel(value) {
+  return { required: "필수", preferred: "우대", duty: "담당 업무", unspecified: "구분 없음" }[value] || "구분 없음";
+}
+
+function jdStrengthLabel(value) {
+  return { strong: "공통 역량 2개 이상", partial: "공통 역량 1개", none: "경험 근거 없음" }[value] || "경험 근거 없음";
+}
+
+function jdCompetencyNames(ids) {
+  const lookup = new Map((window.JDAnalyzer?.TAXONOMY || []).map((row) => [row.id, row.name]));
+  return (ids || []).map((id) => lookup.get(id) || id);
+}
+
+function renderJdAnalysis(result) {
+  const results = document.querySelector("#jd-results");
+  const company = document.querySelector("#jd-company").value.trim();
+  const role = document.querySelector("#jd-role").value.trim();
+  const sourceType = document.querySelector("#jd-source-type").value;
+  const sourceLabels = {
+    official: "A · 기업 공식 채용공고",
+    platform: "B · 채용 플랫폼·대행사",
+    unknown: "C · 출처 미확인 복사본",
+  };
+  document.querySelector("#jd-result-title").textContent = [company, role].filter(Boolean).join(" · ") || "JD 분석 결과";
+  document.querySelector("#jd-source-grade").textContent = `${sourceLabels[sourceType]} · 사용자 선택`;
+  const collectedAt = document.querySelector("#jd-collected-at").value;
+  const sourceUrl = document.querySelector("#jd-source-url").value.trim();
+  document.querySelector("#jd-source-meta").textContent = [
+    collectedAt ? `원문 확인일 ${collectedAt}` : "원문 확인일 미입력",
+    sourceUrl ? `공고 주소 ${sourceUrl}` : "공고 주소 미입력",
+  ].join(" · ");
+  document.querySelector("#jd-limitations").innerHTML = result.limitations.length
+    ? `<strong>분석 범위 확인</strong><ul>${result.limitations.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
+    : "<strong>분석 범위 확인</strong><p>입력된 JD 원문과 경험만 사용했습니다.</p>";
+
+  document.querySelector("#jd-requirement-list").innerHTML = result.requirements.length
+    ? result.requirements.map((row) => `
+      <article class="jd-evidence-card">
+        <div><strong>${escapeHtml(row.id)}</strong><span class="jd-level ${escapeHtml(row.level)}">${jdLevelLabel(row.level)}</span>${row.quoteVerified ? '<span class="quote-ok">원문 확인</span>' : '<span class="quote-fail">검증 실패</span>'}</div>
+        <blockquote>${escapeHtml(row.text)}</blockquote>
+        <div class="jd-competencies">${jdCompetencyNames(row.competencies).map((name) => `<span>${escapeHtml(name)}</span>`).join("") || "<small>분류된 역량 없음</small>"}</div>
+      </article>
+    `).join("")
+    : '<p class="jd-empty-result">추출된 요구사항이 없습니다.</p>';
+
+  document.querySelector("#jd-match-list").innerHTML = result.matches.length
+    ? result.matches.map((row) => `
+      <article class="jd-match-card ${escapeHtml(row.strength)}">
+        <div class="jd-match-status"><strong>${escapeHtml(row.requirement.id)}</strong><span>${jdStrengthLabel(row.strength)} · 자동 해석</span></div>
+        <div class="jd-quote-pair">
+          <div><small>JD 원문</small><blockquote>${escapeHtml(row.requirement.text)}</blockquote></div>
+          <div><small>${row.experience ? `${escapeHtml(row.experience.id)} 사용자 입력` : "사용자 경험"}</small><blockquote>${row.experience ? escapeHtml(row.experience.text) : "현재 입력된 경험에서 연결 근거를 찾지 못했습니다."}</blockquote></div>
+        </div>
+        ${row.shared.length ? `<p>공통 분류: ${jdCompetencyNames(row.shared).map(escapeHtml).join(" · ")}</p>` : ""}
+      </article>
+    `).join("")
+    : '<p class="jd-empty-result">비교할 요구사항이 없습니다.</p>';
+
+  const maxFrequency = Math.max(...result.frequency.map((row) => row.count), 1);
+  document.querySelector("#jd-frequency-list").innerHTML = result.frequency.length
+    ? result.frequency.map((row) => `<div><span>${escapeHtml(row.name)}</span><i><b style="width:${Math.max(8, Math.round(row.count / maxFrequency * 100))}%"></b></i><strong>${row.count}문장</strong></div>`).join("")
+    : '<p class="jd-empty-result">집계할 역량이 없습니다.</p>';
+
+  document.querySelector("#jd-learning-list").innerHTML = result.learning.length
+    ? result.learning.map((row, index) => `
+      <article>
+        <span>${index + 1}</span>
+        <div><strong>${escapeHtml(row.competency)}</strong><p><b>근거 ${escapeHtml(row.requirementId)} · ${jdLevelLabel(row.level)}</b> “${escapeHtml(row.requirementText)}”</p><p><b>자동 학습 제안</b> ${escapeHtml(row.suggestion)}</p></div>
+      </article>
+    `).join("")
+    : '<p class="jd-empty-result">JD가 요구하지만 입력 경험에서 근거를 찾지 못한 역량이 없습니다. 입력 경험이 없거나 너무 짧다면 결과를 확정적으로 해석하지 마세요.</p>';
+  results.hidden = false;
+  results.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function bindJdAnalyzer() {
+  const dateInput = document.querySelector("#jd-collected-at");
+  dateInput.value = new Date().toISOString().slice(0, 10);
+  document.querySelector("#jd-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    try {
+      const result = window.JDAnalyzer.analyze({
+        jdText: document.querySelector("#jd-text").value,
+        experienceText: document.querySelector("#experience-text").value,
+      });
+      renderJdAnalysis(result);
+    } catch (error) {
+      window.alert(error.message || "분석 중 문제가 발생했습니다.");
+    }
+  });
+  document.querySelector("#jd-reset").addEventListener("click", () => {
+    document.querySelector("#jd-form").reset();
+    dateInput.value = new Date().toISOString().slice(0, 10);
+    document.querySelector("#jd-results").hidden = true;
   });
 }
 
@@ -566,6 +664,7 @@ bindTrendPeriodTabs();
 bindCompanyProfiles();
 bindProcessFocusButton();
 bindProcessOnlyToggle();
+bindJdAnalyzer();
 updateProcessFocusButton();
 showChapter("trend");
 loadData();
