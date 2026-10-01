@@ -153,7 +153,7 @@
     if (requirements.length === 0) limitations.push("담당 업무·자격·우대 문장을 구분하지 못했습니다. 원문의 해당 부분을 줄바꿈하여 다시 붙여 넣어 주세요.");
     if (requirements.some((row) => row.level === "unspecified")) limitations.push("일부 문장에는 필수·우대 표시가 없어 ‘구분 없음’으로 유지했습니다.");
     if (/(모집\s*부문|직무별|각\s*부문)/.test(jdText)) limitations.push("여러 직무가 섞인 공고일 수 있습니다. 지원할 직무 부분만 남기면 결과가 더 명확해집니다.");
-    if (experiences.length === 0) limitations.push("사용자 경험이 입력되지 않아 경험 매칭과 부족 근거 판단은 제한됩니다.");
+    if (experiences.length === 0) limitations.push("내 프로필에 저장된 경험이 없어 경험 매칭과 부족 근거 판단은 제한됩니다.");
     return {
       requirements,
       experiences,

@@ -233,6 +233,7 @@ function showChapter(chapter) {
   state.chapter = chapter;
   document.querySelector("#trend-chapter").hidden = chapter !== "trend";
   document.querySelector("#news-chapter").hidden = chapter !== "news";
+  document.querySelector("#profile-chapter").hidden = chapter !== "profile";
   document.querySelector("#jd-chapter").hidden = chapter !== "jd";
   document.querySelectorAll("button[data-chapter]").forEach((button) => {
     const active = button.dataset.chapter === chapter;
@@ -274,7 +275,7 @@ function renderJdAnalysis(result) {
   ].join(" · ");
   document.querySelector("#jd-limitations").innerHTML = result.limitations.length
     ? `<strong>분석 범위 확인</strong><ul>${result.limitations.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
-    : "<strong>분석 범위 확인</strong><p>입력된 JD 원문과 경험만 사용했습니다.</p>";
+    : "<strong>분석 범위 확인</strong><p>입력된 JD 원문과 저장된 프로필만 사용했습니다.</p>";
 
   document.querySelector("#jd-requirement-list").innerHTML = result.requirements.length
     ? result.requirements.map((row) => `
@@ -292,7 +293,7 @@ function renderJdAnalysis(result) {
         <div class="jd-match-status"><strong>${escapeHtml(row.requirement.id)}</strong><span>${jdStrengthLabel(row.strength)} · 자동 해석</span></div>
         <div class="jd-quote-pair">
           <div><small>JD 원문</small><blockquote>${escapeHtml(row.requirement.text)}</blockquote></div>
-          <div><small>${row.experience ? `${escapeHtml(row.experience.id)} 사용자 입력` : "사용자 경험"}</small><blockquote>${row.experience ? escapeHtml(row.experience.text) : "현재 입력된 경험에서 연결 근거를 찾지 못했습니다."}</blockquote></div>
+          <div><small>${row.experience ? `${escapeHtml(row.experience.id)} 내 프로필` : "저장된 내 프로필"}</small><blockquote>${row.experience ? escapeHtml(row.experience.text) : "저장된 프로필에서 연결 근거를 찾지 못했습니다."}</blockquote></div>
         </div>
         ${row.shared.length ? `<p>공통 분류: ${jdCompetencyNames(row.shared).map(escapeHtml).join(" · ")}</p>` : ""}
       </article>
@@ -311,9 +312,127 @@ function renderJdAnalysis(result) {
         <div><strong>${escapeHtml(row.competency)}</strong><p><b>근거 ${escapeHtml(row.requirementId)} · ${jdLevelLabel(row.level)}</b> “${escapeHtml(row.requirementText)}”</p><p><b>자동 학습 제안</b> ${escapeHtml(row.suggestion)}</p></div>
       </article>
     `).join("")
-    : '<p class="jd-empty-result">JD가 요구하지만 입력 경험에서 근거를 찾지 못한 역량이 없습니다. 입력 경험이 없거나 너무 짧다면 결과를 확정적으로 해석하지 마세요.</p>';
+    : '<p class="jd-empty-result">JD가 요구하지만 저장된 프로필에서 근거를 찾지 못한 역량이 없습니다. 프로필 경험이 없거나 너무 짧다면 결과를 확정적으로 해석하지 마세요.</p>';
   results.hidden = false;
   results.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function profileFromForm() {
+  return {
+    education: document.querySelector("#profile-education").value,
+    major: document.querySelector("#profile-major").value,
+    targetRoles: document.querySelector("#profile-target-roles").value,
+    skills: document.querySelector("#profile-skills").value,
+    certificates: document.querySelector("#profile-certificates").value,
+    experiences: document.querySelector("#profile-experiences").value,
+  };
+}
+
+function fillProfileForm(profile) {
+  document.querySelector("#profile-education").value = profile.education || "";
+  document.querySelector("#profile-major").value = profile.major || "";
+  document.querySelector("#profile-target-roles").value = profile.targetRoles || "";
+  document.querySelector("#profile-skills").value = profile.skills || "";
+  document.querySelector("#profile-certificates").value = profile.certificates || "";
+  document.querySelector("#profile-experiences").value = profile.experiences || "";
+}
+
+function refreshJdProfileLink() {
+  const profile = window.CareerProfile.load(window.localStorage);
+  const summary = window.CareerProfile.summary(profile);
+  const container = document.querySelector("#jd-profile-link");
+  const title = container.querySelector("strong");
+  const copy = container.querySelector("span");
+  const button = container.querySelector("button");
+  if (summary.ready) {
+    container.classList.add("ready");
+    title.textContent = `내 프로필 경험 ${summary.experienceCount}개 사용`;
+    copy.textContent = "이 기기에 저장된 경험과 JD 요구사항을 비교합니다.";
+    button.textContent = "프로필 수정";
+  } else {
+    container.classList.remove("ready");
+    title.textContent = "저장된 내 프로필 없음";
+    copy.textContent = "요구사항 분석은 가능하지만 경험 매칭은 제한됩니다.";
+    button.textContent = "내 프로필 작성";
+  }
+}
+
+function bindProfileForm() {
+  const form = document.querySelector("#profile-form");
+  const status = document.querySelector("#profile-save-status");
+  fillProfileForm(window.CareerProfile.load(window.localStorage));
+  refreshJdProfileLink();
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const profile = window.CareerProfile.save(profileFromForm(), window.localStorage);
+    const summary = window.CareerProfile.summary(profile);
+    status.className = "profile-save-status success";
+    status.textContent = `이 기기에 저장했습니다. 경험 ${summary.experienceCount}개를 JD 비교에 사용합니다.`;
+    refreshJdProfileLink();
+  });
+
+  document.querySelector("#profile-export").addEventListener("click", () => {
+    const profile = window.CareerProfile.normalize(profileFromForm());
+    const blob = new Blob([JSON.stringify({ version: 1, profile }, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `career-profile-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+    status.className = "profile-save-status success";
+    status.textContent = "현재 입력 내용을 백업 파일로 만들었습니다.";
+  });
+
+  document.querySelector("#profile-import").addEventListener("change", async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      const parsed = JSON.parse(await file.text());
+      const profile = window.CareerProfile.save(parsed.profile || parsed, window.localStorage);
+      fillProfileForm(profile);
+      refreshJdProfileLink();
+      status.className = "profile-save-status success";
+      status.textContent = "백업 파일을 불러와 이 기기에 저장했습니다.";
+    } catch (_error) {
+      status.className = "profile-save-status error";
+      status.textContent = "이 사이트에서 만든 프로필 백업 파일인지 확인해 주세요.";
+    }
+    event.target.value = "";
+  });
+
+  document.querySelector("#profile-delete").addEventListener("click", () => {
+    if (!window.confirm("이 기기에 저장한 취업 프로필을 모두 삭제할까요?")) return;
+    const profile = window.CareerProfile.clear(window.localStorage);
+    fillProfileForm(profile);
+    refreshJdProfileLink();
+    status.className = "profile-save-status";
+    status.textContent = "이 기기에 저장한 프로필을 삭제했습니다.";
+  });
+
+  document.querySelectorAll("[data-open-profile]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showChapter("profile");
+      document.querySelector("#profile-chapter").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function updateRoleMapping() {
+  const roleName = document.querySelector("#jd-role").value;
+  const mapping = window.RoleNormalizer.mapRole(roleName);
+  const container = document.querySelector("#jd-role-map");
+  container.hidden = !roleName.trim();
+  document.querySelector("#jd-role-category").textContent = mapping.category;
+}
+
+function showDetectedRoles(roles) {
+  const wrapper = document.querySelector("#jd-role-choice-wrap");
+  const select = document.querySelector("#jd-role-choice");
+  const uniqueRoles = Array.isArray(roles) ? roles : [];
+  wrapper.hidden = uniqueRoles.length < 2;
+  select.innerHTML = uniqueRoles.map((row) => `<option value="${escapeHtml(row.original)}">${escapeHtml(row.original)} · ${escapeHtml(row.category)}</option>`).join("");
 }
 
 function bindJdAnalyzer() {
@@ -330,9 +449,17 @@ function bindJdAnalyzer() {
         fileStatus.textContent = message;
       });
       document.querySelector("#jd-text").value = extracted.text;
+      const detected = window.RoleNormalizer.detect(extracted.text);
+      if (!document.querySelector("#jd-company").value.trim() && detected.company) {
+        document.querySelector("#jd-company").value = detected.company;
+      }
+      if (!document.querySelector("#jd-role").value.trim() && detected.role.original) {
+        document.querySelector("#jd-role").value = detected.role.original;
+      }
+      showDetectedRoles(detected.roles);
+      updateRoleMapping();
       fileStatus.className = "jd-file-status success";
-      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 자동 분석했습니다.`;
-      document.querySelector("#jd-form").requestSubmit();
+      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 회사명과 직무명을 확인한 뒤 분석을 시작하세요.`;
     } catch (error) {
       fileStatus.className = "jd-file-status error";
       fileStatus.textContent = error.message || "PDF에서 글자를 읽지 못했습니다.";
@@ -343,7 +470,7 @@ function bindJdAnalyzer() {
     try {
       const result = window.JDAnalyzer.analyze({
         jdText: document.querySelector("#jd-text").value,
-        experienceText: document.querySelector("#experience-text").value,
+        experienceText: window.CareerProfile.toExperienceText(window.CareerProfile.load(window.localStorage)),
       });
       renderJdAnalysis(result);
     } catch (error) {
@@ -356,6 +483,13 @@ function bindJdAnalyzer() {
     fileStatus.textContent = "";
     fileStatus.className = "jd-file-status";
     document.querySelector("#jd-results").hidden = true;
+    showDetectedRoles([]);
+    updateRoleMapping();
+  });
+  document.querySelector("#jd-role").addEventListener("input", updateRoleMapping);
+  document.querySelector("#jd-role-choice").addEventListener("change", (event) => {
+    document.querySelector("#jd-role").value = event.target.value;
+    updateRoleMapping();
   });
 }
 
@@ -685,6 +819,7 @@ bindTrendPeriodTabs();
 bindCompanyProfiles();
 bindProcessFocusButton();
 bindProcessOnlyToggle();
+bindProfileForm();
 bindJdAnalyzer();
 updateProcessFocusButton();
 showChapter("trend");

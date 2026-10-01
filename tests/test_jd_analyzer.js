@@ -35,7 +35,7 @@ const unspecified = analyzer.analyze({
 });
 assert.equal(unspecified.requirements[0].level, "unspecified");
 assert.equal(unspecified.limitations.some((value) => value.includes("구분 없음")), true);
-assert.equal(unspecified.limitations.some((value) => value.includes("사용자 경험")), true);
+assert.equal(unspecified.limitations.some((value) => value.includes("프로필")), true);
 
 const mixedRoles = analyzer.analyze({
   jdText: "모집 부문\n공정 엔지니어와 데이터 엔지니어 각 부문에서 분석 경험 보유자를 모집합니다.",
