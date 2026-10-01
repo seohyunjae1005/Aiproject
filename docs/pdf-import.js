@@ -4,8 +4,10 @@
   const PDFJS_VERSION = "5.4.624";
   const MODULE_URL = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${PDFJS_VERSION}/build/pdf.min.mjs`;
   const WORKER_URL = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${PDFJS_VERSION}/build/pdf.worker.min.mjs`;
+  const TESSERACT_URL = "https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/tesseract.esm.min.js";
   const MAX_BYTES = 20 * 1024 * 1024;
   const MAX_PAGES = 150;
+  const OCR_MAX_PAGES = 10;
 
   function textFromItems(items) {
     const lines = [];
@@ -55,14 +57,52 @@
       if (text) pages.push(`[${pageNumber}쪽]\n${text}`);
       page.cleanup();
     }
-    await pdf.destroy();
-    const fullText = pages.join("\n\n").trim();
+    let fullText = pages.join("\n\n").trim();
+    let mode = "embedded_text";
     if (fullText.replace(/\s/g, "").length < 80) {
-      throw new Error("글자를 거의 찾지 못했습니다. 이미지로 스캔한 PDF는 아직 지원하지 않습니다.");
+      if (pageCount > OCR_MAX_PAGES) {
+        throw new Error(`이미지형 PDF는 OCR 처리 시간이 길어 ${OCR_MAX_PAGES}쪽 이하만 지원합니다. 지원할 직무 페이지만 분리해 다시 넣어 주세요.`);
+      }
+      mode = "browser_ocr";
+      onProgress?.("선택 가능한 글자가 없어 이미지 OCR을 준비하고 있습니다. 처음에는 언어 파일을 내려받아 시간이 걸릴 수 있습니다.");
+      const { createWorker } = await import(TESSERACT_URL);
+      const worker = await createWorker(["kor", "eng"], 1, {
+        logger: (message) => {
+          if (message?.status === "recognizing text" && Number.isFinite(message.progress)) {
+            onProgress?.(`이미지 글자를 읽고 있습니다. ${Math.round(message.progress * 100)}%`);
+          }
+        },
+      });
+      const ocrPages = [];
+      try {
+        for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
+          onProgress?.(`${pageCount}쪽 중 ${pageNumber}쪽을 이미지 OCR로 읽고 있습니다.`);
+          const page = await pdf.getPage(pageNumber);
+          const viewport = page.getViewport({ scale: 1.8 });
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.ceil(viewport.width);
+          canvas.height = Math.ceil(viewport.height);
+          const context = canvas.getContext("2d", { alpha: false });
+          await page.render({ canvasContext: context, viewport }).promise;
+          const recognized = await worker.recognize(canvas);
+          const text = String(recognized?.data?.text || "").trim();
+          if (text) ocrPages.push(`[${pageNumber}쪽 OCR]\n${text}`);
+          page.cleanup();
+          canvas.width = 1;
+          canvas.height = 1;
+        }
+      } finally {
+        await worker.terminate();
+      }
+      fullText = ocrPages.join("\n\n").trim();
+      if (fullText.replace(/\s/g, "").length < 80) {
+        throw new Error("이미지 OCR을 시도했지만 글자를 충분히 읽지 못했습니다. 더 선명한 PDF나 지원할 직무 부분의 이미지를 사용해 주세요.");
+      }
     }
-    return { text: fullText, pages: pageCount, characters: fullText.length, fileName: file.name };
+    await pdf.destroy();
+    return { text: fullText, pages: pageCount, characters: fullText.length, fileName: file.name, mode };
   }
 
-  root.JDPdfImport = { PDFJS_VERSION, MAX_BYTES, MAX_PAGES, textFromItems, extract };
+  root.JDPdfImport = { PDFJS_VERSION, MAX_BYTES, MAX_PAGES, OCR_MAX_PAGES, textFromItems, extract };
   if (typeof module !== "undefined" && module.exports) module.exports = root.JDPdfImport;
 })(typeof window !== "undefined" ? window : globalThis);

@@ -277,59 +277,62 @@ function renderJdAnalysis(result) {
     ? `<strong>분석 범위 확인</strong><ul>${result.limitations.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
     : "<strong>분석 범위 확인</strong><p>입력된 JD 원문과 저장된 프로필만 사용했습니다.</p>";
 
+  document.querySelector("#jd-role-summary").innerHTML = `<span class="jd-interpretation-label">해석</span> ${escapeHtml(result.summary)}`;
+  document.querySelector("#jd-work-blocks").innerHTML = result.workBlocks.length
+    ? result.workBlocks.map((row) => `
+      <article><span>${escapeHtml(row.id)}</span><strong>${escapeHtml(row.title)}</strong><small>${jdCompetencyNames(row.competencyIds).map(escapeHtml).join(" · ") || "세부 분류 없음"}</small></article>
+    `).join("")
+    : '<p class="jd-empty-result">담당 업무 블록을 구분하지 못했습니다. 정리 미리보기에서 소제목과 글머리표를 확인해 주세요.</p>';
+
+  document.querySelector("#jd-top-strategies").innerHTML = result.topStrategies.length
+    ? result.topStrategies.map((row) => {
+      const match = result.matches.find((item) => item.requirement.id === row.requirementId || item.shared.includes(row.skillId));
+      return `
+        <article class="jd-strategy-card">
+          <header><span>TOP ${row.rank}</span><h4>${escapeHtml(row.name)}</h4></header>
+          <div class="jd-strategy-fact"><span class="jd-fact-label">사실 · ${escapeHtml(row.requirementId)}</span><blockquote>${escapeHtml(row.evidence)}</blockquote></div>
+          <dl>
+            <div><dt><span class="jd-interpretation-label">해석</span> 왜 중요한가</dt><dd>${escapeHtml(row.importance)}</dd></div>
+            <div><dt><span class="jd-interpretation-label">제안</span> 이력서 작성 방향</dt><dd>${escapeHtml(row.resume)}</dd></div>
+            <div><dt>내 프로필 연결</dt><dd>${match ? `<b>${escapeHtml(match.experience.id)}</b> ${escapeHtml(match.experience.text)}` : result.profileProvided ? "저장된 활동에서 이 역량과 직접 연결되는 근거를 찾지 못했습니다." : "프로필 없이도 위 JD 전략은 사용할 수 있습니다. 프로필을 작성하면 연결 활동을 추가로 표시합니다."}</dd></div>
+          </dl>
+        </article>`;
+    }).join("")
+    : '<p class="jd-empty-result">이력서 전략을 만들 수 있는 반도체 세부 역량을 찾지 못했습니다.</p>';
+
+  document.querySelector("#jd-feature-list").innerHTML = result.features.length
+    ? result.features.map((row) => `
+      <article><p><span class="jd-fact-label">사실 · ${escapeHtml(row.requirementId)}</span> ${escapeHtml(row.fact)}</p><p><span class="jd-interpretation-label">해석</span> ${escapeHtml(row.interpretation)}</p></article>
+    `).join("")
+    : '<p class="jd-empty-result">지원 자격·우대사항에서 반도체 전용 특징을 찾지 못했습니다.</p>';
+
+  document.querySelector("#jd-study-list").innerHTML = result.studyTopics.length
+    ? result.studyTopics.map((row) => `
+      <article><strong>${escapeHtml(row.title)}</strong><p>${escapeHtml(row.topic)}</p><small>근거 연결: ${escapeHtml(row.basedOn)}</small></article>
+    `).join("")
+    : '<p class="jd-empty-result">담당 업무에서 구체적인 학습 주제를 만들지 못했습니다.</p>';
+
+  document.querySelector("#jd-question-list").innerHTML = result.suggestedQuestions.length
+    ? result.suggestedQuestions.map((row) => `
+      <article class="jd-question-card">
+        <div><strong>${escapeHtml(row.id)}</strong><span>${escapeHtml(row.label)}</span></div>
+        <h4>${escapeHtml(row.question)}</h4>
+        <p><b>JD 근거</b> ${escapeHtml(row.requirementId)}</p>
+        <p><b>프로필 활용 후보</b> ${row.experience ? `${escapeHtml(row.experience.id)} “${escapeHtml(row.experience.text)}”` : "현재 저장된 경험에서 직접 연결할 근거를 찾지 못했습니다."}</p>
+      </article>
+    `).join("")
+    : '<p class="jd-empty-result">JD 요구사항이 추출되면 근거가 연결된 추천 문항을 표시합니다.</p>';
+
   document.querySelector("#jd-requirement-list").innerHTML = result.requirements.length
     ? result.requirements.map((row) => `
       <article class="jd-evidence-card">
         <div><strong>${escapeHtml(row.id)}</strong><span class="jd-level ${escapeHtml(row.level)}">${jdLevelLabel(row.level)}</span>${row.quoteVerified ? '<span class="quote-ok">원문 확인</span>' : '<span class="quote-fail">검증 실패</span>'}</div>
         <blockquote>${escapeHtml(row.text)}</blockquote>
-        <div class="jd-competencies">${jdCompetencyNames(row.competencies).map((name) => `<span>${escapeHtml(name)}</span>`).join("") || "<small>분류된 역량 없음</small>"}</div>
+        <div class="jd-competencies">${jdCompetencyNames(row.competencies).map((name) => `<span>${escapeHtml(name)}</span>`).join("") || "<small>분류 없음</small>"}</div>
+        <p class="jd-classification-reason">${escapeHtml(row.classificationReason)}</p>
       </article>
     `).join("")
-    : '<p class="jd-empty-result">추출된 요구사항이 없습니다.</p>';
-
-  document.querySelector("#jd-match-list").innerHTML = result.matches.length
-    ? result.matches.map((row) => `
-      <article class="jd-match-card ${escapeHtml(row.strength)}">
-        <div class="jd-match-status"><strong>${escapeHtml(row.requirement.id)}</strong><span>${jdStrengthLabel(row.strength)} · 자동 해석</span></div>
-        <div class="jd-quote-pair">
-          <div><small>JD 원문</small><blockquote>${escapeHtml(row.requirement.text)}</blockquote></div>
-          <div><small>${row.experience ? `${escapeHtml(row.experience.id)} 내 프로필` : "저장된 내 프로필"}</small><blockquote>${row.experience ? escapeHtml(row.experience.text) : "저장된 프로필에서 연결 근거를 찾지 못했습니다."}</blockquote></div>
-        </div>
-        ${row.shared.length ? `<p>공통 분류: ${jdCompetencyNames(row.shared).map(escapeHtml).join(" · ")}</p>` : ""}
-      </article>
-    `).join("")
-    : result.profileProvided
-      ? '<p class="jd-empty-result">저장된 프로필에서 연결할 수 있는 경험 근거를 찾지 못했습니다.</p>'
-      : '<p class="jd-empty-result">JD 요구사항 분석은 정상 완료했습니다. 내 프로필을 작성하면 요구사항과 경험을 추가로 비교할 수 있습니다.</p>';
-
-  const maxFrequency = Math.max(...result.frequency.map((row) => row.count), 1);
-  document.querySelector("#jd-frequency-list").innerHTML = result.frequency.length
-    ? result.frequency.map((row) => `<div><span>${escapeHtml(row.name)}</span><i><b style="width:${Math.max(8, Math.round(row.count / maxFrequency * 100))}%"></b></i><strong>${row.count}문장</strong></div>`).join("")
-    : '<p class="jd-empty-result">집계할 역량이 없습니다.</p>';
-
-  document.querySelector("#jd-learning-description").textContent = result.profileProvided
-    ? "JD 요구사항과 저장된 경험의 차이를 바탕으로 만든 자동 제안이며, 채용 필수 조건을 새로 만든 것이 아닙니다."
-    : "프로필 평가가 아니라 JD에 직접 등장한 역량을 기준으로 정리한 공부 주제입니다.";
-  document.querySelector("#jd-learning-list").innerHTML = result.learning.length
-    ? result.learning.map((row, index) => `
-      <article>
-        <span>${index + 1}</span>
-        <div><strong>${escapeHtml(row.competency)}</strong><p><b>근거 ${escapeHtml(row.requirementId)} · ${jdLevelLabel(row.level)}</b> “${escapeHtml(row.requirementText)}”</p><p><b>${row.mode === "jd_only" ? "JD 기반 공부 제안" : "프로필 비교 기반 제안"}</b> ${escapeHtml(row.suggestion)}</p></div>
-      </article>
-    `).join("")
-    : result.profileProvided
-      ? '<p class="jd-empty-result">JD와 저장된 프로필의 차이에서 별도의 학습 주제를 만들지 못했습니다.</p>'
-      : '<p class="jd-empty-result">JD 요구사항이 추출되면 프로필 평가와 분리된 공부 주제를 표시합니다.</p>';
-  document.querySelector("#jd-question-list").innerHTML = result.suggestedQuestions.length
-    ? result.suggestedQuestions.map((row) => `
-      <article class="jd-question-card">
-        <div><strong>${escapeHtml(row.id)}</strong><span>${escapeHtml(row.competency)} · JD 기반 추천</span></div>
-        <h4>${escapeHtml(row.question)}</h4>
-        <p><b>JD 근거</b> ${row.requirementIds.map(escapeHtml).join(" · ")}</p>
-        <p><b>프로필 활용 후보</b> ${row.experience ? `${escapeHtml(row.experience.id)} “${escapeHtml(row.experience.text)}”` : "현재 저장된 경험에서 직접 연결할 근거를 찾지 못했습니다."}</p>
-      </article>
-    `).join("")
-    : '<p class="jd-empty-result">JD 요구사항이 추출되면 근거가 연결된 추천 문항을 표시합니다.</p>';
+    : '<p class="jd-empty-result">추출된 의미 단위가 없습니다.</p>';
   results.hidden = false;
   results.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -452,6 +455,20 @@ function showDetectedRoles(roles) {
   select.innerHTML = uniqueRoles.map((row) => `<option value="${escapeHtml(row.original)}">${escapeHtml(row.original)} · ${escapeHtml(row.category)}</option>`).join("");
 }
 
+function renderJdSourcePreview() {
+  const rawText = document.querySelector("#jd-text").value;
+  const preview = window.JDAnalyzer.previewSource(rawText);
+  const panel = document.querySelector("#jd-clean-preview");
+  document.querySelector("#jd-cleaned-text").value = preview.cleanedText;
+  document.querySelector("#jd-preview-count").textContent = `소제목 ${preview.headingCount}개 · 의미 단위 ${preview.semanticUnitCount}개`;
+  document.querySelector("#jd-ocr-warnings").innerHTML = preview.warnings.length
+    ? `<strong>OCR 확인 필요</strong><ul>${preview.warnings.map((warning) => `<li>${escapeHtml(warning)}</li>`).join("")}</ul>`
+    : "<span>뚜렷한 OCR 오류 신호는 찾지 못했습니다. 그래도 회사명·직무명·공정명은 원본과 대조하세요.</span>";
+  panel.hidden = false;
+  document.querySelector("#jd-analyze-button").hidden = false;
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function bindJdAnalyzer() {
   const dateInput = document.querySelector("#jd-collected-at");
   const fileInput = document.querySelector("#jd-pdf-file");
@@ -476,7 +493,9 @@ function bindJdAnalyzer() {
       showDetectedRoles(detected.roles);
       updateRoleMapping();
       fileStatus.className = "jd-file-status success";
-      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 회사명과 직무명을 확인한 뒤 분석을 시작하세요.`;
+      const extractionMode = extracted.mode === "browser_ocr" ? "이미지 OCR" : "PDF 내장 글자";
+      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extractionMode}로 ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 정리 미리보기에서 OCR 오류와 의미 단위를 확인하세요.`;
+      renderJdSourcePreview();
     } catch (error) {
       fileStatus.className = "jd-file-status error";
       fileStatus.textContent = error.message || "PDF에서 글자를 읽지 못했습니다.";
@@ -485,8 +504,12 @@ function bindJdAnalyzer() {
   document.querySelector("#jd-form").addEventListener("submit", (event) => {
     event.preventDefault();
     try {
+      if (document.querySelector("#jd-clean-preview").hidden) {
+        renderJdSourcePreview();
+        return;
+      }
       const result = window.JDAnalyzer.analyze({
-        jdText: document.querySelector("#jd-text").value,
+        jdText: document.querySelector("#jd-cleaned-text").value,
         experienceText: window.CareerProfile.toExperienceText(window.CareerProfile.load(window.localStorage)),
         roleName: document.querySelector("#jd-role").value,
       });
@@ -495,12 +518,27 @@ function bindJdAnalyzer() {
       window.alert(error.message || "분석 중 문제가 발생했습니다.");
     }
   });
+  document.querySelector("#jd-preview-button").addEventListener("click", () => {
+    try {
+      renderJdSourcePreview();
+    } catch (error) {
+      window.alert(error.message || "원문을 정리하지 못했습니다.");
+    }
+  });
+  document.querySelector("#jd-text").addEventListener("input", () => {
+    document.querySelector("#jd-clean-preview").hidden = true;
+    document.querySelector("#jd-analyze-button").hidden = true;
+    document.querySelector("#jd-results").hidden = true;
+  });
   document.querySelector("#jd-reset").addEventListener("click", () => {
     document.querySelector("#jd-form").reset();
     dateInput.value = new Date().toISOString().slice(0, 10);
     fileStatus.textContent = "";
     fileStatus.className = "jd-file-status";
     document.querySelector("#jd-results").hidden = true;
+    document.querySelector("#jd-clean-preview").hidden = true;
+    document.querySelector("#jd-analyze-button").hidden = true;
+    document.querySelector("#jd-cleaned-text").value = "";
     showDetectedRoles([]);
     updateRoleMapping();
   });

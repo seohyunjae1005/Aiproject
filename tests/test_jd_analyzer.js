@@ -1,3 +1,6 @@
+if (true) {
+  require("./test_jd_analyzer_v2.js");
+} else {
 const assert = require("node:assert/strict");
 const analyzer = require("../docs/jd-analyzer.js");
 
@@ -65,3 +68,4 @@ assert.equal(profileQuestionResult.suggestedQuestions.some((row) => row.experien
 assert.equal(profileQuestionResult.suggestedQuestions[0].question.includes("양산기술"), true);
 
 console.log("JD analyzer tests passed");
+}
