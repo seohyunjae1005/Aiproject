@@ -272,7 +272,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-section-title > span { display: grid; flex: 0 0 1.55rem; height: 1.55rem; place-items: center; border-radius: 50%; background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 800; }
 .jd-section-title h3 { margin: 0; font-size: 1rem; }
 .jd-section-title p { margin: 0.18rem 0 0; color: var(--muted); font-size: 0.75rem; }
-.jd-requirement-list, .jd-match-list, .jd-learning-list { display: grid; gap: 0.65rem; }
+.jd-requirement-list, .jd-match-list, .jd-learning-list, .jd-question-list { display: grid; gap: 0.65rem; }
 .jd-evidence-card, .jd-match-card { padding: 0.85rem; border: 1px solid var(--line); background: var(--surface); }
 .jd-evidence-card > div:first-child { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
 .jd-evidence-card > div:first-child > strong { color: var(--accent); }
@@ -302,6 +302,12 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-learning-list article strong { font-size: 0.82rem; }
 .jd-learning-list article p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.72rem; }
 .jd-learning-list article p b { color: var(--text); }
+.jd-question-card { padding: 0.9rem; border: 1px solid var(--line); background: var(--surface); }
+.jd-question-card > div { display: flex; gap: 0.45rem; align-items: center; color: var(--accent); font-size: 0.7rem; }
+.jd-question-card > div strong { font-size: 0.8rem; }
+.jd-question-card h4 { margin: 0.55rem 0; font-size: 0.88rem; }
+.jd-question-card p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.72rem; }
+.jd-question-card p b { color: var(--text); }
 .jd-empty-result { margin: 0; padding: 0.9rem; border: 1px dashed var(--line-strong); color: var(--muted); font-size: 0.76rem; }
 .jd-disclaimer { margin: 1.2rem 0 0; color: var(--muted); font-size: 0.7rem; }
 

@@ -298,21 +298,38 @@ function renderJdAnalysis(result) {
         ${row.shared.length ? `<p>공통 분류: ${jdCompetencyNames(row.shared).map(escapeHtml).join(" · ")}</p>` : ""}
       </article>
     `).join("")
-    : '<p class="jd-empty-result">비교할 요구사항이 없습니다.</p>';
+    : result.profileProvided
+      ? '<p class="jd-empty-result">저장된 프로필에서 연결할 수 있는 경험 근거를 찾지 못했습니다.</p>'
+      : '<p class="jd-empty-result">JD 요구사항 분석은 정상 완료했습니다. 내 프로필을 작성하면 요구사항과 경험을 추가로 비교할 수 있습니다.</p>';
 
   const maxFrequency = Math.max(...result.frequency.map((row) => row.count), 1);
   document.querySelector("#jd-frequency-list").innerHTML = result.frequency.length
     ? result.frequency.map((row) => `<div><span>${escapeHtml(row.name)}</span><i><b style="width:${Math.max(8, Math.round(row.count / maxFrequency * 100))}%"></b></i><strong>${row.count}문장</strong></div>`).join("")
     : '<p class="jd-empty-result">집계할 역량이 없습니다.</p>';
 
+  document.querySelector("#jd-learning-description").textContent = result.profileProvided
+    ? "JD 요구사항과 저장된 경험의 차이를 바탕으로 만든 자동 제안이며, 채용 필수 조건을 새로 만든 것이 아닙니다."
+    : "프로필 평가가 아니라 JD에 직접 등장한 역량을 기준으로 정리한 공부 주제입니다.";
   document.querySelector("#jd-learning-list").innerHTML = result.learning.length
     ? result.learning.map((row, index) => `
       <article>
         <span>${index + 1}</span>
-        <div><strong>${escapeHtml(row.competency)}</strong><p><b>근거 ${escapeHtml(row.requirementId)} · ${jdLevelLabel(row.level)}</b> “${escapeHtml(row.requirementText)}”</p><p><b>자동 학습 제안</b> ${escapeHtml(row.suggestion)}</p></div>
+        <div><strong>${escapeHtml(row.competency)}</strong><p><b>근거 ${escapeHtml(row.requirementId)} · ${jdLevelLabel(row.level)}</b> “${escapeHtml(row.requirementText)}”</p><p><b>${row.mode === "jd_only" ? "JD 기반 공부 제안" : "프로필 비교 기반 제안"}</b> ${escapeHtml(row.suggestion)}</p></div>
       </article>
     `).join("")
-    : '<p class="jd-empty-result">JD가 요구하지만 저장된 프로필에서 근거를 찾지 못한 역량이 없습니다. 프로필 경험이 없거나 너무 짧다면 결과를 확정적으로 해석하지 마세요.</p>';
+    : result.profileProvided
+      ? '<p class="jd-empty-result">JD와 저장된 프로필의 차이에서 별도의 학습 주제를 만들지 못했습니다.</p>'
+      : '<p class="jd-empty-result">JD 요구사항이 추출되면 프로필 평가와 분리된 공부 주제를 표시합니다.</p>';
+  document.querySelector("#jd-question-list").innerHTML = result.suggestedQuestions.length
+    ? result.suggestedQuestions.map((row) => `
+      <article class="jd-question-card">
+        <div><strong>${escapeHtml(row.id)}</strong><span>${escapeHtml(row.competency)} · JD 기반 추천</span></div>
+        <h4>${escapeHtml(row.question)}</h4>
+        <p><b>JD 근거</b> ${row.requirementIds.map(escapeHtml).join(" · ")}</p>
+        <p><b>프로필 활용 후보</b> ${row.experience ? `${escapeHtml(row.experience.id)} “${escapeHtml(row.experience.text)}”` : "현재 저장된 경험에서 직접 연결할 근거를 찾지 못했습니다."}</p>
+      </article>
+    `).join("")
+    : '<p class="jd-empty-result">JD 요구사항이 추출되면 근거가 연결된 추천 문항을 표시합니다.</p>';
   results.hidden = false;
   results.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -471,6 +488,7 @@ function bindJdAnalyzer() {
       const result = window.JDAnalyzer.analyze({
         jdText: document.querySelector("#jd-text").value,
         experienceText: window.CareerProfile.toExperienceText(window.CareerProfile.load(window.localStorage)),
+        roleName: document.querySelector("#jd-role").value,
       });
       renderJdAnalysis(result);
     } catch (error) {

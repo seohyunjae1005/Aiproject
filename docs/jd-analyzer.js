@@ -19,9 +19,9 @@
   ];
 
   const SECTION_RULES = [
-    { level: "required", regex: /^(필수|자격\s*요건|지원\s*자격|요구\s*사항|requirements?|qualifications?)\s*[:：]?$/i },
-    { level: "preferred", regex: /^(우대|우대\s*사항|preferred|nice\s*to\s*have)\s*[:：]?$/i },
-    { level: "duty", regex: /^(담당\s*업무|주요\s*업무|수행\s*업무|직무\s*내용|responsibilities|what\s*you.ll\s*do)\s*[:：]?$/i },
+    { level: "required", regex: /^(필수|자격\s*요건|지원\s*자격|요구\s*사항|requirements?|qualifications?|who\s+we(?:'|’)?re\s+looking\s+for|우리는\s*이런\s*사람을\s*찾고\s*있습니다)\s*[:：]?$/i },
+    { level: "preferred", regex: /^(우대|우대\s*사항|preferred|nice\s*to\s*have|이런\s*역량이나\s*경\S{0,2}이\s*있다면\s*더\s*좋습니다)\s*[:：]?$/i },
+    { level: "duty", regex: /^(담당\s*업무|주요\s*업무|수행\s*업무|직무\s*내용|responsibilities|what\s*you(?:'|’)?ll\s*do|what\s*you(?:'|’)?ll\s*experience|경험할\s*수\s*있습니다)\s*[:：]?$/i },
     { level: "ignore", regex: /^(복리\s*후생|전형\s*절차|지원\s*방법|근무\s*(조건|지역|장소)|회사\s*소개|benefits?|about\s*us)\s*[:：]?$/i },
   ];
 
@@ -37,9 +37,23 @@
   }
 
   function sectionLevel(line) {
-    const cleaned = cleanLine(line);
+    const cleaned = cleanLine(line).replace(/[.!?]+$/, "");
     const rule = SECTION_RULES.find((item) => item.regex.test(cleaned));
     return rule ? rule.level : null;
+  }
+
+  function prepareSourceLines(sourceText) {
+    return String(sourceText || "")
+      .replace(/we\s*[•·]\s*re/gi, "we're")
+      .replace(/you\s*[•·]\s*ll/gi, "you'll")
+      .replace(/\s*(about\s+us)\s*/gi, "\n$1\n")
+      .replace(/\s*(what\s+you(?:'|’)?ll\s+experience)\s*/gi, "\n$1\n")
+      .replace(/\s*(who\s+we(?:'|’)?re\s+looking\s+for)\s*/gi, "\n$1\n")
+      .replace(/\s*(우리는\s*이런\s*사람을\s*찾고\s*있습니다)\s*/g, "\n$1\n")
+      .replace(/\s*(이런\s*역량이나\s*경\S{0,2}이\s*있다면\s*더\s*좋습니다)\s*/g, "\n$1\n")
+      .replace(/\s*[•▪▶✓✔]\s*/g, "\n")
+      .replace(/([.!?])\s+(?=[가-힣A-Z])/g, "$1\n")
+      .split(/\r?\n/);
   }
 
   function detectCompetencies(text) {
@@ -50,9 +64,7 @@
 
   function parseRequirements(sourceText) {
     const source = String(sourceText || "").trim();
-    const rawLines = source
-      .replace(/([.!?])\s+(?=[가-힣A-Z])/g, "$1\n")
-      .split(/\r?\n/);
+    const rawLines = prepareSourceLines(source);
     const requirements = [];
     let currentLevel = "unspecified";
 
@@ -70,10 +82,13 @@
       const looksRelevant = competencies.length > 0
         || /(경험|역량|능력|가능|전공|학위|자격|담당|수행|운영|구축|보유|이해|활용)/.test(line);
       if (!looksRelevant && currentLevel === "unspecified") return;
+      const looksLikeDuty = /(운영|최적화|관리|개선|개발|설계|구축|제어|담당|수행|높입니다|극대화)/.test(line)
+        && !/(있는\s*분|경험이\s*있는|역량이\s*있는|관련\s*분야|전공|학위|자격)/.test(line);
+      const effectiveLevel = currentLevel === "required" && looksLikeDuty ? "duty" : currentLevel;
       requirements.push({
         id: `J${requirements.length + 1}`,
         text: line,
-        level: currentLevel,
+        level: effectiveLevel,
         competencies,
         quoteVerified: normalize(source).includes(normalize(line)),
       });
@@ -142,29 +157,90 @@
     return rows.slice(0, 8);
   }
 
+  function jdLearningPriorities(requirements) {
+    const rows = [];
+    const seen = new Set();
+    const rank = { required: 0, duty: 1, preferred: 2, unspecified: 3 };
+    [...requirements].sort((left, right) => rank[left.level] - rank[right.level]).forEach((requirement) => {
+      requirement.competencies.forEach((id) => {
+        if (seen.has(id)) return;
+        const taxonomy = TAXONOMY.find((item) => item.id === id);
+        if (!taxonomy) return;
+        seen.add(id);
+        rows.push({
+          competency: taxonomy.name,
+          requirementId: requirement.id,
+          requirementText: requirement.text,
+          level: requirement.level,
+          suggestion: taxonomy.study,
+          mode: "jd_only",
+        });
+      });
+    });
+    return rows.slice(0, 8);
+  }
+
+  const QUESTION_TEMPLATES = {
+    process: (role) => `${role} 업무에서 공정 안정화 또는 조건 최적화에 기여할 수 있는 경험과 판단 과정을 설명해 주세요.`,
+    quality: () => "품질이나 성능 문제를 발견하고 원인을 좁혀 개선한 경험을 설명해 주세요.",
+    data: () => "데이터를 이용해 문제를 판단하거나 개선 방향을 제시한 경험을 설명해 주세요.",
+    problem: () => "예상하지 못한 문제의 원인을 찾고 해결한 과정을 구체적으로 설명해 주세요.",
+    research: () => "실험·연구·개발 과정에서 가설을 세우고 결과를 검증한 경험을 설명해 주세요.",
+    software: () => "프로그래밍이나 자동화를 활용해 업무 또는 프로젝트 문제를 해결한 경험을 설명해 주세요.",
+    equipment: () => "장비의 성능·안정성·생산성을 높이기 위해 점검하거나 개선한 경험을 설명해 주세요.",
+    design: () => "요구조건을 설계안으로 바꾸고 결과를 검증한 경험을 설명해 주세요.",
+    project: () => "프로젝트 목표와 일정을 관리하며 본인이 맡은 역할과 성과를 설명해 주세요.",
+    communication: () => "다른 사람 또는 조직과 기준을 맞추고 공동의 결과를 만든 경험을 설명해 주세요.",
+    customer: () => "상대방의 요구를 파악해 해결안이나 가치로 바꾼 경험을 설명해 주세요.",
+    language: () => "외국어를 실제 과제·협업·자료 이해에 활용한 경험을 설명해 주세요.",
+    safety: () => "안전·환경 위험을 확인하고 예방 조치로 연결한 경험을 설명해 주세요.",
+    leadership: () => "팀의 방향을 정하거나 구성원의 행동을 이끌어 결과를 만든 경험을 설명해 주세요.",
+  };
+
+  function suggestApplicationQuestions(requirements, matches, roleName) {
+    const role = String(roleName || "지원 직무").trim() || "지원 직무";
+    const frequency = competencyFrequency(requirements);
+    return frequency.slice(0, 4).map((row, index) => {
+      const evidence = requirements.filter((requirement) => requirement.competencies.includes(row.id));
+      const matched = matches.find((match) => match.shared.includes(row.id) && match.experience);
+      const template = QUESTION_TEMPLATES[row.id] || (() => `${role} 수행에 필요한 ${row.name} 역량을 보여주는 경험을 설명해 주세요.`);
+      return {
+        id: `Q${index + 1}`,
+        competency: row.name,
+        question: template(role),
+        requirementIds: evidence.slice(0, 3).map((requirement) => requirement.id),
+        experience: matched?.experience || null,
+        source: "jd_suggestion",
+      };
+    });
+  }
+
   function analyze(input) {
     const jdText = String(input?.jdText || "").trim();
     if (!jdText) throw new Error("JD 원문을 입력해 주세요.");
     const requirements = parseRequirements(jdText);
     const experiences = parseExperiences(input?.experienceText || "");
-    const matches = buildMatches(requirements, experiences);
+    const profileProvided = experiences.length > 0;
+    const matches = profileProvided ? buildMatches(requirements, experiences) : [];
     const limitations = [];
     if (jdText.length < 250) limitations.push("JD 내용이 짧아 제한적인 결과만 표시합니다.");
-    if (requirements.length === 0) limitations.push("담당 업무·자격·우대 문장을 구분하지 못했습니다. 원문의 해당 부분을 줄바꿈하여 다시 붙여 넣어 주세요.");
+    if (requirements.length === 0) limitations.push("담당 업무·자격·우대 문장을 찾지 못했습니다. 추출 원문에서 해당 내용이 포함됐는지 확인해 주세요.");
     if (requirements.some((row) => row.level === "unspecified")) limitations.push("일부 문장에는 필수·우대 표시가 없어 ‘구분 없음’으로 유지했습니다.");
     if (/(모집\s*부문|직무별|각\s*부문)/.test(jdText)) limitations.push("여러 직무가 섞인 공고일 수 있습니다. 지원할 직무 부분만 남기면 결과가 더 명확해집니다.");
-    if (experiences.length === 0) limitations.push("내 프로필에 저장된 경험이 없어 경험 매칭과 부족 근거 판단은 제한됩니다.");
+    if (!profileProvided) limitations.push("JD 분석은 완료했으며, 내 프로필이 없어 경험 비교만 생략했습니다.");
     return {
       requirements,
       experiences,
       matches,
       frequency: competencyFrequency(requirements),
-      learning: learningPriorities(matches),
+      learning: profileProvided ? learningPriorities(matches) : jdLearningPriorities(requirements),
+      suggestedQuestions: suggestApplicationQuestions(requirements, matches, input?.roleName),
+      profileProvided,
       limitations,
       analyzedAt: new Date().toISOString(),
     };
   }
 
-  root.JDAnalyzer = { TAXONOMY, normalize, parseRequirements, parseExperiences, buildMatches, competencyFrequency, learningPriorities, analyze };
+  root.JDAnalyzer = { TAXONOMY, normalize, prepareSourceLines, parseRequirements, parseExperiences, buildMatches, competencyFrequency, learningPriorities, jdLearningPriorities, suggestApplicationQuestions, analyze };
   if (typeof module !== "undefined" && module.exports) module.exports = root.JDAnalyzer;
 })(typeof window !== "undefined" ? window : globalThis);
