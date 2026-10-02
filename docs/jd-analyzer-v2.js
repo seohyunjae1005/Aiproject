@@ -122,6 +122,7 @@
 
   function markInlineBoundaries(value) {
     let text = conservativeOcrFixes(value).replace(/\r/g, "\n");
+    text = text.replace(/\[\s*(담당\s*업무|주요\s*업무|수행\s*업무|직무\s*내용|우대\s*사항|지원\s*자격|자격\s*요건|요구\s*사항|회사\s*소개)\s*\]/gi, "$1");
     const headings = [
       /about\s+us/gi, /what\s+you(?:'|’)?ll\s+experience/gi, /what\s+you(?:'|’)?ll\s+do/gi,
       /who\s+we(?:'|’)?re\s+looking\s+for/gi, /우리는\s*이런\s*가치를\s*만듭니다/gi,

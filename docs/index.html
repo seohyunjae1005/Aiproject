@@ -8,12 +8,12 @@
       content="주요 반도체 기업의 공식 뉴스룸에서 기술 동향과 기업 맥락을 추적합니다."
     />
     <title>반도체 산업 동향</title>
-    <link rel="stylesheet" href="styles.css?v=20261001-7" />
+    <link rel="stylesheet" href="styles.css?v=20261002-1" />
     <script src="pdf-import.js?v=20261001-2" defer></script>
-    <script src="jd-analyzer-v2.js?v=20261001-1" defer></script>
-    <script src="profile-store.js?v=20261001-1" defer></script>
+    <script src="jd-analyzer-v2.js?v=20261002-1" defer></script>
+    <script src="profile-store-v2.js?v=20261002-1" defer></script>
     <script src="role-normalizer.js?v=20261001-1" defer></script>
-    <script src="app.js?v=20261001-5" defer></script>
+    <script src="app.js?v=20261002-1" defer></script>
   </head>
   <body>
     <header class="topbar">
@@ -196,8 +196,8 @@
 
       <section class="chapter-panel profile-chapter" id="profile-chapter" role="tabpanel" aria-labelledby="profile-tab" hidden>
         <div class="chapter-heading">
-          <div><span>MY CAREER PROFILE</span><h2>내 취업 프로필</h2></div>
-          <p>한 번 입력한 내용을 JD 분석과 이후 자소서·면접 기능에서 함께 사용합니다.</p>
+          <div><span>MY CAREER PROFILE</span><h2>지원서 기본 프로필</h2></div>
+          <p>SK하이닉스 지원서 입력 가이드를 참고해 학력과 경험을 구조화했습니다. 다른 회사 지원에도 재사용할 수 있습니다.</p>
         </div>
 
         <div class="jd-privacy-notice">
@@ -206,17 +206,59 @@
         </div>
 
         <form class="profile-form" id="profile-form">
-          <div class="profile-field-grid">
-            <label><span>학력 <small>선택</small></span><input id="profile-education" type="text" placeholder="예: 대학교 재학 / 졸업" /></label>
-            <label><span>전공 <small>선택</small></span><input id="profile-major" type="text" placeholder="예: 신소재공학" /></label>
-          </div>
-          <label><span>관심 직무 <small>한 줄에 하나</small></span><textarea id="profile-target-roles" rows="3" placeholder="공정기술&#10;양산기술"></textarea></label>
-          <label><span>기술·교육·실습 <small>한 줄에 하나</small></span><textarea id="profile-skills" rows="5" placeholder="반도체 8대 공정 교육 이수&#10;Python 데이터 분석 기초"></textarea></label>
-          <label><span>자격증·어학 <small>한 줄에 하나</small></span><textarea id="profile-certificates" rows="4" placeholder="예: OPIc IM2"></textarea></label>
-          <label>
-            <span>프로젝트·실습·인턴 경험 <b>JD 비교에 사용</b></span>
-            <textarea id="profile-experiences" rows="8" placeholder="한 줄에 하나씩, 내가 한 행동과 결과가 드러나게 작성하세요.&#10;예: 반도체 공정 실습에서 측정 데이터를 정리하고 이상 원인을 비교함"></textarea>
-          </label>
+          <section class="profile-form-section">
+            <div class="profile-section-heading">
+              <div><strong>1. 지원 방향</strong><span>회사마다 직무명이 달라도 원래 명칭을 그대로 적어주세요.</span></div>
+            </div>
+            <label><span>관심 직무 <small>한 줄에 하나</small></span><textarea id="profile-target-roles" rows="3" placeholder="SK하이닉스 양산기술&#10;삼성전자 공정기술"></textarea></label>
+          </section>
+
+          <section class="profile-form-section">
+            <div class="profile-section-heading">
+              <div><strong>2. 학력</strong><span>고등학교부터 최종 학력까지 학교별로 추가합니다. 석·박사는 학사 학력도 별도로 입력하세요.</span></div>
+              <button class="profile-add" id="profile-add-education" type="button">학력 추가</button>
+            </div>
+            <div class="profile-entry-list" id="profile-education-list"></div>
+            <div class="profile-guide-note">
+              <b>가이드 기준</b>
+              <span>대학은 전체 평점·기준 평점·총 이수학점과 전공 과목을 기록하고, 교양·Pass 과목은 전공 목록에서 제외합니다. 대학원은 세부전공·지도교수·연구분야·논문·학회도 기록합니다.</span>
+            </div>
+          </section>
+
+          <section class="profile-form-section">
+            <div class="profile-section-heading">
+              <div><strong>3. 기술·자격·어학</strong><span>교육과 실습은 사용한 기술과 확인 가능한 결과 중심으로 작성합니다.</span></div>
+            </div>
+            <div class="profile-field-grid">
+              <label><span>기술·교육·실습 <small>한 줄에 하나</small></span><textarea id="profile-skills" rows="5" placeholder="Python으로 공정 데이터 전처리 및 시각화&#10;반도체 8대 공정 교육 40시간 이수"></textarea></label>
+              <label><span>자격증 <small>한 줄에 하나</small></span><textarea id="profile-certificates" rows="5" placeholder="산업안전기사&#10;6시그마 GB"></textarea></label>
+            </div>
+            <label><span>어학 <small>시험·등급·취득일을 함께 기록</small></span><textarea id="profile-languages" rows="3" placeholder="OPIc IM2 · 2026-03"></textarea></label>
+          </section>
+
+          <section class="profile-form-section">
+            <div class="profile-section-heading">
+              <div><strong>4. 프로젝트·실습·인턴·연구 경험</strong><span>경험마다 역할·행동·결과를 분리해 저장하면 JD와 자소서 문항에 정확히 연결할 수 있습니다.</span></div>
+              <button class="profile-add" id="profile-add-experience" type="button">경험 추가</button>
+            </div>
+            <div class="profile-entry-list" id="profile-experience-list"></div>
+          </section>
+
+          <section class="profile-form-section">
+            <div class="profile-section-heading">
+              <div><strong>5. AI 기반 문제해결 경험</strong><span>하이닉스 가이드의 경험기술서 항목입니다. 단순 질문·답변이 아니라 문제 해결 과정과 검증을 적습니다.</span></div>
+            </div>
+            <div class="profile-field-grid profile-ai-grid">
+              <label><span>경험명</span><input id="profile-ai-title" type="text" placeholder="예: 반도체 뉴스 자동 분류 프로젝트" /></label>
+              <label><span>기간</span><input id="profile-ai-period" type="text" placeholder="예: 2026.09~2026.11" /></label>
+              <label class="profile-span-2"><span>구체적인 경험·문제 상황</span><textarea id="profile-ai-context" rows="3" placeholder="어떤 문제를 해결하려 했는지 작성하세요."></textarea></label>
+              <label><span>내 역할</span><textarea id="profile-ai-role" rows="3" placeholder="내가 결정하고 수행한 일을 작성하세요."></textarea></label>
+              <label><span>AI 활용 방법</span><textarea id="profile-ai-use" rows="3" placeholder="어떤 AI를 어떤 단계에 사용했는지 작성하세요."></textarea></label>
+              <label><span>검증·수정 과정</span><textarea id="profile-ai-verification" rows="3" placeholder="AI 결과의 오류를 어떻게 확인하고 개선했는지 작성하세요."></textarea></label>
+              <label><span>결과·배운 점</span><textarea id="profile-ai-result" rows="3" placeholder="수치, 산출물, 변화와 배운 점을 작성하세요."></textarea></label>
+            </div>
+          </section>
+
           <p class="profile-save-status" id="profile-save-status" aria-live="polite"></p>
           <div class="profile-actions">
             <button class="jd-primary" type="submit">이 기기에 저장</button>
@@ -323,17 +365,22 @@
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>3</span><div><h3>이 공고의 특징</h3><p>우대사항과 지원 자격에서 직접 확인되는 특징만 해석합니다.</p></div></div>
+            <div class="jd-section-title"><span>3</span><div><h3>회사의 최근 공식 동향과 직무 연결</h3><p>뉴스는 필수 역량 판정이 아니라 회사 공부·면접 준비의 보조 근거로만 사용합니다.</p></div></div>
+            <div class="jd-company-context" id="jd-company-context"></div>
+          </section>
+
+          <section class="jd-result-section">
+            <div class="jd-section-title"><span>4</span><div><h3>이 공고의 특징</h3><p>우대사항과 지원 자격에서 직접 확인되는 특징만 해석합니다.</p></div></div>
             <div class="jd-feature-list" id="jd-feature-list"></div>
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>4</span><div><h3>지원 전 공부할 도메인 주제</h3><p><span class="jd-interpretation-label">제안</span> Top 5 역량과 연결된 구체적인 반도체 학습 범위입니다.</p></div></div>
+            <div class="jd-section-title"><span>5</span><div><h3>지원 전 공부할 도메인 주제</h3><p><span class="jd-interpretation-label">제안</span> Top 5 역량과 연결된 구체적인 반도체 학습 범위입니다.</p></div></div>
             <div class="jd-study-list" id="jd-study-list"></div>
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>5</span><div><h3>JD 기반 자소서 문항 추천</h3><p><span class="jd-interpretation-label">제안</span> 실제 기업 공개 문항이 아닌 지원서 작성 연습용 문항입니다.</p></div></div>
+            <div class="jd-section-title"><span>6</span><div><h3>JD 기반 자소서 문항 추천</h3><p><span class="jd-interpretation-label">제안</span> 실제 기업 공개 문항이 아닌 지원서 작성 연습용 문항입니다.</p></div></div>
             <div class="jd-question-list" id="jd-question-list"></div>
           </section>
 

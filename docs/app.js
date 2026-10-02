@@ -255,6 +255,97 @@ function jdCompetencyNames(ids) {
   return (ids || []).map((id) => lookup.get(id) || id);
 }
 
+const JD_CONTEXT_ROLE_MAP = {
+  "공정·양산 엔지니어링": ["공정기술·양산기술"],
+  "공정설계·R&D": ["R&D공정·공정설계"],
+  "설비·장비 엔지니어링": ["설비기술·기반기술", "FSE·CE·장비기술"],
+  "패키지·테스트": ["P&T·패키지개발", "평가분석·품질·PE"],
+  "평가·분석·품질": ["평가분석·품질·PE"],
+  "소자·회로": ["소자", "회로설계"],
+  "소프트웨어·데이터·AI": ["SW·데이터·AI"],
+};
+
+const JD_CONTEXT_TECH_MAP = {
+  wafer_processes: ["노광·마스크", "파운드리·로직·소자", "소재·부품"],
+  yield_optimization: ["장비·Fab·인프라", "파운드리·로직·소자"],
+  equipment_supplier: ["장비·Fab·인프라"],
+  amhs_control: ["장비·Fab·인프라", "AI·데이터"],
+  product_technology: ["DRAM·HBM", "NAND·스토리지", "첨단 패키징", "파운드리·로직·소자"],
+  process_fundamentals: ["파운드리·로직·소자", "소재·부품"],
+  process_experiment: ["소재·부품", "계측·검사"],
+  test_programming: ["AI·데이터", "계측·검사"],
+};
+
+function intersect(values, allowed) {
+  const set = new Set(allowed || []);
+  return (values || []).filter((value) => set.has(value));
+}
+
+function trackedCompanyName(input) {
+  const detected = window.RoleNormalizer.detectCompany(input);
+  if (detected) return detected;
+  const normalized = String(input || "").trim().toLocaleLowerCase("ko");
+  return [...new Set(state.articles.map((row) => row.company).filter(Boolean))]
+    .find((value) => value.toLocaleLowerCase("ko") === normalized) || "";
+}
+
+function buildJdCompanyContext(companyInput, roleInput, result) {
+  const company = trackedCompanyName(companyInput);
+  if (!company) return { mode: "external", company: companyInput, articles: [] };
+  const roleCategory = window.RoleNormalizer.mapRole(roleInput).category;
+  const allowedRoles = JD_CONTEXT_ROLE_MAP[roleCategory] || [];
+  const allowedTech = [...new Set((result.topStrategies || []).flatMap((row) => JD_CONTEXT_TECH_MAP[row.skillId] || []))];
+  const scored = state.articles.filter((article) => article.company === company).map((article) => {
+    const roleHits = intersect(article.job_roles, allowedRoles);
+    const techHits = intersect(article.tech_domains, allowedTech);
+    const processScore = article.process_fit === "direct" ? 2 : article.process_fit === "indirect" ? 1 : 0;
+    return { article, roleHits, techHits, score: roleHits.length * 3 + techHits.length * 2 + processScore };
+  }).filter((row) => row.score > 0)
+    .sort((left, right) => right.score - left.score || new Date(right.article.published_at) - new Date(left.article.published_at))
+    .slice(0, 3)
+    .map((row, index) => ({ ...row, id: `N${index + 1}` }));
+  return { mode: "tracked", company, roleCategory, articles: scored };
+}
+
+function renderJdCompanyContext(company, role, result) {
+  const container = document.querySelector("#jd-company-context");
+  const context = buildJdCompanyContext(company, role, result);
+  if (context.mode === "external") {
+    container.innerHTML = `
+      <div class="jd-context-status external">
+        <span class="jd-interpretation-label">외부 회사 조사 모드</span>
+        <strong>입력한 회사(${escapeHtml(company || "회사명 미입력")})는 현재 자동 추적 기업이 아닙니다.</strong>
+        <p>JD 분석 결과는 그대로 사용할 수 있지만 회사 동향은 아직 결합하지 않습니다. 향후 공식 채용 페이지·뉴스룸·IR 자료를 조사하고 출처 등급과 확인일을 저장한 뒤 연결해야 합니다.</p>
+      </div>`;
+    return;
+  }
+  if (!context.articles.length) {
+    container.innerHTML = `
+      <div class="jd-context-status">
+        <span class="jd-fact-label">추적 기업 · ${escapeHtml(context.company)}</span>
+        <strong>현재 저장된 공식 기사 중 이 JD와 직접 연결할 근거를 찾지 못했습니다.</strong>
+        <p>관련성이 약한 뉴스를 억지로 붙이지 않았습니다. JD 요구사항 분석은 위 결과대로 유지됩니다.</p>
+      </div>`;
+    return;
+  }
+  container.innerHTML = `
+    <div class="jd-context-status">
+      <span class="jd-fact-label">추적 기업 · ${escapeHtml(context.company)}</span>
+      <strong>JD 직무·기술 분류와 겹치는 최근 공식 기사 ${context.articles.length}건</strong>
+      <p>기사 건수는 발표 빈도이며 채용 중요도·시장점유율을 뜻하지 않습니다.</p>
+    </div>
+    <div class="jd-context-list">${context.articles.map((row) => {
+      const article = row.article;
+      const connections = [...new Set([...row.roleHits, ...row.techHits, ...(article.process_fit && article.process_fit !== "background" ? [`공정 연결 ${article.process_fit}`] : [])])];
+      return `<article>
+        <div><span class="jd-fact-label">공식 동향 · ${row.id}</span><time>${escapeHtml(formatDate(article.published_at))}</time></div>
+        <h4><a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(article.title_ko || article.title)}</a></h4>
+        <p><b>자동 연결 근거</b> ${connections.map(escapeHtml).join(" · ")}</p>
+        <p><span class="jd-interpretation-label">학습 제안 · ${row.id}</span> 이 발표에서 확인되는 ${escapeHtml(connections.slice(0, 2).join("·"))} 내용을 지원 직무의 실제 업무와 어떻게 연결할지 원문을 읽고 정리하세요. 이를 JD의 필수 역량으로 단정하면 안 됩니다.</p>
+      </article>`;
+    }).join("")}</div>`;
+}
+
 function renderJdAnalysis(result) {
   const results = document.querySelector("#jd-results");
   const company = document.querySelector("#jd-company").value.trim();
@@ -306,6 +397,8 @@ function renderJdAnalysis(result) {
     `).join("")
     : '<p class="jd-empty-result">지원 자격·우대사항에서 반도체 전용 특징을 찾지 못했습니다.</p>';
 
+  renderJdCompanyContext(company, role, result);
+
   document.querySelector("#jd-study-list").innerHTML = result.studyTopics.length
     ? result.studyTopics.map((row) => `
       <article><strong>${escapeHtml(row.title)}</strong><p>${escapeHtml(row.topic)}</p><small>근거 연결: ${escapeHtml(row.basedOn)}</small></article>
@@ -337,24 +430,116 @@ function renderJdAnalysis(result) {
   results.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function profileEntryId(prefix) {
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function profileOptions(values, selected) {
+  const options = selected && !values.includes(selected) ? [selected, ...values] : values;
+  return options.map((value) => `<option value="${escapeHtml(value)}"${value === selected ? " selected" : ""}>${escapeHtml(value || "선택")}</option>`).join("");
+}
+
+function educationEntryTemplate(row = {}, index = 0) {
+  const id = row.id || profileEntryId("education");
+  const levels = ["", "고등학교", "검정고시", "전문대학", "대학(학사)", "대학원(석사)", "대학원(박사)"];
+  const statuses = ["", "재학", "휴학", "졸업예정", "졸업", "수료", "중퇴"];
+  const transfers = ["", "비해당", "편입 전", "편입 후"];
+  return `
+    <article class="profile-entry-card profile-education-entry" data-entry-id="${escapeHtml(id)}">
+      <div class="profile-entry-heading"><strong>학력 ${index + 1}</strong><button type="button" data-remove-entry>삭제</button></div>
+      <div class="profile-field-grid profile-entry-fields">
+        <label><span>학력 구분</span><select data-field="level">${profileOptions(levels, row.level || "")}</select></label>
+        <label><span>학교명</span><input data-field="school" type="text" value="${escapeHtml(row.school || "")}" placeholder="학교명을 입력하세요" /></label>
+        <label><span>재학 상태</span><select data-field="status">${profileOptions(statuses, row.status || "")}</select></label>
+        <label><span>전공</span><input data-field="major" type="text" value="${escapeHtml(row.major || "")}" placeholder="학과·전공명" /></label>
+        <label><span>시작</span><input data-field="startDate" type="month" value="${escapeHtml(row.startDate || "")}" /></label>
+        <label><span>종료·예정</span><input data-field="endDate" type="month" value="${escapeHtml(row.endDate || "")}" /></label>
+        <label><span>복수·부·세부전공 <small>해당 시</small></span><input data-field="secondaryMajor" type="text" value="${escapeHtml(row.secondaryMajor || "")}" /></label>
+        <label><span>편입 여부 <small>해당 시</small></span><select data-field="transfer">${profileOptions(transfers, row.transfer || "")}</select></label>
+        <label><span>학교 소재지</span><input data-field="region" type="text" value="${escapeHtml(row.region || "")}" placeholder="예: 경기도" /></label>
+        <label><span>평점 / 기준 평점</span><span class="profile-inline-fields"><input data-field="gpa" type="number" min="0" step="0.01" value="${escapeHtml(row.gpa || "")}" placeholder="4.16" /><input data-field="gpaScale" type="number" min="0" step="0.1" value="${escapeHtml(row.gpaScale || "")}" placeholder="4.5" /></span></label>
+        <label><span>총 이수학점</span><input data-field="credits" type="number" min="0" step="0.5" value="${escapeHtml(row.credits || "")}" placeholder="예: 130" /></label>
+      </div>
+      <details class="profile-entry-details">
+        <summary>과목·연구 세부정보</summary>
+        <label><span>전공 과목·성적 <small>한 줄에 하나, 교양·Pass 제외</small></span><textarea data-field="coursework" rows="5" placeholder="반도체공정 · 3학점 · A+\n재료분석 · 3학점 · A0">${escapeHtml(row.coursework || "")}</textarea></label>
+        <div class="profile-field-grid profile-graduate-fields">
+          <label><span>지도교수 <small>대학원</small></span><input data-field="advisor" type="text" value="${escapeHtml(row.advisor || "")}" /></label>
+          <label><span>LAB명 <small>대학원</small></span><input data-field="lab" type="text" value="${escapeHtml(row.lab || "")}" /></label>
+        </div>
+        <label class="profile-graduate-fields"><span>연구분야 <small>대학원</small></span><textarea data-field="research" rows="3">${escapeHtml(row.research || "")}</textarea></label>
+        <label class="profile-graduate-fields"><span>논문 실적 <small>한 줄에 하나</small></span><textarea data-field="theses" rows="3" placeholder="논문명 · 저널 · SCIE 여부 · 저자 · 출판일 · IF">${escapeHtml(row.theses || "")}</textarea></label>
+        <label class="profile-graduate-fields"><span>학회 경험 <small>한 줄에 하나</small></span><textarea data-field="conferences" rows="3" placeholder="학회명 · 발표 주제 · 발표 내용 · 발표일 · Oral 여부">${escapeHtml(row.conferences || "")}</textarea></label>
+      </details>
+    </article>`;
+}
+
+function experienceEntryTemplate(row = {}, index = 0) {
+  const id = row.id || profileEntryId("experience");
+  const types = ["", "프로젝트", "공정·분석 실습", "인턴", "연구", "공모전", "학회", "동아리", "봉사", "아르바이트", "기타"];
+  return `
+    <article class="profile-entry-card profile-experience-entry" data-entry-id="${escapeHtml(id)}">
+      <div class="profile-entry-heading"><strong>경험 ${index + 1}</strong><button type="button" data-remove-entry>삭제</button></div>
+      <div class="profile-field-grid profile-entry-fields">
+        <label><span>경험 유형</span><select data-field="type">${profileOptions(types, row.type || "")}</select></label>
+        <label><span>경험명</span><input data-field="title" type="text" value="${escapeHtml(row.title || "")}" placeholder="예: 반도체 소자 제작 실습" /></label>
+        <label><span>기관·팀</span><input data-field="organization" type="text" value="${escapeHtml(row.organization || "")}" /></label>
+        <label><span>기간</span><span class="profile-inline-fields"><input data-field="startDate" type="month" value="${escapeHtml(row.startDate || "")}" /><input data-field="endDate" type="month" value="${escapeHtml(row.endDate || "")}" /></span></label>
+      </div>
+      <label><span>내 역할</span><textarea data-field="role" rows="2" placeholder="팀 전체가 아니라 내가 맡은 역할을 적으세요.">${escapeHtml(row.role || "")}</textarea></label>
+      <label><span>문제·목표</span><textarea data-field="situation" rows="2" placeholder="어떤 문제나 목표가 있었는지 적으세요.">${escapeHtml(row.situation || "")}</textarea></label>
+      <label><span>내가 한 행동</span><textarea data-field="action" rows="3" placeholder="분석, 실험, 조정, 의사결정 등 구체적인 행동을 적으세요.">${escapeHtml(row.action || "")}</textarea></label>
+      <label><span>결과·배운 점</span><textarea data-field="result" rows="3" placeholder="수치, 산출물, 개선 효과와 배운 점을 적으세요.">${escapeHtml(row.result || "")}</textarea></label>
+      <label><span>사용 기술·장비·도구</span><input data-field="tools" type="text" value="${escapeHtml(row.tools || "")}" placeholder="예: SEM, Excel, Python" /></label>
+    </article>`;
+}
+
+function readProfileEntries(selector) {
+  return [...document.querySelectorAll(`${selector} [data-entry-id]`)].map((card) => {
+    const row = { id: card.dataset.entryId };
+    card.querySelectorAll("[data-field]").forEach((field) => { row[field.dataset.field] = field.value; });
+    return row;
+  });
+}
+
 function profileFromForm() {
   return {
-    education: document.querySelector("#profile-education").value,
-    major: document.querySelector("#profile-major").value,
     targetRoles: document.querySelector("#profile-target-roles").value,
     skills: document.querySelector("#profile-skills").value,
     certificates: document.querySelector("#profile-certificates").value,
-    experiences: document.querySelector("#profile-experiences").value,
+    languages: document.querySelector("#profile-languages").value,
+    educations: readProfileEntries("#profile-education-list"),
+    experiences: readProfileEntries("#profile-experience-list"),
+    aiExperience: {
+      title: document.querySelector("#profile-ai-title").value,
+      context: document.querySelector("#profile-ai-context").value,
+      period: document.querySelector("#profile-ai-period").value,
+      role: document.querySelector("#profile-ai-role").value,
+      aiUse: document.querySelector("#profile-ai-use").value,
+      verification: document.querySelector("#profile-ai-verification").value,
+      result: document.querySelector("#profile-ai-result").value,
+    },
   };
 }
 
 function fillProfileForm(profile) {
-  document.querySelector("#profile-education").value = profile.education || "";
-  document.querySelector("#profile-major").value = profile.major || "";
   document.querySelector("#profile-target-roles").value = profile.targetRoles || "";
   document.querySelector("#profile-skills").value = profile.skills || "";
   document.querySelector("#profile-certificates").value = profile.certificates || "";
-  document.querySelector("#profile-experiences").value = profile.experiences || "";
+  document.querySelector("#profile-languages").value = profile.languages || "";
+  const educations = profile.educations?.length ? profile.educations : [{}];
+  const experiences = profile.experiences?.length ? profile.experiences : [{}];
+  document.querySelector("#profile-education-list").innerHTML = educations.map(educationEntryTemplate).join("");
+  document.querySelector("#profile-experience-list").innerHTML = experiences.map(experienceEntryTemplate).join("");
+  const ai = profile.aiExperience || {};
+  ["title", "context", "period", "role", "use", "verification", "result"].forEach((key) => {
+    const profileKey = key === "use" ? "aiUse" : key;
+    document.querySelector(`#profile-ai-${key}`).value = ai[profileKey] || "";
+  });
+}
+
+function renumberProfileEntries(containerSelector, label) {
+  document.querySelectorAll(`${containerSelector} .profile-entry-heading strong`).forEach((node, index) => { node.textContent = `${label} ${index + 1}`; });
 }
 
 function refreshJdProfileLink() {
@@ -383,18 +568,42 @@ function bindProfileForm() {
   fillProfileForm(window.CareerProfile.load(window.localStorage));
   refreshJdProfileLink();
 
+  document.querySelector("#profile-add-education").addEventListener("click", () => {
+    const list = document.querySelector("#profile-education-list");
+    list.insertAdjacentHTML("beforeend", educationEntryTemplate({}, list.children.length));
+    list.lastElementChild.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  document.querySelector("#profile-add-experience").addEventListener("click", () => {
+    const list = document.querySelector("#profile-experience-list");
+    list.insertAdjacentHTML("beforeend", experienceEntryTemplate({}, list.children.length));
+    list.lastElementChild.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+
+  [
+    ["#profile-education-list", "학력"],
+    ["#profile-experience-list", "경험"],
+  ].forEach(([selector, label]) => {
+    document.querySelector(selector).addEventListener("click", (event) => {
+      const button = event.target.closest("[data-remove-entry]");
+      if (!button) return;
+      button.closest("[data-entry-id]").remove();
+      renumberProfileEntries(selector, label);
+    });
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const profile = window.CareerProfile.save(profileFromForm(), window.localStorage);
     const summary = window.CareerProfile.summary(profile);
     status.className = "profile-save-status success";
-    status.textContent = `이 기기에 저장했습니다. 경험 ${summary.experienceCount}개를 JD 비교에 사용합니다.`;
+    status.textContent = `이 기기에 저장했습니다. 학력 ${summary.educationCount}개와 경험 ${summary.experienceCount}개를 이후 JD·자소서 기능에 사용합니다.`;
     refreshJdProfileLink();
   });
 
   document.querySelector("#profile-export").addEventListener("click", () => {
     const profile = window.CareerProfile.normalize(profileFromForm());
-    const blob = new Blob([JSON.stringify({ version: 1, profile }, null, 2)], { type: "application/json" });
+    const blob = new Blob([JSON.stringify({ version: 2, profile }, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;

@@ -10,6 +10,10 @@ assert.equal(preview.warnings.length >= 2, true);
 assert.equal(preview.cleanedText.includes("Ion Implant"), true);
 assert.equal(preview.cleanedText.includes("[회사 소개]"), true);
 
+const bracketPreview = analyzer.previewSource("[담당 업무]\n- 공정 조건을 최적화합니다.\n[우대사항]\n- 반도체 공정 원리를 이해한 분");
+assert.equal(bracketPreview.cleanedText.includes("[\n"), false);
+assert.equal((bracketPreview.cleanedText.match(/\[담당 업무\]/g) || []).length, 1);
+
 const requirements = analyzer.parseRequirements(preview.cleanedText);
 assert.equal(requirements.some((row) => /Who we/i.test(row.text)), false);
 assert.equal(requirements.some((row) => row.text.includes("Photolithography, Etch, Ion Implant & Diffusion, Thin Film, Cleaning & CMP")), true);
