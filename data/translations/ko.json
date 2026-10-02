@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "deepl",
   "target_language": "KO",
-  "updated_at": "2026-09-30T22:02:43.699576+00:00",
+  "updated_at": "2026-10-02T01:07:43.756576+00:00",
   "translations": {
     "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-cash-dividend-69": {
       "title_ko": "애플라이드 머티리얼즈, 현금 배당 발표",
@@ -1551,6 +1551,24 @@
       "summary_ko": "램 리서치(Lam Research Corp., 나스닥: LRCX)는 오늘, 2026년 10월 21일 수요일 오후 2시(태평양 표준시)부터 분기별 재무 컨퍼런스 콜 및 웹캐스트를 개최할 것이라고 발표했습니다...",
       "source_fingerprint": "aac48fb09d937c048176cf2285a59957b38f60557d6bb84aef02be0ab671bc6a",
       "translated_at": "2026-09-30T22:02:43.699545+00:00"
+    },
+    "https://news.skhynix.com/en/ai-ecosystem-series-ep3/": {
+      "title_ko": "[AI 생태계] 인프라 재설계: 아키텍처가 성능을 좌우하는 이유",
+      "summary_ko": "태그: 에이전트 기반 AI, CXL, GPU, HBM",
+      "source_fingerprint": "a3c5e92bbb1b945e6fbd8d784f62cfa92d125dfa4b6b80ef14f4dabccdc2e76f",
+      "translated_at": "2026-10-02T01:07:43.756551+00:00"
+    },
+    "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-and-besi-expand-strategic-partnership-advance": {
+      "title_ko": "애플라이드 머티리얼즈와 베시, AI 확장성을 위한 차세대 패키징 기술 발전을 위해 전략적 파트너십 확대",
+      "summary_ko": "베시는 애플라이드의 EPIC 센터에 혁신 파트너로 합류하며, 2020년 싱가포르에 설립된 양사의 공동 ‘하이브리드 본딩 센터 오브 엑설런스(Hybrid Bonding Center of Excellence)’를 통해 시작된 협력을 확대하게 되었습니다. 확대된 협력은 차세대 3D IC 미세화, 로직 및 메모리 통합, 그리고 포토닉스 응용 분야를 목표로 합니다.",
+      "source_fingerprint": "35af5bbacd6e917f6c4c2dd1a798d27196f298abcc8a88d1af1a1006edd034d9",
+      "translated_at": "2026-10-02T01:07:43.756551+00:00"
+    },
+    "https://ir.kla.com/news-events/press-releases/detail/522/kla-announces-first-quarter-fiscal-year-2027-earnings-date": {
+      "title_ko": "KLA, 2027 회계연도 1분기 실적 발표일 및 웹캐스트 일정 공개",
+      "summary_ko": "코소보 해방군(KLA) 공식 보도자료",
+      "source_fingerprint": "1bf8e53636f8e7cc2dd3a6fd729b1b4e377818170a99a7ad65476855c08d081b",
+      "translated_at": "2026-10-02T01:07:43.756551+00:00"
     }
   }
 }
