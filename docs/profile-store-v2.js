@@ -42,15 +42,40 @@
     };
   }
 
+  function parseLegacyEducation(value, major) {
+    const raw = clean(value);
+    const statuses = ["졸업예정", "재학", "휴학", "졸업", "수료", "중퇴"];
+    const status = statuses.find((item) => raw.includes(item)) || "";
+    const school = status ? raw.replace(status, "").trim() : raw;
+    let level = "";
+    if (/검정고시/.test(raw)) level = "검정고시";
+    else if (/고등학교/.test(raw)) level = "고등학교";
+    else if (/전문대/.test(raw)) level = "전문대학";
+    else if (/대학원/.test(raw)) level = "대학원(석사)";
+    else if (/대학교|대학/.test(raw)) level = "대학(학사)";
+    return { id: "legacy-education", level, school, status, major: clean(major) };
+  }
+
+  function splitLegacyQualifications(value) {
+    const languagePattern = /(toeic|opic|toefl|teps|토익|오픽|토플|텝스|영어s*말하기|토익스피킹)/i;
+    const all = lines(value);
+    return {
+      certificates: all.filter((item) => !languagePattern.test(item)).join("\n"),
+      languages: all.filter((item) => languagePattern.test(item)).join("\n"),
+    };
+  }
+
   function migrateLegacy(legacy) {
     if (!legacy || typeof legacy !== "object") return normalize(EMPTY_PROFILE);
     const education = clean(legacy.education);
     const major = clean(legacy.major);
+    const qualifications = splitLegacyQualifications(legacy.certificates);
     return normalize({
       targetRoles: legacy.targetRoles,
       skills: legacy.skills,
-      certificates: legacy.certificates,
-      educations: education || major ? [{ id: "legacy-education", level: education, major }] : [],
+      certificates: qualifications.certificates,
+      languages: qualifications.languages,
+      educations: education || major ? [parseLegacyEducation(education, major)] : [],
       experiences: lines(legacy.experiences).map((text, index) => ({ id: `legacy-experience-${index + 1}`, type: "기존 입력", title: text })),
     });
   }

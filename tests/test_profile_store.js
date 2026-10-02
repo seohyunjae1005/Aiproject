@@ -51,12 +51,18 @@ assert.equal(profileStore.clear(storage).experiences.length, 0);
 assert.equal(profileStore.load(storage).educations.length, 0);
 
 memory.set(profileStore.LEGACY_STORAGE_KEY, JSON.stringify({
-  education: "대학교 재학",
+  education: "경북대학교 재학",
   major: "화학공학",
+  certificates: "산업안전기사\n토익스피킹 AL",
   experiences: "공정 조건을 비교함\n팀 일정을 조율함",
 }));
 const migrated = profileStore.load(storage);
 assert.equal(migrated.educations[0].major, "화학공학");
+assert.equal(migrated.educations[0].level, "대학(학사)");
+assert.equal(migrated.educations[0].school, "경북대학교");
+assert.equal(migrated.educations[0].status, "재학");
+assert.equal(migrated.certificates, "산업안전기사");
+assert.equal(migrated.languages, "토익스피킹 AL");
 assert.equal(migrated.experiences.length, 2);
 
 console.log("Profile store tests passed");
