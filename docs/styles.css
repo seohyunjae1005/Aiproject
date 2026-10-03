@@ -284,6 +284,31 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-fact-label, .jd-interpretation-label { display: inline-flex; align-items: center; padding: 0.12rem 0.35rem; border-radius: 999px; font-size: 0.62rem; font-weight: 800; white-space: nowrap; }
 .jd-fact-label { border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); }
 .jd-interpretation-label { background: var(--accent); color: #fff; }
+.jd-overview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.jd-overview-grid article { min-width: 0; padding: 0.85rem; border: 1px solid var(--line); background: var(--surface); }
+.jd-overview-grid article:first-child { grid-column: 1 / -1; }
+.jd-overview-grid article > strong { display: block; margin-bottom: 0.45rem; color: var(--accent); font-size: 0.72rem; }
+.jd-overview-grid article > div { font-size: 0.78rem; line-height: 1.55; }
+.jd-overview-grid ul, .jd-analysis-table ul { margin: 0; padding-left: 1.1rem; }
+.jd-overview-grid li + li, .jd-analysis-table li + li { margin-top: 0.25rem; }
+.jd-table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+.jd-analysis-table { width: 100%; min-width: 44rem; border-collapse: collapse; table-layout: fixed; }
+.jd-analysis-table th, .jd-analysis-table td { padding: 0.8rem; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; font-size: 0.74rem; line-height: 1.55; }
+.jd-analysis-table thead th { background: var(--accent-soft); color: var(--text); font-size: 0.68rem; }
+.jd-analysis-table th:first-child { width: 9rem; }
+.jd-analysis-table th:last-child, .jd-analysis-table td:last-child { width: 10rem; }
+.jd-analysis-table tbody tr:last-child > * { border-bottom: 0; }
+.jd-evidence-link { margin: 0 0.2rem 0.2rem 0; padding: 0.18rem 0.4rem; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--surface); color: var(--accent); font-size: 0.63rem; font-weight: 800; cursor: pointer; }
+.jd-evidence-link:hover, .jd-evidence-link:focus-visible { background: var(--accent); color: #fff; }
+.jd-none, .jd-no-evidence { color: var(--muted); font-size: 0.7rem; }
+.jd-tool-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+.jd-tool-columns > div { min-width: 0; padding: 0.9rem; border: 1px solid var(--line); background: var(--surface); }
+.jd-tool-columns h4 { margin: 0 0 0.65rem; }
+.jd-tool-columns article { display: grid; gap: 0.35rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
+.jd-tool-columns article:first-child { border-top: 0; padding-top: 0; }
+.jd-tool-columns article strong { font-size: 0.8rem; }
+.jd-tool-columns article p { margin: 0; color: var(--muted); font-size: 0.72rem; }
+.jd-tool-columns article small { color: var(--muted); font-size: 0.64rem; }
 .jd-summary-section { padding: 1rem; border: 1px solid var(--line); background: var(--surface); }
 .jd-role-summary { margin: 0; font-size: 1.05rem; font-weight: 750; line-height: 1.6; }
 .jd-role-summary .jd-interpretation-label { margin-right: 0.35rem; vertical-align: middle; }
@@ -323,6 +348,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-level, .quote-ok, .quote-fail { padding: 0.1rem 0.35rem; font-size: 0.62rem; font-weight: 750; }
 .jd-level { background: var(--surface-2); color: var(--muted); }
 .jd-level.required { background: var(--accent); color: #fff; }
+.jd-level.required_unspecified { background: #fff4df; color: #79531f; }
 .jd-level.preferred { background: var(--accent-soft); color: var(--accent-strong); }
 .quote-ok { margin-left: auto; color: var(--accent-strong); }
 .quote-fail { margin-left: auto; color: #9a4d42; }
@@ -365,6 +391,13 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-context-list h4 a { color: var(--text); text-decoration-color: var(--line-strong); text-underline-offset: 0.2rem; }
 .jd-context-list p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.7rem; line-height: 1.55; }
 .jd-context-list p b { color: var(--text); }
+.jd-required-list, .jd-profile-connections { display: grid; gap: 0.7rem; }
+.jd-required-card { padding: 0.85rem; border: 1px solid var(--line); background: var(--surface); }
+.jd-required-card > div { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem; }
+.jd-required-card > div strong { font-size: 0.74rem; }
+.jd-required-card blockquote, .jd-work-blocks blockquote { margin: 0.55rem 0 0; padding-left: 0.65rem; border-left: 2px solid var(--line-strong); font-size: 0.75rem; line-height: 1.5; }
+.jd-strategy-card header small { margin-left: auto; color: var(--muted); font-size: 0.65rem; }
+.jd-profile-connect-section > .jd-primary { margin-bottom: 0.8rem; }
 .jd-empty-result { margin: 0; padding: 0.9rem; border: 1px dashed var(--line-strong); color: var(--muted); font-size: 0.76rem; }
 .jd-disclaimer { margin: 1.2rem 0 0; color: var(--muted); font-size: 0.7rem; }
 
@@ -629,6 +662,8 @@ footer { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; 
   .jd-quote-pair { grid-template-columns: 1fr; }
   .jd-role-map { grid-template-columns: 1fr; }
   .jd-strategy-card dl > div, .jd-study-list article { grid-template-columns: 1fr; }
+  .jd-overview-grid, .jd-tool-columns { grid-template-columns: 1fr; }
+  .jd-overview-grid article:first-child { grid-column: auto; }
 }
 
 @media (max-width: 480px) {

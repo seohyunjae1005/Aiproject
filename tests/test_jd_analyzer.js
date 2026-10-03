@@ -1,5 +1,5 @@
 if (true) {
-  require("./test_jd_analyzer_v2.js");
+  require("./test_jd_analyzer_v4.js");
 } else {
 const assert = require("node:assert/strict");
 const analyzer = require("../docs/jd-analyzer.js");

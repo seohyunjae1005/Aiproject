@@ -14,6 +14,7 @@ const state = {
   monthlyTrendReport: null,
   processFocus: false,
   chapter: "trend",
+  jdAnalysis: null,
 };
 
 const grid = document.querySelector("#article-grid");
@@ -243,7 +244,7 @@ function showChapter(chapter) {
 }
 
 function jdLevelLabel(value) {
-  return { required: "필수", preferred: "우대", duty: "담당 업무", unspecified: "구분 없음" }[value] || "구분 없음";
+  return { required: "필수", required_unspecified: "자격 관련·표시 미확정", preferred: "우대", duty: "담당 업무", unspecified: "구분 없음" }[value] || "구분 없음";
 }
 
 function jdStrengthLabel(value) {
@@ -267,13 +268,13 @@ const JD_CONTEXT_ROLE_MAP = {
 
 const JD_CONTEXT_TECH_MAP = {
   wafer_processes: ["노광·마스크", "파운드리·로직·소자", "소재·부품"],
-  yield_optimization: ["장비·Fab·인프라", "파운드리·로직·소자"],
-  equipment_supplier: ["장비·Fab·인프라"],
-  amhs_control: ["장비·Fab·인프라", "AI·데이터"],
-  product_technology: ["DRAM·HBM", "NAND·스토리지", "첨단 패키징", "파운드리·로직·소자"],
-  process_fundamentals: ["파운드리·로직·소자", "소재·부품"],
-  process_experiment: ["소재·부품", "계측·검사"],
-  test_programming: ["AI·데이터", "계측·검사"],
+  yield_process: ["장비·Fab·인프라", "파운드리·로직·소자"],
+  equipment: ["장비·Fab·인프라"],
+  amhs: ["장비·Fab·인프라", "AI·데이터"],
+  semiconductor_fundamentals: ["파운드리·로직·소자", "소재·부품"],
+  semiconductor_experiment: ["소재·부품", "계측·검사"],
+  programming: ["AI·데이터", "계측·검사"],
+  data_ai: ["AI·데이터"],
 };
 
 function intersect(values, allowed) {
@@ -368,34 +369,38 @@ function renderJdAnalysis(result) {
     ? `<strong>분석 범위 확인</strong><ul>${result.limitations.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
     : "<strong>분석 범위 확인</strong><p>입력된 JD 원문과 저장된 프로필만 사용했습니다.</p>";
 
+  document.querySelector("#jd-required-list").innerHTML = result.requiredChecklist.length
+    ? result.requiredChecklist.map((row) => `
+      <article class="jd-required-card">
+        <div><span class="jd-fact-label">사실 · ${escapeHtml(row.id)}</span><strong>${row.explicit ? "원문 필수 구역" : "자격 관련·필수 여부 미확정"}</strong></div>
+        <blockquote>${escapeHtml(row.quote)}</blockquote>
+      </article>`).join("")
+    : '<p class="jd-empty-result">원문에서 필수·Minimum 자격 구역을 찾지 못했습니다. 필수요건을 임의로 만들지 않았습니다.</p>';
+
   document.querySelector("#jd-role-summary").innerHTML = `<span class="jd-interpretation-label">해석</span> ${escapeHtml(result.summary)}`;
   document.querySelector("#jd-work-blocks").innerHTML = result.workBlocks.length
     ? result.workBlocks.map((row) => `
-      <article><span>${escapeHtml(row.id)}</span><strong>${escapeHtml(row.title)}</strong><small>${jdCompetencyNames(row.competencyIds).map(escapeHtml).join(" · ") || "세부 분류 없음"}</small></article>
+      <article><span>${escapeHtml(row.id)}</span><strong>${escapeHtml(row.title)}</strong><small>${jdCompetencyNames(row.competencyIds).map(escapeHtml).join(" · ") || "분류 미정"}</small><blockquote>${escapeHtml(row.quote)}</blockquote></article>
     `).join("")
     : '<p class="jd-empty-result">담당 업무 블록을 구분하지 못했습니다. 정리 미리보기에서 소제목과 글머리표를 확인해 주세요.</p>';
 
   document.querySelector("#jd-top-strategies").innerHTML = result.topStrategies.length
-    ? result.topStrategies.map((row) => {
-      const match = result.matches.find((item) => item.requirement.id === row.requirementId || item.shared.includes(row.skillId));
-      return `
+    ? result.topStrategies.map((row) => `
         <article class="jd-strategy-card">
-          <header><span>TOP ${row.rank}</span><h4>${escapeHtml(row.name)}</h4></header>
+          <header><span>TOP ${row.rank}</span><h4>${escapeHtml(row.name)}</h4><small>${escapeHtml(row.scope || "원문 기반")}</small></header>
           <div class="jd-strategy-fact"><span class="jd-fact-label">사실 · ${escapeHtml(row.requirementId)}</span><blockquote>${escapeHtml(row.evidence)}</blockquote></div>
           <dl>
             <div><dt><span class="jd-interpretation-label">해석</span> 왜 중요한가</dt><dd>${escapeHtml(row.importance)}</dd></div>
             <div><dt><span class="jd-interpretation-label">제안</span> 이력서 작성 방향</dt><dd>${escapeHtml(row.resume)}</dd></div>
-            <div><dt>내 프로필 연결</dt><dd>${match ? `<b>${escapeHtml(match.experience.id)}</b> ${escapeHtml(match.experience.text)}` : result.profileProvided ? "저장된 활동에서 이 역량과 직접 연결되는 근거를 찾지 못했습니다." : "프로필 없이도 위 JD 전략은 사용할 수 있습니다. 프로필을 작성하면 연결 활동을 추가로 표시합니다."}</dd></div>
           </dl>
-        </article>`;
-    }).join("")
-    : '<p class="jd-empty-result">이력서 전략을 만들 수 있는 반도체 세부 역량을 찾지 못했습니다.</p>';
+        </article>`).join("")
+    : '<p class="jd-empty-result">원문에서 구체적인 업무 역량을 찾지 못했습니다. 추출된 업무 문장은 아래 근거 영역에 그대로 보존했습니다.</p>';
 
   document.querySelector("#jd-feature-list").innerHTML = result.features.length
     ? result.features.map((row) => `
       <article><p><span class="jd-fact-label">사실 · ${escapeHtml(row.requirementId)}</span> ${escapeHtml(row.fact)}</p><p><span class="jd-interpretation-label">해석</span> ${escapeHtml(row.interpretation)}</p></article>
     `).join("")
-    : '<p class="jd-empty-result">지원 자격·우대사항에서 반도체 전용 특징을 찾지 못했습니다.</p>';
+    : '<p class="jd-empty-result">지원 자격·우대사항에서 해석 가능한 특징을 찾지 못했습니다.</p>';
 
   renderJdCompanyContext(company, role, result);
 
@@ -411,7 +416,6 @@ function renderJdAnalysis(result) {
         <div><strong>${escapeHtml(row.id)}</strong><span>${escapeHtml(row.label)}</span></div>
         <h4>${escapeHtml(row.question)}</h4>
         <p><b>JD 근거</b> ${escapeHtml(row.requirementId)}</p>
-        <p><b>프로필 활용 후보</b> ${row.experience ? `${escapeHtml(row.experience.id)} “${escapeHtml(row.experience.text)}”` : "현재 저장된 경험에서 직접 연결할 근거를 찾지 못했습니다."}</p>
       </article>
     `).join("")
     : '<p class="jd-empty-result">JD 요구사항이 추출되면 근거가 연결된 추천 문항을 표시합니다.</p>';
@@ -426,6 +430,89 @@ function renderJdAnalysis(result) {
       </article>
     `).join("")
     : '<p class="jd-empty-result">추출된 의미 단위가 없습니다.</p>';
+  document.querySelector("#jd-profile-connections").hidden = true;
+  document.querySelector("#jd-profile-connections").innerHTML = "";
+  state.jdAnalysis = result;
+  results.hidden = false;
+  results.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderProfileConnections(connectionResult) {
+  const container = document.querySelector("#jd-profile-connections");
+  if (!connectionResult.profileProvided) {
+    container.innerHTML = '<p class="jd-empty-result">저장된 경험이 없습니다. 내 프로필에서 경험을 먼저 입력해 주세요.</p>';
+    container.hidden = false;
+    return;
+  }
+  container.innerHTML = connectionResult.connections.map((row) => {
+    const labels = { direct: "직접 근거", indirect: "간접 연결", none: "근거 없음" };
+    const reason = row.mode === "direct" ? "JD와 경험에서 두 개 이상의 같은 역량 표현이 확인됐습니다."
+      : row.mode === "indirect" ? "공통 역량 표현은 하나지만 같은 업무라고 단정할 수 없어 추가 설명이 필요합니다."
+        : "프로필에 적힌 내용만으로는 이 요구사항과 연결할 근거를 찾지 못했습니다.";
+    return `<article class="jd-match-card ${row.mode === "none" ? "none" : ""}">
+      <div class="jd-match-status"><strong>${escapeHtml(row.requirement.id)} · ${labels[row.mode]}</strong><span>${jdCompetencyNames(row.shared).map(escapeHtml).join(" · ")}</span></div>
+      <div class="jd-quote-pair"><div><small>JD 원문</small><blockquote>${escapeHtml(row.requirement.quote || row.requirement.text)}</blockquote></div><div><small>내 경험 원문</small><blockquote>${row.experience ? escapeHtml(row.experience.text) : "연결 근거 없음"}</blockquote></div></div>
+      <p><span class="jd-interpretation-label">자동 연결 해석</span> ${escapeHtml(reason)}</p>
+    </article>`;
+  }).join("");
+  container.hidden = false;
+}
+
+function jdEvidenceButtons(ids) {
+  return (ids || []).length
+    ? ids.map((id) => `<button class="jd-evidence-link" type="button" data-evidence-id="${escapeHtml(id)}">${escapeHtml(id)}</button>`).join(" ")
+    : '<span class="jd-no-evidence">원문 근거 없음</span>';
+}
+
+function jdFactValues(rows, emptyText = "원문에 없음") {
+  if (!rows || !rows.length) return `<span class="jd-none">${emptyText}</span>`;
+  return `<ul>${rows.map((row) => `<li>${escapeHtml(row.value)}</li>`).join("")}</ul>`;
+}
+
+function renderJdAnalysisV4(result) {
+  const results = document.querySelector("#jd-results");
+  const company = document.querySelector("#jd-company").value.trim();
+  const role = document.querySelector("#jd-role").value.trim();
+  const sourceType = document.querySelector("#jd-source-type").value;
+  const sourceLabels = { official: "A · 기업 공식 채용공고", platform: "B · 채용 플랫폼·대행사", unknown: "C · 출처 미확인 복사본" };
+  document.querySelector("#jd-result-title").textContent = [company, role].filter(Boolean).join(" · ") || "JD 분석 결과";
+  document.querySelector("#jd-source-grade").textContent = `${sourceLabels[sourceType]} · 사용자 선택`;
+  const collectedAt = document.querySelector("#jd-collected-at").value;
+  const sourceUrl = document.querySelector("#jd-source-url").value.trim();
+  document.querySelector("#jd-source-meta").textContent = [collectedAt ? `원문 확인일 ${collectedAt}` : "원문 확인일 미입력", sourceUrl ? `공고 주소 ${sourceUrl}` : "공고 주소 미입력"].join(" · ");
+  document.querySelector("#jd-limitations").innerHTML = result.warnings.length
+    ? `<strong>분석 전 확인</strong><ul>${result.warnings.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
+    : "<strong>근거 검증</strong><p>표시된 Fact는 입력한 JD 의미 단위에 연결되었습니다.</p>";
+
+  const facts = result.facts;
+  const overview = [
+    ["직무명", `${escapeHtml(facts.jobTitle.value)}${facts.jobTitle.origin === "user" ? ' <small>사용자 입력</small>' : ""}`],
+    ["주요 업무", jdFactValues(facts.duties.slice(0, 5))],
+    ["핵심 요구역량·조건", jdFactValues([...facts.competencies, ...facts.required].slice(0, 5))],
+    ["주요 성과 목표", jdFactValues(facts.metrics.slice(0, 5))],
+    ["핵심 키워드", facts.keywords.length ? `<ul>${facts.keywords.slice(0, 7).map((row) => `<li>${escapeHtml(row.original)}</li>`).join("")}</ul>` : '<span class="jd-none">원문에 없음</span>'],
+  ];
+  document.querySelector("#jd-overview-grid").innerHTML = overview.map(([label, value]) => `<article><strong>${label}</strong><div>${value}</div></article>`).join("");
+
+  const factRows = [
+    ["직무명", facts.jobTitle.value === "원문에 없음" ? [] : [{ value: facts.jobTitle.value, evidenceIds: facts.jobTitle.evidenceIds }]],
+    ["주요 업무", facts.duties], ["요구 역량", facts.competencies], ["필수 조건", facts.required], ["우대 조건", facts.preferred],
+    ["필요 전공·기술지식", facts.knowledge], ["Tool·Software·언어", facts.tools], ["협업 대상", facts.collaborators], ["성과 목표·지표", facts.metrics],
+    ["JD 핵심 키워드", facts.keywords.map((row) => ({ value: row.original, evidenceIds: row.evidenceIds }))],
+  ];
+  document.querySelector("#jd-fact-table").innerHTML = factRows.map(([label, rows]) => `<tr><th>${label}</th><td>${jdFactValues(rows)}</td><td>${rows?.length ? jdEvidenceButtons([...new Set(rows.flatMap((row) => row.evidenceIds || []))]) : '<span class="jd-no-evidence">원문에 없음</span>'}</td></tr>`).join("");
+
+  document.querySelector("#jd-interpretation-table").innerHTML = result.interpretations.map((row) => `<tr><th>${escapeHtml(row.label)}<br><span class="jd-interpretation-label">AI 해석</span></th><td>${escapeHtml(row.value)}</td><td>${row.status === "supported" ? jdEvidenceButtons(row.evidenceIds) : '<span class="jd-no-evidence">해석 근거 부족</span>'}</td></tr>`).join("");
+  document.querySelector("#jd-keyword-table").innerHTML = facts.keywords.length
+    ? facts.keywords.map((row) => `<tr><td><span class="jd-fact-label">원문</span> ${escapeHtml(row.original)}</td><td><span class="jd-interpretation-label">AI 표준화</span> ${escapeHtml(row.standardized)}</td><td>${jdEvidenceButtons(row.evidenceIds)}</td></tr>`).join("")
+    : '<tr><td colspan="3"><span class="jd-none">원문에 없음</span></td></tr>';
+  document.querySelector("#jd-direct-tools").innerHTML = facts.tools.length
+    ? facts.tools.map((row) => `<article><strong>${escapeHtml(row.value)}</strong>${jdEvidenceButtons(row.evidenceIds)}</article>`).join("")
+    : '<p class="jd-empty-result">JD에 직접 적힌 Tool이 없습니다.</p>';
+  document.querySelector("#jd-study-tools").innerHTML = result.studySuggestions.length
+    ? result.studySuggestions.map((row) => `<article><strong>${escapeHtml(row.name)}</strong><p>${escapeHtml(row.reason)}</p>${jdEvidenceButtons(row.evidenceIds)}<small>공고의 요구 Tool이 아니라 공부 후보입니다.</small></article>`).join("")
+    : '<p class="jd-empty-result">근거가 충분한 Tool 공부 후보를 만들지 않았습니다.</p>';
+  document.querySelector("#jd-evidence-list").innerHTML = result.units.map((row) => `<article class="jd-evidence-card" id="evidence-${escapeHtml(row.id)}"><div><strong>${escapeHtml(row.id)}</strong><span class="jd-level">${escapeHtml(row.section)}</span>${row.verified ? '<span class="quote-ok">원문 확인</span>' : '<span class="quote-fail">검증 실패</span>'}</div><blockquote>${escapeHtml(row.text)}</blockquote></article>`).join("");
   results.hidden = false;
   results.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -546,6 +633,8 @@ function refreshJdProfileLink() {
   const profile = window.CareerProfile.load(window.localStorage);
   const summary = window.CareerProfile.summary(profile);
   const container = document.querySelector("#jd-profile-link");
+  // JD 1단계는 프로필과 완전히 분리되어 이 영역이 없는 것이 정상이다.
+  if (!container) return;
   const title = container.querySelector("strong");
   const copy = container.querySelector("span");
   const button = container.querySelector("button");
@@ -680,36 +769,7 @@ function renderJdSourcePreview() {
 
 function bindJdAnalyzer() {
   const dateInput = document.querySelector("#jd-collected-at");
-  const fileInput = document.querySelector("#jd-pdf-file");
-  const fileStatus = document.querySelector("#jd-file-status");
   dateInput.value = new Date().toISOString().slice(0, 10);
-  fileInput.addEventListener("change", async () => {
-    const file = fileInput.files?.[0];
-    if (!file) return;
-    fileStatus.className = "jd-file-status loading";
-    try {
-      const extracted = await window.JDPdfImport.extract(file, (message) => {
-        fileStatus.textContent = message;
-      });
-      document.querySelector("#jd-text").value = extracted.text;
-      const detected = window.RoleNormalizer.detect(extracted.text);
-      if (!document.querySelector("#jd-company").value.trim() && detected.company) {
-        document.querySelector("#jd-company").value = detected.company;
-      }
-      if (!document.querySelector("#jd-role").value.trim() && detected.role.original) {
-        document.querySelector("#jd-role").value = detected.role.original;
-      }
-      showDetectedRoles(detected.roles);
-      updateRoleMapping();
-      fileStatus.className = "jd-file-status success";
-      const extractionMode = extracted.mode === "browser_ocr" ? "이미지 OCR" : "PDF 내장 글자";
-      fileStatus.textContent = `${extracted.fileName} · ${extracted.pages}쪽 · ${extractionMode}로 ${extracted.characters.toLocaleString("ko-KR")}자 추출 완료. 정리 미리보기에서 OCR 오류와 의미 단위를 확인하세요.`;
-      renderJdSourcePreview();
-    } catch (error) {
-      fileStatus.className = "jd-file-status error";
-      fileStatus.textContent = error.message || "PDF에서 글자를 읽지 못했습니다.";
-    }
-  });
   document.querySelector("#jd-form").addEventListener("submit", (event) => {
     event.preventDefault();
     try {
@@ -719,10 +779,9 @@ function bindJdAnalyzer() {
       }
       const result = window.JDAnalyzer.analyze({
         jdText: document.querySelector("#jd-cleaned-text").value,
-        experienceText: window.CareerProfile.toExperienceText(window.CareerProfile.load(window.localStorage)),
         roleName: document.querySelector("#jd-role").value,
       });
-      renderJdAnalysis(result);
+      renderJdAnalysisV4(result);
     } catch (error) {
       window.alert(error.message || "분석 중 문제가 발생했습니다.");
     }
@@ -742,19 +801,18 @@ function bindJdAnalyzer() {
   document.querySelector("#jd-reset").addEventListener("click", () => {
     document.querySelector("#jd-form").reset();
     dateInput.value = new Date().toISOString().slice(0, 10);
-    fileStatus.textContent = "";
-    fileStatus.className = "jd-file-status";
     document.querySelector("#jd-results").hidden = true;
     document.querySelector("#jd-clean-preview").hidden = true;
     document.querySelector("#jd-analyze-button").hidden = true;
     document.querySelector("#jd-cleaned-text").value = "";
-    showDetectedRoles([]);
-    updateRoleMapping();
   });
-  document.querySelector("#jd-role").addEventListener("input", updateRoleMapping);
-  document.querySelector("#jd-role-choice").addEventListener("change", (event) => {
-    document.querySelector("#jd-role").value = event.target.value;
-    updateRoleMapping();
+  document.querySelector("#jd-results").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-evidence-id]");
+    if (!button) return;
+    const details = document.querySelector(".jd-evidence-details");
+    details.open = true;
+    const target = document.querySelector(`#evidence-${CSS.escape(button.dataset.evidenceId)}`);
+    target?.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
 
