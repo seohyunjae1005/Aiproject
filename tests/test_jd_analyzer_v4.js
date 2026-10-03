@@ -22,6 +22,21 @@ function assertEvidenceIntegrity(result) {
     assert.ok(row.evidenceIds.length > 0, `근거 없는 해석: ${row.label}`);
     row.evidenceIds.forEach((id) => assert.ok(ids.has(id), `존재하지 않는 해석 근거: ${id}`));
   });
+  const careerRows = [
+    result.careerAnalysis.definition,
+    ...result.careerAnalysis.workAxes,
+    ...result.careerAnalysis.problems,
+    ...result.careerAnalysis.competencyLinks,
+    ...result.careerAnalysis.performanceGroups,
+    ...result.careerAnalysis.emphasis,
+    ...result.careerAnalysis.preparation.must,
+    ...result.careerAnalysis.preparation.strengths,
+    ...result.careerAnalysis.preparation.study,
+  ].filter((row) => row.status !== "insufficient");
+  careerRows.forEach((row) => {
+    assert.ok(row.evidenceIds.length > 0, `근거 없는 직무 해석: ${row.title || row.label || row.problem || row.category}`);
+    row.evidenceIds.forEach((id) => assert.ok(ids.has(id), `존재하지 않는 직무 해석 근거: ${id}`));
+  });
 }
 
 const hyundai = `직무명: 생산기술
@@ -43,6 +58,13 @@ assert.equal(hyundaiResult.facts.required.length, 3);
 assert.ok(hyundaiResult.facts.metrics.some((row) => /가동률/.test(row.value)));
 assert.ok(hyundaiResult.facts.tools.some((row) => row.value === "AI" ) === false);
 assert.ok(hyundaiResult.facts.keywords.some((row) => row.standardized === "Automation / Smart Factory"));
+assert.ok(hyundaiResult.careerAnalysis.definition.status === "supported");
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "line"));
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "automation"));
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "improvement"));
+assert.ok(hyundaiResult.careerAnalysis.problems.some((row) => /가동률/.test(row.problem)));
+assert.ok(hyundaiResult.careerAnalysis.performanceGroups.some((row) => row.category === "경제성"));
+assert.ok(hyundaiResult.careerAnalysis.preparation.must.some((row) => /영어회화/.test(row.title)));
 assert.equal(JSON.stringify(hyundaiResult).includes("재료·화학"), false);
 assert.equal("profile" in hyundaiResult, false);
 assertEvidenceIntegrity(hyundaiResult);
@@ -59,6 +81,8 @@ assert.equal(hynixResult.facts.duties.length, 2);
 assert.equal(hynixResult.facts.preferred.length, 2);
 assert.ok(hynixResult.facts.collaborators.some((row) => /장비\s*업체/.test(row.value)));
 assert.ok(hynixResult.facts.metrics.some((row) => /수율/.test(row.value)));
+assert.ok(hynixResult.careerAnalysis.workAxes.some((row) => row.id === "improvement"));
+assert.ok(hynixResult.careerAnalysis.competencyLinks.some((row) => /반도체 공정/.test(row.requirement)));
 assertEvidenceIntegrity(hynixResult);
 
 const generic = analyzer.analyze({
@@ -76,6 +100,8 @@ assert.ok(generic.facts.tools.some((row) => row.value === "Python"));
 assert.ok(generic.facts.tools.some((row) => row.value === "SQL"));
 assert.ok(generic.facts.tools.some((row) => row.value === "Tableau"));
 assert.ok(generic.facts.collaborators.some((row) => /개발\s*부서/.test(row.value)));
+assert.ok(generic.careerAnalysis.workAxes.some((row) => ["data", "software"].includes(row.id)));
+assert.equal("profile" in generic.careerAnalysis, false);
 assertEvidenceIntegrity(generic);
 
 const noRequirementHeading = analyzer.analyze({ jdText: "고객 데이터를 분석하고 서비스 품질을 개선합니다." });

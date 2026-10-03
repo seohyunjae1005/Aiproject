@@ -154,15 +154,162 @@
     add("JMP 또는 Minitab", "공정·품질 데이터 비교와 통계 해석 학습 후보", "Process Optimization"); add("PLC 기초", "설비 자동화 구조 이해를 위한 학습 후보", "Automation / Smart Factory");
     return suggestions.slice(0, 3);
   }
+
+  const WORK_AXIS_RULES = [
+    { id: "launch", title: "제품·양산 준비", regex: /신차|신제품|신규\s*제품|양산\s*(준비|전환)|제품\s*도입|개발\s*단계/, purpose: "제품을 실제 생산·운영 환경에 안정적으로 도입" },
+    { id: "line", title: "공정·라인 설계", regex: /라인|레이아웃|layout|공법|투자비|표준\s*인원|공장\s*건설|공정\s*설계|운영관리\s*프로세스/, purpose: "필요 생산능력과 운영 효율을 갖춘 생산 체계를 설계" },
+    { id: "automation", title: "자동화·시스템 고도화", regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|인공지능|비전|시스템\s*(구축|확대|고도화)|디지털/, purpose: "자동화와 데이터 활용으로 운영 수준을 높임" },
+    { id: "improvement", title: "생산성·품질 개선", regex: /생산성|가동률|품질|수율|원가|수익성|저해\s*요인|불량|처리량|납기|최적화/, purpose: "손실 요인을 찾아 JD가 제시한 성과 목표를 개선" },
+    { id: "operations", title: "운영·안정화", regex: /운영|관리|안정|set[- ]?up|유지|모니터링|생산\s*공정/, purpose: "공정·설비·서비스가 안정적으로 작동하도록 관리" },
+    { id: "data", title: "데이터 분석·활용", regex: /데이터\s*(분석|활용)|파이프라인|데이터베이스|\bSQL\b|통계|모델/, purpose: "데이터를 수집·분석해 판단과 개선에 활용" },
+    { id: "software", title: "개발·구현", regex: /소프트웨어|프로그램|프로그래밍|코드|\bAPI\b|배포|테스트|개발|구현/, purpose: "요구 기능을 실제 시스템이나 프로그램으로 구현" },
+    { id: "research", title: "연구·평가·검증", regex: /연구|실험|평가|검증|시험|특성\s*분석/, purpose: "가설이나 기술의 성능을 평가하고 검증" },
+    { id: "business", title: "고객·사업 실행", regex: /고객|시장|영업|전략|사업|매출/, purpose: "고객과 시장 요구를 사업 성과로 연결" },
+  ];
+
+  function evidenceOf(rows) { return unique((rows || []).flatMap((row) => row.evidenceIds || [])); }
+  function topicParticle(word) {
+    const last = String(word || "").slice(-1); const code = last.charCodeAt(0);
+    if (code >= 0xac00 && code <= 0xd7a3) return (code - 0xac00) % 28 === 0 ? "는" : "은";
+    return "는";
+  }
+  function shortDuty(text) {
+    const value = clean(text).replace(/^(?:담당\s*업무\s*)/i, "");
+    const colon = value.split(/[:：]/);
+    if (colon.length > 1 && colon[0].length >= 3 && colon[0].length <= 32) return `${colon[0].trim()}: ${colon.slice(1).join(":").trim()}`;
+    return value.length > 170 ? `${value.slice(0, 167).trim()}…` : value;
+  }
+  function axisScore(text, axis) {
+    const matches = String(text).match(new RegExp(axis.regex.source, "gi"));
+    return matches ? matches.length : 0;
+  }
+  function buildWorkAxes(facts) {
+    const buckets = new Map(); const unclassified = [];
+    facts.duties.forEach((duty) => {
+      const ranked = WORK_AXIS_RULES.map((axis) => ({ axis, score: axisScore(duty.value, axis) })).sort((a, b) => b.score - a.score);
+      if (!ranked[0] || ranked[0].score === 0) { unclassified.push(duty); return; }
+      const selected = ranked[0].axis;
+      if (!buckets.has(selected.id)) buckets.set(selected.id, { ...selected, duties: [] });
+      buckets.get(selected.id).duties.push(duty);
+    });
+    const axes = [...buckets.values()].map((axis) => ({
+      id: axis.id,
+      title: axis.title,
+      actualWork: axis.duties.map((row) => shortDuty(row.value)),
+      purpose: axis.purpose,
+      evidenceIds: evidenceOf(axis.duties),
+    }));
+    if (unclassified.length) axes.push({ id: "other", title: "기타 핵심 업무", actualWork: unclassified.map((row) => shortDuty(row.value)), purpose: "사전에 맞지 않더라도 JD가 직접 제시한 업무로 보존", evidenceIds: evidenceOf(unclassified) });
+    return axes.slice(0, 6);
+  }
+  function hasAny(text, regex) { regex.lastIndex = 0; return regex.test(String(text)); }
+  function matchingEvidence(facts, regex) {
+    const rows = [...facts.duties, ...facts.metrics, ...facts.keywords.map((row) => ({ value: row.original, evidenceIds: row.evidenceIds }))];
+    return evidenceOf(rows.filter((row) => hasAny(row.value, regex)));
+  }
+  function buildProblems(facts, axes) {
+    const candidates = [
+      { regex: /가동률|저해\s*요인/, problem: "가동률을 떨어뜨리는 요인이 발생함", target: "설비·공정의 저해 요인", direction: "저해 요인을 검토·분석하고 개선", result: "가동률·생산성 개선" },
+      { regex: /품질|불량/, problem: "생산 과정에서 요구 품질을 확보해야 함", target: "JD에 언급된 제품·부품 품질", direction: "품질 상태를 확인하고 확보·개선 활동을 수행", result: "품질 확보·개선" },
+      { regex: /수율/, problem: "생산 과정에서 수율 손실이 발생함", target: "공정 조건과 수율 저하 요인", direction: "조건을 최적화하고 결과를 확인", result: "수율 향상" },
+      { regex: /원가|투자비|수익성/, problem: "기술 선택과 생산 체계의 경제성을 함께 판단해야 함", target: "공법·투자비·원가·수익성", direction: "대안을 검토하고 비용·수익 관점에서 비교", result: "투자 타당성·수익성 확보" },
+      { regex: /신차|신제품|양산\s*(준비|전환)|개발\s*단계/, problem: "새 제품을 생산 현장에 안정적으로 도입해야 함", target: "제품 구조·공법·라인·운영 조건", direction: "사전 검토와 설계·품질 확보를 병행", result: "안정적인 제품·양산 준비" },
+      { regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전/, problem: "자동화 설비와 데이터 활용 수준을 높여야 함", target: "JD에 언급된 자동화 설비와 데이터 활용 방식", direction: "자동화·데이터 기술을 개발하고 현장에 적용", result: "생산 체계 고도화" },
+    ];
+    return candidates.map((row) => ({ ...row, evidenceIds: matchingEvidence(facts, row.regex) })).filter((row) => row.evidenceIds.length).slice(0, 5);
+  }
+  function buildCompetencyLinks(facts, axes) {
+    const rows = [...facts.competencies, ...facts.preferred, ...facts.required];
+    const seen = new Set(); const links = [];
+    rows.forEach((row) => {
+      const value = row.value; const normalized = normalize(value); if (!normalized || seen.has(normalized)) return;
+      let axis = axes.find((item) => item.actualWork.some((work) => {
+        const tokens = value.match(/[가-힣A-Za-z]{2,}/g) || [];
+        return tokens.some((token) => normalize(work).includes(normalize(token)));
+      }));
+      if (!axis && /분석|데이터|Python|SQL|통계|프로그램/i.test(value)) axis = axes.find((item) => ["data", "automation", "improvement", "software"].includes(item.id));
+      if (!axis && /공정|원리|반도체|설계|전공|공학/i.test(value)) axis = axes.find((item) => ["operations", "improvement", "line", "research"].includes(item.id));
+      if (!axis && /협업|커뮤니케이션/i.test(value)) axis = axes[0];
+      if (!axis) return;
+      let reason = `${axis.title} 업무의 대상을 이해하고 실행하기 위한 배경으로 연결됩니다.`;
+      if (/분석|데이터|Python|SQL|통계/i.test(value)) reason = `${axis.title}에서 현상을 수치로 확인하고 원인을 좁히는 데 연결됩니다.`;
+      else if (/협업|커뮤니케이션/i.test(value)) reason = `${axis.title} 수행 중 관련 조직과 조건·일정·결과를 조율하는 데 연결됩니다.`;
+      else if (/공정|원리|반도체|설계|공학/i.test(value)) reason = `${axis.title}의 변수와 기술적 제약을 이해하는 기반으로 연결됩니다.`;
+      links.push({ requirement: value, axisTitle: axis.title, reason, evidenceIds: unique([...(row.evidenceIds || []), ...axis.evidenceIds]) }); seen.add(normalized);
+    });
+    return links.slice(0, 6);
+  }
+  function buildPerformanceGroups(facts, axes) {
+    const groups = [
+      ["생산 운영", /생산성|가동률|처리량|납기/], ["품질", /품질|수율|불량률/], ["경제성", /원가|투자비|수익성/], ["구축·고도화 목표", /안정|자동화|최적화|스마트\s*팩토리/],
+    ];
+    const rows = [...facts.metrics, ...facts.keywords.map((row) => ({ value: row.original, evidenceIds: row.evidenceIds }))];
+    return groups.map(([category, regex]) => {
+      const matched = mergeFacts(rows.filter((row) => hasAny(row.value, regex)));
+      if (!matched.length) return null;
+      const items = [];
+      matched.map((row) => row.value).sort((a, b) => b.length - a.length).forEach((value) => {
+        if (!items.some((item) => normalize(item).includes(normalize(value)) || normalize(value).includes(normalize(item)))) items.push(value);
+      });
+      const relatedAxes = axes.filter((axis) => axis.actualWork.some((work) => hasAny(work, regex))).map((axis) => axis.title);
+      return { category, items, connection: relatedAxes.length ? `${unique(relatedAxes).join("·")} 업무의 결과를 확인하는 기준입니다.` : "JD가 직접 언급한 업무 결과 기준입니다.", evidenceIds: evidenceOf(matched) };
+    }).filter(Boolean);
+  }
+  function buildEmphasis(facts, axes) {
+    const concepts = [
+      ["생산성과 가동률", /생산성|가동률/], ["품질과 수율", /품질|수율|불량/], ["자동화와 데이터 활용", /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전|데이터/],
+      ["공정·라인 설계", /라인|레이아웃|공법|공정\s*설계/], ["경제성", /원가|투자비|수익성/], ["운영 안정화", /운영|안정|set[- ]?up|관리/],
+    ];
+    const evidenceRows = [...facts.duties, ...facts.competencies, ...facts.required, ...facts.preferred];
+    return concepts.map(([label, regex]) => {
+      const matched = evidenceRows.filter((row) => hasAny(row.value, regex)); const refs = evidenceOf(matched);
+      if (!refs.length) return null;
+      const count = refs.length; const inDuty = facts.duties.some((row) => hasAny(row.value, regex));
+      const level = count >= 2 ? "핵심 강조" : inDuty ? "중요" : "보조";
+      return { label, level, reason: count >= 2 ? `서로 다른 ${count}개 의미 단위에서 반복됩니다.` : "주요 업무 문장에서 직접 확인됩니다.", evidenceIds: refs };
+    }).filter(Boolean).sort((a, b) => {
+      const scores = { "핵심 강조": 3, "중요": 2, "보조": 1 };
+      return scores[b.level] - scores[a.level];
+    }).slice(0, 6);
+  }
+  function buildPreparation(facts, axes, suggestions) {
+    const must = facts.required.slice(0, 5).map((row) => ({ title: row.value, detail: "지원 전 충족 여부를 원문 기준으로 먼저 확인해야 합니다.", evidenceIds: row.evidenceIds }));
+    const strengths = [...facts.preferred, ...facts.competencies].slice(0, 5).map((row) => {
+      const axis = axes.find((item) => item.evidenceIds.some((id) => row.evidenceIds.includes(id))) || axes[0];
+      return { title: row.value, detail: axis ? `${axis.title} 업무와 연결되는 경험을 구체적인 행동·결과로 설명할 준비가 필요합니다.` : "JD 문장과 직접 연결되는 경험 근거를 준비할 수 있습니다.", evidenceIds: unique([...(row.evidenceIds || []), ...(axis?.evidenceIds || [])]) };
+    });
+    if (!strengths.length) axes.slice(0, 3).forEach((axis) => strengths.push({ title: axis.title, detail: "이 업무와 관련해 본인이 수행한 행동·판단·산출물을 설명할 수 있도록 정리합니다.", evidenceIds: axis.evidenceIds }));
+    const study = suggestions.map((row) => ({ title: row.name, detail: row.reason, evidenceIds: row.evidenceIds }));
+    return { must, strengths, study };
+  }
+  function buildCareerAnalysis(facts, suggestions) {
+    const workAxes = buildWorkAxes(facts); const performanceGroups = buildPerformanceGroups(facts, workAxes);
+    const metricNames = unique(performanceGroups.flatMap((row) => row.items)).slice(0, 4);
+    const axisNames = workAxes.slice(0, 3).map((row) => row.title);
+    const definitionRefs = unique([...workAxes.slice(0, 3).flatMap((row) => row.evidenceIds), ...performanceGroups.flatMap((row) => row.evidenceIds)]);
+    const role = facts.jobTitle.value === "원문에 없음" ? "이 직무" : facts.jobTitle.value;
+    const definition = definitionRefs.length && axisNames.length
+      ? interpretation("직무 한 줄 정의", `${role}${topicParticle(role)} ${axisNames.join("·")}을 수행해 ${metricNames.length ? `${metricNames.join("·")} 같은 성과` : "JD에 제시된 업무 목표"}를 확보·개선하는 역할로 해석됩니다.`, definitionRefs)
+      : interpretation("직무 한 줄 정의", "해석 근거 부족", []);
+    return {
+      definition,
+      workAxes,
+      problems: buildProblems(facts, workAxes),
+      competencyLinks: buildCompetencyLinks(facts, workAxes),
+      performanceGroups,
+      emphasis: buildEmphasis(facts, workAxes),
+      preparation: buildPreparation(facts, workAxes, suggestions),
+    };
+  }
   function analyze(input) {
     const source = String(input?.jdText || "").trim(); if (!source) throw new Error("분석할 JD 원문을 입력해 주세요.");
-    const units = segment(source); const facts = extractFacts(source, units, input?.roleName); const interpretations = buildInterpretations(facts); const warnings = [];
+    const units = segment(source); const facts = extractFacts(source, units, input?.roleName); const interpretations = buildInterpretations(facts); const suggestions = studySuggestions(facts); const warnings = [];
     if (units.some((u) => !u.verified)) warnings.push("일부 근거 문장을 원문에서 다시 찾지 못해 해당 결과를 최종 사실로 확정하지 않았습니다.");
     if (!units.some((u) => u.section === "duty") && units.some((u) => u.section === "duty_inferred")) warnings.push("주요 업무 소제목이 없어 번호·수행 동사를 기준으로 업무 의미 단위를 복원했습니다. 원문과 대조해 주세요.");
     if (!units.some((u) => u.section === "duty" || u.section === "duty_inferred")) warnings.push("주요 업무 소제목 또는 명확한 업무 문장을 찾지 못했습니다. 업무 Fact를 ‘원문에 없음’으로 표시합니다.");
-    return { units, facts, interpretations, studySuggestions: studySuggestions(facts), warnings, analyzedAt: new Date().toISOString() };
+    return { units, facts, interpretations, studySuggestions: suggestions, careerAnalysis: buildCareerAnalysis(facts, suggestions), warnings, analyzedAt: new Date().toISOString() };
   }
 
-  root.JDAnalyzer = { SECTION_RULES, KEYWORD_RULES, TOOL_RULES, normalize, clean, segment, previewSource, extractFacts, buildInterpretations, studySuggestions, analyze };
+  root.JDAnalyzer = { SECTION_RULES, KEYWORD_RULES, TOOL_RULES, normalize, clean, segment, previewSource, extractFacts, buildInterpretations, studySuggestions, buildCareerAnalysis, analyze };
   if (typeof module !== "undefined" && module.exports) module.exports = root.JDAnalyzer;
 })(typeof window !== "undefined" ? window : globalThis);

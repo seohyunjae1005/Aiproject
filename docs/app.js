@@ -485,14 +485,31 @@ function renderJdAnalysisV4(result) {
     : "<strong>근거 검증</strong><p>표시된 Fact는 입력한 JD 의미 단위에 연결되었습니다.</p>";
 
   const facts = result.facts;
-  const overview = [
-    ["직무명", `${escapeHtml(facts.jobTitle.value)}${facts.jobTitle.origin === "user" ? ' <small>사용자 입력</small>' : ""}`],
-    ["주요 업무", jdFactValues(facts.duties.slice(0, 5))],
-    ["핵심 요구역량·조건", jdFactValues([...facts.competencies, ...facts.required].slice(0, 5))],
-    ["주요 성과 목표", jdFactValues(facts.metrics.slice(0, 5))],
-    ["핵심 키워드", facts.keywords.length ? `<ul>${facts.keywords.slice(0, 7).map((row) => `<li>${escapeHtml(row.original)}</li>`).join("")}</ul>` : '<span class="jd-none">원문에 없음</span>'],
-  ];
-  document.querySelector("#jd-overview-grid").innerHTML = overview.map(([label, value]) => `<article><strong>${label}</strong><div>${value}</div></article>`).join("");
+  const career = result.careerAnalysis;
+  document.querySelector("#jd-career-definition").innerHTML = career.definition.status === "supported"
+    ? `<span class="jd-interpretation-label">자동 해석</span><p>${escapeHtml(career.definition.value)}</p><div>${jdEvidenceButtons(career.definition.evidenceIds)}</div>`
+    : '<p class="jd-empty-result">업무와 성과 목표를 함께 연결할 근거가 부족합니다.</p>';
+  document.querySelector("#jd-work-axes").innerHTML = career.workAxes.length
+    ? career.workAxes.map((axis, index) => `<article><div class="jd-axis-number">0${index + 1}</div><h4>${escapeHtml(axis.title)}</h4><ul>${axis.actualWork.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><p><b>이 업무의 목적</b>${escapeHtml(axis.purpose)}</p><div>${jdEvidenceButtons(axis.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">묶을 수 있는 주요 업무 문장을 찾지 못했습니다.</p>';
+  document.querySelector("#jd-problems").innerHTML = career.problems.length
+    ? career.problems.map((row) => `<article><div><small>문제 상황</small><strong>${escapeHtml(row.problem)}</strong></div><div><small>살펴볼 대상</small><span>${escapeHtml(row.target)}</span></div><div><small>업무 방향</small><span>${escapeHtml(row.direction)}</span></div><div><small>기대 결과</small><span>${escapeHtml(row.result)}</span></div><div class="jd-row-evidence">${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">JD가 직접 언급한 문제·성과 표현만으로는 문제 해결 구조를 만들기 어렵습니다.</p>';
+  document.querySelector("#jd-competency-links").innerHTML = career.competencyLinks.length
+    ? career.competencyLinks.map((row) => `<article><div><small>JD 요구</small><strong>${escapeHtml(row.requirement)}</strong></div><span class="jd-connection-arrow">→</span><div><small>연결 업무</small><strong>${escapeHtml(row.axisTitle)}</strong><p>${escapeHtml(row.reason)}</p></div><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">업무와 직접 연결할 수 있는 요구 역량 문장을 찾지 못했습니다.</p>';
+  document.querySelector("#jd-performance-groups").innerHTML = career.performanceGroups.length
+    ? career.performanceGroups.map((row) => `<article><small>성과 관점</small><h4>${escapeHtml(row.category)}</h4><div class="jd-chip-row">${row.items.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div><p>${escapeHtml(row.connection)}</p><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">원문에서 직접 확인되는 성과 목표나 지표가 없습니다.</p>';
+  document.querySelector("#jd-emphasis").innerHTML = career.emphasis.length
+    ? career.emphasis.map((row) => `<article><span class="jd-emphasis-level">${escapeHtml(row.level)}</span><div><strong>${escapeHtml(row.label)}</strong><p>${escapeHtml(row.reason)}</p></div><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">강조도를 판단할 직접 표현이 부족합니다.</p>';
+  const renderPreparation = (rows, emptyText) => rows.length
+    ? rows.map((row) => `<article><strong>${escapeHtml(row.title)}</strong><p>${escapeHtml(row.detail)}</p><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : `<p class="jd-empty-result">${escapeHtml(emptyText)}</p>`;
+  document.querySelector("#jd-prep-must").innerHTML = renderPreparation(career.preparation.must, "원문에 명시된 필수 조건이 없습니다.");
+  document.querySelector("#jd-prep-strengths").innerHTML = renderPreparation(career.preparation.strengths, "직접 확인되는 우대·역량 조건이 없습니다.");
+  document.querySelector("#jd-prep-study").innerHTML = renderPreparation(career.preparation.study, "근거가 충분한 공부 후보를 만들지 않았습니다.");
 
   const factRows = [
     ["직무명", facts.jobTitle.value === "원문에 없음" ? [] : [{ value: facts.jobTitle.value, evidenceIds: facts.jobTitle.evidenceIds }]],
@@ -502,9 +519,8 @@ function renderJdAnalysisV4(result) {
   ];
   document.querySelector("#jd-fact-table").innerHTML = factRows.map(([label, rows]) => `<tr><th>${label}</th><td>${jdFactValues(rows)}</td><td>${rows?.length ? jdEvidenceButtons([...new Set(rows.flatMap((row) => row.evidenceIds || []))]) : '<span class="jd-no-evidence">원문에 없음</span>'}</td></tr>`).join("");
 
-  document.querySelector("#jd-interpretation-table").innerHTML = result.interpretations.map((row) => `<tr><th>${escapeHtml(row.label)}<br><span class="jd-interpretation-label">AI 해석</span></th><td>${escapeHtml(row.value)}</td><td>${row.status === "supported" ? jdEvidenceButtons(row.evidenceIds) : '<span class="jd-no-evidence">해석 근거 부족</span>'}</td></tr>`).join("");
   document.querySelector("#jd-keyword-table").innerHTML = facts.keywords.length
-    ? facts.keywords.map((row) => `<tr><td><span class="jd-fact-label">원문</span> ${escapeHtml(row.original)}</td><td><span class="jd-interpretation-label">AI 표준화</span> ${escapeHtml(row.standardized)}</td><td>${jdEvidenceButtons(row.evidenceIds)}</td></tr>`).join("")
+    ? facts.keywords.map((row) => `<tr><td><span class="jd-fact-label">원문</span> ${escapeHtml(row.original)}</td><td><span class="jd-interpretation-label">자동 표준화</span> ${escapeHtml(row.standardized)}</td><td>${jdEvidenceButtons(row.evidenceIds)}</td></tr>`).join("")
     : '<tr><td colspan="3"><span class="jd-none">원문에 없음</span></td></tr>';
   document.querySelector("#jd-direct-tools").innerHTML = facts.tools.length
     ? facts.tools.map((row) => `<article><strong>${escapeHtml(row.value)}</strong>${jdEvidenceButtons(row.evidenceIds)}</article>`).join("")

@@ -8,12 +8,12 @@
       content="주요 반도체 기업의 공식 뉴스룸에서 기술 동향과 기업 맥락을 추적합니다."
     />
     <title>반도체 산업 동향</title>
-    <link rel="stylesheet" href="styles.css?v=20261003-2" />
+    <link rel="stylesheet" href="styles.css?v=20261003-3" />
     <script src="pdf-import.js?v=20261001-2" defer></script>
-    <script src="jd-analyzer-v4.js?v=20261003-1" defer></script>
+    <script src="jd-analyzer-v4.js?v=20261003-2" defer></script>
     <script src="profile-store-v2.js?v=20261002-2" defer></script>
     <script src="role-normalizer.js?v=20261001-1" defer></script>
-    <script src="app.js?v=20261003-1" defer></script>
+    <script src="app.js?v=20261003-2" defer></script>
   </head>
   <body>
     <header class="topbar">
@@ -330,38 +330,51 @@
           <p class="jd-source-meta" id="jd-source-meta"></p>
           <div class="jd-limitations" id="jd-limitations"></div>
 
-          <section class="jd-result-section jd-overview-section">
-            <div class="jd-section-title"><span>1</span><div><h3>JD 한눈에 보기</h3><p>원문에서 확인된 내용만 요약합니다. 없는 항목은 ‘원문에 없음’으로 표시합니다.</p></div></div>
-            <div class="jd-overview-grid" id="jd-overview-grid"></div>
+          <section class="jd-result-section jd-mission-section">
+            <div class="jd-section-title"><span>1</span><div><h3>이 직무를 한 줄로 해석하면</h3><p><span class="jd-interpretation-label">근거 기반 자동 해석</span> JD 업무와 성과 표현을 함께 읽은 결과입니다.</p></div></div>
+            <div class="jd-mission-card" id="jd-career-definition"></div>
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>2</span><div><h3>JD Fact 분석</h3><p><span class="jd-fact-label">JD Fact</span> 추출 내용과 근거 문장을 함께 표시합니다.</p></div></div>
-            <div class="jd-table-wrap"><table class="jd-analysis-table"><thead><tr><th>항목</th><th>추출 내용</th><th>근거 JD 문장</th></tr></thead><tbody id="jd-fact-table"></tbody></table></div>
+            <div class="jd-section-title"><span>2</span><div><h3>핵심 업무축</h3><p>길게 나열된 업무를 목적이 같은 3~6개 묶음으로 정리합니다.</p></div></div>
+            <div class="jd-axis-grid" id="jd-work-axes"></div>
           </section>
 
           <section class="jd-result-section jd-suggestion-section">
-            <div class="jd-section-title"><span>3</span><div><h3>AI 직무 해석</h3><p><span class="jd-interpretation-label">AI 해석</span> 근거가 부족하면 해석하지 않습니다.</p></div></div>
-            <div class="jd-table-wrap"><table class="jd-analysis-table"><thead><tr><th>해석 항목</th><th>AI 해석</th><th>근거 JD 문장</th></tr></thead><tbody id="jd-interpretation-table"></tbody></table></div>
+            <div class="jd-section-title"><span>3</span><div><h3>이 직무가 해결하는 문제</h3><p>JD에서 확인되는 문제·분석 대상·업무 방향·기대 결과를 연결합니다.</p></div></div>
+            <div class="jd-problem-list" id="jd-problems"></div>
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>4</span><div><h3>JD 키워드</h3><p>원문 표현을 바꾸지 않고, 별도 열에만 AI 표준화 값을 표시합니다.</p></div></div>
-            <div class="jd-table-wrap"><table class="jd-analysis-table"><thead><tr><th>원문 키워드</th><th>AI 표준화</th><th>근거 JD 문장</th></tr></thead><tbody id="jd-keyword-table"></tbody></table></div>
+            <div class="jd-section-title"><span>4</span><div><h3>왜 이 역량을 요구하는가</h3><p>요구 조건을 반복하지 않고 어떤 업무에 왜 필요한지 설명합니다.</p></div></div>
+            <div class="jd-connection-list" id="jd-competency-links"></div>
           </section>
 
           <section class="jd-result-section">
-            <div class="jd-section-title"><span>5</span><div><h3>준비해야 할 지식·Tool</h3><p>JD 직접 요구와 AI 공부 후보를 명확히 분리합니다.</p></div></div>
-            <div class="jd-tool-columns"><div><h4><span class="jd-fact-label">JD 직접 요구</span></h4><div id="jd-direct-tools"></div></div><div><h4><span class="jd-interpretation-label">AI 제안 · 공부 후보</span></h4><div id="jd-study-tools"></div></div></div>
+            <div class="jd-section-title"><span>5</span><div><h3>성과 구조</h3><p>합격 가능성 점수가 아니라, JD가 직접 말한 업무 결과 기준의 묶음입니다.</p></div></div>
+            <div class="jd-performance-grid" id="jd-performance-groups"></div>
+          </section>
+
+          <section class="jd-result-section">
+            <div class="jd-section-title"><span>6</span><div><h3>JD 내부 강조도</h3><p>공고 안에서 같은 주제가 반복되거나 주요 업무에 직접 쓰였는지를 보여줍니다.</p></div></div>
+            <div class="jd-emphasis-list" id="jd-emphasis"></div>
+          </section>
+
+          <section class="jd-result-section jd-preparation-section">
+            <div class="jd-section-title"><span>7</span><div><h3>취업 준비 우선순위</h3><p>지원 전 확인 사항, 강조할 역량, 공부 후보를 서로 섞지 않습니다.</p></div></div>
+            <div class="jd-preparation-grid"><div><h4>먼저 확인</h4><div id="jd-prep-must"></div></div><div><h4>강조 준비</h4><div id="jd-prep-strengths"></div></div><div><h4><span class="jd-interpretation-label">공부 후보</span></h4><div id="jd-prep-study"></div></div></div>
           </section>
 
           <details class="jd-evidence-details">
-            <summary>JD 원문 근거 문장 전체 보기</summary>
-            <p>각 결과의 근거 번호를 누르면 여기에서 원문 의미 단위를 확인할 수 있습니다.</p>
-            <div class="jd-requirement-list" id="jd-evidence-list"></div>
+            <summary>JD Fact·키워드·원문 근거 자세히 보기</summary>
+            <p>위 해석의 근거 번호를 누르면 해당 원문 의미 단위로 이동합니다.</p>
+            <div class="jd-detail-block"><h4>JD Fact 분석</h4><div class="jd-table-wrap"><table class="jd-analysis-table"><thead><tr><th>항목</th><th>추출 내용</th><th>근거 JD 문장</th></tr></thead><tbody id="jd-fact-table"></tbody></table></div></div>
+            <div class="jd-detail-block"><h4>원문 키워드와 표준화 키워드</h4><div class="jd-table-wrap"><table class="jd-analysis-table"><thead><tr><th>원문 키워드</th><th>자동 표준화</th><th>근거 JD 문장</th></tr></thead><tbody id="jd-keyword-table"></tbody></table></div></div>
+            <div class="jd-detail-block"><h4>직접 요구된 Tool과 공부 후보</h4><div class="jd-tool-columns"><div><h4><span class="jd-fact-label">JD 직접 요구</span></h4><div id="jd-direct-tools"></div></div><div><h4><span class="jd-interpretation-label">자동 제안 · 공부 후보</span></h4><div id="jd-study-tools"></div></div></div></div>
+            <div class="jd-detail-block"><h4>원문 의미 단위</h4><div class="jd-requirement-list" id="jd-evidence-list"></div></div>
           </details>
 
-          <p class="jd-disclaimer">이 단계는 JD 원문만 분석하며 사용자 경험, 적합도, 합격 가능성을 판단하지 않습니다. AI 해석은 근거 문장을 확인한 뒤 참고용으로만 사용하세요.</p>
+          <p class="jd-disclaimer">이 단계는 JD 원문만 분석하며 사용자 경험, 적합도, 합격 가능성을 판단하지 않습니다. 자동 해석은 연결된 근거 문장을 확인한 뒤 참고용으로만 사용하세요.</p>
         </section>
       </section>
     </main>
