@@ -24,7 +24,7 @@
   ];
   const TOOL_RULES = [
     [/\bPython\b/gi, "Python"], [/\bSQL\b/gi, "SQL"], [/\bJMP\b/gi, "JMP"], [/\bMinitab\b/gi, "Minitab"],
-    [/\bMATLAB\b/gi, "MATLAB"], [/\bR\b/g, "R"], [/\bC\+\+\b/gi, "C++"], [/\bJava\b/gi, "Java"],
+    [/\bMATLAB\b/gi, "MATLAB"], [/\bR\b/g, "R"], [/\bDBMS\b/gi, "DBMS"], [/\bC\+\+\b/gi, "C++"], [/\bJava\b/gi, "Java"],
     [/\bExcel\b/gi, "Excel"], [/\bTableau\b/gi, "Tableau"], [/\bPower\s*BI\b/gi, "Power BI"],
     [/\bCAD\b/gi, "CAD"], [/\bCATIA\b/gi, "CATIA"], [/\bPLC\b/gi, "PLC"], [/\bSPC\b/gi, "SPC"], [/\bDOE\b/gi, "DOE"],
     [/\bE-FOREST\b/gi, "E-FOREST"],
@@ -150,21 +150,25 @@
   function studySuggestions(facts) {
     const suggestions = [];
     const add = (name, reason, keyword) => { const refs = facts.keywords.filter((r) => r.standardized === keyword).flatMap((r) => r.evidenceIds); if (refs.length && !facts.tools.some((r) => r.value === name)) suggestions.push({ name, reason, evidenceIds: unique(refs) }); };
-    add("Python", "데이터 전처리·분석 기초 연습 후보", "Data Analysis"); add("SQL", "업무 데이터 조회·집계 학습 후보", "Data Analysis");
+    const dataRefs = facts.keywords.filter((r) => r.standardized === "Data Analysis").flatMap((r) => r.evidenceIds);
+    const missingDataTools = ["Python", "SQL"].filter((name) => !facts.tools.some((row) => row.value === name));
+    if (dataRefs.length && missingDataTools.length) suggestions.push({ name: missingDataTools.join("·"), reason: "데이터 전처리·조회·분석을 한 흐름으로 연습하는 공부 후보", evidenceIds: unique(dataRefs) });
     add("JMP 또는 Minitab", "공정·품질 데이터 비교와 통계 해석 학습 후보", "Process Optimization"); add("PLC 기초", "설비 자동화 구조 이해를 위한 학습 후보", "Automation / Smart Factory");
     return suggestions.slice(0, 3);
   }
 
   const WORK_AXIS_RULES = [
-    { id: "launch", title: "제품·양산 준비", regex: /신차|신제품|신규\s*제품|양산\s*(준비|전환)|제품\s*도입|개발\s*단계/, purpose: "제품을 실제 생산·운영 환경에 안정적으로 도입" },
-    { id: "line", title: "공정·라인 설계", regex: /라인|레이아웃|layout|공법|투자비|표준\s*인원|공장\s*건설|공정\s*설계|운영관리\s*프로세스/, purpose: "필요 생산능력과 운영 효율을 갖춘 생산 체계를 설계" },
-    { id: "automation", title: "자동화·시스템 고도화", regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|인공지능|비전|시스템\s*(구축|확대|고도화)|디지털/, purpose: "자동화와 데이터 활용으로 운영 수준을 높임" },
-    { id: "improvement", title: "생산성·품질 개선", regex: /생산성|가동률|품질|수율|원가|수익성|저해\s*요인|불량|처리량|납기|최적화/, purpose: "손실 요인을 찾아 JD가 제시한 성과 목표를 개선" },
-    { id: "operations", title: "운영·안정화", regex: /운영|관리|안정|set[- ]?up|유지|모니터링|생산\s*공정/, purpose: "공정·설비·서비스가 안정적으로 작동하도록 관리" },
-    { id: "data", title: "데이터 분석·활용", regex: /데이터\s*(분석|활용)|파이프라인|데이터베이스|\bSQL\b|통계|모델/, purpose: "데이터를 수집·분석해 판단과 개선에 활용" },
-    { id: "software", title: "개발·구현", regex: /소프트웨어|프로그램|프로그래밍|코드|\bAPI\b|배포|테스트|개발|구현/, purpose: "요구 기능을 실제 시스템이나 프로그램으로 구현" },
-    { id: "research", title: "연구·평가·검증", regex: /연구|실험|평가|검증|시험|특성\s*분석/, purpose: "가설이나 기술의 성능을 평가하고 검증" },
-    { id: "business", title: "고객·사업 실행", regex: /고객|시장|영업|전략|사업|매출/, purpose: "고객과 시장 요구를 사업 성과로 연결" },
+    { id: "launch", regex: /신차|신제품|신규\s*제품|양산\s*(준비|전환)|제품\s*도입|개발\s*단계/ },
+    { id: "line", regex: /생산\s*라인|라인\s*설계|레이아웃|layout|표준\s*인원|공장\s*건설|공정\s*설계|운영관리\s*프로세스/ },
+    { id: "economics", regex: /공법|투자비|원가|수익성|경제성/ },
+    { id: "automation", regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|인공지능|비전|E-FOREST|시스템\s*(구축|확대|고도화)|디지털/ },
+    { id: "operations_improvement", regex: /생산성|가동률|저해\s*요인|처리량|납기/ },
+    { id: "quality", regex: /품질|수율|불량/ },
+    { id: "process_operations", regex: /공정\s*(운영|최적화)|조건\s*최적화|장비\s*set[- ]?up|설비\s*운영|안정적으로\s*운영|모니터링/ },
+    { id: "data", regex: /데이터\s*(분석|활용)|파이프라인|데이터베이스|DBMS|\bSQL\b|통계|모델/ },
+    { id: "software", regex: /소프트웨어|프로그램|프로그래밍|코드|\bAPI\b|서비스\s*개발|애플리케이션|배포/ },
+    { id: "research", regex: /연구|실험|평가|검증|시험|특성\s*분석/ },
+    { id: "business", regex: /고객|시장|영업|전략|사업|매출/ },
   ];
 
   function evidenceOf(rows) { return unique((rows || []).flatMap((row) => row.evidenceIds || [])); }
@@ -179,6 +183,43 @@
     if (colon.length > 1 && colon[0].length >= 3 && colon[0].length <= 32) return `${colon[0].trim()}: ${colon.slice(1).join(":").trim()}`;
     return value.length > 170 ? `${value.slice(0, 167).trim()}…` : value;
   }
+  function axisPresentation(axisId, source) {
+    const has = (regex) => hasAny(source, regex);
+    const map = {
+      launch: { title: has(/신차/) ? "신차 양산 준비" : "제품 양산 준비", purpose: has(/신차/) ? "신차가 생산 현장에 안정적으로 도입되도록 준비" : "제품이 생산·운영 환경에 안정적으로 도입되도록 준비" },
+      line: { title: has(/생산\s*라인|라인\s*설계/) ? "생산라인·공장 설계" : "공정·운영 체계 설계", purpose: "레이아웃·인원·운영 프로세스를 포함한 생산 체계를 설계" },
+      economics: { title: has(/투자비/) ? "공법·투자비·경제성 검토" : "원가·경제성 검토", purpose: "JD에 제시된 비용·투자·수익 관점에서 생산 계획을 검토" },
+      automation: { title: has(/스마트\s*팩토리/) ? "자동화·스마트팩토리 고도화" : "자동화·시스템 고도화", purpose: has(/빅데이터|\bAI\b|인공지능|비전/) ? "JD에 명시된 데이터·AI·비전 기술을 현장에 적용해 자동화 수준을 높임" : "자동화 기술과 시스템의 운영 수준을 높임" },
+      operations_improvement: { title: "생산 운영 개선", purpose: "저해 요인을 분석해 JD에 제시된 생산 운영 성과를 개선" },
+      quality: { title: has(/신차/) ? "신차 품질 확보" : has(/수율/) ? "품질·수율 개선" : "품질 확보·개선", purpose: "제품·공정의 품질 상태를 확인하고 JD에 제시된 품질 목표를 확보" },
+      process_operations: { title: "공정·설비 운영 최적화", purpose: "공정과 설비를 안정적으로 운영하고 조건을 최적화" },
+      data: { title: "데이터 분석·활용", purpose: "데이터를 수집·분석해 판단과 개선에 활용" },
+      software: { title: "소프트웨어·프로그램 개발", purpose: "JD에 명시된 소프트웨어·프로그램 업무를 개발·운영" },
+      research: { title: "연구·평가·검증", purpose: "가설이나 기술의 성능을 평가하고 검증" },
+      business: { title: "고객·사업 실행", purpose: "고객과 시장 요구를 사업 업무에 연결" },
+      other: { title: "기타 핵심 업무", purpose: "사전에 맞지 않더라도 JD가 직접 제시한 업무로 보존" },
+    };
+    return map[axisId] || map.other;
+  }
+  function axisWorkSummary(axisId, source) {
+    const phraseRules = {
+      launch: [/신차\s*준비/, /신제품\s*준비/, /양산\s*(?:준비|전환)/, /제품\s*도입/, /개발\s*단계/],
+      line: [/생산\s*라인\s*설계/, /신공장\s*건설/, /레이아웃/, /표준\s*인원/, /운영관리\s*프로세스\s*수립/, /공정\s*설계/],
+      economics: [/공법/, /투자비/, /원가/, /수익성/],
+      automation: [/자동화\s*설비\s*고도화/, /스마트\s*팩토리\s*구축/, /빅데이터/, /\bAI\b/, /인공지능/, /비전\s*활용/, /E-FOREST\s*시스템\s*(?:구축|확대\s*적용)?/],
+      operations_improvement: [/생산성/, /가동률\s*저해\s*요인/, /가동률/, /처리량/, /납기/],
+      quality: [/신차\s*개발\s*단계별\s*부품\s*품질(?:을)?\s*(?:육성\s*및\s*)?확보/, /품질(?:을)?\s*(?:안정화|향상|개선|확보)/, /수율\s*(?:향상|개선)?/, /불량률?\s*(?:감소|개선)?/],
+      process_operations: [/공정\s*(?:운영|최적화)/, /조건\s*최적화/, /장비\s*set[- ]?up/i, /안정적으로\s*운영/],
+      data: [/데이터\s*(?:분석|활용)/, /데이터\s*파이프라인/, /데이터베이스/, /DBMS/i, /SQL/i, /통계/],
+      software: [/소프트웨어/, /프로그램(?:밍)?/, /API/i, /서비스\s*개발/, /애플리케이션/, /배포/],
+      research: [/연구/, /실험/, /평가/, /검증/, /시험/, /특성\s*분석/],
+      business: [/고객/, /시장/, /영업/, /전략/, /사업/, /매출/],
+    };
+    const phrases = unique((phraseRules[axisId] || []).flatMap((regex) => {
+      const match = String(source).match(new RegExp(regex.source, regex.flags.includes("i") ? "i" : "")); return match ? [match[0].trim()] : [];
+    }));
+    return phrases.length ? phrases.join(" · ") : shortDuty(source);
+  }
   function axisScore(text, axis) {
     const matches = String(text).match(new RegExp(axis.regex.source, "gi"));
     return matches ? matches.length : 0;
@@ -186,20 +227,20 @@
   function buildWorkAxes(facts) {
     const buckets = new Map(); const unclassified = [];
     facts.duties.forEach((duty) => {
-      const ranked = WORK_AXIS_RULES.map((axis) => ({ axis, score: axisScore(duty.value, axis) })).sort((a, b) => b.score - a.score);
-      if (!ranked[0] || ranked[0].score === 0) { unclassified.push(duty); return; }
-      const selected = ranked[0].axis;
-      if (!buckets.has(selected.id)) buckets.set(selected.id, { ...selected, duties: [] });
-      buckets.get(selected.id).duties.push(duty);
+      const matched = WORK_AXIS_RULES.filter((axis) => axisScore(duty.value, axis) > 0);
+      if (!matched.length) { unclassified.push(duty); return; }
+      matched.forEach((axis) => {
+        if (!buckets.has(axis.id)) buckets.set(axis.id, { ...axis, duties: [] });
+        buckets.get(axis.id).duties.push(duty);
+      });
     });
     const axes = [...buckets.values()].map((axis) => ({
       id: axis.id,
-      title: axis.title,
-      actualWork: axis.duties.map((row) => shortDuty(row.value)),
-      purpose: axis.purpose,
+      ...axisPresentation(axis.id, axis.duties.map((row) => row.value).join(" ")),
+      actualWork: [axisWorkSummary(axis.id, axis.duties.map((row) => row.value).join(" "))],
       evidenceIds: evidenceOf(axis.duties),
     }));
-    if (unclassified.length) axes.push({ id: "other", title: "기타 핵심 업무", actualWork: unclassified.map((row) => shortDuty(row.value)), purpose: "사전에 맞지 않더라도 JD가 직접 제시한 업무로 보존", evidenceIds: evidenceOf(unclassified) });
+    if (unclassified.length) axes.push({ id: "other", ...axisPresentation("other", ""), actualWork: unclassified.map((row) => shortDuty(row.value)), evidenceIds: evidenceOf(unclassified) });
     return axes.slice(0, 6);
   }
   function hasAny(text, regex) { regex.lastIndex = 0; return regex.test(String(text)); }
@@ -208,28 +249,34 @@
     return evidenceOf(rows.filter((row) => hasAny(row.value, regex)));
   }
   function buildProblems(facts, axes) {
-    const candidates = [
-      { regex: /가동률|저해\s*요인/, problem: "가동률을 떨어뜨리는 요인이 발생함", target: "설비·공정의 저해 요인", direction: "저해 요인을 검토·분석하고 개선", result: "가동률·생산성 개선" },
-      { regex: /품질|불량/, problem: "생산 과정에서 요구 품질을 확보해야 함", target: "JD에 언급된 제품·부품 품질", direction: "품질 상태를 확인하고 확보·개선 활동을 수행", result: "품질 확보·개선" },
-      { regex: /수율/, problem: "생산 과정에서 수율 손실이 발생함", target: "공정 조건과 수율 저하 요인", direction: "조건을 최적화하고 결과를 확인", result: "수율 향상" },
-      { regex: /원가|투자비|수익성/, problem: "기술 선택과 생산 체계의 경제성을 함께 판단해야 함", target: "공법·투자비·원가·수익성", direction: "대안을 검토하고 비용·수익 관점에서 비교", result: "투자 타당성·수익성 확보" },
-      { regex: /신차|신제품|양산\s*(준비|전환)|개발\s*단계/, problem: "새 제품을 생산 현장에 안정적으로 도입해야 함", target: "제품 구조·공법·라인·운영 조건", direction: "사전 검토와 설계·품질 확보를 병행", result: "안정적인 제품·양산 준비" },
-      { regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전/, problem: "자동화 설비와 데이터 활용 수준을 높여야 함", target: "JD에 언급된 자동화 설비와 데이터 활용 방식", direction: "자동화·데이터 기술을 개발하고 현장에 적용", result: "생산 체계 고도화" },
-    ];
-    return candidates.map((row) => ({ ...row, evidenceIds: matchingEvidence(facts, row.regex) })).filter((row) => row.evidenceIds.length).slice(0, 5);
+    const source = facts.duties.map((row) => row.value).join(" "); const candidates = [];
+    const directTerms = (terms) => terms.filter(([regex]) => hasAny(source, regex)).map(([, label]) => label);
+    const operating = directTerms([[/생산성/, "생산성"], [/가동률/, "가동률"], [/처리량/, "처리량"], [/납기/, "납기"]]);
+    if (operating.length) candidates.push({ regex: /생산성|가동률|저해\s*요인|처리량|납기/, problem: `${operating.join("·")}을 개선하거나 확보해야 함`, target: hasAny(source, /저해\s*요인/) ? "JD가 언급한 운영 저해 요인" : "JD에 제시된 생산 운영 상태", direction: hasAny(source, /분석/) ? "운영 상태와 저해 요인을 분석하고 개선" : "운영 상태를 확인하고 개선 활동을 수행", result: `${operating.join("·")} 개선` });
+    const quality = directTerms([[/품질/, "품질"], [/수율/, "수율"], [/불량/, "불량" ]]);
+    if (quality.length) candidates.push({ regex: /품질|수율|불량/, problem: `${quality.join("·")} 목표를 확보하거나 개선해야 함`, target: hasAny(source, /부품\s*품질/) ? "JD에 언급된 부품 품질" : "JD에 언급된 제품·공정 품질", direction: "상태와 원인을 확인하고 확보·개선 활동을 수행", result: `${quality.join("·")} 확보·개선` });
+    const economy = directTerms([[/공법/, "공법"], [/투자비/, "투자비"], [/원가/, "원가"], [/수익성/, "수익성"]]);
+    if (economy.length) candidates.push({ regex: /공법|투자비|원가|수익성/, problem: `${economy.join("·")}을 함께 검토해야 함`, target: `${economy.join("·")} 관련 계획과 산출 내용`, direction: "JD에 제시된 비용·투자·수익 관점에서 대안을 검토", result: `${economy.join("·")} 검토 결과 확보` });
+    if (hasAny(source, /신차|신제품|양산\s*(준비|전환)|개발\s*단계/)) candidates.push({ regex: /신차|신제품|양산\s*(준비|전환)|개발\s*단계/, problem: hasAny(source, /신차/) ? "신차를 생산 현장에 안정적으로 도입해야 함" : "제품을 생산 현장에 안정적으로 도입해야 함", target: hasAny(source, /구조|설계/) ? "JD에 언급된 제품 구조·설계와 생산 조건" : "JD에 언급된 제품과 생산 조건", direction: "사전 검토와 생산 준비 활동을 수행", result: hasAny(source, /신차/) ? "신차 양산 준비" : "제품 양산 준비" });
+    if (hasAny(source, /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전/)) candidates.push({ regex: /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전/, problem: "자동화 설비와 기술 적용 수준을 높여야 함", target: "JD에 언급된 자동화 설비와 적용 기술", direction: "원문에 명시된 기술을 개발·적용", result: hasAny(source, /스마트\s*팩토리/) ? "자동화·스마트팩토리 고도화" : "자동화 수준 고도화" });
+    return candidates.map((row) => ({ ...row, evidenceIds: matchingEvidence(facts, row.regex) })).filter((row) => row.evidenceIds.length).slice(0, 6);
+  }
+  function findAxisForRequirement(value, axes) {
+    if (/자격증|기사\s*(?:자격|보유)|어학|영어\s*성적|학위|졸업/.test(String(value))) return null;
+    const tokens = String(value).match(/[가-힣A-Za-z]{2,}/g) || [];
+    let axis = axes.find((item) => item.actualWork.some((work) => tokens.some((token) => normalize(work).includes(normalize(token)))));
+    if (!axis && /분석|데이터|Python|SQL|DBMS|\bR\b|통계|프로그램/i.test(value)) axis = axes.find((item) => ["data", "operations_improvement", "automation", "software"].includes(item.id));
+    if (!axis && /공정|원리|반도체|설계|전공|공학/i.test(value)) axis = axes.find((item) => ["process_operations", "operations_improvement", "line", "research"].includes(item.id));
+    if (!axis && /협업|커뮤니케이션/i.test(value)) axis = axes[0];
+    return axis || null;
   }
   function buildCompetencyLinks(facts, axes) {
     const rows = [...facts.competencies, ...facts.preferred, ...facts.required];
     const seen = new Set(); const links = [];
     rows.forEach((row) => {
       const value = row.value; const normalized = normalize(value); if (!normalized || seen.has(normalized)) return;
-      let axis = axes.find((item) => item.actualWork.some((work) => {
-        const tokens = value.match(/[가-힣A-Za-z]{2,}/g) || [];
-        return tokens.some((token) => normalize(work).includes(normalize(token)));
-      }));
-      if (!axis && /분석|데이터|Python|SQL|통계|프로그램/i.test(value)) axis = axes.find((item) => ["data", "automation", "improvement", "software"].includes(item.id));
-      if (!axis && /공정|원리|반도체|설계|전공|공학/i.test(value)) axis = axes.find((item) => ["operations", "improvement", "line", "research"].includes(item.id));
-      if (!axis && /협업|커뮤니케이션/i.test(value)) axis = axes[0];
+      if (ELIGIBILITY_HINT.test(value)) return;
+      const axis = findAxisForRequirement(value, axes);
       if (!axis) return;
       let reason = `${axis.title} 업무의 대상을 이해하고 실행하기 위한 배경으로 연결됩니다.`;
       if (/분석|데이터|Python|SQL|통계/i.test(value)) reason = `${axis.title}에서 현상을 수치로 확인하고 원인을 좁히는 데 연결됩니다.`;
@@ -241,55 +288,72 @@
   }
   function buildPerformanceGroups(facts, axes) {
     const groups = [
-      ["생산 운영", /생산성|가동률|처리량|납기/], ["품질", /품질|수율|불량률/], ["경제성", /원가|투자비|수익성/], ["구축·고도화 목표", /안정|자동화|최적화|스마트\s*팩토리/],
+      ["생산 운영 지표", /생산성|가동률|처리량|납기/, ["operations_improvement"]], ["품질 지표", /품질|수율|불량률/, ["quality"]], ["경제성 지표", /원가|수익성/, ["economics"]],
     ];
     const rows = [...facts.metrics, ...facts.keywords.map((row) => ({ value: row.original, evidenceIds: row.evidenceIds }))];
-    return groups.map(([category, regex]) => {
+    return groups.map(([category, regex, axisIds]) => {
       const matched = mergeFacts(rows.filter((row) => hasAny(row.value, regex)));
       if (!matched.length) return null;
       const items = [];
       matched.map((row) => row.value).sort((a, b) => b.length - a.length).forEach((value) => {
         if (!items.some((item) => normalize(item).includes(normalize(value)) || normalize(value).includes(normalize(item)))) items.push(value);
       });
-      const relatedAxes = axes.filter((axis) => axis.actualWork.some((work) => hasAny(work, regex))).map((axis) => axis.title);
+      const relatedAxes = axes.filter((axis) => axisIds.includes(axis.id)).map((axis) => axis.title);
       return { category, items, connection: relatedAxes.length ? `${unique(relatedAxes).join("·")} 업무의 결과를 확인하는 기준입니다.` : "JD가 직접 언급한 업무 결과 기준입니다.", evidenceIds: evidenceOf(matched) };
     }).filter(Boolean);
   }
-  function buildEmphasis(facts, axes) {
+  function buildDeliveryGoals(facts, axes) {
+    const groups = [["구축·설계 산출물", /라인|레이아웃|공장\s*건설|시스템\s*구축|프로세스\s*수립/, ["line", "economics"]], ["자동화·혁신 목표", /자동화|스마트\s*팩토리|고도화|확대\s*적용/, ["automation"]]];
+    const rows = facts.duties;
+    return groups.map(([category, regex, axisIds]) => {
+      const matched = rows.filter((row) => hasAny(row.value, regex)); if (!matched.length) return null;
+      const relatedAxes = axes.filter((axis) => axisIds.includes(axis.id)).map((axis) => axis.title);
+      return { category, description: relatedAxes.length ? `${unique(relatedAxes).join("·")}에서 만들어야 할 구축·설계 결과입니다.` : "JD가 직접 제시한 구축·설계 결과입니다.", evidenceIds: evidenceOf(matched) };
+    }).filter(Boolean);
+  }
+  function directConceptLabel(source, terms) { return terms.filter(([regex]) => hasAny(source, regex)).map(([, label]) => label).join("·"); }
+  function buildEvidenceDensity(facts, units) {
     const concepts = [
-      ["생산성과 가동률", /생산성|가동률/], ["품질과 수율", /품질|수율|불량/], ["자동화와 데이터 활용", /자동화|스마트\s*팩토리|빅데이터|\bAI\b|비전|데이터/],
-      ["공정·라인 설계", /라인|레이아웃|공법|공정\s*설계/], ["경제성", /원가|투자비|수익성/], ["운영 안정화", /운영|안정|set[- ]?up|관리/],
+      [[[/생산성/, "생산성"], [/가동률/, "가동률"]], /생산성|가동률/],
+      [[[/품질/, "품질"], [/수율/, "수율"], [/불량/, "불량"]], /품질|수율|불량/],
+      [[[/자동화/, "자동화"], [/스마트\s*팩토리/, "스마트팩토리"], [/빅데이터/, "빅데이터"], [/\bAI\b|인공지능/, "AI"], [/비전/, "비전"]], /자동화|스마트\s*팩토리|빅데이터|\bAI\b|인공지능|비전/],
+      [[[/라인/, "라인"], [/레이아웃/, "레이아웃"], [/공법/, "공법"]], /라인|레이아웃|공법|공정\s*설계/],
+      [[[/원가/, "원가"], [/투자비/, "투자비"], [/수익성/, "수익성"]], /원가|투자비|수익성/],
+      [[[/운영/, "운영"], [/안정/, "안정화"], [/set[- ]?up/i, "Set-up"]], /운영|안정|set[- ]?up/],
     ];
     const evidenceRows = [...facts.duties, ...facts.competencies, ...facts.required, ...facts.preferred];
-    return concepts.map(([label, regex]) => {
+    const unitMap = new Map(units.map((unit) => [unit.id, unit])); const sectionNames = { duty: "주요 업무", duty_inferred: "주요 업무", required: "필수 조건", preferred: "우대 조건", unspecified: "기타" };
+    return concepts.map(([terms, regex]) => {
       const matched = evidenceRows.filter((row) => hasAny(row.value, regex)); const refs = evidenceOf(matched);
       if (!refs.length) return null;
-      const count = refs.length; const inDuty = facts.duties.some((row) => hasAny(row.value, regex));
-      const level = count >= 2 ? "핵심 강조" : inDuty ? "중요" : "보조";
-      return { label, level, reason: count >= 2 ? `서로 다른 ${count}개 의미 단위에서 반복됩니다.` : "주요 업무 문장에서 직접 확인됩니다.", evidenceIds: refs };
+      const source = matched.map((row) => row.value).join(" "); const label = directConceptLabel(source, terms);
+      const sections = unique(refs.map((id) => sectionNames[unitMap.get(id)?.section] || "기타")); const inDuty = sections.includes("주요 업무");
+      const level = sections.length >= 2 || refs.length >= 3 ? "높은 근거 밀도" : inDuty ? "중간 근거 밀도" : "보조 근거";
+      const reason = `${sections.join("·")}의 ${refs.length}개 의미 단위에서 직접 확인됩니다.`;
+      return { label, level, reason, sections, evidenceIds: refs };
     }).filter(Boolean).sort((a, b) => {
-      const scores = { "핵심 강조": 3, "중요": 2, "보조": 1 };
+      const scores = { "높은 근거 밀도": 3, "중간 근거 밀도": 2, "보조 근거": 1 };
       return scores[b.level] - scores[a.level];
     }).slice(0, 6);
   }
   function buildPreparation(facts, axes, suggestions) {
     const must = facts.required.slice(0, 5).map((row) => ({ title: row.value, detail: "지원 전 충족 여부를 원문 기준으로 먼저 확인해야 합니다.", evidenceIds: row.evidenceIds }));
     const strengths = [...facts.preferred, ...facts.competencies].slice(0, 5).map((row) => {
-      const axis = axes.find((item) => item.evidenceIds.some((id) => row.evidenceIds.includes(id))) || axes[0];
-      return { title: row.value, detail: axis ? `${axis.title} 업무와 연결되는 경험을 구체적인 행동·결과로 설명할 준비가 필요합니다.` : "JD 문장과 직접 연결되는 경험 근거를 준비할 수 있습니다.", evidenceIds: unique([...(row.evidenceIds || []), ...(axis?.evidenceIds || [])]) };
+      const axis = findAxisForRequirement(row.value, axes);
+      return { title: row.value, detail: axis ? `${axis.title} 업무와 연결되는 경험을 구체적인 행동·결과로 설명할 준비가 필요합니다.` : "특정 업무축에 억지로 연결하지 않고 JD 명시 우대·역량 사항으로 준비합니다.", evidenceIds: unique([...(row.evidenceIds || []), ...(axis?.evidenceIds || [])]) };
     });
     if (!strengths.length) axes.slice(0, 3).forEach((axis) => strengths.push({ title: axis.title, detail: "이 업무와 관련해 본인이 수행한 행동·판단·산출물을 설명할 수 있도록 정리합니다.", evidenceIds: axis.evidenceIds }));
     const study = suggestions.map((row) => ({ title: row.name, detail: row.reason, evidenceIds: row.evidenceIds }));
     return { must, strengths, study };
   }
-  function buildCareerAnalysis(facts, suggestions) {
+  function buildCareerAnalysis(facts, suggestions, units) {
     const workAxes = buildWorkAxes(facts); const performanceGroups = buildPerformanceGroups(facts, workAxes);
-    const metricNames = unique(performanceGroups.flatMap((row) => row.items)).slice(0, 4);
-    const axisNames = workAxes.slice(0, 3).map((row) => row.title);
-    const definitionRefs = unique([...workAxes.slice(0, 3).flatMap((row) => row.evidenceIds), ...performanceGroups.flatMap((row) => row.evidenceIds)]);
+    const metricNames = unique(performanceGroups.flatMap((row) => row.items)).slice(0, 5);
+    const axisNames = workAxes.slice(0, 4).map((row) => row.title);
+    const definitionRefs = unique([...workAxes.slice(0, 4).flatMap((row) => row.evidenceIds), ...performanceGroups.flatMap((row) => row.evidenceIds)]);
     const role = facts.jobTitle.value === "원문에 없음" ? "이 직무" : facts.jobTitle.value;
     const definition = definitionRefs.length && axisNames.length
-      ? interpretation("직무 한 줄 정의", `${role}${topicParticle(role)} ${axisNames.join("·")}을 수행해 ${metricNames.length ? `${metricNames.join("·")} 같은 성과` : "JD에 제시된 업무 목표"}를 확보·개선하는 역할로 해석됩니다.`, definitionRefs)
+      ? interpretation("직무 한 줄 정의", `${role}${topicParticle(role)} ${axisNames.join(", ")}${workAxes.length > 4 ? " 등" : ""}의 업무를 통해 ${metricNames.length ? `${metricNames.join("·")} 같은 성과` : "JD에 제시된 업무 목표"}를 확보·개선하는 역할로 해석됩니다.`, definitionRefs)
       : interpretation("직무 한 줄 정의", "해석 근거 부족", []);
     return {
       definition,
@@ -297,9 +361,18 @@
       problems: buildProblems(facts, workAxes),
       competencyLinks: buildCompetencyLinks(facts, workAxes),
       performanceGroups,
-      emphasis: buildEmphasis(facts, workAxes),
+      deliveryGoals: buildDeliveryGoals(facts, workAxes),
+      emphasis: buildEvidenceDensity(facts, units),
       preparation: buildPreparation(facts, workAxes, suggestions),
     };
+  }
+  function validateCareerAnalysis(source, career) {
+    const protectedTerms = ["수율", "OEE", "Cpk", "PLC", "JMP", "Minitab", "Python", "SQL", "DBMS", "E-FOREST"];
+    const withoutStudySuggestions = { ...career, preparation: { ...career.preparation, study: [] } };
+    const rendered = JSON.stringify(withoutStudySuggestions).toLocaleLowerCase("ko");
+    const original = String(source || "").toLocaleLowerCase("ko");
+    const unsupportedTerms = protectedTerms.filter((term) => rendered.includes(term.toLocaleLowerCase("ko")) && !original.includes(term.toLocaleLowerCase("ko")));
+    return { status: unsupportedTerms.length ? "fail" : "pass", unsupportedTerms, checkedTerms: protectedTerms };
   }
   function analyze(input) {
     const source = String(input?.jdText || "").trim(); if (!source) throw new Error("분석할 JD 원문을 입력해 주세요.");
@@ -307,9 +380,11 @@
     if (units.some((u) => !u.verified)) warnings.push("일부 근거 문장을 원문에서 다시 찾지 못해 해당 결과를 최종 사실로 확정하지 않았습니다.");
     if (!units.some((u) => u.section === "duty") && units.some((u) => u.section === "duty_inferred")) warnings.push("주요 업무 소제목이 없어 번호·수행 동사를 기준으로 업무 의미 단위를 복원했습니다. 원문과 대조해 주세요.");
     if (!units.some((u) => u.section === "duty" || u.section === "duty_inferred")) warnings.push("주요 업무 소제목 또는 명확한 업무 문장을 찾지 못했습니다. 업무 Fact를 ‘원문에 없음’으로 표시합니다.");
-    return { units, facts, interpretations, studySuggestions: suggestions, careerAnalysis: buildCareerAnalysis(facts, suggestions), warnings, analyzedAt: new Date().toISOString() };
+    const careerAnalysis = buildCareerAnalysis(facts, suggestions, units); const validation = validateCareerAnalysis(source, careerAnalysis);
+    if (validation.status === "fail") warnings.push(`최종 용어 검증에서 원문에 없는 표현(${validation.unsupportedTerms.join("·")})을 발견했습니다. 해당 해석은 게시 전 확인이 필요합니다.`);
+    return { units, facts, interpretations, studySuggestions: suggestions, careerAnalysis, validation, warnings, analyzedAt: new Date().toISOString() };
   }
 
-  root.JDAnalyzer = { SECTION_RULES, KEYWORD_RULES, TOOL_RULES, normalize, clean, segment, previewSource, extractFacts, buildInterpretations, studySuggestions, buildCareerAnalysis, analyze };
+  root.JDAnalyzer = { SECTION_RULES, KEYWORD_RULES, TOOL_RULES, normalize, clean, segment, previewSource, extractFacts, buildInterpretations, studySuggestions, buildCareerAnalysis, validateCareerAnalysis, analyze };
   if (typeof module !== "undefined" && module.exports) module.exports = root.JDAnalyzer;
 })(typeof window !== "undefined" ? window : globalThis);

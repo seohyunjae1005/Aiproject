@@ -482,7 +482,7 @@ function renderJdAnalysisV4(result) {
   document.querySelector("#jd-source-meta").textContent = [collectedAt ? `원문 확인일 ${collectedAt}` : "원문 확인일 미입력", sourceUrl ? `공고 주소 ${sourceUrl}` : "공고 주소 미입력"].join(" · ");
   document.querySelector("#jd-limitations").innerHTML = result.warnings.length
     ? `<strong>분석 전 확인</strong><ul>${result.warnings.map((value) => `<li>${escapeHtml(value)}</li>`).join("")}</ul>`
-    : "<strong>근거 검증</strong><p>표시된 Fact는 입력한 JD 의미 단위에 연결되었습니다.</p>";
+    : `<strong>환각 검증 Pass</strong><p>표시된 Fact가 JD 의미 단위에 연결됐으며, 보호 용어 ${result.validation?.checkedTerms?.length || 0}종의 원문 존재 여부를 다시 확인했습니다.</p>`;
 
   const facts = result.facts;
   const career = result.careerAnalysis;
@@ -501,6 +501,9 @@ function renderJdAnalysisV4(result) {
   document.querySelector("#jd-performance-groups").innerHTML = career.performanceGroups.length
     ? career.performanceGroups.map((row) => `<article><small>성과 관점</small><h4>${escapeHtml(row.category)}</h4><div class="jd-chip-row">${row.items.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div><p>${escapeHtml(row.connection)}</p><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
     : '<p class="jd-empty-result">원문에서 직접 확인되는 성과 목표나 지표가 없습니다.</p>';
+  document.querySelector("#jd-delivery-goals").innerHTML = career.deliveryGoals.length
+    ? career.deliveryGoals.map((row) => `<article><small>과업·산출물</small><h4>${escapeHtml(row.category)}</h4><p>${escapeHtml(row.description)}</p><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
+    : '<p class="jd-empty-result">성과지표와 분리해 표시할 구축·설계 산출물이 없습니다.</p>';
   document.querySelector("#jd-emphasis").innerHTML = career.emphasis.length
     ? career.emphasis.map((row) => `<article><span class="jd-emphasis-level">${escapeHtml(row.level)}</span><div><strong>${escapeHtml(row.label)}</strong><p>${escapeHtml(row.reason)}</p></div><div>${jdEvidenceButtons(row.evidenceIds)}</div></article>`).join("")
     : '<p class="jd-empty-result">강조도를 판단할 직접 표현이 부족합니다.</p>';

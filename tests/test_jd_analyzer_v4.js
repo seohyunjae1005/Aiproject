@@ -28,6 +28,7 @@ function assertEvidenceIntegrity(result) {
     ...result.careerAnalysis.problems,
     ...result.careerAnalysis.competencyLinks,
     ...result.careerAnalysis.performanceGroups,
+    ...result.careerAnalysis.deliveryGoals,
     ...result.careerAnalysis.emphasis,
     ...result.careerAnalysis.preparation.must,
     ...result.careerAnalysis.preparation.strengths,
@@ -59,12 +60,18 @@ assert.ok(hyundaiResult.facts.metrics.some((row) => /가동률/.test(row.value))
 assert.ok(hyundaiResult.facts.tools.some((row) => row.value === "AI" ) === false);
 assert.ok(hyundaiResult.facts.keywords.some((row) => row.standardized === "Automation / Smart Factory"));
 assert.ok(hyundaiResult.careerAnalysis.definition.status === "supported");
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "launch"));
 assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "line"));
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "economics"));
 assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "automation"));
-assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "improvement"));
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "operations_improvement"));
+assert.ok(hyundaiResult.careerAnalysis.workAxes.some((row) => row.id === "quality"));
 assert.ok(hyundaiResult.careerAnalysis.problems.some((row) => /가동률/.test(row.problem)));
-assert.ok(hyundaiResult.careerAnalysis.performanceGroups.some((row) => row.category === "경제성"));
+assert.ok(hyundaiResult.careerAnalysis.performanceGroups.some((row) => row.category === "경제성 지표"));
+assert.ok(hyundaiResult.careerAnalysis.deliveryGoals.some((row) => row.category === "자동화·혁신 목표"));
 assert.ok(hyundaiResult.careerAnalysis.preparation.must.some((row) => /영어회화/.test(row.title)));
+assert.equal(JSON.stringify(hyundaiResult.careerAnalysis).includes("수율"), false);
+assert.equal(hyundaiResult.validation.status, "pass");
 assert.equal(JSON.stringify(hyundaiResult).includes("재료·화학"), false);
 assert.equal("profile" in hyundaiResult, false);
 assertEvidenceIntegrity(hyundaiResult);
@@ -81,7 +88,7 @@ assert.equal(hynixResult.facts.duties.length, 2);
 assert.equal(hynixResult.facts.preferred.length, 2);
 assert.ok(hynixResult.facts.collaborators.some((row) => /장비\s*업체/.test(row.value)));
 assert.ok(hynixResult.facts.metrics.some((row) => /수율/.test(row.value)));
-assert.ok(hynixResult.careerAnalysis.workAxes.some((row) => row.id === "improvement"));
+assert.ok(hynixResult.careerAnalysis.workAxes.some((row) => row.id === "quality"));
 assert.ok(hynixResult.careerAnalysis.competencyLinks.some((row) => /반도체 공정/.test(row.requirement)));
 assertEvidenceIntegrity(hynixResult);
 
@@ -110,5 +117,29 @@ assert.equal(noRequirementHeading.facts.preferred.length, 0);
 assert.equal(noRequirementHeading.facts.jobTitle.value, "원문에 없음");
 assert.ok(noRequirementHeading.warnings.length > 0);
 assertEvidenceIntegrity(noRequirementHeading);
+
+const noYieldContamination = analyzer.analyze({
+  roleName: "생산기술",
+  jdText: `주요 업무
+- 생산 라인의 품질을 개선합니다.
+- 자동화 설비를 구축하고 가동률 저해요인을 분석합니다.
+우대 사항
+- Python, R, DBMS 활용 경험
+- 품질경영기사 자격증 보유`,
+});
+assert.equal(JSON.stringify(noYieldContamination.careerAnalysis).includes("수율"), false);
+assert.equal(noYieldContamination.validation.status, "pass");
+assert.ok(noYieldContamination.facts.tools.some((row) => row.value === "DBMS"));
+assert.ok(noYieldContamination.careerAnalysis.competencyLinks.some((row) => /Python/.test(row.requirement)));
+const licensePreparation = noYieldContamination.careerAnalysis.preparation.strengths.find((row) => /기사/.test(row.title));
+assert.ok(licensePreparation);
+assert.match(licensePreparation.detail, /특정 업무축에 억지로 연결하지 않고/);
+assertEvidenceIntegrity(noYieldContamination);
+
+const deliberateContamination = analyzer.validateCareerAnalysis("품질 개선", {
+  definition: { value: "수율 개선" }, workAxes: [], problems: [], competencyLinks: [], performanceGroups: [], deliveryGoals: [], emphasis: [], preparation: { must: [], strengths: [], study: [] },
+});
+assert.equal(deliberateContamination.status, "fail");
+assert.ok(deliberateContamination.unsupportedTerms.includes("수율"));
 
 console.log("JD analyzer v4 tests passed");

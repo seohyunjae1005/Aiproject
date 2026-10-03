@@ -305,6 +305,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.25rem 5rem; }
 .jd-connection-list p { margin: 0; color: var(--muted); font-size: 0.68rem; line-height: 1.5; }
 .jd-connection-arrow { color: var(--muted); font-size: 1rem; }
 .jd-performance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+.jd-subsection-heading { margin: 1rem 0 0.55rem; color: var(--muted); font-size: 0.7rem; letter-spacing: 0.04em; }
+.jd-subsection-heading:first-of-type { margin-top: 0; }
 .jd-performance-grid article { padding: 0.9rem; border: 1px solid var(--line); }
 .jd-performance-grid h4 { margin: 0.2rem 0 0.65rem; }
 .jd-performance-grid p { margin: 0.7rem 0; color: var(--muted); font-size: 0.7rem; }
